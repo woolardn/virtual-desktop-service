@@ -49,18 +49,18 @@ This guide walks you through the deployment of WVD using NetApp VDS technology f
 . <<Create a VDS Admin Account,Create a VDS admin account (if you don’t have one)>>
 . <<VDS Setup Sections,Build the Azure environment using the purpose-built VDS for Azure Setup wizard>>
 . <<Activating WVD Services,Activating WVD services for the Azure tenant>>
-. Create the first host pool with a standard Windows 10 EVD image
-. Assigning virtual desktops to Azure AD user(s)
-. Add users to the default app group for delivering the desktop environment to users. Optionally create additional host pool(s) for delivering RemoteApp services
-. Connect as an end user via client software and/or web client
-. Connect to the platform and client services as local and domain admin
-. Optionally enable VDS' multi-factor authentication for VDS admins & WVD end users
-. Optionally walk through the entire application entitlement workflow including populating the app library, app install automation, app masking by users and security groups
-. Optionally create and manage Active Directory security groups, folder permissions and application entitlement by group.
-. Optionally configure cost optimization technologies including Workload Scheduling and Live Scaling
-. Optionally create, update and Sysprep a virtual machine image for future deployments
-. Optionally configure Azure Cloud Backup
-. Optionally disable default security control group policies
+. <<Create WVD Host Pool,Create the first host pool with a standard Windows 10 EVD image>>
+. <<Enable VDS desktops to users,Assigning virtual desktops to Azure AD user(s)>>
+. <<Default app group,Add users to the default app group for delivering the desktop environment to users.>> Optionally, <<Create Additional WVD App Group(s),create additional host pool(s) for delivering RemoteApp services>>
+. <<End User WVD Acces,Connect as an end user via client software and/or web client>>
+. <<Admin connection options,Connect to the platform and client services as local and domain admin>>
+. <<Multi-Factor Authentication (MFA),Optionally enable VDS' multi-factor authentication for VDS admins & WVD end users>>
+. <<Application Entitlement Workflow,Optionally walk through the entire application entitlement workflow including populating the app library, app install automation, app masking by users and security groups>>
+. <<Azure AD Security Groups,Optionally create and manage Active Directory security groups, folder permissions and application entitlement by group.>>
+. <<Configure Cost Optimization Options,Optionally configure cost optimization technologies including Workload Scheduling and Live Scaling>>
+. <<Create and Manage VM Images,Optionally create, update and Sysprep a virtual machine image for future deployments>>
+. <<Configure Azure Cloud Backup Service,Optionally configure Azure Cloud Backup>>
+. <<Select App Management/Policy Mode,Optionally disable default security control group policies>>
 
 
 == Azure Prerequisites
@@ -332,6 +332,7 @@ image:Create Additional WVD App Group 2.png[]
 image:Create Additional WVD App Group 3.png[]
 
 . Click the Add App Group button to create the App Group
+
 == End User WVD Access
 End users can access WVD environments using the Web Client or an installed client on a variety of platforms
 
