@@ -52,7 +52,7 @@ This guide walks you through the deployment of WVD using NetApp VDS technology f
 . <<Create WVD Host Pool,Create the first host pool with a standard Windows 10 EVD image>>
 . <<Enable VDS desktops to users,Assigning virtual desktops to Azure AD user(s)>>
 . <<Default app group,Add users to the default app group for delivering the desktop environment to users.>> Optionally, <<Create Additional WVD App Group(s),create additional host pool(s) for delivering RemoteApp services>>
-. <<End User WVD Acces,Connect as an end user via client software and/or web client>>
+. <<End User WVD Access,Connect as an end user via client software and/or web client>>
 . <<Admin connection options,Connect to the platform and client services as local and domain admin>>
 . <<Multi-Factor Authentication (MFA),Optionally enable VDS' multi-factor authentication for VDS admins & WVD end users>>
 . <<Application Entitlement Workflow,Optionally walk through the entire application entitlement workflow including populating the app library, app install automation, app masking by users and security groups>>
