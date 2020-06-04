@@ -1,0 +1,165 @@
+---
+sidebar: sidebar
+permalink: index.html
+summary: Step-by-step guide to deploy VDS into Azure
+---
+
+= Virtual Desktop Service documentation
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== Overview
+This guide will provide the step by step instructions to create a Windows Virtual Desktop (WVD) deployment utilizing NetApp Virtual Desktop Service (VDS) in Azure.
+
+This Proof of Concept (POC) guide is designed to help you quickly deploy and configure WVD in your own test Azure Subscription. This guide assumes a green-field deployment into a clean, non-production Azure Active Directory tenant.
+
+Production deployments, especially into existing AD or Azure AD environments are very common however that process is not considered in this POC Guide. Complex POCs and production deployments should be initiated with the NetApp VDS Sales/Services teams and not performed in a self-service fashion.
+
+This POC document will take you thru the entire WVD deployment and provide a brief tour of the major areas of post-deployment configuration available in the CWMS platform. Once completed you’ll have a fully deployed and functional WVD environment, complete with host pools, app groups and users. Optionally you’ll have the option to configure automated application delivery, security groups, file share permissions, Azure Cloud Backup, intelligent cost optimization. CWMS deploys a set of best practice settings via GPO. Instructions on how to optionally disable those controls are also included, in the event your POC needs to have no security controls, similar to an unmanaged local device environment.
+
+== WVD Basics
+Windows Virtual Desktop is a comprehensive desktop and app virtualization service that runs in the cloud. Here is a quick list of some of the key features and functionality:
+
+* Infrastructure services like gateway, brokering, licensing, diagnostics are provided as a service in Azure. There’s no need to deploy and maintain any on-premises infrastructure.
+* Windows Virtual Desktop can leverage Azure Active Directory (Azure AD) as the identity provider, allowing you to leverage additional security controls like multi-factor authentication (MFA) or conditional access.
+* Once a user is connected to Windows Virtual Desktop service, access to Active Directory joined virtual machines (VMs) will be provided using Azure AD identities. In environments where Active Directory Federation Services (AD FS) is implemented for single sign-on (SSO), the user won’t be prompted for credentials when connecting to the VM, providing a seamless sign-on experience.
+* Reverse connect technology means your destination VM doesn’t need any inbound ports to be opened. Even the default RDP port, TCP/3389, doesn’t have to be open. Instead, an agent creates an outbound connection using TCP/443 into the Windows Virtual Desktop management plane. Azure is your reverse proxy for RDP traffic.
+* Virtual machines in Windows Virtual Desktop are not exposed to the Internet directly. They can run using a private IP address and run isolated from other workloads or even the Internet. (The reverse connect technology allows the VMs to be accessed.)
+* Windows Virtual Desktop introduces Windows 10 multi-session, allowing you to offer a Windows 10 Enterprise experience where multiple users can log into the same Windows client VM simultaneously via RDP. (multi-session was historically only possible on Windows Server operating systems.)
+* Access to FSLogix technology, making your Office experience in a non-persistent environment feel like you are using a traditional PC.
+* Windows Virtual Desktop supports full desktop, RemoteApp, and persistent or non-persistent, dedicated or multi-session experiences.
+* Organizations with “Windows 10 Enterprise E3 Per User” licenses or better (e.g. Windows 10 Enterprise E5 or Microsoft 365 E3, E5, F1, or Business) or RDS CALs can use Windows Virtual Desktop for no additional charge apart from Azure compute/storage and network usage billing. Reserved instances can be used to reduce Azure costs up to 80%.
+
+Source: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/getting-started-with-windows-virtual-desktop/ba-p/391054
+
+== Guide Scope
+This guide walks you through the deployment of WVD using NetApp VDS technology from the perspective of an Azure and VDS administrator. You bring the Azure tenant and subscription with zero preconfiguration and this guide helps you setup WVD end-to-end.
+This guide covers the following steps:
+
+This guide covers the following steps:
+1. <<Azure Prerequisites,Confirm prerequisites of the Azure tenant, Azure subscription and Azure admin account permissions>>
+2. <<Collect Discovery Details, Collect required discovery details>>
+3. Create a VDS admin account (if you don’t have one)
+4. Build the Azure environment using the purpose-built VDS for Azure Setup wizard
+5. Activating WVD services for the Azure tenant
+6. Create the first host pool with a standard Windows 10 EVD image
+7. Assigning virtual desktops to Azure AD user(s)
+8. Add users to the default app group for delivering the desktop environment to users. Optionally create additional host pool(s) for delivering RemoteApp services
+9. Connect as an end user via client software and/or web client
+10. Connect to the platform and client services as local and domain admin
+11. Optionally enable VDS' multi-factor authentication for VDS admins & WVD end users
+12. Optionally walk through the entire application entitlement workflow including populating the app library, app install automation, app masking by users and security groups
+13. Optionally create and manage Active Directory security groups, folder permissions and application entitlement by group.
+14. Optionally configure cost optimization technologies including Workload Scheduling and Live Scaling
+15. Optionally create, update and Sysprep a virtual machine image for future deployments
+16. Optionally configure Azure Cloud Backup
+17. Optionally disable default security control group policies
+
+
+== Azure Prerequisites
+VDS uses native Azure security context to deploy the WVD instance.  Before starting the VDS Setup wizard, there are a few Azure prerequisites that need to be established.
+
+During the deployment, service accounts and permissions are granted to CWMS via authentication of an existing admin account from within the Azure tenant.
+
+=== Quick prerequisites checklist
+- [x] Azure Tenant with Azure AD instance (can be Microsoft 365 instance)
+- [x] Azure Subscription
+- [x] Available Azure Quota for Azure virtual machines
+- [x] Azure Admin Account with Global Admin and Subscription Ownership Roles
+
+NOTE: Detailed prerequisites are documented on link:VDS-and-WVD-Components-and-Permissions-2020.05.26.pdf[this PDF]
+
+=== Azure Admin in Azure AD
+This existing Azure admin must be an Azure AD account in the target tenant. Windows Server AD accounts can be deployed with the CWA Setup but additional steps are required to setup a sync with Azure AD (out of scope for this guide)
+
+This can be confirmed by finding the user account in the Azure Management Portal under Users > All Users.
+image:Azure Admin in Azure AD.png[]
+
+=== Global Administrator Role
+The Azure Administrator must be assigned the Global Administrator role in the Azure tenant. To check your role in Azure AD, follow these steps:
+
+1. Log in to the Azure Portal at https://portal.azure.com/
+2. Search for and select Azure Active Directory
+3. In the next pane to the right, click on the Users option in the Manage section
+4. Click on the name of the Administrator user that you are checking
+5. Click on Directory Role. In the far-right pane the Global Administrator role should be listed.
+image:Global Administrator Role 1.png[]
+
+If this user does not have the Global Administrator role, you can perform the following steps to add it (Note that the logged in account must be a Global Administrator to perform these steps):
+
+1. From the user Directory Role detail page in step 5 above, click the Add Assignment button at the top of the detail page.
+2. Click on Global Administrator in the list of roles. Click the Add button.
+image:Global Administrator Role 2.png[]
+
+=== Azure Subscription Ownership
+The Azure Administrator must also be a Subscription Owner on the subscription that will contain the deployment. To check that the Administrator is a Subscription Owner, follow these steps:
+
+1. Log in to the Azure Portal at https://portal.azure.com/
+2. Search for, and select Subscriptions.
+3. In the next pane to the right, click on the name of the subscription to see the subscription details
+4. Click on the Access Control (IAM) menu item in the pane second from the left
+5. Click on the Role Assignments tab. The Azure Administrator should be listed in the Owner section.
+image:Azure Subscription Ownership 1.png[]
+
+If the Azure Administrator is not listed, you can add the account as a subscription owner by following these steps:
+
+1. Click the Add button at the top of the page and choose the Add Role Assignment option
+2. A dialog will appear to the right. Choose “Owner” in the role drop down, then start typing the username of the Administrator in the Select box. When the full name of the Administrator appears, select it
+3. Click the Save button at the bottom of the dialog.
+image:Azure Subscription Ownership 2.png[]
+
+=== Azure Compute Core Quota
+The CWA Setup wizard and CWMS portal will create new virtual machines and the Azure subscription must have available quota to successfully execute. To check quote follow these steps:
+
+1. Navigate to the Subscriptions module and click “Usage + Quotas”.
+2. Select all providers in the “providers” drop-down, select “Microsoft.Compute in the “Providers” drop-down.
+3. Select the target Region in the “Locations” drop-down
+4. A list of available quotas by virtual machine family should be shown.
+image:Azure Compute Core Quota.png[]
+If you need to increase quota, click Request Increase and follow the prompts to add additional capacity. For the initial deployment specifically request increased quote for the “Standard DSv3 Family vCPUs”.
+
+=== Collect Discovery Details
+Once working through the CWA Setup wizard there are several questions that need to be answered. NetApp VDS has provided a linked PDF that can be used to record these selections prior to deployment. Item include:
+
+[cols=2*,options="header",cols="25,50" width=75%]
+|===
+| Item
+| Description
+| VDS admin credentials | Collect the existing VDS admin credentials if you already have them.  Otherwise a new admin account will be created during deployment.
+| Azure Region | Determine the target Azure Region based on performance and availability of services. This https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/[Microsoft Tool^] can estimate end user experienced based on region.
+| Active Directory type | The VMs will need to join a domain but can't directly join Azure AD. A domain controller VM, or Azure AD Domain Services (AADDS) or a secure connection (e.g. VPN or ExpressRoute) to an existing domain controller is required.
+| File Management | Performance is highly dependent on disk speed, particularly as related to user profile storage.  The VDS setup wizard can deploy a simple file server or configure Azure NetApp Files (ANF).  For any production environment ANF is recommended however for a POC the file server option provides sufficient performance.  Storage options can be revised post-deployment, including using existing storage resources in Azure.
+| Virtual Network Scope | A routable /20 network range is required for the deployment.  the VDS setup wizard will allow you to define this range.  It is important that this range does not overlap with any existing vNets in Azure or on-premises (if the two networks will be connected via a VPN or ExpressRoute).
+
+|===
+General info will also be collected such as:
+
+* Company Info
+* Contact Info
+* Billing Info
+
+== Create a VDS Admin Account
+NOTE: Existing VDS partners should already have an account to login to VDS at https://manage.cloudworkspace.com. Existing users can skip steps 3-7
+
+Follow these steps to Register with NetApp VDS and to link the VDS admin account with this deployment:
+1. Log in to https://cwasetup.cloudworkspace.com using the Azure Administrator account with the required roles above.
+
+2. Microsoft Azure requires administrators to consent to specific permissions for applications that run in the Azure security context. Click the Accept button to accept the permissions listed.
+
+3. Choose how you want to register this instance with CloudJumper. For new users, you will need to create a new CloudJumper account.
+
+4. The registration page collects basic contact information the CWMS account you will use to provision and manage WVD. For NON-US customers, if your address does not include a State/Province/Locality type entity, please enter “NA” for that field.
+
+5. The next step creates your primary CWMS Administrator account. Remember your username and password from this step – you will use it to both setup your WVD instance and manage it going forward.
+
+6. For the payment terms, enter a Credit Card number or ACH information.
+
+7. After reviewing your settings, click the Register button and accept the Terms of Service – you will need to scroll down to the bottom of the Terms of Service dialog to be able to check the checkbox that you agree to the terms.
