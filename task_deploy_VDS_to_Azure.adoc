@@ -4,7 +4,7 @@ permalink: index.html
 summary: Step-by-step guide to deploy VDS into Azure
 ---
 
-= Virtual Desktop Service documentation
+= Virtual Desktop Service Documentation
 
 :toc: macro
 :hardbreaks:
