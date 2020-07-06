@@ -4,7 +4,7 @@ permalink: index.html
 summary: Step-by-step guide to deploy VDS into Azure
 ---
 
-= Virtual Desktop Service documentation 
+= WVD Deployment Guide
 
 :toc: macro
 :hardbreaks:
@@ -222,6 +222,14 @@ Once validation is complete the green Provision button will appear in place of t
 
 === Status
 The provisioning process takes between 2-4 hours depending on Azure workload and the choices you made. You can follow the progress in the log by clicking the Status page or wait for the email that will tell you the deployment process has completed. Deployment builds the virtual machines and Azure components required to support both VDS and a Remote Desktop or a WVD implementation. This includes a single virtual machine that can act as both an Remote Desktop session host and a file server. In a WVD implementation this virtual machine will act only as a file server.
+
+== Install and configure AD Connect
+Immediately after the install is successful, AD Connect needs to be installed and configured on the Domain Controller.  In a singe platform VM setup the CWMGR1 machine is the DC. The users in AD need to sync between Azure AD and the local domain.
+
+.To install and configure AD Connect, follow these steps:
+. Connect to the domain controller as a domain admin.
+.. Get credentials form the Azure Key Vault
+. Install AD Connect, login with the domain admin and the Azure AD Global Admin.
 
 == Activating WVD Services
 Once the deployment is complete, the next step is to enable the WVD functionality. The WVD enablement process requires the Azure Administrator to perform several steps to register their Azure AD domain and subscription for access using the Azure WVD services. Similarly, Microsoft requires VDS to request the same permissions for our automation application in Azure. The steps below walk you through that process.
