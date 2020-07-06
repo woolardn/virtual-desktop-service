@@ -30,6 +30,10 @@ Applications can be assigned to users directly or via Security groups managed in
 
 NOTE: Steps 3 & 4 can be fully automated with Scripted Events as illustrated below
 
+Video Walkthrough
+
+video::Application_Management.mp4[]
+
 == Add Applications to the App Catalog
 VDS Application Entitlement starts with the App Catalog, this is a listing of all the applications available for deployment to end user environments.
 
@@ -125,7 +129,7 @@ Application entitlement is handled by VDS and application can be assigned to use
 
 .Assign Applications to Users
 . Navigate to the User Detail page.
-. Navigate to the Applications section. 
+. Navigate to the Applications section.
 . Check the box next to all applications required by this user.
 
 .Assign Users to an Application
