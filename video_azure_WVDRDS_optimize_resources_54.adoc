@@ -18,6 +18,6 @@ summary: Video: Create a WVD Host Pool with NetApp VDS v5.4
 [.lead]
 == Overview
 
-video::D4gNs_L-_wg[youtube]
+video::IABgjxLCWkI[youtube]
 
 _Last version: June 5, 2020_

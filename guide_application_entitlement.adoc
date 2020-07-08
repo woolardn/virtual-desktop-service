@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: index.html
+permalink: index.adoc
 summary: Step-by-step guide to deploy Applications to end users in VDS
 ---
 
@@ -32,7 +32,7 @@ NOTE: Steps 3 & 4 can be fully automated with Scripted Events as illustrated bel
 
 .Video Walkthrough
 video::19NpO8v15BE[youtube]
-link:/video_WVDRDS_app_management_54.html[Video Page]
+link:/video_WVDRDS_app_management_54.adoc[Video Page]
 
 == Add Applications to the App Catalog
 VDS Application Entitlement starts with the App Catalog, this is a listing of all the applications available for deployment to end user environments.
