@@ -74,7 +74,7 @@ During the deployment, service accounts and permissions are granted to VDS via a
 - [x] Available Azure Quota for Azure virtual machines
 - [x] Azure Admin Account with Global Admin and Subscription Ownership Roles
 
-NOTE: Detailed prerequisites are documented on link:VDS-and-WVD-Components-and-Permissions-2020.05.26.pdf[this PDF]
+NOTE: Detailed prerequisites are documented on link:docs_components_and_permissions.adoc[this PDF]
 
 === Azure Admin in Azure AD
 This existing Azure admin must be an Azure AD account in the target tenant. Windows Server AD accounts can be deployed with the CWA Setup but additional steps are required to setup a sync with Azure AD (out of scope for this guide)
