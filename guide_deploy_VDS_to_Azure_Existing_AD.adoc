@@ -87,4 +87,4 @@ Typing A and hitting Enter
 image:Existing AD 3.png[]
 
 == Next steps
-This article covers the unique steps to deploy into an existing AD environment.  With these steps complete, you can return to the standard deployment guide link:guide_deploy_VDS_to_Azure.adoc#file management[here].
+This article covers the unique steps to deploy into an existing AD environment.  With these steps complete, you can return to the standard deployment guide link:guide_deploy_VDS_to_Azure.adoc#filemanagement[here].
