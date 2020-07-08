@@ -179,6 +179,9 @@ Select an appropriate **Azure Region**. This https://azure.microsoft.com/en-us/s
 
 ==== Active Directory type
 VDS can be provisioned with a **new virtual machine** for the Domain Controller function or setup to leverage an existing Domain Controller.
+In this guide we will select New Windows Server Active Directory, which will create one or two VMs (based on choices made during this process) under the subscription.
+
+A detailed article covering an existing AD deployment is found link:guide_deploy_VDS_to_Azure_Existing_AD.adoc[here].
 
 ==== Active Directory domain name
 Enter a **domain name**.  Mirroring the Azure AD Domain Name from above is recommended.
@@ -188,7 +191,7 @@ VDS can provision a simple file server virtual machine or setup and configure Az
 
 In a POC (non-production) environment the file server is a low-cost and simple deployment option however the available performance of Azure Managed Disks can be overwhelmed by the IOPS consumption of even a small production deployment.
 
-For example, a 4TB Standard SSD disk in azure supports up to 500 IOPS, which couple only support a maximum of 100 total users at 5 IOPS/user.  With ANF Premium the same sized storage setup would support 16,000 IOPS posting 32x more IOPS.
+For example, a 4TB Standard SSD disk in azure supports up to 500 IOPS, which coupld only support a maximum of 100 total users at 5 IOPS/user.  With ANF Premium the same sized storage setup would support 16,000 IOPS posting 32x more IOPS.
 
 For production WVD deployments, **Azure NetApp Files is Microsoft's recommendation**.
 
