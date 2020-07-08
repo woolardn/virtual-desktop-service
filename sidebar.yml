@@ -18,7 +18,7 @@ entries:
 
   - title: NetApp VDS v5.4 Videos
     entries:
-      -title: Add WVD Host Pools in Azure
+      -title: Add WVD Host Pool in Azure
        url: /video_azure_WVD_hostpool_54.adoc
       -title: Deploy WVD or RDS
        url: /video_azure_WVDRDS_deploy_54.adoc
