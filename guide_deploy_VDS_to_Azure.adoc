@@ -1,7 +1,8 @@
 ---
 sidebar: sidebar
-permalink: index.html
+permalink: guide_deploy_VDS_to_Azure.html
 summary: Step-by-step guide to deploy VDS into Azure
+keywords:
 ---
 
 = WVD Deployment Guide
