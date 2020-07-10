@@ -21,4 +21,4 @@ keywords:
 
 Download the current link:media/NetApp-VDS-and-WVD-Requirements-.pdf[VDS Prerequisites PDF here].
 
-_Last version: June 5, 2020_
+_Last version: June 8, 2020_
