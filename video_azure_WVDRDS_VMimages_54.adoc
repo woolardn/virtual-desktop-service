@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: video_azure_WVDRDS_VMimages_54.html
-summary: Video: Create and Customize VM Images for WVD and RDS with NetApp VDS v5.4
+summary: (Video) Create and Customize VM Images for WVD and RDS with NetApp VDS v5.4
 keywords:
 ---
 
