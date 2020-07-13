@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: video_azure_WVDRDS_optimize_resources_54.html
-summary: (Video) Create a WVD Host Pool with NetApp VDS v5.4
+summary: Create a WVD Host Pool with NetApp VDS v5.4
 keywords:
 ---
 
