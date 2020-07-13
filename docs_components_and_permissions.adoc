@@ -1,7 +1,8 @@
 ---
 sidebar: sidebar
-permalink: index.html
+permalink: docs_components_and_permissions.html
 summary: VDS Components and Permissions
+keywords:
 ---
 
 = WVD Deployment Guide

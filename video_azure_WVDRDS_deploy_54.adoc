@@ -1,10 +1,11 @@
 ---
 sidebar: sidebar
-permalink: index.html
+permalink: video_azure_WVDRDS_deploy_54.html
 summary: Video: Deploy WVD or RDS Into Azure with NetApp VDS v5.4
+keywords:
 ---
 
-= Video: Deploy WVD or RDS Into Azure with NetApp VDS v5.4
+= Deploy WVD or RDS Into Azure with NetApp VDS v5.4
 
 :toc: macro
 :hardbreaks:
