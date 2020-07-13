@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: video_azure_WVDRDS_deploy_54.html
-summary: (Video) Deploy WVD or RDS Into Azure with NetApp VDS v5.4
+summary: Deploy WVD or RDS Into Azure with NetApp VDS v5.4
 keywords:
 ---
 
