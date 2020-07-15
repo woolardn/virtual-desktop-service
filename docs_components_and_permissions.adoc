@@ -19,6 +19,6 @@ keywords:
 [.lead]
 == Overview
 
-Download the current link:media/NetApp-VDS-and-WVD-Components-and-Permissions-2020.05.26.pdf[Components and Permissions PDF here].
+Download the current link:media/NetApp-VDS-and-WVD-Components-and-Permissions-2020.07.15.pdf[Components and Permissions PDF here].
 
 _Last version: May 26, 2020_
