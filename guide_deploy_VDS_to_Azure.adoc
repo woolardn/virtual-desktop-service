@@ -75,7 +75,7 @@ During the deployment, service accounts and permissions are granted to VDS via a
 - [x] Available Azure Quota for Azure virtual machines
 - [x] Azure Admin Account with Global Admin and Subscription Ownership Roles
 
-NOTE: Detailed prerequisites are documented on link:docs_components_and_permissions.adoc[this PDF]
+NOTE: Detailed prerequisites are documented on link:docs_components_and_permissions.html[this PDF]
 
 === Azure Admin in Azure AD
 This existing Azure admin must be an Azure AD account in the target tenant. Windows Server AD accounts can be deployed with the CWA Setup but additional steps are required to setup a sync with Azure AD (out of scope for this guide)
@@ -182,7 +182,7 @@ Select an appropriate **Azure Region**. This https://azure.microsoft.com/en-us/s
 VDS can be provisioned with a **new virtual machine** for the Domain Controller function or setup to leverage an existing Domain Controller.
 In this guide we will select New Windows Server Active Directory, which will create one or two VMs (based on choices made during this process) under the subscription.
 
-A detailed article covering an existing AD deployment is found link:guide_deploy_VDS_to_Azure_Existing_AD.adoc[here].
+A detailed article covering an existing AD deployment is found link:guide_deploy_VDS_to_Azure_Existing_AD.html[here].
 
 ==== Active Directory domain name
 Enter a **domain name**.  Mirroring the Azure AD Domain Name from above is recommended.
@@ -380,7 +380,7 @@ To disable the automatic local admin login function and force the Level III acco
 
 === Multi-Factor Authentication (MFA)
 CloudJumper VDS includes SMS/Email MFA at no charge. This feature can be used to secure VDS Admin accounts and/or End User accounts.
-link:task_configure_MFA.adoc[MFA Article]
+link:task_configure_MFA.html[MFA Article]
 
 === Application Entitlement Workflow
 VDS provides a mechanism to assign end users access to applications from a pre-defined list of applications called the Application Catalog. The Application catalog spans all managed deployments.
