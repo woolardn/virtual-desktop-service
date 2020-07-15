@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: docs_prerequisites.html
-summary: VDS prerequisites
+summary: VDS Prerequisites
 keywords:
 ---
 
-= WVD Deployment Guide
+= VDS & WVD Prerequisites
 
 :toc: macro
 :hardbreaks:
