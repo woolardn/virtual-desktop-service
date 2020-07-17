@@ -1,0 +1,196 @@
+---
+sidebar: sidebar
+permalink: docs_components_and_permissions.html
+summary: VDS Components and Permissions
+keywords:
+---
+
+= VDS Components and Permissions
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== WVD and VDS Security Entities and Services
+Windows Virtual Desktop (WVD) requires security accounts and components in both Azure AD and the local Active Directory to perform automated actions. NetApp’s Virtual Desktop Service (VDS) creates components and security settings during the deployment process that allow administrators to control the WVD environment. This document describes the relevant VDS accounts, components, and security settings in both environments.
+
+=== Azure Components and Security Settings
+WVD requires that the user session Virtual Machines (VM) be created in an Azure subscription. To enable the creation and management of these VMs, VDS creates several supporting components in the Azure Subscription:
+
+* *Azure AD Enterprise Applications* - VDS leverages Enterprise Applications and App Registrations in a tenant’s Azure AD domain. The Enterprise Applications are the conduit for the calls against the Azure Resource Manager, Azure Graph and (if using the WVD Fall Release) WVD API endpoints from the Azure AD instance security context using the delegated roles and permissions granted to the associated Service Principal. App registrations may be created depending on initialization state of WVD services for the tenant through VDS:
+** *Cloud Workspace* – This is the initial Enterprise Application admins grant consent to and is used during VDS Setup Wizard’s deployment process.
+** *Cloud Workspace API* – Handles general management calls for Azure PaaS functions. Examples of Azure PaaS functions are Azure Compute, Azure Backup, Azure Files, etc. This Service Principal requires Owner rights to the target Azure subscription during initial deployment, and Contributor rights for ongoing management (note: Use of Azure Files requires subscription Owner rights in order to set per user permissions on Azure File objects).
+* *Azure Resource Group* – VDS deployment automation creates a single Azure Resource Group to contain the other WVD components, including VMs, network subnets, network security groups, and either Azure Files containers or Azure NetApp Files capacity pools. Note – the default is a single resource group, but VDS has tools to create resources in additional Resources Groups if desired.
+* *Azure Virtual Network and Subnets* – VDS creates an Azure Virtual Network and supporting subnets. VDS requires a separate subnet for CWMGR1, WVD host machines, and Azure domain controllers and peering between the subnets. Note that the AD controller subnet typically already exists so the VDS deployed subnets will need to be peered with the existing subnet.
+* *CWMGR1* – CMWGR1 is the VDS control VM for each Deployment. By default, it is created as a Windows 2019 Server VM in the target Azure subscription. See the Local Deployment section for the list of VDS and 3rd party components installed on CWMGR1.
+* *Network Security Group (NSG)* – a network security group is created to control access to the CWMGR1 VM.
+** Tenant: contains IP addresses for use by session host and data VMs
+** Services: contains IP addresses for use by PaaS services (Azure NetApp Files, for example)
+** Platform: contains IP addresses for use as NetApp platform VMs (CWMGR1 and any gateway servers)
+** Directory: contains IP addresses for use as Active Directory VMs
+* *Azure NetApp Files Capacity Pool (Optional)* – an Azure NetApp Files Capacity Pool and associated Volume(s) will be created if you choose Azure NetApp Files as the Data Layer option in VDS Setup. The Volume hosts the shared filed storage for user profiles (via FSLogix containers), user personal folders, and the corporate data share folder.
+* *File Server VM (Optional)* – a Windows Server VM is created with a Managed Disk if you choose File Server as the Data Layer option in VDS Setup. The File Server hosts the shared filed storage for user profiles (via FSLogix containers), user personal folders, and the corporate data share folder.
+* *Azure File Share (Optional)* – an Azure File Share and its associated Azure Storage Account will be created if you chose Azure Files as the Data Layer option in CWS Setup. The Azure File Share hosts the shared filed storage for user profiles (via FSLogix containers), user personal folders, and the corporate data share folder.
+* *Recovery Service Vault (Optional)* – a Recovery Service Vault is created by VDS Automation during deployment. This is currently activated by default, as Azure Backup is applied to CWMGR1 during the deployment process. This can be deactivated and removed if desired, but will be recreated if Azure Backup is enabled in the environment.
+* *Custom Roles* – The Automation Contributor role is created to facilitate deployments via least privileged methodologies. This role allows the CWMGR1 VM to access the Azure automation account.
+* *Key Vault* – an Azure Key Vault is created during the deployment process and is used to store certificates, API keys and credentials that are used by Azure Automation Accounts during deployment. Management and access rules are as follows:
+* *Automation Account* – an Automation account is created during deployment and is a required component during the provisioning process. The Automation account contains variables, credentials, modules and Desired State Configurations and references the Key Vault.
+** *Desired State Configuration* - this is the method used to build the configuration of CWMGR1  The configuration file is downloaded to the VM and applied via Local Configuration Manager on the VM. Examples of configuration elements include:
+*** Installing Windows features
+*** Installing software
+*** Applying software configurationsEnsuring the proper permission sets are applied
+*** Applying the Let’s Encrypt certificate
+*** Ensuring DNS records are correct
+*** Ensuring that CWMGR1 is joined to the domain
+** Modules:
+*** ActiveDirectoryDsc: Desired state configuration resource for deployment and configuration of Active Directory. These resources allow you to configure new domains, child domains and high availability domain controllers, establish cross-domain trusts and manage users, groups and OUs.
+*** Az.Accounts: A Microsoft provided module used for managing credentials and common configuration elements for Azure modules
+*** Az.Automation:  A Microsoft provided module for Azure Automation commandlets
+*** Az.Compute:A Microsoft provided module for Azure Compute commandlets
+*** Az.KeyVault: A Microsoft provided module for Azure Key Vault commandlets
+*** Az.Resources: A Microsoft provided module for Azure Resource Manager commandlets
+*** cChoco:  Desired state configuration resource for downloading and installing packages using Chocolatey
+*** cjAz: this NetApp-created module provides automation tools to the Azure automation module
+*** cjAzACS: this NetApp-created module contains environment automation functions and PowerShell processes that execute from within the user context.
+*** cjAzBuild: this NetApp-created module contains build and maintenance automation and PowerShell processes that execute from the system context.
+*** cNtfsAccessControl:  Desired state configuration resource for NTFS access control management
+*** ComputerManagementDsc:  Desired state configuration resource that allow computer management tasks such as joining a domain and scheduling tasks as well as configuring items such as virtual memory, event logs, time zones and power settings.
+*** cUserRightsAssignment:  Desired state configuration resource that allow management of user rights such as logon rights and privileges
+*** NetworkingDsc: t Desired state configuration resource for networking
+*** xCertificate:  Desired state configuration resource to simplify management of certificates on Windows Server.
+*** xDnsServer:  Desired state configuration resource for configuration and management of Windows Server DNS Server
+*** xNetworking:  Desired state configuration resource related to networking.
+*** link:https://github.com/PowerShell/xRemoteDesktopAdmin[xRemoteDesktopAdmin]: this module utilizes a repository that contains desired state configuration resources for configuring remote desktop settings and Windows firewall on a local or remote machine.
+*** xRemoteDesktopSessionHost:  Desired state configuration resource (xRDSessionDeployment, xRDSessionCollection, xRDSessionCollectionConfiguration and xRDRemoteApp) enabling the creation and configuration of a Remote Desktop Session Host (RDSH) instance
+*** xSmbShare:  Desired state configuration resource for configuration and managing an SMB share
+*** xSystemSecurity:  Desired state configuration resource for managing UAC and IE Esc
+* *Log Analytics* – a Log Analytics workspace is created to store logs from the deployment and DSC processes and from other services, This can be deleted after deployment, but this isn’t recommended as it enables other functionality. Logs are retained for 30 days by default, incurring no charges for retention.
+* *Availability Set* – an Availability Set is set up as a part of the deployment process to enable separation of shared VMs (shared WVD host pools, RDS resource pools) across fault domains. This can be deleted after deployment if desired, but would disable the option to provide additional fault tolerance for shared VMs.
+* *SendGrid* – an instance of SendGrid is created from the Azure Marketplace and used to send notifications regarding the progress of the deployment process and when new users are provisioned. This can be removed after deployment if desired, but nightly reports and new user creation notifications will be disabled.
+
+NOTE: Windows Virtual Desktop also installs Azure components, including Enterprise Applications and App Registrations for Windows Virtual Desktop and Windows Virtual Desktop Client, the WVD Tenant, WVD Host Pools, WVD App Groups, and WVD registered Virtual Machines. While VDS Automation components manage these components, WVD controls their default configuration and attribute set so refer to the WVD documentation for details.
+
+=== Azure Subscription Delegated Permissions
+The Azure Enterprise Applications request a specific set of permissions during the VDS Setup Process. These permissions are:
+
+* *Cloud Workspace Enterprise Application*
+** Access Directory as the Signed In User (Delegated)
+** Read and Write Directory Data (Delegated)
+** Sign In and Read User Profile (Delegated)
+** Sign Users in (Delegated)
+** View Users’ Basic Profile (Delegated)
+** Access Azure Service Management as Organization Users (Delegated)
+* *Cloud Workspace API Enterprise Application*
+** Subscription Contributor (or Subscription Owner if Azure Files is used)
+** Azure AD Graph
+*** Read and Write All Applications (Application)
+*** Manage Apps That This App Creates or Owns (Application)
+*** Read and Write Devices (Application)
+*** Access the Directory as the Signed In User (Delegated)
+*** Read Directory Data (Application)
+*** Read Directory Data (Delegated)
+*** Read and Write Directory Data (Application)
+*** Read and Write Directory Data (Delegated)
+*** Read and Write Domains (Application)
+*** Read All Groups (Delegated)
+*** Read and Write All Groups (Delegated)
+*** Read All Hidden Memberships (Application)
+*** Read Hidden Memberships (Delegated)
+*** Sign In and Read User Profile (Delegated)
+*** Read All Users’ Full Profiles (Delegated)
+*** Read All Users’ Basic Profiles (Delegated)
+** Azure Service Management
+*** Access Azure Service Management as Organization Users (Delegated)
+
+=== Local Deployment (Azure Subscription) Components
+WVD requires the WVD VMs be joined to an Active Directory domain. To facilitate this process and to provide the automation tools for managing the VDS environment several components are installed on the CWMGR1 VM described above and several components are added to the AD instance. The components include:
+
+* *Windows Services* - VDS uses Windows services to perform automation and management actions from within a deployment:
+** *CW Automation Service* is a Windows Service deployed on CWMGR1 in each WVD deployment that performs many of the user-facing automation tasks in the environment. This service runs under the *CloudWorkspaceSVC* AD account.
+** *CW VM Automation Service* is a Windows Service deployed on CWMGR1 in each WVD deployment that performs the virtual machine management functions. This service runs under the *CloudWorkspaceSVC* AD account.
+** *CW Agent Service* is a Windows Service deployed to each virtual machine under VDS management, including CWMGR1. This service runs under the *LocalSystem* context on the virtual machine.
+** *CWManagerX API* is an IIS app pool-based listener installed on CWMGR1 in each WVD deployment. This handles inbound requests from the global control plane and is run under the *CloudWorkspaceSVC* AD account.
+* *SQL Server 2017 Express* – VDS creates a SQL Server Express instance on the CWMGR1 VM to manage the metadata generated by the automation components.
+* *Internet Information Services (IIS)* – IIS is enabled on CWMGR1 to host the CWManagerX and CWApps IIS application (only if RDS RemoteApp functionality is enabled). VDS requires IIS version 7.5 or greater.
+* *HTML5 Portal (Optional)* – VDS installs the Spark Gateway service to provide HTML5 access to the VMs in the Deployment and from the VDS web application. This is a Java based application and can be disabled and removed if this method of access is not desired.
+* *RD Gateway (Optional)* – VDS enables the RD Gateway role on CWMGR1 to provide RDP access to RDS Collection based Resource Pools. This role can be disabled/uninstalled if only WVD Reverse Connect access is desired.
+* *RD Web (Optional)* – VDS enables the RD Web role and creates the CWApps IIS web application. This role can be disabled if only WVD access is desired.
+* *DC Config* – a Windows application used to perform Deployment and VDS Site specific configuration and advanced configuration tasks.
+* *Test VDC Tools* – a Windows application that supports direct task execution for Virtual Machine and client level configuration changes used in the rare case where API or Web Application tasks need to be modified for troubleshooting purposes.
+* *Let’s Encrypt Wildcard Certificate (Optional)* – created and managed by VDS – all VMs that require HTTPS traffic over TLS are updated with the certificate nightly. Renewal is also handled by automated task (certificates are 90 day so renewal starts shortly before). Customer can provide their own wildcard certificate if desired.
+VDS also requires several Active Directory components to support the Automation tasks. The design intent is to utilize a minimum number of AD component and permission additions while still supporting the environment for automated management. These components include:
+* *Cloud Workspace Organizational Unit (OU)* – this Organization Unit will act as the primary AD container for the required child components. Permissions for the CW-Infrastructure and Client DHP Access groups will be set at this level and its child components. See Appendix B for sub-OUs that are created in this OU.
+* *Cloud Workspace Infrastructure Group (CW-Infrastructure)* is a security group created in the local AD to allow required delegated permissions to be assigned to the VDS service account (*CloudWorkspaceSVC*)
+* *Client DHP Access Group (ClientDHPAccess)* is a security group created in the local AD to allow VDS to govern the location in which the company shared, user home and profile data reside.
+* *CloudWorkspaceSVC* service account (member of Cloud Workspace Infrastructure Group)
+* *DNS zone for <deployment code>.cloudworkspace.app domain* (this domain manages the auto-created DNS names for session host VMs ) – created by Deploy  configuration.
+* *NetApp-specific GPOs* linked to various child OUs of the Cloud Workspace Organizational Unit. These GPOs are:
+** *Cloud Workspace GPO (linked to Cloud Workspace OU)* – Defines access protocols and methods for members of the CW-Infrastructure Group. Also adds the group to the local Administrators Group on WVD session hosts.
+** *Cloud Workspace Firewall GPO* (linked to Dedicated Customers Servers, Remote Desktop and Staging OUs) - creates a policy that ensures and isolates connections to sessions hosts from Platform server(s).
+** *Cloud Workspace RDS* (Dedicated Customers Servers, Remote Desktop and Staging OUs) - policy set limits for session quality, reliability, disconnect timeout limits. For RDS sessions the TS licensing Server Value is defined.
+** *Cloud Workspace Companies* (NOT LINKED by default) – optional GPO to “lock down” a user session/ workspace by preventing access to administrative tools and areas. Can be linked/enabled to provide a restricted activity workspace.
+
+NOTE: Default Group Policy setting configurations can be provided on request.
+
+=== Local AD Permission Delegation
+NetApp provides an optional tool that can streamline this process. If using NetApp’s optional tool, it must:
+
+* Run on a server OS as opposed to a Workstation OS
+* Run on a server that is joined to the domain or is a domain controller
+* Have PowerShell 5.0 or greater in place on both the server running the tool (if not run on the Domain Controller) and the Domain Controller
+* Be executed by a user with Domain Admin privileges OR be executed by a user with local administrator permissions and ability to supply a Domain Administrator credential (for use with RunAs)
+
+Whether created manually or applied by NetApp’s tool, the permissions required are:
+
+* CW-Infrastructure group
+** The Cloud Workspace Infrastructure (*CW-Infrastructure*) security group is granted Full Control to the Cloud Workspace OU level and all descendent objects
+** <deployment code>.cloudworkspace.app DNS Zone – CW-Infrastructure group granted CreateChild, DeleteChild, ListChildren, ReadProperty, DeleteTree, ExtendedRight, Delete, GenericWrite
+** DNS Server – CW-Infrastructure Group granted ReadProperty, GenericExecute
+** Local admin access for VMs created (CWMGR1, WVD session VMs) (done by group policy on the managed WVD systems)
+* CW-CWMGRAccess group This group provides local administrative rights to CWMGR1 on all templates, the single server, new native Active Directory template utilizes the built-in groups Server Operators Remote Desktop Users, and Network Configuration Operators.
+
+== Appendix A: WVD Virtual Machine Creation
+The VDS automation and orchestration deploys virtual machines into a targeted Active Directory instance and then joins the machines to the designated host pool. WVD virtual machines are governed at a computer level by both the AD structure (organizational units, group policy, local computer administrator permissions etc.) and membership in the WVD structure (host pools, workspace app group membership), which are governed by Azure AD entities and permissions. VDS handles this “dual control” environment by using the VDS Enterprise application/Azure Service Principal for WVD actions and the local AD service account (CloudWorkspaceSVC) for local AD and local computer actions.
+
+The specific steps for creating a WVD virtual machine and adding it to the WVD host pool include:
+
+* Create Virtual Machine from Azure template visible to the Azure Subscription associated with WVD (uses Azure Service Principal permissions)
+* Check/Configure DNS address for new Virtual Machine using the Azure VNet designated during VDS Deployment (requires local AD permissions (everything delegated to CW-Infrastructure above) Sets the Virtual Machine name using the standard VDS naming scheme *_{companycode}TS{sequencenumber}_*. Example: XYZTS3. (Requires local AD permissions (placed into OU structure we have created on-prem (remote desktop/companycode/shared) (same permission/group description as above)
+* Places virtual machine in designated Active Directory Organizational Unit (AD) (requires the delegated permissions to the OU structure (designated during manual process above))
+* Update internal AD DNS directory with the new machine name/ IP address (requires local AD permissions)
+* Join new virtual machine to local AD domain (requires local AD permissions)
+* Update VDS local database with new server information (does not require additional permissions)
+* Join VM to designated WVD Host Pool (requires WVD Service Principal permissions)
+* Install Chocolatey components to the new Virtual Machine (requires local computer administrative privilege for the *CloudWorkspaceSVC* account)
+* Install FSLogix components for the WVD instance (Requires local computer administrative permissions on the WVD OU in the local AD)
+* Update AD Windows Firewall GPO to allow traffic to the new VM (Requires AD GPO create/modify for policies associated with the WVD OU and its associated virtual machines. Requires AD GPO policy create/modify on the WVD OU in the local AD. Can be turned off post-install if not managing VMs via VDS.)
+* Set “Allow New Connections” flag on the new virtual machine (requires Azure Service Principal permissions)
+
+== Appendix B – Default Cloud Workspace Organizational Unit Structure
+
+* Cloud Workspace
+** Cloud Workspace Companies
+** Cloud Workspace Servers
+*** Dedicated Customer Servers
+*** Infrastructure
+* CWMGR Servers
+* Gateway Servers
+* FTP Servers
+* Template VMs
+*** Remote Desktop
+*** Staging
+** Cloud Workspace Service Accounts
+*** Client Service Accounts
+*** Infrastructure Service Accounts
+** Cloud Workspace Tech Users
+*** Groups
+*** Tech 3 Technicians
+
+
+_Last version: July 15, 2020_

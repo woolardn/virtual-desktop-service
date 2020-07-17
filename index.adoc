@@ -5,7 +5,7 @@ summary: Welcome to the documentation portal for Virtual Desktop Service.
 keywords:
 ---
 
-= Virtual Desktop Service documentation
+= Virtual Desktop Service Documentation
 
 :toc: macro
 :hardbreaks:
@@ -35,7 +35,7 @@ Deploy desktops into logical workflows per cloud best practices; Such as Microso
 +
 Event driven automation and orchestration engine leveraging your current scripts, making management so easy, general IT administrators can manage your cloud desktops!
 
-* *Turn-key*
+* *Turn-Key*
 +
 Deploy as a do-it-yourself software management service for your choice of VDI environments or choose a fully managed WVD platform service.
 
