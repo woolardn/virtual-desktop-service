@@ -2,6 +2,10 @@ entries:
   - title: Virtual Desktop Service Documentation
     url: /index.html
 
+  - title: Release Notes
+    entries:
+      -title: VDS v5.4 Release Notes
+      url: /release_notes_54.html
   - title: Azure Deploy Guide
     entries:
       - title: NetApp VDS Setup Guide VDS v5.4 (Azure)
@@ -9,7 +13,7 @@ entries:
       - title: Supplimental Guide- VDS with Existing AD VDS v5.4 (Azure)
         url: /guide_deploy_VDS_to_Azure_Existing_AD.html
 
-  - title: Reference Documents
+  - title: Reference
     entries:
       - title: VDS v5.4 Components and Permissions
         url: /WVD_and_VDS_components_and_permissions.html

@@ -1,0 +1,78 @@
+---
+sidebar: sidebar
+permalink: release_notes_54.html
+summary: NetApp VDS Release Notes v5.4
+keywords:
+---
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+= Virtual Desktop Service – v5.4 Release Notes
+
+== VDS 5.4 Hotfix: Thurs., July 23, 2020
+
+_Components:_  5.4 Virtual Desktop Service
+_When:_  Thursday July 23rd, 2020 at 10pm – 11pm Eastern
+_Impact:_  Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== VDS Setup
+* Automation enhancements for DNS settings in Azure deployments
+* General deployment automation checks and improvements
+
+== VDS 5.4 Release: Thurs., July 16, 2020
+
+_Components:_  5.4 Virtual Desktop Service
+_When:_  Thursday July 16th, 2020 at 10pm – 11pm Eastern
+_Impact:_  Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== Virtual Desktop Service
+
+* Proactive security enhancements behind the scenes
+* Streamlining the WVD App Group provisioning process by auto-selecting the WVD Workspace if only one WVD Workspace is present
+* Performance improvements in the Workspace module via paginating Groups under the Users and Groups tab
+* If VDS admins select Azure in the Deployments tab, direct the user to log into VDS Setup instead
+
+=== VDS Setup
+
+* Proactive security enhancements behind the scenes
+* Improved layout to streamline the deployment workflow
+* Enhanced descriptions for deployments using an existing Active Directory structure
+* General enhancements and bug fixes for deployment automation
+
+=== VDS Tools and Services
+
+* Bug fix for TestVDCTools performance in single server deployments
+
+=== REST API
+
+* Usability enhancement for API consumption for Azure deployments – return usernames gathered even if first names are not defined on the user in Azure AD
+
+=== HTML5 Login Experience
+
+* Bug fix for Wake on Demand for session hosts leveraging the WVD Spring Release (WVD v2)
+* Updates to reflect NetApp branding/phrasing
+
+=== Azure Cost Estimator
+
+* Display pricing dynamically by region
+* Display whether relevant services are available in the region select to ensure that users understand whether the functionality desired will be available in that region. Those services are:
+** Azure NetApp Files
+** Azure Active Directory Domain Services
+** NV and NV v4 (GPU enabled) Virtual Machines
+
+== VDS 5.4 Release: Fri., June 26, 2020
+
+_Components:_  5.4 Virtual Desktop Service
+_When:_  Thursday June 26, 2020 at 10pm – 11pm Eastern
+_Impact:_  Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== Virtual Desktop Service
+
+As of Friday July 17th, 2020 the release of v5.4 is supported as a production release.
