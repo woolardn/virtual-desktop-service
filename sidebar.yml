@@ -12,9 +12,9 @@ entries:
   - title: Reference Documents
     entries:
       - title: VDS v5.4 Components and Permissions
-        url: /docs_components_and_permissions.html
+        url: /WVD_and_VDS_components_and_permissions.html
       - title: VDS v5.4 Prerequisites
-        url: /docs_prerequisites.html
+        url: /WVD_and_VDS_requirements.html
 
   - title: NetApp VDS v5.4 Videos
     entries:
