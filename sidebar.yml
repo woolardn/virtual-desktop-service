@@ -4,8 +4,8 @@ entries:
 
   - title: Release Notes
     entries:
-      -title: VDS v5.4 Release Notes
-      url: /release_notes_54.html
+      - title: VDS v5.4 Release Notes
+        url: /release_notes_54.html
 
   - title: Azure Deploy Guide
     entries:
