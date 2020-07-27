@@ -33,8 +33,6 @@ This guide walks you thru the setup of MFA along with an illustration of the end
 . <<Requiring MFA for All Users,Requiring MFA for All Users>>
 . <<Enabling MFA for Individual Administrators ,Enabling MFA for Individual Administrators>>
 . <<End User Initial Setup,End User Initial Setup>>
-. <<End User Self-Service Changes,End User Self-Service Changes>>
-. <<End User Connection Experience,End User Connection Experience>>
 
 
 == Enabling MFA for Individual Users
