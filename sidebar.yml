@@ -14,6 +14,15 @@ entries:
       - title: Supplimental Guide- VDS with Existing AD VDS v5.4 (Azure)
         url: /guide_deploy_VDS_to_Azure_Existing_AD.html
 
+  - title: Product Features
+    entries:
+      - title: Application Entitlement
+        url: /guide_application_entitlement.html
+      - title: Multi-Factor Auth
+        url: /task_configure_MFA.html
+
+
+    
   - title: Reference
     entries:
       - title: VDS v5.4 Components and Permissions
