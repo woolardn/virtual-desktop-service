@@ -1,0 +1,66 @@
+---
+sidebar: sidebar
+permalink: feature_workload_schedule.html
+summary: Step-by-step guide to deploy Applications to end users in VDS
+keywords:
+---
+
+= Workload Schedule
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== Overview
+Workload Scheduling is a feature that can schedule the time window in which the environment is active.
+
+Workload scheduling can be set to "Always On", "Always Off" or "Scheduled".  When set to "Scheduled" the on and off times can be set as granularly as a different time window for each day of the week.
+
+image:workload_schedule1.png[]
+
+When scheduled to be off, either via "Always Off" or "Scheduled", all tenant virtual machines will shut down.  Platform servers (such as CWMGR1) will remain active to facilitate functionality such as wake on demand.
+
+Workload Schedule works in conjunction with other resource optimization features including Live Scaling and Wake on Demand.
+
+=== Wake on Demand
+Wake on Demand (WoD) is patent-pending technology that can wake the appropriate VM resources for an end user in order to facilitate unattended access 24/7, even when resources are scheduled to be inactive.
+
+==== WoD for Remote Desktop Services
+In RDS, the VDS Windows Client has built-in Wake on Demand integration and can wake the appropriate resources without any additional end-user actions.  They simply need to initiate their normal login and the client will notify them of a short delay which the VM(s) are activated.  This client (and thus this automate wake on demand functionality) is only available when connecting from a Windows device to an RDS environment.
+
+Similar Functionality is built into the VDS Web client for RDS deployments. The VDS Web Client is found at: link:https://login.cloudworkspace.com[]
+
+Wake on Demand functionality is not built into the Microsoft RD client (for Windows or any other platform) nor any other 3rd party RD clients.
+
+==== WoD for Windows Virtual Desktop
+In WVD, the only clients that can be used to connect are Microsoft provided and thus do not contain the Wake on Demand functionality.
+
+VDS does include a self-service Wake on Demand function for WVD via the VDS Web Client.  The web client can be used to wake the appropriate resources, then the connection can be initiated via the standard WVD client.
+
+.To wake VM resources in WVD:
+. Connect to the VDS Web Client at link:https://login.cloudworkspace.com[]
+. Login with the user WVD credentials
+** A warning message will prompt _"You have Microsoft's WVD services available. Click HERE to view the status and start offline Host Pools."_
+. After clicking "_HERE_" you'll see a list of available Host Pools along with a link to "Click to Start" link under the status column
++
+image:Wake_on_Demand_h5_1.png[]
+. _Click to Start_ the link and wait 1-5 minutes for the status to change to "Online" and show a green status icon
+. Connect to WVD using your normal process
+
+
+=== Live Scaling
+Live Scaling works in conjunction with Workload Scheduling by managing the number of online session hosts during the scheduled active time as configured in Workload Scheduling. When scheduled to be offline, Live Scaling won't control session host availability.
+
+=== Other Active Resources
+Workload Scheduling does not control the platform servers such as CWMGR1 as they are needed to trigger the Wake on Demand functionality and facilitate other platform tasks and should run 24/7 for normal environmental operation.
+
+Additional saving can be achieved by deactivating the entire environment but is only recommended for non-production environments.  This is a manual action that can be performed in the Deployments section of VDS.   Returning the environment to a normal status also requires a manual step on the same page.
+
+image:Stop_deployment.png[]
+image:Start_deployment.png[]
