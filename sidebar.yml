@@ -15,8 +15,10 @@ entries:
         url: /guide_application_entitlement.html
       - title: Multi-Factor Auth
         url: /task_configure_MFA.html
-
-
+      - title: Scripted Events
+        url: /feature_scripted_events.html
+      - title: Managing Users
+        url: /guide_managing_end_users.html
 
   - title: Reference
     entries:
@@ -41,3 +43,5 @@ entries:
         url: /video_azure_WVDRDS_optimize_resources_54.html
       - title: Automate Application management for WVD and RDS
         url: /video_WVDRDS_app_management_54.html
+      - title: VDS, A Day in the Life
+        url: /video_VDS_day_in_the_life.html
