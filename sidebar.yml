@@ -19,6 +19,8 @@ entries:
         url: /feature_scripted_events.html
       - title: Managing Users
         url: /guide_managing_end_users.html
+      - title: Workload Scheduling
+        url: /feature_workload_schedule.html
 
   - title: Reference
     entries:

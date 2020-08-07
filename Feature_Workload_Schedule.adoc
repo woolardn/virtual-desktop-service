@@ -64,3 +64,6 @@ Additional saving can be achieved by deactivating the entire environment but is 
 
 image:Stop_deployment.png[]
 image:Start_deployment.png[]
+
+== Cost Minimization for Non-Production VDS Environments
+When running a POC in a public cloud environment, administrators may wish to more agressivly reduce spending
