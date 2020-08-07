@@ -1,0 +1,37 @@
+---
+sidebar: sidebar
+permalink: guide_managing_end_users.html
+summary: Step-by-step guide to manage end users in VDS
+keywords:
+---
+
+= WVD Deployment Guide
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== Adding New Users to Cloud Workspace
+Admins can add Users by clicking Workspaces, then Users and Groups.
+
+The most effective way to add Users is via Bulk User import – see the image below on how that process works. Fill out the bulk user upload template (link:Docs/Bulk-User-Upload-Sheet.xlsx[Bulk-User-Upload-Sheet.xlsx]) and then upload it to add multiple users at once:
+image:import_users.gif[]
+
+
+NOTE: Accurately adding email and mobile phone # at this stage greatly improves the process of enabling MFA later.
+
+Once you have created Users, you can click on their name to see things like when they were created, their connection status (whether they’re currently logged in or not) and what their specific settings are.
+
+
+== Activating the Cloud Workspace for Existing AD users
+
+If users are already present in AD, you can simple activate the users' Virtual Desktop by clicking on the gear next to their name and then enabling their desktop.
+image:Enable_desktop.png[]
+
+In order for logins to work, the password hash for Azure AD users must be synced to support NTLM and Kerberos authentication. The easiest way to accomplish this task is to change the user password in Office.com or the Azure portal, which will force the password hash sync to occur. The sync cycle for Domain Service servers can take up to 20 minutes so changes to passwords in Azure AD typically take 20 minutes to be reflected in AADDS and thus in the Cloud Workspace environment.

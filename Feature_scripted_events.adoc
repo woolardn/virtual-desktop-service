@@ -1,0 +1,51 @@
+---
+sidebar: sidebar
+permalink: feature_scripted_events.html
+summary: Scripted Events
+keywords:
+---
+
+= Scripted Events
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== Overview
+Scripted Events provides the advanced administrator with a mechanism to create custom automation for system maintenance, user alerts, group policy management, or other events. Scripts can be designated to run as an executable process and accept arguments, or can be used as arguments for a different executable program. This functionality allows for scripts to be combined and nested to support complex customization and integration needs.
+
+A detailed example of scripted events in action is found in the link:guide_application_entitlement.html[Application Entitlement Guide].
+
+Additionally, Scripted Events allows for the creation of automation that does not require a script to process, rather the automation flow is launched by a system trigger and executes an existing program or system utility with optional arguments.
+
+=== Script Repository
+This section displays all scripts available.  Scripts are executed by activities, covered in the next section.
+
+Clicking on the Add button allows for the creation of a new Script.
+
+Clicking Name of a script opens a dialog box for editing the script.
+
+=== Activities
+
+Activities are the way to execute one or more scripts. Activities can be triggered on many system actions. More on automating app installs is found link:guide_application_entitlement.html[here].
+
+* Application Install (e.g. Automate an app install when added to the CW tenant on the Workspaces page)
+* Application Uninstall (e.g. Automate an app uninstall when removed from the CW tenant on the Workspaces page)
+* Clone Server (e.g. Automate setting changes based on new server name)
+* Create Cache
+* Create Client
+* Create Server
+* Create User
+* Delete User (e.g. Zip and upload user profile before permanently deleting the user and user profile)
+* Manual (e.g. Run a one-time automation across all servers in an environment to address a zero-day threat)
+* Manual Application Update
+* Scheduled (e.g. Run automate maintenance tasks on a nightly basis)
+* Start Server (e.g. Add automation to a server each time it it boots up)
+
+Clicking on the _Name_ opens a dialog box where the activity can be edited.
