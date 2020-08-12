@@ -66,4 +66,4 @@ image:Stop_deployment.png[]
 image:Start_deployment.png[]
 
 == Cost Minimization for Non-Production VDS Environments
-When running a POC in a public cloud environment, administrators may wish to more agressivly reduce spending
+When running a POC in a public cloud environment, administrators may wish to more aggressively reduce spending.
