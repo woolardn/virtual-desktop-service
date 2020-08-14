@@ -1,0 +1,42 @@
+---
+sidebar: sidebar
+permalink: whats-next.html
+summary: What's Next?
+keywords:
+---
+
+= Congratulations on starting the deployment of a new Cloud Workspace environment!
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== Overview
+Once your deployment completes you should receive an email notification as well as a large amount of success and error reports via email.  Info on these emails and how to change the delivery options is here: link:guide_why_emails.html[What’s with All these emails?]
+
+Complete documentation is found at https://docs.netapp.com/us-en/virtual-desktop-service/ but the selected items below are a good place to start:
+
+
+=== Quick Start
+
+* link:https://www.youtube.com/playlist?list=PLQ1wYDzid2pRl74Y4SnFVvTHL7kbN9GQZ[VDS Introduction Video Playlist on YouTube]
+* link:Changing Azure Resource Consumption
+* Managing Users
+* Managing Applications
+* Managing Data and Permissions
+* Cloud Workspace System Requirements: End-Users Overview
+
+=== Refine your Deployment – Tips & Tricks
+
+* Enhancing Security with MFA
+//to do * Applying Backups
+//to do * Apply Monitoring and Anti-Virus
+* Optimizing Server Costs
+* Deploy Your Automation with Scripted Events
+* Data Migration
