@@ -19,8 +19,12 @@ entries:
         url: /feature_scripted_events.html
       - title: Managing Users
         url: /guide_managing_end_users.html
+      - title: Manage User Folder Permissions
+        url: /guide_manage_data_permissions.html
       - title: Workload Scheduling
         url: /feature_workload_schedule.html
+      - title: Migrating Data
+        url: /guide_migrate_data.html
 
   - title: Reference
     entries:
@@ -30,6 +34,8 @@ entries:
         url: /WVD_and_VDS_components_and_permissions.html
       - title: VDS v5.4 Prerequisites
         url: /WVD_and_VDS_requirements.html
+      - title: End User Access
+        url: /guide_user_requirements.html
 
   - title: NetApp VDS v5.4 Videos
     entries:
