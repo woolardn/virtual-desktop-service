@@ -391,7 +391,7 @@ End users can access WVD environments using the Web Client or an installed clien
 
 Log in using the end user username and password. Note that Remote App and Desktop Connections (RADC), Remote Desktop Connection (mstsc), and the CloudWorksapce Client for Windows application do not currently support the ability to log in to WVD instances.
 
-Monitor User Logins
+== Monitor User Logins
 The host pool detail page will also display a list of active users when they log in to a WVD session.
 
 == Admin Connection Options

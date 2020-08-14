@@ -1,0 +1,80 @@
+---
+sidebar: sidebar
+permalink: guide_migrate_data.html
+summary: Summary of considerations when migrating data
+keywords:
+---
+
+= Data Migration Considerations
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== Overview
+Migrating data is a near-universal requirement when migrating to a cloud solution of any type. While Admins are responsible for migrating data into their Virtual Desktops, NetApp’s experience is available and has proven invaluable for innumerable Customer migrations. The Virtual Desktop environment is simply a hosted Windows environment, so any methods desired can likely be accommodated.
+
+.Data that is typically migrated:
+* User profiles (Desktop, Documents, Favorites, etc…)
+* File Server Shares
+* Data Shares (App data, databases, backup caches)
+
+.In the Virtual Desktop environment there are two primary places where data is stored and organized:
+
+* The User (typically H:\) drive: This is the mapped drive visible for each User.
+** This is mapped back to the <DRIVE>:\home\CustomerCode\user.name\ path
+** Each user has their own H:\ drive and can not see another User
+* The Shared (typically I:\) drive: This is the shared mapped drive visible for all users
+** This is mapped back to the <DRIVE>:\data\CustomerCode\ path
+** All users can access this drive. Their level of access to contained folders/file is managed in the Folders section of VDS.
+
+== Generic Migration Process
+
+. Replicate data to the Cloud Environment
+. Move data to the appropriate path for H:\ and I:\ drives
+. Assign appropriate permissions in the Virtual Desktop environment
+
+== FTPS Transfers & Considerations
+=== Migration with FTPS
+
+. If the FTPS server role was enabled during the CWA deployment process, gather FTPS credentials by logging into VDS, navigating to Reports and running the Master Client Report for your organization
+. Upload data
+. Move data to the appropriate path for the H:\ and I:\ drives
+. Assign appropriate permissions in the Virtual Desktop environment via the Folders module
+
+NOTE: When transferring data via FTPS, any interruption will prevent the data from being transferred as intended. Since servers managed by Virtual Desktop Services are rebooted nightly, the standard overnight transmission strategy will likely be interrupted. To get around this, admins can enable Migration Mode to prevent VMs from being rebooted for 1 week.
+
+Enabling Migration Mode is easy – navigate to the organization, then scroll down to the Virtual Desktop Settings section and check the box for Migration Mode, then click Update.
+
+
+NOTE: NetApp recommends that Admins enable a compliance setting that helps organizations meet PCI, HIPAA and NIST controls via hardening the deployment’s gateways, etc. This also disallows the default FTP server role, if enabled, from accepting default, unencrypted transmissions via port 21. FileZilla does not allow SFTP, which means that connections should be made using FTPS over port 990.
+
+To enable that setting, connect to CWMGR1 and navigate to the CwVmAutomationService program, then enable PCI v3 compliance.
+
+== Sync Tools and Considerations
+
+Enterprise File Sync and Share, often referred to as EFSS or sync tools, can be extremely useful in migrating data, as the tool will capture changes on each side until cutover. Tools like OneDrive, which comes with Office 365, can help you sync fileserver data. It is also useful for VDI User deployments as well, where there is a 1:1 relationship between the User and the VM, as long as the User doesn’t attempt to sync shared content onto their VDI Server when shared data can be deployed once to the Shared (typically I:\) drive for the whole organization to use.
+Migrating SQL and Similar Data (Open Files)
+
+.Common sync and/or migration solutions do not transfer open files, which includes file types like:
+
+* Mailbox (.ost) files
+* QuickBooks files
+* Microsoft Access files
+* SQL databases
+
+This means that if one single element of the entire file (1 new email appears, for example) or database (1 new record is entered into a app’s system) then the entire file is different and standard sync tools (Dropbox, for example) will think it is an entirely new file and needs to be moved again. There are specialized tools available for purchase from 3rd party providers, if desired.
+
+Another common way these migrations are handled is via providing access to a 3rd party VAR, who often have streamlined of importing/exporting databases.
+
+== Shipping Drives
+
+Many data center providers no longer ship hard drives – either that, or they require you to follow their specific policies and procedures.
+
+Microsoft Azure is enabling organizations to use Azure Data Box, which Admins can take advantage of by coordinating with their Microsoft representatives.
