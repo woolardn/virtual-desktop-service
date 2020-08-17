@@ -119,7 +119,7 @@ image:Azure Subscription Ownership 2.png[]
 === Azure Compute Core Quota
 The CWA Setup wizard and VDS portal will create new virtual machines and the Azure subscription must have available quota to successfully execute.
 
-.To check quote follow these steps:
+.To check quota follow these steps:
 . Navigate to the Subscriptions module and click “Usage + Quotas”
 . Select all providers in the “providers” drop-down, select “Microsoft.Compute in the “Providers” drop-down
 . Select the target Region in the “Locations” drop-down

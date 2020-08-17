@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_why_emails.html
+permalink: guide_manage_data_permissions.html
 summary: Managing Data Permissions
 keywords:
 ---
