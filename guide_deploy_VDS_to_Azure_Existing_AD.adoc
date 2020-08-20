@@ -38,9 +38,9 @@ Note: this account can be created for a one-time purpose and be deleted once the
 Create Account Matching Required Permissions
 This method involves customer administrators manually creating the permission structure here, then entering the credentials for the CloudWorkspaceSVC account here and proceeding.
 Manual Deployment Process
-This option involves running the NetApp/CloudJumper Domain Preparation Tool, to build these permissions out automatically.
+This option involves running the NetApp VDS Domain Preparation Tool, to build these permissions out automatically.
 
-== CloudJumper Deployment Preparation Tool
+== NetApp VDS Deployment Preparation Tool
 
 === Access Method
 
@@ -53,12 +53,12 @@ PowerShell commands
 . Have PowerShell 5.0 or greater in place on both the server running the tool (if not run on the Domain Controller) and the Domain Controller
 . Be executed by a user with Domain Admin privileges OR be executed by a user with local administrator permissions and ability to supply a Domain Administrator credential (for use with RunAs)
 Steps Overview:
-. Log into CWA Setup and extend permissions, then select the subscription you wish to deploy into
-. Once CWA Setup has loaded, click Review in the navigation bar on the left and note the deployment code for later
-. Log into any local domain joined machine (preferably Domain Controller, but any local domain joined machine will work) and run 3 actions with NetApp/CloudJumper Deployment Preparation Tool.
+. Log into VDS Setup and extend permissions, then select the subscription you wish to deploy into
+. Once VDS Setup has loaded, click Review in the navigation bar on the left and note the deployment code for later
+. Log into any local domain joined machine (preferably Domain Controller, but any local domain joined machine will work) and run 3 actions with NetApp VDS Deployment Preparation Tool.
 Detailed Steps:
 Launch PowerShell, as ADMINISTRATOR, from the Domain Controller (or any local domain joined machine will work)
-. Run the following commands, individually, to launch NetaApp/CloudJumper Deployment Preparation Tool:
+. Run the following commands, individually, to launch NetaApp VDS Deployment Preparation Tool:
 +
 `[System.Net.ServicePointManager]::SecurityProtocol =[System.Net.SecurityProtocolType]::'Ssl3','Tls','Tls11','Tls12';`
 +
@@ -72,9 +72,9 @@ Launch PowerShell, as ADMINISTRATOR, from the Domain Controller (or any local do
 . Select Action ‘Prepare the domain’:
 .. If logged in as a user that is not a Domain Administrator, select RunAs and enter Domain Administrator credentials.
 .. Set the Svc account password.
-.. Enter the SDDC code displayed in CWASetup provisioning.
+.. Enter the SDDC code displayed in VDS Setup provisioning.
 +
-NOTE: This SDDC code is displayed in the CWASETUP WEB GUI window
+NOTE: This SDDC code is displayed in the VDS Setup WEB GUI window
 
 . Click ‘Go’.
 . Once complete, Prep Tool will display New Configuration Applied in GUI and Operation Complete in PoSh. Click Close:
