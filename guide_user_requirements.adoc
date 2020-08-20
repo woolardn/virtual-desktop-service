@@ -123,12 +123,12 @@ Manually Configure Client | https://login.cloudworkspace.com/
 ===== Comparison Matrix
 [cols=6*,options="header",cols="20,20,20,20,20,20"]
 |===
-| Elements/Features| 	HTML5 Browser| 	Cloud Workspace Client for Windows| 	MacOS RDP Client| 	RDP Client on mobile devices| 	HTML5 Client on mobile devices
+| Elements/Features| 	HTML5 Browser| 	VDS Client for Windows| 	MacOS RDP Client| 	RDP Client on mobile devices| 	HTML5 Client on mobile devices
 |Local Drive Access| 	Click the background, then the cloud icon that appears in the center of the top of the screen| 	Available in Windows Explorer| 	Right click edit the RDP. Go to the redirection tab. Then pick a folder that you would like to map. Log into the desktop and it will be displayed as a mapped drive.| 	N/A| 	N/A
 |Display Scaling| 	Can be resized, and will  change based on how large the browser window is.This can never be larger than the resolution of the endpoint (primary, endpoint monitor in the event of multiple monitors 	|Can be re-scaled, but will always be equal to the screen resolution of the endpoint (primary, endpoint monitor in the event of multiple monitors) 	|Can be re-scaled, but will always be equal to the screen resolution of the endpoint (primary, endpoint monitor in
 the event of multiple monitors) 	 |N/A 	|N/A
 |Copy/Paste 	|Enabled through clipboard redirection. 	|Enabled through clipboard
-redirection. 	|Enabled through clipboard redirection. Inside the Cloud Workspace, use control + C or V instead of command + C or V. 	|Enabled through clipboard redirection. 	 |Enabled through clipboard redirection.
+redirection. 	|Enabled through clipboard redirection. Inside virtual desktop, use control + C or V instead of command + C or V. 	|Enabled through clipboard redirection. 	 |Enabled through clipboard redirection.
 |Printer Mapping 	|Printing handled via a PDF print driver that browsers are using to detect local and network printers 	|All local and network printers mapped via ThinPrint utility 	|All local and network printers mapped via ThinPrint utility 	|All local and network printers mapped via ThinPrint utility 	|Printing handled via a PDF print driver that browsers are using to detect local and network printers
 |Performance 	|RemoteFX (enhancement of audio and video) not enabled 	|RemoteFX enabled via RDP, enhancing audio/video performance 	|RemoteFX enabled via RDP, enhancing audio/video
 performance 	|RemoteFX enabled, enhancing audio/video performance 	|RemoteFX (enhancement of audio/video) not enabled

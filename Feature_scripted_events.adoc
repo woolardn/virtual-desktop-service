@@ -35,8 +35,8 @@ Clicking Name of a script opens a dialog box for editing the script.
 
 Activities are the way to execute one or more scripts. Activities can be triggered on many system actions. More on automating app installs is found link:guide_application_entitlement.html[here].
 
-* Application Install (e.g. Automate an app install when added to the CW tenant on the Workspaces page)
-* Application Uninstall (e.g. Automate an app uninstall when removed from the CW tenant on the Workspaces page)
+* Application Install (e.g. Automate an app install when added to the VDS tenant on the Workspaces page)
+* Application Uninstall (e.g. Automate an app uninstall when removed from the VDS tenant on the Workspaces page)
 * Clone Server (e.g. Automate setting changes based on new server name)
 * Create Cache
 * Create Client

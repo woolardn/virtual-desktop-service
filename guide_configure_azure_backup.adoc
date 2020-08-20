@@ -1,0 +1,97 @@
+---
+sidebar: sidebar
+permalink: guide_configure_azure_backup.html
+summary: Backup Configuration
+keywords:
+---
+
+= Configure Azure Backup Schedule
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== Overview
+
+In Azure, VDS can automatically configure backups using native link:https://azure.microsoft.com/en-us/services/backup/[Azure Cloud Backup] with locally redundant storage (LRS). Geo-redundant storage (GRS) can be configured in the Azure Management Portal if needed.
+
+* Individual backup policies can be defined for each Server Type (with default recommendations).   Additionally, individual machines can be assigned a schedule independent (from their server type) from within the VDS UI, this setting can be applied by navigating to the Server Detail View by clicking on the Server name on the Workspace page (See Video Below: Setting Individual Backup Policies)
+** Data
+*** Backup with 7 daily, 5 weekly & 2 monthly backups.  Increase retention periods based on business requirements.
+*** This is true for both a dedicated Data server and for add-on VPS VMs for Apps and Databases.
+** Infrastructure
+*** CWMGR1 – Backup Daily and keep 7 daily, 5 weekly, 2 monthly.
+*** RDS Gateway – Backup weekly and keep 4 weekly.
+*** HTML5 Gateway – Backup weekly and keep 4 weekly.
+** PowerUser (aka VDI User)
+*** Don’t backup the VM as data should be stored on a D1 or TSD1 server.
+*** Be aware that some applications do store data locally and special considerations should be taken if this is the case.
+*** In the event of a VM failure, a new VM can be built via Cloning another.  In the event there is only one VDI VM (or one unique VM build) it it advisable to back it up so that a complete rebuild of that VM is not required.
+*** If needed, rather than backing up all VDI servers, costs can be minimized by manually configuring a single VM to backup directly in the Azure Management portal.
+** TS
+*** Don’t backup the VM as data should be stored on a D1 or TSD1 server.
+*** Be aware that some applications do store data locally and special considerations should be taken if this is the case.
+*** In the event of a VM failure, a new VM can be built via Cloning another.  In the event there is only one TS VM it it advisable to back it up so that a complete rebuild of that VM is not required.
+*** If needed, rather than backing up all TS servers, costs can be minimized by manually configuring a single VM to backup directly in the Azure Management portal.
+** TSData
+*** Backup with 7 daily, 5 weekly & 2 monthly backups.  Increase retention periods based on business requirements.
+* Policies can be set to take backups daily or weekly, Azure does not support more frequent schedules.
+* For daily schedules, enter the preferred time to take the backup.  For weekly schedules, enter the preferred day and time to take the backup. Note: Setting the time to exactly 12:00 am can cause issues in Azure Backup so 12:01 am is recommended.
+* Define how many daily, weekly, monthly and yearly backups should be retained.
+
+== Setting Deployment Defaults
+image:Backup_gif.gif[]
+
+.In order to setup Azure backup for the entire deployment, follow these steps:
+. Navigate to the Deployments detail page, select Backup Defaults
+. Select a server type from the drop-down menu. The server types are:
+
+    Data: these are for LOB/database server types
+    Infrastructure: these are platform servers
+    Power User: these are for Users with a TS server dedicated solely to them
+    TS: these are terminal servers that Users launch sessions on
+    TSData: these are servers doubling as terminal and data servers.
+
+
+** This will define the overarching backup settings for the entire Deployment. These can be overridden and set at a server-specific level later if desired.
+
+. Click the settings wheel, then the Edit popup that appears.
+
+. Select the following backup settings:
+
+    On or off
+    Daily or weekly
+    What time of day backups take place
+    How long each backup type (daily, weekly, etc.) should be retained
+
+. Finally, click Create (or Edit) Schedule to put these settings in place.
+
+== Setting Individual Backup Policies
+
+.To apply server-specific integrated backup settings, navigate to a Workspace detail page.
+
+. Scroll down to the Servers section and click on a server’s name
+
+. Click Add Schedule
+
+. Apply backup settings as desired and click Create Schedule
+
+== Restoring From Backup
+
+.To restore backups of a given VM, begin by navigating to that Workspace detail page.
+
+. Scroll down to the Servers section and click on a server’s name
+
+. Scroll down to the Backups section and click the wheel to expand your options, then select either
+
+. Restore to Server or Restore to Disk (attach a drive from the backup so that you can copy data from the backup to the existing version of the VM).
+
+. Proceed with your restore from this point on as you would in any other restore scenario.
+
+NOTE: Costs depend on what schedule you want to maintain and is entirely driven by the Azure backup cost. Backup pricing for VMs is found on the Azure Cost Calculator: https://azure.microsoft.com/en-us/pricing/calculator/

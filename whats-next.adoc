@@ -35,8 +35,8 @@ Complete documentation is found at https://docs.netapp.com/us-en/virtual-desktop
 === Refine your Deployment – Tips & Tricks
 
 * link:task_configure_MFA.html[Enhancing Security with MFA]
-//to do * Applying Backups
-//to do * Apply Monitoring and Anti-Virus
+* link:guide_configure_AV.html[Anti-Virus Setup]
+* link:guide_configure_azure_backup[Azure Backup Setup]
 * link:feature_workload_schedule.html[Optimizing Server Costs]
 * link:feature_scripted_events.html[Deploy Your Automation with Scripted Events]
 * link:guide_migrate_data.html[Data Migration]
