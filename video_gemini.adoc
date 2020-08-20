@@ -1,0 +1,22 @@
+---
+sidebar: sidebar
+permalink: video_gemini.html
+summary: NetApp VDS Gemini Demo
+keywords:
+---
+
+= NetApp VDS Gemini Demo
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== Overview
+
+<iframe src='//players.brightcove.net/260701648001/H1gEPI1kz_default/index.html?videoId=6182654694001' allowfullscreen frameborder=0></iframe>
