@@ -78,15 +78,13 @@ image:storage6.png[]
 +
 image:storage7.png[]
 
-==== Update the VDS SQL Database on CWMGR1
-. Connect to CWMGR1 and access the SQL Database
-. Update the SQL Database with new share values in the following Database/Table
-+
-image:storage8.png[]
+==== Update the VDS SQL Database with TestVDC Tools
+CWMGR1 contains a helper utility applications called TestVDC Tools which can bulk update the VDS database.
 
-. Right Click in dbo.companies, edit top 200 rows.
-. Update the UNC path to each ANF volumes Mount point and set _ISAZureFiles_ column to True.
+.To make the final database updates:
+. Connect to CWMGR1, navigate and run TestVdcTools.exe
 +
-    e.g.: \\uyy-e96b.deskapps.mobi\zucd\home (file://uyy-e96b.deskapps.mobi/zucd/home)
-
-This will have users created with the correct DHP paths after the data relocation.
+image:storage10.png[] 
+. Navigate to the _Operations_ tab and enter the new storage paths(s) for the storage layer.
++
+image:storage11.png[]
