@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_chage_storage.html
+permalink: guide_change_storage.html
 summary: Step-by-step guide to change storage platform
 keywords:
 ---
@@ -84,7 +84,7 @@ CWMGR1 contains a helper utility applications called TestVDC Tools which can bul
 .To make the final database updates:
 . Connect to CWMGR1, navigate and run TestVdcTools.exe
 +
-image:storage10.png[] 
+image:storage10.png[]
 . Navigate to the _Operations_ tab and enter the new storage paths(s) for the storage layer.
 +
 image:storage11.png[]
