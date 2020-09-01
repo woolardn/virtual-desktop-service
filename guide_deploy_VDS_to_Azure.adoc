@@ -320,7 +320,7 @@ As noted above, VDS creates all the elements required to support end user worksp
 
 .To enable workspaces for end users follow these steps:
 
-. Log in to VDS at https://manage.cloudworkspace.com using the VDS primary administrator account you created during provisioning. If you don’t remember your account information, please contact NEtApp VDS for assistance in retrieving it
+. Log in to VDS at https://manage.cloudworkspace.com using the VDS primary administrator account you created during provisioning. If you don’t remember your account information, please contact NetApp VDS for assistance in retrieving it
 . Click on the Workspaces menu item, then click on the name of the Workspace that was created automatically during provisioning
 . Click on the Users and Groups tab
 image:Enable VDS desktops to Users 1.png[]
