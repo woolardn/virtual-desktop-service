@@ -38,6 +38,7 @@ image:storage1.png[]
 +
 image:storage2.png[]
 
+
 .. Adjust the remaining settings to match the settings on the original storage layer as originally created by the deployment automation.
 
 === Moving Data

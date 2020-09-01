@@ -25,6 +25,8 @@ entries:
         url: /feature_workload_schedule.html
       - title: Migrating Data
         url: /guide_migrate_data.html
+      - title: Changing Data Storage Layer
+        url: /guide_change_storage.html
 
   - title: Reference
     entries:
