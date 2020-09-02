@@ -77,7 +77,7 @@ During the deployment, service accounts and permissions are granted to VDS via a
 NOTE: Detailed prerequisites are documented on link:docs_components_and_permissions.html[this PDF]
 
 === Azure Administrator in Azure AD
-This existing Azure admin must be an Azure AD account in the target tenant. Windows Server AD accounts can be deployed with the CWA Setup but additional steps are required to setup a sync with Azure AD (out of scope for this guide)
+This existing Azure admin must be an Azure AD account in the target tenant. Windows Server AD accounts can be deployed with the VDS Setup but additional steps are required to setup a sync with Azure AD (out of scope for this guide)
 
 This can be confirmed by finding the user account in the Azure Management Portal under Users > All Users.
 image:Azure Admin in Azure AD.png[]
@@ -412,7 +412,7 @@ To disable the automatic local admin login function and force the Level III acco
 == Optional Post-deployment Actions
 
 === Multi-Factor Authentication (MFA)
-CloudJumper VDS includes SMS/Email MFA at no charge. This feature can be used to secure VDS Admin accounts and/or End User accounts.
+NetApp VDS includes SMS/Email MFA at no charge. This feature can be used to secure VDS Admin accounts and/or End User accounts.
 link:task_configure_MFA.html[MFA Article]
 
 === Application Entitlement Workflow
@@ -498,7 +498,7 @@ By default, VDS implements a number of Group Policy Objects (GPO) that lock down
 
 This evaluation is intended to demonstrate the capabilities of Window Virtual Desktop, so you have the option to remove the GPOs so that you can implement a “basic workspace” that provides the same functionality and access as a physical workspace. To do this, follow the steps in the “Basic Workspace” option.
 
-You can also choose to utilize the full Cloud Workspace management feature set to implement a “Controlled Workspace”. These steps include creating and managing an application catalog for end user application entitlement and using Administrator level permissions to manage access to both applications and data folders. Follow the steps in the “Controlled Workspace” section to implement this type of workspace on your WVD host pools.
+You can also choose to utilize the full Virtual Desktop management feature set to implement a “Controlled Workspace”. These steps include creating and managing an application catalog for end user application entitlement and using Administrator level permissions to manage access to both applications and data folders. Follow the steps in the “Controlled Workspace” section to implement this type of workspace on your WVD host pools.
 
 ==== Controlled WVD Workspace (Default Policies)
 Using a controlled workspace is the default mode for VDS deployments. The polices are applied automatically. This mode requires VDS Administrators to install applications and then end users are granted access to the application via a shortcut on the session desktop. In a similar fashion, access to the data folders are assigned to end users by creating mapped shared folders and setting up permissions to see only those mapped drive letters instead of the standard boot and/or data drives. To manage this environment, follow the steps below to install applications and provide end user access.

@@ -45,7 +45,7 @@ VDS Application Entitlement starts with the App Catalog, this is a listing of al
 . Click the Add App option in the Application Catalog title bar.
 . To add a group of applications, choose the Import Apps option.
 .. A dialog will appear that provides an Excel template to download that creates the correct format for the application list.
-.. For this evaluation CloudJumper has created a sample application list for import it can be found here.
+.. For this evaluation NetApp VDS has created a sample application list for import it can be found here.
 .. Click on the Upload area and choose the application template file, click the Import button.
 . To add individual applications, choose the Add App button and a dialog box will appear.
 .. Enter the name of the application.
