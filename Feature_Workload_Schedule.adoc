@@ -22,7 +22,7 @@ Workload Scheduling is a feature that can schedule the time window in which the 
 
 Workload scheduling can be set to "Always On", "Always Off" or "Scheduled".  When set to "Scheduled" the on and off times can be set as granularly as a different time window for each day of the week.
 
-image:workload_schedule1.png[]
+image:Workload_schedule1.png[]
 
 When scheduled to be off, either via "Always Off" or "Scheduled", all tenant virtual machines will shut down.  Platform servers (such as CWMGR1) will remain active to facilitate functionality such as wake on demand.
 
@@ -105,7 +105,7 @@ Additionally, the administrator can define the maximum size a VM can reach.  Whe
 
 In the screenshot below, each VM is limited to 32GB Ram and 8vCPU cores.
 
-image:VMresource4.png[]
+image:VMResource4.png[]
 
 
 With all of these variables defined, VDS can calculate the appropriate size and quantity of session host VMs, greatly simplifying the process of maintaining appropriate resource allotment, even as users are added and removed.
@@ -124,5 +124,5 @@ Workload Scheduling does not control the platform servers such as CWMGR1 as they
 
 Additional saving can be achieved by deactivating the entire environment but is only recommended for non-production environments.  This is a manual action that can be performed in the Deployments section of VDS.   Returning the environment to a normal status also requires a manual step on the same page.
 
-image:Stop_deployment.png[]
+image:Stop_Deployment.png[]
 image:Start_deployment.png[]

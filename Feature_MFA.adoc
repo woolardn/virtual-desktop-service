@@ -25,7 +25,7 @@ NetApp Virtual Desktop Service (VDS) includes an SMS/Email based MFA service at 
 * VDS MFA can send SMS or Email notifications
 * VDS MFA has a self-service initial setup and reset function
 
-= Guide Scope
+== Guide Scope
 This guide walks you thru the setup of MFA along with an illustration of the end user experience
 
 .This guide covers the following subjects:
