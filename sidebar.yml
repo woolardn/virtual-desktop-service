@@ -31,6 +31,8 @@ entries:
         url: /guide_configure_azure_backup.html
       - title: Configure AV
         url: /guide_configure_AV.html
+      - title: Clone Virtual Machines
+        url: /guide_clone_VMs.html
 
 
   - title: Reference
@@ -62,3 +64,5 @@ entries:
         url: /video_WVDRDS_app_management_54.html
       - title: VDS, A Day in the Life
         url: /video_VDS_day_in_the_life.html
+      - title: Upgrade v1 WVD Host Pool to v2
+        url: /video_upgrade_v1_WVD.html
