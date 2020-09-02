@@ -31,14 +31,14 @@ Workload Schedule works in conjunction with other resource optimization features
 == Wake on Demand
 Wake on Demand (WoD) is patent-pending technology that can wake the appropriate VM resources for an end user in order to facilitate unattended access 24/7, even when resources are scheduled to be inactive.
 
-==== WoD for Remote Desktop Services
+=== WoD for Remote Desktop Services
 In RDS, the VDS Windows Client has built-in Wake on Demand integration and can wake the appropriate resources without any additional end-user actions.  They simply need to initiate their normal login and the client will notify them of a short delay which the VM(s) are activated.  This client (and thus this automate wake on demand functionality) is only available when connecting from a Windows device to an RDS environment.
 
 Similar Functionality is built into the VDS Web client for RDS deployments. The VDS Web Client is found at: link:https://login.cloudworkspace.com[]
 
 Wake on Demand functionality is not built into the Microsoft RD client (for Windows or any other platform) nor any other 3rd party RD clients.
 
-==== WoD for Windows Virtual Desktop
+=== WoD for Windows Virtual Desktop
 In WVD, the only clients that can be used to connect are Microsoft provided and thus do not contain the Wake on Demand functionality.
 
 VDS does include a self-service Wake on Demand function for WVD via the VDS Web Client.  The web client can be used to wake the appropriate resources, then the connection can be initiated via the standard WVD client.
@@ -91,7 +91,7 @@ The size of the VMs is contained with the family of VMs selected in the UI which
 
 image:VMResource1.png[]
 
-=== Based on Users
+=== Scaling Based on Users
 
 NOTE: The function below behaves the same for either "Active Users" or "User Count".  User Count is a simply count of all users activated with a VDS desktop. Active Users is a calculated variable based on the previous 2 weeks of user session data.
 
@@ -110,7 +110,7 @@ image:VMResource4.png[]
 
 With all of these variables defined, VDS can calculate the appropriate size and quantity of session host VMs, greatly simplifying the process of maintaining appropriate resource allotment, even as users are added and removed.
 
-=== Based on Server Load
+=== Scaling Based on Server Load
 When calculating based on server load, the size (and quantity) of session host VMs is calculated based on the average CPU/RAM utilization rates as observed by VDS over the previous 2-week period.
 
 When the maximum threshold is exceeded, VDS will increase the size or increment the quantity to bring average usage back within range.
@@ -119,7 +119,7 @@ Like user based scaling, the VM Family and the maximum VM size can be defined.
 
 image:VMResource6.png[]
 
-=== Other Active Resources
+== Other Active Resources
 Workload Scheduling does not control the platform servers such as CWMGR1 as they are needed to trigger the Wake on Demand functionality and facilitate other platform tasks and should run 24/7 for normal environmental operation.
 
 Additional saving can be achieved by deactivating the entire environment but is only recommended for non-production environments.  This is a manual action that can be performed in the Deployments section of VDS.   Returning the environment to a normal status also requires a manual step on the same page.
