@@ -27,6 +27,11 @@ entries:
         url: /guide_migrate_data.html
       - title: Changing Data Storage Layer
         url: /guide_change_storage.html
+      - title: Configure Azure Backup
+        url: /guide_configure_azure_backup.html
+      - title: Configure AV
+        url: /guide_configure_AV.html
+
 
   - title: Reference
     entries:
@@ -38,6 +43,8 @@ entries:
         url: /WVD_and_VDS_requirements.html
       - title: End User Access
         url: /guide_user_requirements.html
+      - title: Troubleshooting Failed VDS Actions
+        url: /guide_troubleshooting_failed_VDS_actions.html
 
   - title: NetApp VDS v5.4 Videos
     entries:
