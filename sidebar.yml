@@ -33,6 +33,8 @@ entries:
         url: /guide_configure_AV.html
       - title: Clone Virtual Machines
         url: /guide_clone_VMs.html
+      - title: Upgrade WVD v1 Host Pools
+        url: /guide_update_WVD_v1.html
 
 
   - title: Reference
