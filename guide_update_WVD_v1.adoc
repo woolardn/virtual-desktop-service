@@ -23,7 +23,7 @@ This guide outlines the process of using the Virtual Desktop Service (VDS) inter
 === Prerequisites
 .This guide assumes that the customer has the following:
 * At least one Fall Release (v1) WVD host pool deployed
-* A v5.4 (or greater) Virtual Desktop Service Deployment 
+* A v5.4 (or greater) Virtual Desktop Service Deployment
 * All VMs in the host pool must be online and running
 
 It is worth noting that NetApp’s Virtual Desktop Service can import existing host pools, so customers can leverage VDS to perform in-place upgrades even if VDS was not used to deploy the host pool initially.
@@ -42,5 +42,7 @@ image:upgrade2.png[]
 
 === Video Demo
 video::e4T_Ze6IlMo[youtube]
+
+_Last version: September 1, 2020_
 
 Please contact your service representatives with any additional questions you may have.
