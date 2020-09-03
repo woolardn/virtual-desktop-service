@@ -1,0 +1,46 @@
+---
+sidebar: sidebar
+permalink: guide_update_WVD_v1.html
+summary: Guide on updating WVD from v1 to v2
+keywords:
+---
+
+= Update WVD Host Pool from v1 (Fall 2019) to v2 (Spring 2020)
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== Overview
+This guide outlines the process of using the Virtual Desktop Service (VDS) interface to do an in-place upgrade of an existing WVD Fall Release (v1) host pool, resulting in a WVD Spring Release (v2) host pool. Without VDS, this transformation requires highly skilled architects to figure this out on their own or do a complete re-deployment of the environment.
+
+=== Prerequisites
+.This guide assumes that the customer has the following:
+* At least one Fall Release (v1) WVD host pool deployed
+* A v5.4 (or greater) Virtual Desktop Service Deployment 
+* All VMs in the host pool must be online and running
+
+It is worth noting that NetApp’s Virtual Desktop Service can import existing host pools, so customers can leverage VDS to perform in-place upgrades even if VDS was not used to deploy the host pool initially.
+Note: It is a best practice to perform this action during an established maintenance window in which end users are instructed not to log in (or the VMs are set to not allow user connections), as the end user desktops will not accessible while this action is performed.
+
+=== Process Steps
+. Navigate to the Workspaces module, then to the WVD tab. You will then see the Host Pools section, which now includes an option to leverage VDS’ automation to upgrade a host pool.
+
+. Click on the link that reads Import V1 Host Pool to identify the Host Pool to be upgraded to V2 (the WVD Spring Release) to proceed.
++
+image:upgrade1.png[]
+. Next, select the host pool you want to upgrade from the drop-down menu and select the workspace to assign it to, then click Import Host Pool button to start the automated upgrade process.
+ +
+image:upgrade2.png[]
+. Repeat this process for each host pool you want to upgrade. When the automation completes you will see your newly upgraded Spring Release (v2) host pool in the WVD tab of VDS.
+
+=== Video Demo
+video::e4T_Ze6IlMo[youtube]
+
+Please contact your service representatives with any additional questions you may have.
