@@ -1,0 +1,56 @@
+---
+sidebar: sidebar
+permalink: reference_change_environments.html
+summary: NetApp VDS Change Environments
+keywords:
+---
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+= VDS Change Environments
+== Overview
+
+NetApp’s Virtual Desktop Service allows organizations to manage deployments on prior releases, to preview future releases and to manage environments running one version prior (N -1 methodology).
+
+=== Virtual Desktop Service URLs
+
+Virtual Desktop Service is the management console that administrators can use to manage VDS deployments on an ongoing basis.
+[cols=5*,options="header",cols="20,20,20,20,20"]
+|===
+|Environment |	Description |	URL |	Codebase |	API Documentation
+|Current 	|Current release |	https://manage.cloudworkspace.com/ |	5.3 	|https://api.cloudworkspace.com/5.3/swagger/ui/index
+|Preview |	Preview of the upcoming release |	https://preview.manage.cloudworksace.com/ |	5.4 |	https://api.cloudworkspace.com/5.4/swagger/ui/index
+|Legacy |	Oldest supported minor release |	http://legacy.manage.cloudworkspace.com/ |	5.1, 5.2 |	https://iit-api.hostwindow.net/5.1
+
+https://iit-api.hostwindow.net/5.2/
+|===
+
+=== Virtual Desktop Service for Azure (VDS) Setup App
+
+The VDS Setup wizard allows process allows Administrators to drastically streamline the process of provisioning a VDS deployment.
+
+Administrators cannot provision deployments to a Legacy environment – only in the Current or Preview environment.
+
+[cols=5*,options="header",cols="20,20,20,20,20"]
+|===
+|Environment |	Description |	URL |	Codebase |	Deployment Guide
+|Current |	Current release |	https://cwasetup.cloudworkspace.com |	5.3 |	VDS Deployment Guide
+|Preview 	|Preview of the upcoming release |	https://preview.cwasetup.cloudworkspace.com/ |	5.4 |	TBD
+|===
+
+=== Azure Cost Estimator
+
+ACE is a pupose-built, value-added tool that allows organizations to estimate what their VDS/WVD deployment will cost, including ways to vary and optimize budgets to deliver the solution needed within an organization’s budget.
+[cols=3*,options="header",cols="33,33,33"]
+|===
+|Environment| 	Description |	URL
+|Production (PROD) |	Current release| 	https://v6.manage.cloudworkspace.com/cost-estimator
+|Validation (VAL) |	Preview of the upcoming release |	https://val.v6.manage.cloudworkspace.com/cost-estimator
+|===
