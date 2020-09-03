@@ -39,8 +39,18 @@ entries:
 
   - title: Reference
     entries:
-      - title: VDS v5.4 Release Notes
-        url: /release_notes_54.html
+      - title: Release Notes
+        entries:
+          - title: VDS v5.4 Release Notes
+            url: /release_notes_54.html
+          - title: VDS v5.3 Release Notes
+            url: /release_notes_53.html
+          - title: CWMS v5.2 Release Notes
+            url: /release_notes_52.html
+          - title: CWS v5.1 Release Notes
+            url: /release_notes_51.html
+          - title: CWS v5.0 Release Notes
+            url: /release_notes_50.html
       - title: VDS v5.4 Components and Permissions
         url: /WVD_and_VDS_components_and_permissions.html
       - title: VDS v5.4 Prerequisites
