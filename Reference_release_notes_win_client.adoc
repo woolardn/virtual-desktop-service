@@ -1,9 +1,12 @@
 ---
 sidebar: sidebar
-permalink: release_notes_win_client.html
+permalink: release_notes_client.html
 summary: NetApp VDS Release Notes Windows Client
 keywords:
 ---
+
+= VDS Client for Windows
+
 :toc: macro
 :hardbreaks:
 :toclevels: 2
@@ -14,7 +17,6 @@ keywords:
 :keywords: Windows Virtual Desktop
 
 [.lead]
-= VDS Client for Windows
 
 == Date: Thursday August 27, 2020 at 11pm Eastern
 
