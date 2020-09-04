@@ -25,7 +25,9 @@ This article does not stand-alone, rather it is a detailed explanation of an alt
 The next section defines to make is the Active Directory deployment type for the VDS deployment. In this guide we will select Existing Windows Server Active Directory, which will leverage an AD structure that already exists.
 
 == Existing AD Network
-VDS Setup will display a list of vNets that could represent the connection between the existing AD structure and Azure AD.
+VDS Setup will display a list of vNets that could represent the connection between the existing AD structure and Azure AD. The vNet that you select should have the an Azure-hosted DC that you have configured in Azure. In addition, the vNet will have Custom DNS settings pointed at the Azure-hosted DC.
+
+image:existingDNS.png[]
 
 == Existing Active Directory Domain Name
 Enter the existing domain name that will be used. Note: you do not want to use the domain that is found in the Azure Portal under the Active Directory module, as it can cause DNS issues. The primary example of this is that users will not be able to access the that website (<yourdomain>.com, for example) from inside their desktop.

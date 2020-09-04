@@ -1,9 +1,12 @@
 ---
 sidebar: sidebar
-permalink: release_notes_50.html
-summary: NetApp VDS Release Notes v5.0
+permalink: release_notes_client.html
+summary: NetApp VDS Release Notes Windows Client
 keywords:
 ---
+
+= VDS Client for Windows
+
 :toc: macro
 :hardbreaks:
 :toclevels: 2
@@ -14,63 +17,312 @@ keywords:
 :keywords: Windows Virtual Desktop
 
 [.lead]
-= CWS – v5.0 Release Notes
 
-CloudJumper has released Cloud Workspace Suite 5.0 for general implementation starting in Q4 2016.  This release includes an update of both the CWS APIs and the Admin Control interface.  The release is a significant change and is not “backward compatible” to version 4.x entities.
+== Date: Thursday August 27, 2020 at 11pm Eastern
 
-Version 4.x will continue to be supported until all partner Software Defined Data Centers (SDDCs) have been upgraded to the 5.0 platform, upgrades will be completed by CloudJumper in coordination with each Partner and will not interrupt existing services. There is no upgrade fee or implementation cost to transition. CWS 5 continues to support all of the previous versions’ functionality, and extends new features that enhance both Administrator and End-User experience, and further improve the award winning automation and orchestration introduced with previous releases of Cloud Workspace Suite.
+Impact:  Users will see the RDP client update the next time they launch it
 
-Existing Partners should have little trouble adopting the new Admin interface, and “time to mastery” for new Partners will be even easier.  With CWS 5.0, CloudJumper has re-written all of the platforms APIs into REST API format and completely retired the earlier SOAP APIs.  This updated architecture will make further enhancement by CloudJumper easier and faster, and creates an even friendlier environment for external developers to extend their services and products based on Cloud Workspace.
+No updates this release cycle.
 
-== Highlights
+== Date: Thursday August 13, 2020 at 11pm Eastern
 
-* Complete UI/UX Rewrite
-* Azure AD Integration
-* Azure SDDC Self Service Deploy
-* App Services
-* Resource Scheduling
-* Live Server Scaling – Cross Platform
-* Automated Server Cloning – Cross Platform
-* Customize Drive Shares on a per client basis
+Impact:  Users will see the RDP client update the next time they launch it
 
-== Key Features
+No updates this release cycle.
 
-=== Azure Active Directory (AD) Integration
+== Date: Thursday July 30, 2020 at 11pm Eastern
 
-* Build SDDC as Private Cloud Active Directory or use Microsoft Azure-AD-as-a-Service
-* Combine CWS with Office365
-* Support Azure-based SSO & MFA
+Impact:  Users will see the RDP client update the next time they launch it
 
-=== Azure SDDC Self Service Deploy
+No updates this release cycle.
 
-* Complete integration with Azure
-* Rapidly deploy new SDDCs
-* Deploy private enterprise Clouds within Azure for any workload including Cloud Workspace managed:  WaaS, App Services, Private Web App & SharePoint
+== Date: Thursday July 16, 2020 at 11pm Eastern
 
-=== App Services
+Impact:  Users will see the RDP client update the next time they launch it
 
-* Deploy application silos for publishing applications as isolated service building blocks
-* Apps delivered from ‘public’ app servers to many custom entities
-* Apps installed in single app dedicated server pools
-* Apps decoupled from user profile and data layer requirements
-* Build hyper-scalable app services
-* Multiple app services can be combined into user collections
-* CWS license tracking and usage reporting
+No updates this release cycle.
 
-=== Live Server Scaling – Cross Platform
+== Date: Thursday June 25, 2020 at 11pm Eastern
 
-* Intelligent automated scaling of server resources/active servers
-* Tightly manage server resources with dynamic increase/decrease while user load changes
-* Automatically scale server resources up & down as workload varies
+Impact:  Users will see the RDP client update the next time they launch it
 
-=== Automated Server Cloning – Cross Platform
+No updates this release cycle.
 
-* Automatically increase server until count availability as defined user count grows
-* Adds additional servers to the available resource pools
-* Combine with CWS Live Server Scaling capability to create fully automated solution
+== Date: Thursday June 11, 2020 at 11pm Eastern
 
-=== Resource Scheduling
+Impact:  Users will see the RDP client update the next time they launch it
 
-* Schedule service times on a per-customer basis
-* Cost containment for Public Cloud
-* Shut systems down when not in use and re-activate on pre-defined schedule
+Improvements
+
+* Update the latest WVD RDP Client available for installation
+
+== Date: Thursday May 28, 2020 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Updates to reflect NetApp branding/phrasing. Note – this new branding will be applied for:
+**  New VDS Client downloads
+**  Existing, unedited VDS Client for Windows installs
+**  Existing custom-edited/branded clients will only receive a new banner image if it was never customized. If the banner image was customized, it will remain as-is. All other colors and phrasing will remain the same.
+
+== Date: Thursday May 14, 2020 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Thursday April 30, 2020 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Bug Fixes
+
+* Bug fix for a subset of scenarios where self service password reset was not presented
+
+== Date: Thursday April 16, 2020 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Thursday April 2, 2020 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+== Date: Thursday March 19, 2020 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Thursday, March 5, 2020 at 10pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Graceful handling of a fringe bug with the RDP protocol where legacy credential types mixed with the most current patches on a RDS gateway results in an inability to connect to session hosts
+**  If the end user’s workstation is set up (whether by an external admin, internal customer admin or via the workstation’s default settings) to use legacy credential types, there is a slim possibility this could have impacted users prior to this release
+* Point the Info button in the Cloud Workspace Client Designer to an updated documentation source
+* Improved auto-update process for the Cloud Workspace Client Designer
+
+== Date: Thursday, February 20, 2020 at 10pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Proactive enhancements to security, stability and scalability
+
+Considerations
+
+* The Cloud Workspace Client for Windows will continue to auto-update as long as a user launches it prior to 4/2. If a user does not launch the Cloud Workspace Client for Windows prior to 4/2 their connection to their desktop will still function, but they will need to uninstall and reinstall the Cloud Workspace Client for Windows to resume auto-update functionality.
+* If your organization uses web filtering, please whitelist access to cwc.cloudworkspace.com and cwc-cloud.cloudworkspace.com so that auto-update functionality remains in place
+
+== Date: Thursday January 9, 2020 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Thursday December 19, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Monday December 2, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Thursday, November 14, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Improved clarity for the reason a user would see a ‘your services are currently offline’ message. The potential causes for a message appearing are:
+** Session host server is scheduled to be offline and user does not have Wake on Demand permissions.
+*** If the user was using the Cloud Workspace Client, they would see: “Your services are currently scheduled to be offline, please contact your administrator if you need access.”
+*** If the user was using the HTML5 login portal, they would see: “Your services are currently scheduled to be offline. Please contact your administrator if you need access.”
+** Session host server is scheduled to be online and user does not have Wake on Demand permissions.
+*** If the user was using the Cloud Workspace Client, they would see: “Your services are currently offline, please contact your administrator if you need access.”
+*** If the user was using the HTML5 login portal, they would see: “Your services are currently offline. Please contact your administrator if you need access.”
+** Session host server is scheduled to be offline and user has Wake on Demand permissions.
+*** If the user was using the Cloud Workspace Client, they would see: “Your services are currently offline, please contact your administrator if you need access.”
+*** If the user was using the HTML5 login portal, they would see: “Your services are currently scheduled to be offline. Click START to bring them online and connect.”
+** Session host server is scheduled to be online and user has Wake on Demand permissions.
+*** If the user was using the Cloud Workspace Client, they would see: “Please allow 2-5 minutes for your Workspace to start.”
+*** If the user was using the HTML5 login portal, they would see: “Your services are currently offline. Click START to bring them online and connect.”
+
+== Date: Thursday, October 31, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Thursday, November 17, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Add WVD elements:
+
+== Date: Thursday October 3, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Improved handling of code signing certificates
+
+Bug Fixes
+
+* Fix an issue where Users accessing RemoteApp that didn’t have any apps assigned to them saw an error
+* Resolve an issue where a user loses their internet connection in the middle of logging into their virtual desktop
+
+== Date: Thursday September 19, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Add WVD elements:
+** If the end user has access to WVD resources, present a WVD tab
+** The WVD tab will provide options to:
+*** Install the WVD RD Client, if it isn’t already installed
+*** If the WVD RD Client is installed, launch the RD Client
+*** Launch Web Client to take the user to the WVD HTML5 login page
+*** Click Done to go back to the prior page
+
+== Date: Thursday, September 5, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Thursday, August 22, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Thursday, August 8, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Thursday, July 25, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Thursday, July 11, 2019 at 11pm Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Friday, June 21, 2019 at 4am Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+No updates this release cycle.
+
+== Date: Friday, June 7, 2019 at 4am Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Enable Cloud Workspace Client to automatically launch RDP connections regardless of what the file type association for .rdp files is set to
+
+== Date: Friday, May 24, 2019 at 4am Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Improved performance during the sign in process
+* Reduced load time on launch
+
+== Date: Friday, May 10, 2019 at 4am Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Improved performance during the sign in process
+* Reduced load time on launch
+
+== Date: Friday, April 12, 2019 at 4am Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Enhanced login speed for Wake on Demand
+* After the successful launch of the Cloud Workspace Client for Windows, we will be removing the Feedback button to free up space in the User interface
+
+Bug Fixes
+
+* Resolve an issue where the Sign In button was unresponsive after an unsuccessful Wake on Demand action
+
+== Date: Friday, March 15, 2019 at 4am Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* Allow for Admins using the Cloud Workspace Client for Windows to provide a Support email address OR a phone number, not to require both
+* Ensure that the HTML5 URL provided in Cloud Workspace Client is a valid URL – if not, this will default to https;//login.cloudjumper.com
+* Streamlining the process of applying updates for End Users
+
+== Date: Friday, February 29, 2019 at 4am Eastern
+
+Impact:  Users will see the RDP client update the next time they launch it
+
+Improvements
+
+* The AppData folder has been moved for clarity from c:\users\<username>\appdata\local\RDPClient to c:\users\<username>\appdata\local\Cloud Workspace
+* Implemented a mechanism to streamline upgrade paths if a User has not updated their client in multiple releases
+* Enhanced log details has been enabled for Users working with the Beta version of the client
+
+Bug Fixes
+
+* There will no longer be multiple lines displayed during the update process
+
+== Date: Friday, February 15, 2019 at 4am Eastern
+
+Impact:  Users will see the RDP client update when they launch it
+
+Improvements
+
+* Enable Silent/Quiet installation options for remote installations
+** Install flags are as follows:
+*** /s  or  /silent  or  /q  or  /quiet
+****  These flags will install the client silently and in the background – the client will not launch after installation is complete
+*** /p  or  /passive
+****  Either of these will show the installation process, but not require any input and the client will launch after installation is complete
+*** /nothinprint
+****  Excludes ThinPrint from the installation process
+* Registry entries have been added to HKLM\Software\CloudJumper\Cloud Workspace Client\Branding:
+** ClipboardSharingEnabled: True/False – allows or disallows clipboard redirection
+** RemoteAppEnabled: True/False – allows or disallows access to RemoteApp functionality
+** ShowCompanyNameInTitle: True/False – indicates whether or not the company name is displayed
+* The following can be added to c:\Program Files (x86)\Cloud Workspace:
+** banner.jpg, banner.png, banner.gif or banner.bmp and this will be displayed in the client window.
+** These images should be in the 21:9 ratio
+
+Bug Fixes
+
+* The Registered symbol has been adjusted
+* Empty phone and email entries on the Help page have been fixed
