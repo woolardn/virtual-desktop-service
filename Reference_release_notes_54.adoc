@@ -16,6 +16,175 @@ keywords:
 [.lead]
 = Virtual Desktop Service – v5.4 Release Notes
 
+
+== VDS 5.4 Release: Thurs., September 10, 2020
+_Components:_ 5.4 Virtual Desktop Service
+_When:_ Thursday September 10th, 2020 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== Virtual Desktop Service
+* Improved enforcement mechanism to confirm FSLogix is installed
+* Reduce the number of API calls used to return a list of Azure templates
+* Improved management of users in WVD Spring Release / v2 host pools
+* Referential link update in server resource nightly report
+* Fix for changing administrative passwords to support improved, slimmer permission sets in AD
+* Bug fix for creating VMs from a template via tools on CWMGR1
+* Searches in VDS now point to content on docs.netapp.com
+* Response time improvements for end users accessing the VDS admin interface with MFA enabled
+
+=== VDS Setup
+* Post-provisioning link now points to instructions here
+* Updated choices for platform configuration for existing AD deployments
+* Improvements to automated processes for Google Cloud Platform deployments
+
+== VDS 5.4 Hotfix: Tues., September 1, 2020
+
+_Components:_  5.4 Virtual Desktop Service
+_When:_  Tuesday September 1st, 2020 at 10pm -10:15pm Eastern
+_Impact:_  Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== VDS Setup
+
+* Bug fix for a referential link in the WVD tab
+
+== VDS 5.4 Release: Thurs., August 27, 2020
+
+_Components:_  5.4 Virtual Desktop Service
+_When:_  Thursday August 27th, 2020 at 10pm – 11pm Eastern
+_Impact:_  Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== Virtual Desktop Service
+
+* Introduction of the ability to use the VDS interface to automatically update WVD host pools from the Fall Release to the Spring release
+* Streamlined automation to reflect recent updates resulting in a slimmer permission set required
+* Deployment automation enhancements for GCP, AWS and vSphere deployments
+* Bug fix for a Scripted Events scenario where date and time info was being displayed as current date and time
+* Bug fix for deploying large quantities of WVD session host VMs at the same time
+* Support for an increased amount of Azure VM types
+* Support for an increased amount of GCP VM types
+* Improved handling of variables during deployment
+* Bug fix for vSphere deployment automation
+* Bug fix for a scenario when disabling a Cloud Workspace for a user returned an unexpected result
+* Bug fix for 3rd party apps and RemoteApp app use with MFA enabled
+* Increased Service Board performance when a deployment is offline
+* Updates to reflect NetApp logo/phrasing
+
+== VDS Setup
+
+* Introduction of a multi-server deployment option for native/greenfield Active Directory deployments
+* Further deployment automation enhancements
+
+=== Azure Cost Estimator
+
+* Release of Azure Hybrid Benefits functionality
+* Bug fix for a display issue when entering custom name information into VM details
+* Bug fix for adjusting storage details in a specific sequence
+
+== VDS 5.4 Hotfix: Wedn., August 19, 2020
+
+_Components:_  5.4 Virtual Desktop Service
+_When:_  Wednesday August 19th, 2020 at 5:20pm – 5:25pm Eastern
+_Impact:_  Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== VDS Setup
+
+* Bug fix for variable handling to facilitate flexible automation
+* Bug fix for DNS handling in a single deployment scenario
+* Reduced membership requirements of CW-Infrastructure group
+
+== VDS 5.4 Hotfix: Tues., August 18, 2020
+
+_Components:_  5.4 Virtual Desktop Service
+_When:_  Tuesday August 18th, 2020 at 10pm – 10:15pm Eastern
+_Impact:_  Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== Azure Cost Estimator
+
+* Bug fix for handling adding additional drives on certain VM types
+
+== VDS 5.4 Release: Thurs., August 13, 2020
+
+_Components:_  5.4 Virtual Desktop Service
+_When:_  Thursday August 13th, 2020 at 10pm – 11pm Eastern
+_Impact:_  Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== Virtual Desktop Service
+
+* Add Connect to Server option for WVD session hosts from WVD module
+* Bug fix for a subset of scenarios where additional admin accounts cannot be created
+* Update naming convention for resource defaults – change Power User to VDI User
+
+=== VDS Setup
+
+* Automatically validate pre-approved network settings, further streamlining deployment workflows
+* Reduced permission set required for existing AD deployments
+* Allow domain names longer than 15 characters
+* Text layout fix for a unique combination of selections
+* Allow Azure deployments to continue if the Sendgrid component presents a temporary error
+
+=== VDS Tools and Services
+
+* Proactive security enhancements behind the scenes
+* Additional Live Scaling performance enhancements
+* Enhanced support for hyperscaler deployments with hundreds of sites
+* Bug fix for a scenario where deploying multiple VMs in a single command only partially succeeded
+* Improved message prompts when assigning invalid paths as the target for Data, Home and Profile data locations
+* Bug fix for a scenario where creating VMs via Azure Backup didn’t function as intended
+* Additional deployment validation steps added to GCP and AWS deployment process
+* Additional options for managing external DNS entries
+* Support for separate Resource Groups for VMs, VNETs, Services like Azure NetApp Files, Log Analytics Workspaces
+* Minor back-end enhancements to the provisioning collection/image creation process
+
+=== Azure Cost Estimator
+
+* Add Ephemeral OS Disk support
+* Improved tooltips for storage selections
+* Disallow a scenario where a user became able to enter negative user counts
+* Display the file server when using both WVD and File Server selections
+
+== VDS 5.4 Hotfix: Mon., August 3, 2020
+
+_Components:_  5.4 Virtual Desktop Service
+_When:_  Monday August 3rd, 2020 at 11pm – 11:05pm Eastern
+_Impact:_  Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== VDS Tools and Services
+
+* Improved handling of variables during deployment automation
+
+== VDS 5.4 Release: Thurs., July 30, 2020
+
+_Components:_  5.4 Virtual Desktop Service
+_When:_  Thursday July 30th, 2020 at 10pm – 11pm Eastern
+_Impact:_  Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== Virtual Desktop Service
+
+* Proactive security enhancements behind the scenes
+* Improved performance monitoring behind the scenes
+* Bug fix for a scenario where creating a new VDS admin presents a false positive alert
+
+=== VDS Setup
+
+* Reduced permission sets applied to administrative accounts during the deployment process in Azure
+* Bug fix for a subset of trial account signups
+
+=== VDS Tools and Services
+
+* Improved handling of FSLogix install process
+* Proactive security enhancements behind the scenes
+* Improved data point collection for concurrent usage
+* Improved handling of certificates for HTML5 connections
+* Adjustment to DNS section layout for improved clarity
+* Adjustment to Solarwinds monitoring workflow
+* Updated handling of static IP addresses
+
+=== Azure Cost Estimator
+
+* Ask if the customer’s data needs to be HA and if so, define if cost and labor savings are available by leveraging a PaaS service like Azure NetApp Files
+* Update and standardize default storage type for both WVD & RDS workloads to Premium SSD
+* Behind the scenes performance enhancements
+*
 == VDS 5.4 Hotfix: Thurs., July 23, 2020
 
 _Components:_  5.4 Virtual Desktop Service
