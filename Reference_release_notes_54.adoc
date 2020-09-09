@@ -24,6 +24,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 
 === Virtual Desktop Service
 * Improved enforcement mechanism to confirm FSLogix is installed
+* Support for multi-server configurations for Existing AD deployments
 * Reduce the number of API calls used to return a list of Azure templates
 * Improved management of users in WVD Spring Release / v2 host pools
 * Referential link update in server resource nightly report
