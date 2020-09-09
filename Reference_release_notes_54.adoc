@@ -16,7 +16,6 @@ keywords:
 [.lead]
 = Virtual Desktop Service – v5.4 Release Notes
 
-
 == VDS 5.4 Release: Thurs., September 10, 2020
 _Components:_ 5.4 Virtual Desktop Service
 _When:_ Thursday September 10th, 2020 at 10pm - 11pm Eastern
@@ -24,6 +23,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 
 === Virtual Desktop Service
 * Improved enforcement mechanism to confirm FSLogix is installed
+* Support for multi-server configurations for Existing AD deployments
 * Reduce the number of API calls used to return a list of Azure templates
 * Improved management of users in WVD Spring Release / v2 host pools
 * Referential link update in server resource nightly report
