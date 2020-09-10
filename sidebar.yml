@@ -35,7 +35,7 @@ entries:
         url: /guide_clone_VMs.html
       - title: Upgrade WVD v1 Host Pools
         url: /guide_update_WVD_v1.html
-      - title: Wildcard SLL Renewal Guide
+      - title: Wildcard SSL Renewal Guide
         url: /arch_reset_ssl_cert.html
 
 
