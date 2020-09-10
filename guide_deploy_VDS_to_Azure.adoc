@@ -136,7 +136,7 @@ Once working through the CWA Setup wizard there are several questions that need 
 | Description
 | VDS admin credentials | Collect the existing VDS admin credentials if you already have them.  Otherwise a new admin account will be created during deployment.
 | Azure Region | Determine the target Azure Region based on performance and availability of services. This https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/[Microsoft Tool^] can estimate end user experienced based on region.
-| Active Directory type | The VMs will need to join a domain but can't directly join Azure AD. The VDS deployment can build a new virutal machine or use an existing domain controller.
+| Active Directory type | The VMs will need to join a domain but can't directly join Azure AD. The VDS deployment can build a new virtual machine or use an existing domain controller.
 | File Management | Performance is highly dependent on disk speed, particularly as related to user profile storage.  The VDS setup wizard can deploy a simple file server or configure Azure NetApp Files (ANF).  For any production environment ANF is recommended however for a POC the file server option provides sufficient performance.  Storage options can be revised post-deployment, including using existing storage resources in Azure.
 | Virtual Network Scope | A routable /20 network range is required for the deployment.  the VDS setup wizard will allow you to define this range.  It is important that this range does not overlap with any existing vNets in Azure or on-premises (if the two networks will be connected via a VPN or ExpressRoute).
 
