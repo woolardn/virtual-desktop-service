@@ -6,6 +6,8 @@ entries:
     entries:
       - title: NetApp VDS Setup Guide VDS v5.4 (Azure)
         url: /guide_deploy_VDS_to_Azure.html
+#      - title: Supplemental Guide- VDS with Existing AD VDS v5.4 (Azure)
+#        url: /guide_deploy_VDS_to_Azure_Existing_AD.html
       - title: Supplemental Guide- VDS with Existing AD VDS v5.4 (Azure)
         url: /guide_deploy_VDS_to_Azure_Existing_AD.html
 
