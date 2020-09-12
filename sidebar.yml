@@ -119,8 +119,12 @@ entries:
          - title: Configure Antivirus
            url: /guide_configure_AV.html
 
-#  - title: Troubleshooting
-#    entries:
+  - title: Troubleshooting
+    entries:
+      - title: Reviewing VDS Logs
+        url: /guide_troubleshooting_failed_VDS_actions.html
+      - title: Internet Connection Quality
+        url: /guide_troubleshooting_internet_quality.html
 #      - title: Disk Consumtpion
 #        url: /
 #      - title: User Performance
