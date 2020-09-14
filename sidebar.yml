@@ -84,6 +84,8 @@ entries:
            url: /guide_application_entitlement.html
 #         - title: Streaming Applications
 #           url: /
+         - title: Install Microsoft Office 365
+           url: /guide_install_office_365.html
       - title: Automation
         url: /feature_scripted_events.html
       - title: Configure Cost Optimization
@@ -106,12 +108,16 @@ entries:
         entries:
 #         - title: Privileged Access Management
 #           url: /
+         - title: Provide 3rd Party access
+           url: /guide_3rd_party_access.html
          - title: Configure Backup
            url: /guide_configure_azure_backup.html
 #         - title: Connect to Server
 #           url: /
          - title: Clone VMs
            url: /guide_clone_VMs.html
+         - title: Auto Disk Size Feature
+           url: /guide_auto_add_disk_space.html
 #         - title: Azure Key Vault
 #           url: /
 #         - title: Manage VDS Admin Accounts
@@ -125,6 +131,8 @@ entries:
         url: /guide_troubleshooting_failed_VDS_actions.html
       - title: Internet Connection Quality
         url: /guide_troubleshooting_internet_quality.html
+      - title: Enable User Wallpaper
+        url: /guide_enable_wallpaper.html
 #      - title: Disk Consumtpion
 #        url: /
 #      - title: User Performance
@@ -152,8 +160,6 @@ entries:
       url: /WVD_and_VDS_requirements.html
     - title: End User Access
       url: /guide_user_requirements.html
-    - title: Troubleshooting Failed VDS Actions
-      url: /guide_troubleshooting_failed_VDS_actions.html
     - title: VDS Change Environments
       url: /reference_change_environments.html
 
