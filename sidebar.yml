@@ -104,8 +104,8 @@ entries:
       url: /guide_manage_data_permissions.html
 #         - title: Manage Application Access
 #          url: /
-#         - title: Reset Passwords
-#          url: /
+    - title: Reset Passwords
+      url: /guide_reset_user_password.html
     - title: Configure MFA
       url: /task_configure_MFA.html
 
@@ -138,6 +138,8 @@ entries:
     url: /guide_troubleshooting_internet_quality.html
   - title: Enable User Wallpaper
     url: /guide_enable_wallpaper.html
+  - title: Printing issues
+    url: /guide_troubleshooting_printing.html
 #     - title: Disk Consumtpion
 #       url: /
 #     - title: User Performance
@@ -189,6 +191,10 @@ entries:
 #        entries:
 #      - title: Reports
 #        entries:
+#    - title: DCConfig
+#      entries:
+#    - title: Test VDCTools
+#      entries:
 
 
 - title: NetApp VDS v5.4 Videos
