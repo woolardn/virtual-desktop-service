@@ -167,10 +167,29 @@ entries:
     url: /guide_user_requirements.html
   - title: VDS Change Environments
     url: /reference_change_environments.html
-  - title: Glossary
-    entries:
-    - title:
-      url:
+#  - title: Glossary
+#    entries:
+#    - title: VDS
+#      entries:
+#      - title: Header
+#        entries:
+#      - title: Dashboard
+#        entries:
+#      - title: Organizations
+#        entries:
+#      - title: Deployments
+#        entries:
+#      - title: Workspace
+#        entries:
+#      - title: App Services
+#        entries:
+#      - title: Service Board
+#        entries:
+#      - title: Admins
+#        entries:
+#      - title: Reports
+#        entries:
+
 
 - title: NetApp VDS v5.4 Videos
   entries:

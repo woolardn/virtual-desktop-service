@@ -38,7 +38,6 @@ The diagnostic test can be run and delivered to your email, all from within the 
 . Enter the user name experiencing the issues, click Run
 . Once complete, enter your email address to receive an email report
 . Review the report to troubleshoot potential connection issues
-. Send the report to cjsupport@netapp.com if you need assistance troubleshooting
 
 image:internet_quality1.gif[]
 
