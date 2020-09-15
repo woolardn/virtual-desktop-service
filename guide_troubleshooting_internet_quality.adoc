@@ -51,5 +51,4 @@ To confirm the client’s network connection is the culprit you can run the free
 . Download and install link:https://www.pingplotter.com/[Ping Plotter] (Available for MacOS, Windows and iOS).
 . Enter the gateway of the data center in which the tenant is deployed.
 . Let it run for several minutes.  Ideally while the performance issues or disconnections are being experienced.
-. Capture the data by choosing “Save Image…” from the File Menu.
-. Send that image to NetApp VDS support by attaching to your existing ticket or by creating a new ticket.
+. Capture the data by choosing “Save Image…” from the File Menu if it is needed for additional troubleshooting.
