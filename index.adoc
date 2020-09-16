@@ -5,7 +5,7 @@ summary: Welcome to the documentation portal for Virtual Desktop Service.
 keywords:
 ---
 
-= Virtual Desktop Service Documentation
+= Virtual Desktop Service documentation
 
 :toc: macro
 :hardbreaks:
@@ -22,70 +22,70 @@ NetApp's Virtual Desktop Service (VDS) solves the complexity of deploying and ma
 
 //VIDEO HERE- TBD
 
-=== Virtual Desktop Service Benefits:
+=== Virtual Desktop Service benefits:
 
-* *Reduce Infrastructure Costs*
+* *Reduce infrastructure costs*
 +
 Our customizable resource scheduling system optimizes infrastructure spend up to 50%.
 
-* *Reduce Risk*
+* *Reduce risk*
 +
 Deploy desktops into logical workflows per cloud best practices; Such as Microsoft best practice WVD standards.
 
-* *Full Automation*
+* *Custom automation*
 +
 Event driven automation and orchestration engine leveraging your current scripts, making management so easy, general IT administrators can manage your cloud desktops!
 
-* *Turn-Key*
+* *Turnkey*
 +
 Deploy as a do-it-yourself software management service for your choice of VDI environments or choose a fully managed WVD platform service.
 
-* *Multi-Cloud*
+* *Multi-cloud*
 +
 Control multiple tenants across AWS, Azure and Google with a single graphical user interface.
 
-* *Flexible Control*
+* *Flexible control*
 +
 Maximize business flexibility with a single portal to control every layer of your technology stack.
 
 
-Learn More: https://cloud.netapp.com/virtual-desktop-service
+Learn more: https://cloud.netapp.com/virtual-desktop-service
 
-== Getting Support
+== Getting support
 
-Email Support: cjsupport@netapp.com
+Email support: cjsupport@netapp.com
 
-Phone Support: 844.645.6789 Ext. 2
+Phone support: 844.645.6789 Ext. 2
 
-link:https://cloudjumper.zendesk.com[VDS Support Portal]
+link:https://cloudjumper.zendesk.com[VDS support portal]
 
-Normal Support Business Hours: Monday-Friday, 7:00am-7:00pm Central Time.
+Normal support business hours: Monday-Friday, 7:00am-7:00pm Central Time.
 
-* After Hours (On-Call) Support available via Phone only.
-
-
-== Additional Resources
-
-=== Remote Desktop Services (RDS) Clients
-* link:https://cwc.cloudworkspace.com/download/cwc-win-setup.exe[VDS RDS Client for Windows]
-
-* link:https://login.cloudworkspace.com/[VDS Web Client]
-
-* link:https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients[Microsoft RD Client]
-
-=== Windows Virtual Desktop (WVD) Clients
-* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-windows-7-10[Microsoft WVD for Windows Client]
-
-* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-web[Microsoft WVD Web Client]
-
-* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-android[Microsoft WVD for Android Client]
-
-* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-macos[Microsoft WVD for macOS Client]
-
-* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-ios[Microsoft WVD for iOS Client]
+* After hours (on-call) support available via phone only.
 
 
-=== Other Downloads
-* link:https://cloudjumper.com/wp-content/uploads/2019/12/RemoteScanEnterpriseUser.zip[RemoteScan Client]
+== Additional resources
 
-* link:https://cloudjumper.com/cloudworkspaceclient/designer/Cloud%20Workspace%20Designer.exe[Cloud Workspace Client Designer]
+=== Remote Desktop Services (RDS) clients
+* link:https://cwc.cloudworkspace.com/download/cwc-win-setup.exe[VDS RDS client for Windows]
+
+* link:https://login.cloudworkspace.com/[VDS web client]
+
+* link:https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients[Microsoft RD client]
+
+=== Windows Virtual Desktop (WVD) clients
+* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-windows-7-10[Microsoft WVD for Windows client]
+
+* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-web[Microsoft WVD web client]
+
+* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-android[Microsoft WVD for Android client]
+
+* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-macos[Microsoft WVD for macOS client]
+
+* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-ios[Microsoft WVD for iOS client]
+
+
+=== Other downloads
+* link:https://cloudjumper.com/wp-content/uploads/2019/12/RemoteScanEnterpriseUser.zip[RemoteScan client]
+
+* link:https://cloudjumper.com/cloudworkspaceclient/designer/Cloud%20Workspace%20Designer.exe[VDS RDS Windows client designer]

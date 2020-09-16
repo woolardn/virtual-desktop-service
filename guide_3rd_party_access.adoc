@@ -5,7 +5,7 @@ summary: 3rd party access guide
 keywords:
 ---
 
-= Providing Temporary Access to 3rd Parties
+= Providing temporary access to 3rd parties
 
 :toc: macro
 :hardbreaks:

@@ -5,7 +5,7 @@ summary: What’s with all these emails?
 keywords:
 ---
 
-= Whats With All These Emails?
+= Whats with all these emails?
 
 :toc: macro
 :hardbreaks:

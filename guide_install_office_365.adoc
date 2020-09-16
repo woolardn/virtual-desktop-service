@@ -17,11 +17,11 @@ keywords:
 :keywords: Windows Virtual Desktop
 
 [.lead]
-== Manual Steps Overview
+== Manual steps overview
 
 Licensing rules prevent Administrators from simply downloading Microsoft Office from logged in user’s account and installing it onto a shared terminal server and functioning for multiple users as expected. Instead, Administrators need to follow a specific process to install Office Pro Plus with the Shared Computer Activation flag activated.
 
-=== Process Steps Summary
+=== Process steps summary
 
 . Begin by downloading the Office Deployment Tool from https://www.microsoft.com/en-us/download/details.aspx?id=49117
 
@@ -71,18 +71,18 @@ image:office8.png[]
 
 . Finally, run “setup.exe /configure Configuration.xml” (again, adjusting the XML file name to match your file).
 
-== Unsupported Automated Deployment
+== Unsupported automated deployment
 
 WARNING: This automated process relies on a custom ps1 and a pre-built xml.  It is unsupported in the sense that NetApp makes no warranty that it will work or the impact to any target machines.  The ps1 is hosted by NetApp and could change/disappear at any time.  We recommend this method be used as a template for building and hosting your own automated process.  This process was validate on Windows Server 2016 Datacenter 10.0.14393 and Windows 10 Enterprise for Virtual Desktop 10.0.18362 in Azure on Aug 30th, 2019.
 
-=== Process Steps Summary
+=== Process steps summary
 
 . Execute command to download and execute hosted .ps1
 . ps1 downloads the hosted Office Deployment Configuration .xml (Screenshot of the Office Configuration Tool settings used for this XML is here)
 . ps1 executes ProPlus Install referencing the .xml
 . ps1 copies the Microsoft Office Shortcuts into a single folder for app publishing purposes
 
-=== Customization Steps
+=== Customization steps
 
 . Download and edit the hosted ps1 from http://getwvd.com/proplus_minus_onedrive.ps1
 .. Built your own xml file (outlined above) and upload to your own URL
@@ -94,7 +94,7 @@ image:office9.png[]
 . Upload the edited ps1 file to your own hosting URL
 . Edit the Scripted Event Script to download and execute the customized and self-hosted ps1 (step 3.1. below)
 
-=== Scripted Events Steps
+=== Scripted events steps
 
 This follows the same workflow as a normal App Install Scripted Event.  These instructions assume Chocolatey is already installed following the steps in the Application management Plan.
 Office 365 ProPlus Automated Install with Chocolatey

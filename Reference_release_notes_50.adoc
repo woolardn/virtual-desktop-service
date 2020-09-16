@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: release_notes_50.html
-summary: NetApp VDS Release Notes v5.0
+summary: NetApp VDS release notes v5.0
 keywords:
 ---
 :toc: macro
@@ -14,7 +14,7 @@ keywords:
 :keywords: Windows Virtual Desktop
 
 [.lead]
-= CWS – v5.0 Release Notes
+= CWS – v5.0 release notes
 
 CloudJumper has released Cloud Workspace Suite 5.0 for general implementation starting in Q4 2016.  This release includes an update of both the CWS APIs and the Admin Control interface.  The release is a significant change and is not “backward compatible” to version 4.x entities.
 
@@ -26,14 +26,14 @@ Existing Partners should have little trouble adopting the new Admin interface, a
 
 * Complete UI/UX Rewrite
 * Azure AD Integration
-* Azure SDDC Self Service Deploy
+* Azure SDDC self service deploy
 * App Services
 * Resource Scheduling
 * Live Server Scaling – Cross Platform
 * Automated Server Cloning – Cross Platform
 * Customize Drive Shares on a per client basis
 
-== Key Features
+== Key features
 
 === Azure Active Directory (AD) Integration
 
@@ -41,13 +41,13 @@ Existing Partners should have little trouble adopting the new Admin interface, a
 * Combine CWS with Office365
 * Support Azure-based SSO & MFA
 
-=== Azure SDDC Self Service Deploy
+=== Azure SDDC self service deploy
 
 * Complete integration with Azure
 * Rapidly deploy new SDDCs
 * Deploy private enterprise Clouds within Azure for any workload including Cloud Workspace managed:  WaaS, App Services, Private Web App & SharePoint
 
-=== App Services
+=== App services
 
 * Deploy application silos for publishing applications as isolated service building blocks
 * Apps delivered from ‘public’ app servers to many custom entities
@@ -57,19 +57,19 @@ Existing Partners should have little trouble adopting the new Admin interface, a
 * Multiple app services can be combined into user collections
 * CWS license tracking and usage reporting
 
-=== Live Server Scaling – Cross Platform
+=== Live server scaling – cross platform
 
 * Intelligent automated scaling of server resources/active servers
 * Tightly manage server resources with dynamic increase/decrease while user load changes
 * Automatically scale server resources up & down as workload varies
 
-=== Automated Server Cloning – Cross Platform
+=== Automated server cloning – cross platform
 
 * Automatically increase server until count availability as defined user count grows
 * Adds additional servers to the available resource pools
 * Combine with CWS Live Server Scaling capability to create fully automated solution
 
-=== Resource Scheduling
+=== Resource scheduling
 
 * Schedule service times on a per-customer basis
 * Cost containment for Public Cloud

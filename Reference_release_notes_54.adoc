@@ -16,7 +16,7 @@ keywords:
 [.lead]
 = Virtual Desktop Service – v5.4 Release Notes
 
-== VDS 5.4 Release: Thurs., September 10, 2020
+== VDS 5.4 release: Thurs., September 10, 2020
 _Components:_ 5.4 Virtual Desktop Service
 _When:_ Thursday September 10th, 2020 at 10pm - 11pm Eastern
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
@@ -37,7 +37,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 * Updated choices for platform configuration for existing AD deployments
 * Improvements to automated processes for Google Cloud Platform deployments
 
-== VDS 5.4 Hotfix: Tues., September 1, 2020
+== VDS 5.4 hotfix: Tues., September 1, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Tuesday September 1st, 2020 at 10pm -10:15pm Eastern
@@ -47,7 +47,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 
 * Bug fix for a referential link in the WVD tab
 
-== VDS 5.4 Release: Thurs., August 27, 2020
+== VDS 5.4 release: Thurs., August 27, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Thursday August 27th, 2020 at 10pm – 11pm Eastern
@@ -80,7 +80,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Bug fix for a display issue when entering custom name information into VM details
 * Bug fix for adjusting storage details in a specific sequence
 
-== VDS 5.4 Hotfix: Wedn., August 19, 2020
+== VDS 5.4 hotfix: Wedn., August 19, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Wednesday August 19th, 2020 at 5:20pm – 5:25pm Eastern
@@ -92,7 +92,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Bug fix for DNS handling in a single deployment scenario
 * Reduced membership requirements of CW-Infrastructure group
 
-== VDS 5.4 Hotfix: Tues., August 18, 2020
+== VDS 5.4 hotfix: Tues., August 18, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Tuesday August 18th, 2020 at 10pm – 10:15pm Eastern
@@ -102,7 +102,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 
 * Bug fix for handling adding additional drives on certain VM types
 
-== VDS 5.4 Release: Thurs., August 13, 2020
+== VDS 5.4 release: Thurs., August 13, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Thursday August 13th, 2020 at 10pm – 11pm Eastern
@@ -142,7 +142,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Disallow a scenario where a user became able to enter negative user counts
 * Display the file server when using both WVD and File Server selections
 
-== VDS 5.4 Hotfix: Mon., August 3, 2020
+== VDS 5.4 hotfix: Mon., August 3, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Monday August 3rd, 2020 at 11pm – 11:05pm Eastern
@@ -152,7 +152,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 
 * Improved handling of variables during deployment automation
 
-== VDS 5.4 Release: Thurs., July 30, 2020
+== VDS 5.4 release: Thurs., July 30, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Thursday July 30th, 2020 at 10pm – 11pm Eastern
@@ -185,7 +185,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Update and standardize default storage type for both WVD & RDS workloads to Premium SSD
 * Behind the scenes performance enhancements
 *
-== VDS 5.4 Hotfix: Thurs., July 23, 2020
+== VDS 5.4 hotfix: Thurs., July 23, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Thursday July 23rd, 2020 at 10pm – 11pm Eastern
@@ -195,7 +195,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Automation enhancements for DNS settings in Azure deployments
 * General deployment automation checks and improvements
 
-== VDS 5.4 Release: Thurs., July 16, 2020
+== VDS 5.4 release: Thurs., July 16, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Thursday July 16th, 2020 at 10pm – 11pm Eastern
@@ -236,7 +236,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 ** Azure Active Directory Domain Services
 ** NV and NV v4 (GPU enabled) Virtual Machines
 
-== VDS 5.4 Release: Fri., June 26, 2020
+== VDS 5.4 release: Fri., June 26, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Thursday June 26, 2020 at 10pm – 11pm Eastern

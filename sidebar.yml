@@ -1,90 +1,75 @@
 entries:
-- title: Virtual Desktop Service Documentation
+- title: Virtual Desktop Service documentation
   url: /index.html
 
-- title: Initial Deployment
+- title: Deploying with VDS
   entries:
   - title: Azure
     entries:
-#        - title: New Deploy Guide - RDS
-#          url: /
-    - title: Existing AD Supplemental Guide - WVD
+    - title: Windows Virtual Desktop
+      entries:
+    - title: Deploying WVD in Azure
       url: /guide_deploy_VDS_to_Azure_Existing_AD.html
-#        - title: Existing AD Supplemental Guide - RDS
-#          url: /
-#        - title: Existing WVD Deploy Guide
-#          url: /
-#        - title: Existing RDS Deploy Guide
-#          url: /
-#        - title: Previous Versions
-#          entries:
-#          - title: VDS v5.3
-#            entries:
-#            - title:
-#              url: /
-#  - title: Google
+    - title: Supplemental - WVD with existing AD
+      url: /guide_deploy_VDS_to_Azure_Existing_AD.html
+#    - title: Install VDS on Existing WVD
+#      url: /
+#  - title: Remote Desktop Services
 #    entries:
-#    - title: New Deploy Guide
-#      url: /
-#    - title: Existing AD Supplemental Guide
-#      url: /
-#    - title: Existing RDS Deploy Guide
-#      url: /
-#    - title: Previous Versions
-#      entries:
-#      - title: VDS v5.3
-#        entries:
-#        - title:
+#        - title: Deploying RDS in Azure
 #          url: /
-#  - title: AWS
-#    entries:
-#    - title: New Deploy Guide
-#      url: /
-#    - title: Existing AD Supplemental Guide
-#      url: /
-#    - title: Existing RDS Deploy Guide
-#      url: /
-#    - title: Previous Versions
-#      entries:
-#      - title: VDS v5.3
-#        entries:
-#        - title:
+#        - title: Supplemental - RDS with Existing AD
 #          url: /
-#  - title: vSphere
-#    entries:
-#    - title: New Deploy Guide
-#      url: /
-#    - title: Existing AD Supplemental Guide
-#      url: /
-#    - title: Existing RDS Deploy Guide
-#      url: /
-#    - title: Previous Versions
-#      entries:
-#      - title: VDS v5.3
-#        entries:
-#        - title:
+#        - title: Install VDS on Existing RDS
 #          url: /
 
-- title: Architecture
+#  - title: Google
+#    entries:
+#    - title: Deploying RDS in Google
+#      url: /
+#    - title: Supplemental - RDS with Existing AD
+#      url: /
+#    - title: Install VDS on Existing RDS
+#      url: /
+
+#  - title: AWS
+#    entries:
+#    - title: Deploying RDS in AWS
+#      url: /
+#    - title: Supplemental - RDS with Existing AD
+#      url: /
+#    - title: Install VDS on Existing RDS
+#      url: /
+
+#  - title: vSphere
+#    entries:
+#    - title: Deploying RDS in vSphere
+#      url: /
+#    - title: Supplemental - RDS with Existing AD
+#      url: /
+#    - title: Install VDS on Existing RDS
+#      url: /
+
+- title: Architectural
   entries:
 #    - title: Setup Multi-Site Deployments
 #    url: /
 #    - title: Migrate Users Between Sites
 #    url: /
-  - title: Change Data Layer
+  - title: Change data layer
     url: /guide_change_storage.html
-  - title:  Migrate Data Into VDS
+  - title:  Migrate data into VDS
     url: /guide_migrate_data.html
   - title: Upgrade WVD v1 (Fall '19) to v2 (Spring '20)
     url: guide_update_WVD_v1.html
-  - title: Renew SSL Certificate
+  - title: Renew SSL certificate
     url: /arch_reset_ssl_cert.html
 
 - title: Management
   entries:
   - title: Applications
     entries:
-    - title: Application Entitlement Workflow
+    - title: Application entitlement workflow
       url: /guide_application_entitlement.html
 #     - title: Streaming Applications
 #       url: /
@@ -92,51 +77,51 @@ entries:
       url: /guide_install_office_365.html
   - title: Automation
     url: /feature_scripted_events.html
-  - title: Configure Cost Optimization
+  - title: Configure cost optimization
     url: /feature_workload_schedule.html
 #      - title: Build VM Images
 #        url: /
   - title: User Administration
     entries:
-    - title: Manage Users
+    - title: Manage user accounts
       url: /guide_managing_end_users.html
-    - title: Manage Folders and Permissions
+    - title: Manage folders and permissions
       url: /guide_manage_data_permissions.html
 #         - title: Manage Application Access
 #          url: /
-    - title: Reset Passwords
+    - title: Reset user passwords
       url: /guide_reset_user_password.html
     - title: Configure MFA
       url: /task_configure_MFA.html
 
-- title: System Administration
+- title: System administration
   entries:
 #         - title: Privileged Access Management
 #           url: /
-  - title: Provide 3rd Party access
+  - title: Provide 3rd party access
     url: /guide_3rd_party_access.html
-  - title: Configure Backup
-    url: /guide_configure_azure_backup.html
+  - title: Configure backup
+    url: /guide_configure_backup.html
 #         - title: Connect to Server
 #           url: /
-  - title: Clone VMs
+  - title: Clone virtual machines
     url: /guide_clone_VMs.html
-  - title: Auto Disk Size Feature
+  - title: Auto disk size feature
     url: /guide_auto_add_disk_space.html
 #         - title: Azure Key Vault
 #           url: /
 #         - title: Manage VDS Admin Accounts
 #           url: /
-  - title: Configure Antivirus
+  - title: Configure antivirus
     url: /guide_configure_AV.html
 
 - title: Troubleshooting
   entries:
-  - title: Reviewing VDS Logs
+  - title: Reviewing VDS logs
     url: /guide_troubleshooting_failed_VDS_actions.html
-  - title: Internet Connection Quality
+  - title: Internet connection quality
     url: /guide_troubleshooting_internet_quality.html
-  - title: Enable User Wallpaper
+  - title: Enable user wallpaper
     url: /guide_enable_wallpaper.html
   - title: Printing issues
     url: /guide_troubleshooting_printing.html
@@ -147,27 +132,27 @@ entries:
 
 - title: Reference
   entries:
-  - title: Release Notes
+  - title: release notes
     entries:
-    - title: VDS v5.4 Release Notes
+    - title: VDS v5.4 release notes
       url: /release_notes_54.html
-    - title: VDS Windows Client Release Notes
+    - title: VDS Windows client release notes
       url: /release_notes_client.html
-    - title: VDS v5.3 Release Notes
+    - title: VDS v5.3 release notes
       url: /release_notes_53.html
-    - title: CWMS v5.2 Release Notes
+    - title: CWMS v5.2 release notes
       url: /release_notes_52.html
-    - title: CWS v5.1 Release Notes
+    - title: CWS v5.1 release notes
       url: /release_notes_51.html
-    - title: CWS v5.0 Release Notes
+    - title: CWS v5.0 release notes
       url: /release_notes_50.html
-  - title: VDS v5.4 Components and Permissions
+  - title: VDS v5.4 components and permissions
     url: /WVD_and_VDS_components_and_permissions.html
-  - title: VDS v5.4 Prerequisites
+  - title: VDS v5.4 prerequisites
     url: /WVD_and_VDS_requirements.html
-  - title: End User Access
+  - title: End user access
     url: /guide_user_requirements.html
-  - title: VDS Change Environments
+  - title: VDS change environments
     url: /reference_change_environments.html
 #  - title: Glossary
 #    entries:

@@ -5,7 +5,7 @@ summary: Summary of considerations when migrating data
 keywords:
 ---
 
-= Data Migration Considerations
+= Data migration considerations
 
 :toc: macro
 :hardbreaks:
@@ -34,13 +34,13 @@ Migrating data is a near-universal requirement when migrating to a cloud solutio
 ** This is mapped back to the <DRIVE>:\data\CustomerCode\ path
 ** All users can access this drive. Their level of access to contained folders/file is managed in the Folders section of VDS.
 
-== Generic Migration Process
+== Generic migration process
 
 . Replicate data to the Cloud Environment
 . Move data to the appropriate path for H:\ and I:\ drives
 . Assign appropriate permissions in the Virtual Desktop environment
 
-== FTPS Transfers & Considerations
+== FTPS transfers & considerations
 === Migration with FTPS
 
 . If the FTPS server role was enabled during the CWA deployment process, gather FTPS credentials by logging into VDS, navigating to Reports and running the Master Client Report for your organization
@@ -57,7 +57,7 @@ NOTE: NetApp recommends that Admins enable a compliance setting that helps organ
 
 To enable that setting, connect to CWMGR1 and navigate to the CwVmAutomationService program, then enable PCI v3 compliance.
 
-== Sync Tools and Considerations
+== Sync tools and considerations
 
 Enterprise File Sync and Share, often referred to as EFSS or sync tools, can be extremely useful in migrating data, as the tool will capture changes on each side until cutover. Tools like OneDrive, which comes with Office 365, can help you sync fileserver data. It is also useful for VDI User deployments as well, where there is a 1:1 relationship between the User and the VM, as long as the User doesn’t attempt to sync shared content onto their VDI Server when shared data can be deployed once to the Shared (typically I:\) drive for the whole organization to use.
 Migrating SQL and Similar Data (Open Files)
@@ -73,7 +73,7 @@ This means that if one single element of the entire file (1 new email appears, f
 
 Another common way these migrations are handled is via providing access to a 3rd party VAR, who often have streamlined of importing/exporting databases.
 
-== Shipping Drives
+== Shipping drives
 
 Many data center providers no longer ship hard drives – either that, or they require you to follow their specific policies and procedures.
 

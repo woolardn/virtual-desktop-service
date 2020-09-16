@@ -17,7 +17,7 @@ keywords:
 
 = Virtual Desktop Service – version 5.3
 
-== VDS 5.3 Release: Thurs., September 10, 2020
+== VDS 5.3 release: Thurs., September 10, 2020
 _Components:_ 5.3 Virtual Desktop Service
 _When:_ Thursday September 10th, 2020 at 10pm - 11pm Eastern
 _Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
@@ -28,7 +28,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 * Referential link update in server resource nightly report
 * Fix for changing administrative passwords to support improved, slimmer permission sets in AD
 
-== VDS 5.3 Release: Thurs., August 27, 2020
+== VDS 5.3 release: Thurs., August 27, 2020
 
 _Components:_  5.3 Virtual Desktop Service
 _When:_  Thursday August 13th, 2020 at 10pm – 11pm Eastern
@@ -43,7 +43,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Release of Azure Hybrid Benefits functionality
 * Bug fix for a display issue when entering custom name information into VM details
 
-== VDS 5.3 Release: Thurs., August 13, 2020
+== VDS 5.3 release: Thurs., August 13, 2020
 
 _Components:_  5.3 Virtual Desktop Service
 _When:_  Thursday August 13th, 2020 at 10pm – 11pm Eastern
@@ -56,7 +56,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Disallow a scenario where a user became able to enter negative user counts
 * Display the file server when using both WVD and File Server selections
 
-== VDS 5.3 Release: Thurs., July 30, 2020
+== VDS 5.3 release: Thurs., July 30, 2020
 
 _Components:_  5.3 Virtual Desktop Service
 _When:_  Thursday July 30th, 2020 at 10pm – 11pm Eastern
@@ -72,7 +72,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Update and standardize default storage type for both WVD & RDS workloads to Premium SSD
 * Behind the scenes performance enhancements
 
-== VDS 5.3 Release: Thurs., July 16th, 2020
+== VDS 5.3 release: Thurs., July 16th, 2020
 
 _Components:_  5.3 Virtual Desktop Service
 _When:_  Thursday July 16, 2020 at 10pm – 11pm Eastern
@@ -100,7 +100,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Azure Active Directory Domain Services
 * NV and NV v4 (GPU enabled) Virtual Machines
 
-== VDS 5.3 Release: Thurs., June 25, 2020
+== VDS 5.3 release: Thurs., June 25, 2020
 
 _Components:_  5.3 Virtual Desktop Service
 _When:_  Thursday June 25, 2020 at 10pm – 11pm Eastern
@@ -121,7 +121,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 
 * Ongoing enhancements to gather and display list data faster
 
-== VDS 5.3 Release: Thurs., June 11, 2020
+== VDS 5.3 release: Thurs., June 11, 2020
 
 _Components:_  5.3 Virtual Desktop Service
 _When:_  Thursday June 11, 2020 at 10pm – 11pm Eastern
@@ -148,7 +148,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Bug fix for an automated element of platform deployment automation. This only applies brand new deployments – there will be no impact to existing deployments.
 * Bug fix for deployments into an existing Active Directory structure
 
-== VDS 5.3 Release: Thurs., May 28, 2020
+== VDS 5.3 release: Thurs., May 28, 2020
 
 _Components:_  5.3 Virtual Desktop Service
 _When:_  Thursday May 28, 2020 at 10pm – 11pm Eastern
@@ -179,7 +179,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Add SQL Server options for more VM series/sizes
 * Update to the way IP address pricing is displayed – don’t display the IP address cost unless additional IP addresses are added
 
-== CWMS 5.3 Release: Thurs., May 14, 2020
+== CWMS 5.3 release: Thurs., May 14, 2020
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday May 14, 2020 at 10pm – 11pm Eastern
@@ -202,7 +202,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 
 * Bug fix for the method in which DNS records are set for a specific combination of settings during the deployment process
 
-== CWMS 5.3 Release: Thurs., April 30, 2020
+== CWMS 5.3 release: Thurs., April 30, 2020
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday April 30, 2020 at 10pm – 11pm Eastern
@@ -251,7 +251,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 
 * Performance upgrade to accommodate increased Customer use
 
-== CWMS 5.3 Release: Thurs., April 16, 2020
+== CWMS 5.3 release: Thurs., April 16, 2020
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday April 16, 2020 at 10pm – 11pm Eastern
@@ -275,7 +275,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 
 * Enhancements to unmanaging VMs that are managed by the Solarwinds Orion RMM tool to accommodate Workload Scheduling
 
-== CWMS 5.3 Release: Thurs., April 2, 2020
+== CWMS 5.3 release: Thurs., April 2, 2020
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday April 2, 2020 at 10pm – 11pm Eastern
@@ -313,7 +313,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Updated description of WVD User types and the programs they run per Microsoft documentation
 * Increased clarity for CWMS licensing
 
-=== CWMS 5.3 Release: Thurs., March 19, 2020
+=== CWMS 5.3 release: Thurs., March 19, 2020
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday March 19, 2020 at 10pm – 11pm Eastern
@@ -329,7 +329,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 
 * Behind the scenes improvements to the deployment wizard
 
-== CWMS 5.3 Release: Thurs., March 5, 2020
+== CWMS 5.3 release: Thurs., March 5, 2020
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday March 5, 2020 at 10pm – 11pm Eastern
@@ -355,7 +355,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Phrasing adjustments to match Microsoft WVD messaging
 * Bug fix for Workload Scheduling and Live Scaling savings details in heavily customized quotes
 
-== CWMS 5.3 Release: Thurs., February 20, 2020
+== CWMS 5.3 release: Thurs., February 20, 2020
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday February 20, 2020 at 10pm – 11pm Eastern
@@ -408,7 +408,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 
 * Bug fix for pricing error when using E-series VMs in a subset of scenarios
 
-== CWMS 5.3 Release: Thurs., February 6, 2020
+== CWMS 5.3 release: Thurs., February 6, 2020
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday February 6, 2020 at 10pm – 11pm Eastern
@@ -432,7 +432,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Improved layout for printed estimates
 * Bug fix for an issue where SQL server pricing was not being calculated correctly
 
-== CWMS 5.3 Release: Thurs., January 23, 2020
+== CWMS 5.3 release: Thurs., January 23, 2020
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday January 23, 2020 at 10pm – 11pm Eastern
@@ -462,7 +462,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 
 * Update VM sizing defaults to mirror Microsoft’s recommendations
 
-== CWMS 5.3 Release: Thurs., January 9, 2020
+== CWMS 5.3 release: Thurs., January 9, 2020
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday January 9, 2020 at 10pm – 11pm Eastern
@@ -502,7 +502,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Improved stability for App Services based client creation
 * Bug fix and stability improvements after converting a server from one role to another
 
-== CWMS 5.3 Release: Fri., December 20, 2019
+== CWMS 5.3 release: Fri., December 20, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Friday December 20, 2019 at 10pm – 11pm Eastern
@@ -512,7 +512,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 
 * Fix for scenario where user activity logging does not record data successfully
 
-== CWMS 5.3 Release: Thurs., December 19, 2019
+== CWMS 5.3 release: Thurs., December 19, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday December 19, 2019 at 10pm – 11pm Eastern
@@ -557,7 +557,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Fix for failure to power on some VMs after automatic drive expansion
 * Fix for issue managing folders/permissions when using Azure files or Azure NetApp Files
 
-== CWMS 5.3 Release: Mon. December 2, 2019
+== CWMS 5.3 release: Mon. December 2, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Monday December 2, 2019 at 10pm – 11pm Eastern
@@ -589,7 +589,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Updated vCloud support elements in DC Config
 * Enhancement to TestVDCTools to correctly detect the server type in more specific scenarios
 
-== CWMS 5.3 Release: Thurs., November 14, 2019
+== CWMS 5.3 release: Thurs., November 14, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday November 14, 2019 at 10pm – 11pm Eastern
@@ -631,7 +631,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 
 * Add ability to pre-allocate a company code for use during import
 
-== CWMS 5.3 Release: Thurs., October 31, 2019
+== CWMS 5.3 release: Thurs., October 31, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday October 31, 2019 at 10pm – 11pm Eastern
@@ -662,7 +662,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Update the default setting for uptime hours to 220 in order to match Microsoft’s default value
 * Update the names of the workload types to match the names that Microsoft changed them to
 
-== CWMS 5.3 Release: Thurs., October 17, 2019
+== CWMS 5.3 release: Thurs., October 17, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday October 17, 2019 at 10pm – 11pm Eastern
@@ -711,7 +711,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Add SQL pricing for D4s v3 VMs
 * Bug fix for a display issue when editing VMs
 
-== CWMS 5.3 Release: Thurs., October 3, 2019
+== CWMS 5.3 release: Thurs., October 3, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday October 3, 2019 at 10pm – 11pm Eastern
@@ -736,7 +736,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Bug fix where hours of uptime was very slightly off when users were toggling uptime by increments of 15 minutes
 * Bug fix for a scenario where users set the day to start in the afternoon/evening (PM setting) and end in the morning (AM setting)
 
-== CWMS 5.3 Release: Thurs., September 19, 2019
+== CWMS 5.3 release: Thurs., September 19, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday September 19, 2019 at 10pm – 11pm Eastern
@@ -765,7 +765,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Fix for international administrators – this on longer requires a State if the Country is not the United States.
 * Apply CloudJumper via Partner Admin Link (PAL) to present and future Azure deployments at the subscription level
 
-== CWMS 5.3 Release: Thurs., September 5, 2019
+== CWMS 5.3 release: Thurs., September 5, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday September 5, 2019 at 10pm – 11pm Eastern
@@ -793,7 +793,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 
 * Support for the vCloud Rest interface
 
-== CWMS 5.3 Release: August 22, 2019
+== CWMS 5.3 release: August 22, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday August 22, 2019 at 10pm – 11pm Eastern
@@ -815,7 +815,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Bug fix for SSL certificate management on Legacy (2008 R2) environments
 * Additional health checks for certificate enforcement and lifecycle management
 
-== CWMS 5.3 Release: August 8, 2019
+== CWMS 5.3 release: August 8, 2019
 
 _Components:_  5.3 Cloud Workspace Management Suite
 _When:_  Thursday August 8, 2019 at 10pm – 11pm Eastern

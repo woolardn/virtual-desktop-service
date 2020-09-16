@@ -26,7 +26,7 @@ Production deployments, especially into existing AD or Azure AD environments are
 
 This POC document will take you thru the entire WVD deployment and provide a brief tour of the major areas of post-deployment configuration available in the VDS platform. Once completed you’ll have a fully deployed and functional WVD environment, complete with host pools, app groups and users. Optionally you’ll have the option to configure automated application delivery, security groups, file share permissions, Azure Cloud Backup, intelligent cost optimization. VDS deploys a set of best practice settings via GPO. Instructions on how to optionally disable those controls are also included, in the event your POC needs to have no security controls, similar to an unmanaged local device environment.
 
-== WVD Basics
+== WVD basics
 Windows Virtual Desktop is a comprehensive desktop and app virtualization service that runs in the cloud. Here is a quick list of some of the key features and functionality:
 
 * Infrastructure services like gateway, brokering, licensing, diagnostics are provided as a service in Azure. There’s no need to deploy and maintain any on-premises infrastructure.
@@ -41,7 +41,7 @@ Windows Virtual Desktop is a comprehensive desktop and app virtualization servic
 
 Source: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/getting-started-with-windows-virtual-desktop/ba-p/391054
 
-== Guide Scope
+== Guide scope
 This guide walks you through the deployment of WVD using NetApp VDS technology from the perspective of an Azure and VDS administrator. You bring the Azure tenant and subscription with zero preconfiguration and this guide helps you setup WVD end-to-end.
 
 .This guide covers the following steps:
@@ -63,12 +63,12 @@ This guide walks you through the deployment of WVD using NetApp VDS technology f
 . <<Select App Management/Policy Mode,Optionally disable default security control group policies>>
 
 
-== Azure Prerequisites
+== Azure prerequisites
 VDS uses native Azure security context to deploy the WVD instance.  Before starting the VDS Setup wizard, there are a few Azure prerequisites that need to be established.
 
 During the deployment, service accounts and permissions are granted to VDS via authentication of an existing admin account from within the Azure tenant.
 
-=== Quick Prerequisites Checklist
+=== Quick prerequisites checklist
 - [x] Azure Tenant with Azure AD instance (can be Microsoft 365 instance)
 - [x] Azure Subscription
 - [x] Available Azure Quota for Azure virtual machines
@@ -76,13 +76,13 @@ During the deployment, service accounts and permissions are granted to VDS via a
 
 NOTE: Detailed prerequisites are documented on link:docs_components_and_permissions.html[this PDF]
 
-=== Azure Administrator in Azure AD
+=== Azure administrator in Azure AD
 This existing Azure admin must be an Azure AD account in the target tenant. Windows Server AD accounts can be deployed with the VDS Setup but additional steps are required to setup a sync with Azure AD (out of scope for this guide)
 
 This can be confirmed by finding the user account in the Azure Management Portal under Users > All Users.
 image:Azure Admin in Azure AD.png[]
 
-=== Global Administrator Role
+=== Global Administrator role
 The Azure Administrator must be assigned the Global Administrator role in the Azure tenant.
 
 .To check your role in Azure AD, follow these steps:
@@ -99,7 +99,7 @@ image:Global Administrator Role 1.png[]
 . Click on Global Administrator in the list of roles. Click the Add button.
 image:Global Administrator Role 2.png[]
 
-=== Azure Subscription Ownership
+=== Azure subscription ownership
 The Azure Administrator must also be a Subscription Owner on the subscription that will contain the deployment.
 
 .To check that the Administrator is a Subscription Owner, follow these steps:
@@ -116,7 +116,7 @@ image:Azure Subscription Ownership 1.png[]
 . Click the Save button at the bottom of the dialog
 image:Azure Subscription Ownership 2.png[]
 
-=== Azure Compute Core Quota
+=== Azure compute core quota
 The CWA Setup wizard and VDS portal will create new virtual machines and the Azure subscription must have available quota to successfully execute.
 
 .To check quota follow these steps:
@@ -127,7 +127,7 @@ The CWA Setup wizard and VDS portal will create new virtual machines and the Azu
 image:Azure Compute Core Quota.png[]
 If you need to increase quota, click Request Increase and follow the prompts to add additional capacity. For the initial deployment specifically request increased quote for the “Standard DSv3 Family vCPUs”
 
-=== Collect Discovery Details
+=== Collect discovery details
 Once working through the CWA Setup wizard there are several questions that need to be answered. NetApp VDS has provided a linked PDF that can be used to record these selections prior to deployment. Item include:
 
 [cols=2*,options="header",cols="25,50" width=95%]
@@ -147,7 +147,8 @@ General info will also be collected such as:
 * Contact Info
 * Billing Info
 
-== Create a VDS Admin Account
+== Create a VDS admin account
+
 NOTE: Existing VDS partners should already have an account to login to VDS at https://manage.cloudworkspace.com. Existing users can skip steps 3-7
 
 .Follow these steps to Register with NetApp VDS and to link the VDS admin account with this deployment:
@@ -166,27 +167,27 @@ image:Create a VDS Admin Account 6.png[]
 . After reviewing your settings, click the Register button and accept the Terms of Service – you will need to scroll down to the bottom of the Terms of Service dialog to be able to check the checkbox that you agree to the terms
 image:Create a VDS Admin Account 7.png[]
 
-== VDS Setup Sections
+== VDS setup sections
 
-=== IaaS and Platform
+=== IaaS and platform
 image:VDS Setup Sections 1.png[]
 
-==== Azure AD Domain nNme
+==== Azure AD domain name
 The Azure AD domain name is inherited by the selected tenant.
 
 ==== Location
 Select an appropriate **Azure Region**. This https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/[Microsoft Tool^] can estimate end user experienced based on region.
 
-==== Active Directory Type
+==== Active Directory type
 VDS can be provisioned with a **new virtual machine** for the Domain Controller function or setup to leverage an existing Domain Controller.
 In this guide we will select New Windows Server Active Directory, which will create one or two VMs (based on choices made during this process) under the subscription.
 
 A detailed article covering an existing AD deployment is found link:guide_deploy_VDS_to_Azure_Existing_AD.html[here].
 
-==== Active Directory Domain Name
+==== Active Directory domain name
 Enter a **domain name**.  Mirroring the Azure AD Domain Name from above is recommended.
 
-==== File Management
+==== File management
 VDS can provision a simple file server virtual machine or setup and configure Azure NetApp Files.  In production Microsoft recommends allocating 20gb per user and we've observed that allocating 5-15 IOPS per user is required for optimal performance.
 
 In a POC (non-production) environment the file server is a low-cost and simple deployment option however the available performance of Azure Managed Disks can be overwhelmed by the IOPS consumption of even a small production deployment.
@@ -195,16 +196,16 @@ For example, a 4TB Standard SSD disk in azure supports up to 500 IOPS, which cou
 
 For production WVD deployments, **Azure NetApp Files is Microsoft's recommendation**.
 
-==== RDS License Number
+==== RDS license number
 NetApp VDS can be used to deploy RDS and/or WVD environments.  When deploying WVD, this field can **remain empty**.
 
 ==== Thinprint
 NetApp VDS can be used to deploy RDS and/or WVD environments. When deploying WVD, this toggle can remain **off** (toggle left).
 
-==== Notification Email
+==== Notification email
 VDS will send deployment notifications and ongoing health reports to the **email provided**. This can be changed later.
 
-=== VMs and Network
+=== VMs and network
 There are a variety of services that need to run in order to support a VDS environment – these are collectively referred to as the “VDS platform”.
 Depending on the configuration these can include CWMGR, one or two RDS Gateways, one or two HTML5 Gateways, an FTPS server, and one or two Active Directory VMs.
 
@@ -214,10 +215,10 @@ For smaller and simpler environments that will include RDS use cases, all of the
 image:VDS Setup Sections 2.png[]
 
 
-==== Platform VM Configuration
+==== Platform VM configuration
 NetApp VDS can be used to deploy RDS and/or WVD environments. When deploying WVD the Single virtual machine selection is recommended.  For RDS deployments you need to deploy and manage additional components such as Brokers and Gateways, in production these services should be run on dedicated and redundant virtual machines.  For WVD, all of these services are provided by Azure as an included service and thus, the **single virtual machine** configuration is recommended.
 
-===== Single Virtual Machine
+===== Single virtual machine
 This is the recommended selection for deployments that will exclusively use WVD (and not RDS or a combination of the two). In a Single virtual machine deployment the following roles are all hosted on a single VM in Azure:
 
 *	CW Manager
@@ -231,7 +232,7 @@ The maximum advised user count for RDS use cases in this configuration is 100 us
 
 NOTE: If this environment is being designed for multi-tenancy, a Single virtual machine configuration is not supported - neither is WVD or AD Connect.
 
-===== Multiple Virtual Machines
+===== Multiple virtual machines
 When splitting the VDS Platform into Multiple virtual machines the following roles are hosted on dedicated VMs in Azure:
 
 * Remote Desktop Gateway
@@ -250,10 +251,10 @@ For RDS use cases, the maximum size of the environment can be scaled out with ad
 If this environment is being designed for multi-tenancy then the Multiple virtual machines selection is required.
 
 
-==== Time Zone
+==== Time zone
 While the end users' experience will reflect their local time zone, a default time zone needs to be selected. Select the time zone from where the **primary administration** of the environment will be performed.
 
-==== Virtual Network Scope
+==== Virtual network scope
 It is a best practice to isolate VMs to different subnets according to their purpose. First, define the network scope and add a /20 range.
 
 VDS Setup detects and suggests a range that should prove successful. Per best practices, the subnet IP addresses must fall into a private IP address range.
@@ -280,7 +281,7 @@ Once validation is complete the green Provision button will appear in place of t
 === Status
 The provisioning process takes between 2-4 hours depending on Azure workload and the choices you made. You can follow the progress in the log by clicking the Status page or wait for the email that will tell you the deployment process has completed. Deployment builds the virtual machines and Azure components required to support both VDS and a Remote Desktop or a WVD implementation. This includes a single virtual machine that can act as both an Remote Desktop session host and a file server. In a WVD implementation this virtual machine will act only as a file server.
 
-== Install and Configure AD Connect
+== Install and configure AD Connect
 Immediately after the install is successful, AD Connect needs to be installed and configured on the Domain Controller.  In a singe platform VM setup the CWMGR1 machine is the DC. The users in AD need to sync between Azure AD and the local domain.
 
 .To install and configure AD Connect, follow these steps:
@@ -288,10 +289,10 @@ Immediately after the install is successful, AD Connect needs to be installed an
 .. Get credentials form the Azure Key Vault
 . Install AD Connect, login with the domain admin and the Azure AD Global Admin.
 
-== Activating WVD Services
+== Activating WVD services
 Once the deployment is complete, the next step is to enable the WVD functionality. The WVD enablement process requires the Azure Administrator to perform several steps to register their Azure AD domain and subscription for access using the Azure WVD services. Similarly, Microsoft requires VDS to request the same permissions for our automation application in Azure. The steps below walk you through that process.
 
-== Create WVD Host Pool
+== Create WVD host pool
 End User access to WVD virtual machines is managed by host pools , which contain the virtual machines, and app groups, which in-turn contain the users and type of user access.
 
 .To build your first host pool
@@ -315,7 +316,7 @@ image:Create WVD Host Pool 1.png[]
 
 NOTE: WVD Hosts in VDS are created with a setting that disallows user sessions to connect. This is by design to allow for customization prior to accepting user connections. This setting can be changed by editing the session host’s settings. image:Create WVD Host Pool 2.png[]
 
-== Enable VDS Desktops for Users
+== Enable VDS desktops for users
 As noted above, VDS creates all the elements required to support end user workspaces during deployment. Once the deployment has completed, the next step is to enable workspace access for each user you want introduced to the WVD environment. This step creates the profile configuration and end user data layer access that is the default for a virtual desktop. VDS reuses this configuration to link Azure AD end users to the WVD App Pools.
 
 .To enable workspaces for end users follow these steps:
@@ -332,7 +333,7 @@ image:Enable VDS desktops to Users 2.png[]
 
 NOTE: Activating Azure AD Domain Services creates a managed domain in Azure, and each WVD virtual machine that is created will be joined to that domain. In order for traditional login to the virtual machines to work, the password hash for Azure AD users must be synced to support NTLM and Kerberos authentication. The easiest way to accomplish this task is to change the user password in Office.com or the Azure portal, which will force the password hash sync to occur. The sync cycle for Domain Service servers can take up to 20 minutes.
 
-=== Enable User Sessions
+=== Enable user sessions
 By default, session hosts are unable to accept user connections. This setting is commonly called “drain mode” as it can be used in production to prevent new user sessions, allowing the host to eventually remove all user sessions. When new user sessions are allowed on a host this action is commonly referred to as placing the session host “into rotation.”
 
 In production it makes sense to start new hosts in drain mode because there are typically configuration tasks that need to be completed before the host is ready for production workloads.
@@ -348,7 +349,7 @@ image:Enable User Sessions 2.png[]
 
 . The current stats of “Allow New Session” is also displayed on the main WVD page for each host line item.
 
-=== Default App Group
+=== Default app group
 Note that the Desktop Application Group is created by default as part of the host pool creation process. This group provides interactive desktop access to all group members.
 .To add members to the group:
 
@@ -360,7 +361,7 @@ image:Default App Group 2.png[]
 . Click the Select Users button
 . Click the Update app group button
 
-=== Create Additional WVD App Group(s)
+=== Create additional WVD app group(s)
 Additional app groups can be added to the host pool. These app groups will publish specific applications from the host pool virtual machines to the App Group users using RemoteApp.
 
 NOTE: WVD only allows end users to be assigned to the Desktop App Group type or RemoteApp App Group type but not both in the same host pool, so make sure you segregate your users accordingly. If users need access to a desktop and streaming apps, a 2nd host pool is required to host the app(s).
@@ -378,7 +379,7 @@ image:Create Additional WVD App Group 3.png[]
 
 . Click the Add App Group button to create the App Group
 
-== End User WVD Access
+== End user WVD access
 End users can access WVD environments using the Web Client or an installed client on a variety of platforms
 
 * Web Client: https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-web
@@ -391,47 +392,52 @@ End users can access WVD environments using the Web Client or an installed clien
 
 Log in using the end user username and password. Note that Remote App and Desktop Connections (RADC), Remote Desktop Connection (mstsc), and the CloudWorksapce Client for Windows application do not currently support the ability to log in to WVD instances.
 
-== Monitor User Logins
+== Monitor user logins
 The host pool detail page will also display a list of active users when they log in to a WVD session.
 
-== Admin Connection Options
+== Admin connection options
 VDS Admins are able to connect to virtual machines in the environment in a variety of ways.
 
-=== Connect to Server
+=== Connect to server
 Throughout the portal, VDS Admins will find the “Connect to Server” option. By default, this function connects the admin to the virtual machine by dynamically generating local admin credentials and injecting them into a web client connection. The Admin does not need to know (and is never provided with) credentials in order to connect.
 
 This default behavior can be disabled on a per-Admin basis as described in the next section.
 
-=== .tech/Level III Accounts
+=== .tech/Level 3 admin accounts
 In the CWA Setup process there is an option to create one or more “Level III” admin accounts. The user name is formatted as username.tech@domain.xyz
 
 These accounts, commonly called a “.tech” account, are named domain-level administrator accounts. VDS Admins can use their .tech account when connecting to a CWMGR1 (platform) server and optionally when connecting to all other virtual machines in the environment.
 
 To disable the automatic local admin login function and force the Level III account to be used, change this setting. Navigate to VDS > Admins > Admin Name > Check “Tech Account Enabled.” With this box checked, the VDS admin will not be automatically logged into virtual machines as a local admin and rather be prompted to enter their .tech credentials.
 
-== Optional Post-deployment Actions
+== Optional post-deployment actions
 
-=== Multi-Factor Authentication (MFA)
+=== Multi-factor authentication (MFA)
 NetApp VDS includes SMS/Email MFA at no charge. This feature can be used to secure VDS Admin accounts and/or End User accounts.
 link:task_configure_MFA.html[MFA Article]
 
-=== Application Entitlement Workflow
+=== Application entitlement workflow
 VDS provides a mechanism to assign end users access to applications from a pre-defined list of applications called the Application Catalog. The Application catalog spans all managed deployments.
 
 NOTE: The automatically deployed TSD1 server must remain as-is to support application entitlement. Specifically, do not run the “convert to data” function against this virtual machine.
 
-Application Management is detailed in this Article: https://flightschool.cloudjumper.com/CWMS/application-management-plan/
+Application Management is detailed in this Article: link:guide_application_entitlement.html[]
 
 === Azure AD Security Groups
 VDS includes functionality to create, populate and delete user groups which are backed by Azure AD Security Groups. These groups can be used outside of VDS just like any other Security Group. In VDS these groups can be used to assign folder permissions and application entitlement.
 
+
+
 ==== Create User Groups
-Creating user groups is performed on the Users & Groups tab within a workspace. Complete details are found here: https://flightschool.cloudjumper.com/cwms/users-groups/#groups
+Creating user groups is performed on the Users & Groups tab within a workspace.
+
 
 ==== Assign Folder Permissions by Group
-Permissions to view and edit folders in the company share can be assigned to users or groups. Details on assigning folder permissions to a groups are found here: https://flightschool.cloudjumper.com/cwms/managing-data-and-permissions/#folder_permissions
+Permissions to view and edit folders in the company share can be assigned to users or groups.
 
-==== Assign Applications by Group
+link:guide_manage_data_permissions.html[]
+
+==== Assign applications by group
 In addition to assigning applications to users individually, applications can be provisioned to groups.
 
 . Navigate to the Users and Groups Detail.
@@ -441,10 +447,10 @@ image:Assign Applications by Group 2.png[]
 . Assign user(s) and application(s) to the group.
 image:Assign Applications by Group 3.png[]
 
-=== Configure Cost Optimization Options
+=== Configure cost optimization options
 Workspace management also extends to managing the Azure resources that support the WVD implementation. VDS allows you to configure both Workload Schedules and Live Scaling to turn Azure virtual machines on and off based on end user activities. These features result in matching Azure resource utilization and spending to the actual usage pattern of end users. In addition, if you have configured a proof of concept WVD implementation you can turn the whole Deployment from the VDS interface.
 
-==== Workload Scheduling
+==== Workload scheduling
 Workload Scheduling is a feature that allows the Administrator to create a set schedule for the Workspace virtual machines to be on to support end user sessions. When the end of the scheduled time period is reached for a specific day of the week, VDS Stops/Deallocates the virtual machines in Azure so that hourly charges stop.
 
 .To enable Workload Scheduling:
@@ -474,7 +480,7 @@ Live Scaling automatically turns virtual machines in a shared host pool on and o
 
 NOTE: Live Scaling currently applies to all Shared resource pools. In the near future each pool will have independent Live Scaling options.
 
-==== Power Down the Entire Deployment
+==== Power down the entire deployment
 If you plan to only use your evaluation deployment on a sporadic, non-production basis you can turn off all the virtual machines in the deployment when you are not using them.
 
 .To turn the Deployment on or off (i.e. turn off the virtual machines in the deployment), follow these steps:
@@ -487,23 +493,23 @@ Scroll your cursor over the line for the target Deployment to display the Config
 
 NOTE: It may take several minutes for all the virtual machines in the deployment to stop or start.
 
-=== Create and Manage VM Images
+=== Create and manage VM images
 VDS contains functionality for creating and managing virtual machine images for future deployments. To reach this functionality, navigate to: VDS > Deployments > Deployment Name > Provisioning Collections. The “VDI Image Collection” features are documented here: https://flightschool.cloudjumper.com/cwms/provisioning-collections/
 
-=== Configure Azure Cloud Backup Service
-VDS can natively configure and manage Azure Cloud Backup, an Azure PaaS service for backing up virtual machines. Backup Policies can be assigned to individual machines or groups of machine by type or host pool. Details are found here: https://flightschool.cloudjumper.com/cwms/configure-azure-backup-schedule/
+=== Configure Azure cloud backup service
+VDS can natively configure and manage Azure Cloud Backup, an Azure PaaS service for backing up virtual machines. Backup Policies can be assigned to individual machines or groups of machine by type or host pool. Details are found here: link:guide_configure_backup.html[]
 
-=== Select App Management/Policy Mode
+=== Select app management/policy mode
 By default, VDS implements a number of Group Policy Objects (GPO) that lock down the end user workspace. These policies prevent access to both core data layer locations (ex: c:\) and the ability to perform application installations as an end user.
 
 This evaluation is intended to demonstrate the capabilities of Window Virtual Desktop, so you have the option to remove the GPOs so that you can implement a “basic workspace” that provides the same functionality and access as a physical workspace. To do this, follow the steps in the “Basic Workspace” option.
 
 You can also choose to utilize the full Virtual Desktop management feature set to implement a “Controlled Workspace”. These steps include creating and managing an application catalog for end user application entitlement and using Administrator level permissions to manage access to both applications and data folders. Follow the steps in the “Controlled Workspace” section to implement this type of workspace on your WVD host pools.
 
-==== Controlled WVD Workspace (Default Policies)
+==== Controlled WVD workspace (default policies)
 Using a controlled workspace is the default mode for VDS deployments. The polices are applied automatically. This mode requires VDS Administrators to install applications and then end users are granted access to the application via a shortcut on the session desktop. In a similar fashion, access to the data folders are assigned to end users by creating mapped shared folders and setting up permissions to see only those mapped drive letters instead of the standard boot and/or data drives. To manage this environment, follow the steps below to install applications and provide end user access.
 
-==== Reverting to Basic WVD Workspace
+==== Reverting to basic WVD workspace
 Creating a basic workspace requires disabling the default GPO policies that are created by default.
 
 .To do this, follow this one-time process:

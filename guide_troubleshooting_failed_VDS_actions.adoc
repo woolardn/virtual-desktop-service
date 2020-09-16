@@ -5,7 +5,7 @@ summary: Step-by-step guide to troubleshoot failed VDS actions
 keywords:
 ---
 
-= Troubleshooting Failed VDS Actions
+= Troubleshooting failed VDS actions
 
 :toc: macro
 :hardbreaks:
@@ -28,8 +28,8 @@ They are found in the Program Files path for VDS on the CWMGR1 server and in som
 
 File type also varies by VDS version, log files are either .txt or .log files found in sub-folders of the above outlined path.
 
-== Automation Logs
-=== CW VM Automation Service Log
+== Automation logs
+=== CW VM Automation Service log
 
     CwVmAutomationService.log
 
@@ -39,7 +39,7 @@ Scheduled Task Mode consists of activities that are performed on the VMs as part
 
 Event Mode is activated when a user or other VDS Service such as the CW Automation Service asks for a Task to be completed. Examples of this type of activity include a user request to Create a new Server or CW Automation requesting the sizing and state of servers to be checked because more users were added to the workspace. These events typically have log entries with both the event name “Create Server” and the actual name of the VM right next to it (ex: Create Server NNXTS2). When troubleshooting these types of events, its usually best to scroll to the bottom of the log and then to an upwards search for the VM name. You can then scroll up more rows to see where the process started.
 
-=== CW Automation Service Log
+=== CW Automation Service log
 
     CWAutomationService.log
 
@@ -47,38 +47,38 @@ The CW Automation Service log is the primary Windows services for managing the c
 
 Like the CW VM Automation Service, the CW Automation service executes both scheduled tasks and event driven tasks, with the latter being the more frequent type. The log for the CW Automation Service starts each line with the entity and action being worked on (ex: Start Server NNXTS1) so searching for the entity name from the bottom of the file is the quickest way to find the specific log lines that apply to the task.
 
-===CW Agent Service Log
+=== CW Agent Service log
 
     CwAgent.log
 
 The CW Agent Service performs all the tasks that are local to a specific VM, including checking the resource levels and utilization for the VM, checking that the VM has a valid certificate for TLS traffic, and checking to see if the mandatory reboot period has been reached. Besides checking on detail information on these tasks, this log can also be used to check for unexpected VM restarts or unexpected network or resource activity.
 
-=== CWManagerX Log
+=== CWManagerX log
 
     CWManagerX.log
 
 CWManagerX is a web service that provides the communication link between the local Deployment and the VDS global control plane. Tasks and data requests that originate in the VDS Web Application or VDS API are communicated to the local deployment through this web service. From there, the tasks and requests are directed to the appropriate web service (described above) or in rare cases directly to Active Directory. Since this is mostly a communications link there isn’t much logging that occurs during normal communication, but this log will contain errors when the communication link is broken or performing incorrectly.
 
-=== DC Config Log
+=== DC Config log
 
     DCConfig.log
 
 DC Config is a Windows application that provides Deployment specific configuration parameters that are not exposed in the VDS Web Application interface. The DC Config log details the activities executed when configuration changes are made in DC Config.
 
-=== CWvDCDeployment Log
+=== CWvDCDeployment log
 
     CWvDCDeployment.log
 
 CW vDC Deployment is a Windows application that performs the tasks necessary to create a Deployment in Azure.  The log tracks the configuration of the Cloud Workspace windows services, default GPOs, and routing and resource rules.
 
-=== Miscellaneous Logs
+=== Miscellaneous logs
 
     CwVmAutomationService-Installing.log
     CwAgent-Installing.log
 
 The remaining logs track the installation of the Windows Services and application described above. Since VDS services auto-update when a new version is targeted at that specific deployment, these logs track the upgrade process since the Service or application typically needs to be off while being upgraded. If you find the Services are consistently Stopped these logs can help identify if a failed upgrade to a specific service is the cause. In these cases, we would expect to see an error in these logs detailing why the upgrade failed.
 
-=== Accessing Logs and Reviewing Information
+=== Accessing logs and reviewing information
 
 .When requested actions like cloning a server, adding a user or restoring a backup you’ll get feedback in the VDS UI.
 

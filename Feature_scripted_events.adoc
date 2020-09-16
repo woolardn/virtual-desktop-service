@@ -5,7 +5,7 @@ summary: Scripted Events
 keywords:
 ---
 
-= Scripted Events
+= Scripted events
 
 :toc: macro
 :hardbreaks:
@@ -24,7 +24,7 @@ A detailed example of scripted events in action is found in the link:guide_appli
 
 Additionally, Scripted Events allows for the creation of automation that does not require a script to process, rather the automation flow is launched by a system trigger and executes an existing program or system utility with optional arguments.
 
-=== Script Repository
+=== Script repository
 This section displays all scripts available.  Scripts are executed by activities, covered in the next section.
 
 Clicking on the Add button allows for the creation of a new Script.

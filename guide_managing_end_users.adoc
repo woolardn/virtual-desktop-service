@@ -5,7 +5,7 @@ summary: Step-by-step guide to manage end users in VDS
 keywords:
 ---
 
-= Managing Users
+= Managing user accounts
 
 :toc: macro
 :hardbreaks:
@@ -17,7 +17,7 @@ keywords:
 :keywords: Windows Virtual Desktop
 
 [.lead]
-== Adding New Users to Virtual Desktop Service
+== Adding new users to Virtual Desktop Service
 Admins can add Users by clicking Workspaces, then Users and Groups.
 
 The most effective way to add Users is via Bulk User import – see the image below on how that process works. Fill out the bulk user upload template (link:Docs/Bulk-User-Upload-Sheet.xlsx[Bulk-User-Upload-Sheet.xlsx]) and then upload it to add multiple users at once:
@@ -29,7 +29,7 @@ NOTE: Accurately adding email and mobile phone # at this stage greatly improves 
 Once you have created Users, you can click on their name to see things like when they were created, their connection status (whether they’re currently logged in or not) and what their specific settings are.
 
 
-== Activating the Virtual Desktop for Existing AD users
+== Activating the Virtual Desktop for existing AD users
 
 If users are already present in AD, you can simple activate the users' Virtual Desktop by clicking on the gear next to their name and then enabling their desktop.
 image:Enable_desktop.png[]

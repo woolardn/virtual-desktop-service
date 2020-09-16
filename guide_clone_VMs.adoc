@@ -26,7 +26,7 @@ Admins use cloning in VDS in two ways:
 . On demand automated creation of new server from an existing client server
 . Proactive automated creation of new client server(s) for auto-scaling of resources based-on rules defined and controlled by partners
 
-== Cloning to Add Additional Shared Servers
+== Cloning to add additional shared servers
 
 A clone is a copy of an existing virtual machine.  Cloning functionality saves time and helps admins scale because Installing a guest operating system and applications can be time consuming. With clones, you can make many copies of a virtual machine from a single installation and configuration process. This typically looks like:
 
@@ -60,7 +60,7 @@ image:clone4.png[]
 +
 image:clone5.png[]
 
-== VDS Cloning Process Definition
+== VDS cloning process definition
 
 The step-by-step process is detailed in VDS > Deployment > Task History under any Clone Server operations.  The process has 20+ steps, which start with accessing the hypervisor to start the clone process & ends with activating the cloned server.  The cloning process includes key steps such as:
 
@@ -73,7 +73,7 @@ The step-by-step process is detailed in VDS > Deployment > Task History under an
 
 As well as Task History, the detail steps for any cloning process can be viewed in CwVmAutomationService log on CWMGR1 in each partner’s Virtual Desktop Deployment.  Reviewing these log files is documented link:guide_troubleshooting_failed_VDS_actions.html[here].
 
-== Automated Creation of New Server(s)
+== Automated creation of new server(s)
 
 This VDS functionality designed to automatically increase server unit count availability as defined user count grows.
 
@@ -81,11 +81,11 @@ The partner defines and manages via VDS (link:https://manage.cloudworkspace.com[
 
 NOTE:  Above assumes automated cloning is enabled for the entire Virtual Desktop Deployment.  For example, to stop all automated cloning, use DCConfig, in the Advanced window, uncheck the Server Creation->Automated Cloning Enabled.
 
-=== When Does the Automated Clone Process Run?
+=== When does the automated clone process run?
 
 The automated clone process executes when the daily maintenance is configured to run.  The default is midnight, but this can be edited.  Part of the daily maintenance is to run the Change Resources thread for each resource pool.  The Change Resources thread determines the number of shared servers required based-on the number of users the pool’s configuration (customizable; can be 10, 21, 30, etc users per server).
 
-== “On Demand” Automated Creation of New Server
+== “On demand” automated creation of new server
 
 This VDS functionality allows automated “on demand” cloning of additional servers to available resource pools.
 
