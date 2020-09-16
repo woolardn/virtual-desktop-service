@@ -5,7 +5,7 @@ summary: How to create a Level 3 Admin Account
 keywords:
 ---
 
-= Create a Level 3 Admin Account
+= Create a Level 3 admin account
 
 :toc: macro
 :hardbreaks:
@@ -23,7 +23,7 @@ Occasionally VDS administrators will need domain-level credentials to manage the
 
 These instructions show how these accounts can be created with the appropriate permissions.
 
-=== Traditional Domain Controller
+=== Traditional domain controller
 
 When running an internally hosted Domain Controller (or a local DC linked to Azure via a VPN/Express Route) managing .tech accounts can be done directly in Active Directory Manager.
 

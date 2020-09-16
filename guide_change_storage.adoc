@@ -5,7 +5,7 @@ summary: Step-by-step guide to change storage platform
 keywords:
 ---
 
-= Redirecting Storage Platform
+= Redirecting storage platform
 
 :toc: macro
 :hardbreaks:
@@ -22,10 +22,10 @@ Virtual Desktop Service deployment technologies allow for a variety of storage o
 
 Virtual desktop performance depends on a variety of key resources, storage performance is one of the primary variables.  As requirements change and workloads evolve, the need to change the storage infrastructure is a common task.  In nearly all cases this involves migrating from a file server platform to NetApp storage technology (such as Azure NetApp Files, NetApp Cloud Volumes Service in Google or NetApp Cloud Volumes ONTAP in AWS) since these technologies typically offer the best performance profile for end user computing environments.
 
-=== Creating the New Storage Layer
+=== Creating the new storage layer
 Due to the wide variety of potential storage services across a wide variety of cloud and HCI infrastructure providers, this guide assumes a new storage service has already been established and with the SMB path(s) known.
 
-=== Create Storage Folders
+=== Create storage folders
 . In the new storage service, create three folders:
 * /Data
 * /Home
@@ -41,12 +41,12 @@ image:storage2.png[]
 
 .. Adjust the remaining settings to match the settings on the original storage layer as originally created by the deployment automation.
 
-=== Moving Data
+=== Moving data
 The directories, data, files and security settings can be moved a variety of ways.  The following robocopy syntax will achieve the necessary changes. The patches need to be changed to match your environment.
 
     robocopy c:\data\zucd \\uyy-1c37.deskapps.mobi\zucd-data /xd ~snapshot /MIR /CopyAll /R:1 /W:1 /tee /log:C:\temp\roboitD.txt
 
-=== Redirecting the SMB Path at Cutover
+=== Redirecting the SMB path at cutover
 When the time for cutover comes, a few changes will redirect all the storage functionality across the VDS environment.
 
 ==== Update GPOs
@@ -62,7 +62,7 @@ image:storage4.png[]
 +
 image:storage5.png[]
 
-==== Update FSLogix Profile Paths
+==== Update FSLogix profile paths
  . Open Regedit on the original file server and any other provisioned Session Hosts.
 +
 NOTE: This can also be set via a GPO policy if desired.
@@ -71,7 +71,7 @@ NOTE: This can also be set via a GPO policy if desired.
 +
 image:storage6.png[]
 
-==== Update the Folder Redirection Settings for the Home Directories
+==== Update the folder redirection settings for the home directories
 
 . Open Group Policy Management, select Users GPO linked to DC=domain,DC=mobi/Cloud Workspace/Cloud Workspace Companies/<company-code>/<company-code>-desktop users.
 . Edit folder redirection paths under User Configuration>Policies>Windows Settings>Folder Redirection.
@@ -79,7 +79,7 @@ image:storage6.png[]
 +
 image:storage7.png[]
 
-==== Update the VDS SQL Database with TestVDC Tools
+==== Update the VDS SQL database with TestVDC Tools
 CWMGR1 contains a helper utility applications called TestVDC Tools which can bulk update the VDS database.
 
 .To make the final database updates:

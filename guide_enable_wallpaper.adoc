@@ -5,7 +5,7 @@ summary: How to enable user wallpapers
 keywords:
 ---
 
-= Enable Desktop Wallpaper for User Sessions
+= Enable desktop wallpaper for user sessions
 
 :toc: macro
 :hardbreaks:

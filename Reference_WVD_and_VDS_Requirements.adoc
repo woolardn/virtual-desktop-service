@@ -4,7 +4,7 @@ permalink: WVD_and_VDS_requirements.html
 summary: WVD and VDS Requirements
 ---
 
-= WVD and VDS Requirements
+= WVD and VDS requirements
 
 :toc: macro
 :hardbreaks:
@@ -16,19 +16,19 @@ summary: WVD and VDS Requirements
 :keywords: Windows Virtual Desktop
 
 [.lead]
-== WVD and VDS Requirements and Notes
+== WVD and VDS requirements and notes
 This document describes the required elements for deploying Windows Virtual Desktop (WVD) using NetApp Virtual Desktop Service (VDS). The “Quick Checklist” provides a brief list of required components and pre-deployment steps to take to ensure an efficient deployment. The rest of the guide provides greater detail for each element, depending on the configuration choices that are made.
 
-== Quick Checklist
+== Quick checklist
 
-=== Azure Requirements
+=== Azure requirements
 
 * Azure Tenant with Azure AD instance (can be Microsoft 365 instance)
 * Azure Subscription
 * Available Azure Quota for Azure virtual machines
 * Azure Admin Account with Global Admin and Subscription Ownership Roles
 
-=== Pre-Deployment Information
+=== Pre-deployment information
 
 * Determine total number of users
 * Determine Azure Region
@@ -37,9 +37,9 @@ This document describes the required elements for deploying Windows Virtual Desk
 * Identify session host VM image or requirements
 * Assess existing Azure and on-premises networking configuration
 
-== VDS DEPLOYMENT DETAILED REQUIREMENTS
+== VDS deployment detailed requirements
 
-=== End User Connection Requirements
+=== End user connection requirements
 
 .The following Remote Desktop clients support Windows Virtual Desktop:
 
@@ -72,25 +72,25 @@ IMPORTANT: Windows Virtual Desktop does not currently support the Remote Desktop
 NOTE: Opening these URLs is essential for a reliable client experience. Blocking access to these URLs is unsupported and will affect service functionality. These URLs only correspond to the client sites and resources, and do not include URLs for other services like Azure Active Directory.
 
 
-=== VDS Setup Wizard Starting Point
+=== VDS setup wizard starting point
 
 The VDS setup wizard can handle much of the prerequisite setup required for a successful WVD deployment. The setup wizard (link:https://cwasetup.cloudworkspace.com[]) either creates or uses the following components.
 
-==== Azure Tenant
+==== Azure tenant
 *Required:* An Azure tenant and Azure Active Directory
 
 WVD activation in Azure is a tenant-wide setting. VDS supports running one WVD instance per tenant.
 
-==== Subscription
+==== Azure subscription
 *Required:* An Azure subscription (note the subscription ID that you want to use)
 
 All the deployed Azure resources should be setup in one dedicated subscription. This makes cost tracking for WVD much easier and simplifies the deployment process.
 NOTE: Azure free trials are not supported as they do not have enough credits to deploy a functional WVD deployment.
 
-==== Azure Quota
+==== Azure core quota
 Enough quota for the VM families you will use - specifically at least 10 cores of the Ds v3 family for the initial platform deployment (as few as 2 cores can be used, but 10 covers every initial deployment possibility).
 
-==== Azure Admin Account
+==== Azure admin account
 *Required:* An Azure global administrator account.
 
 The VDS setup wizard requests that the Azure admin grant delegated permissions to the VDS service principal and install the VDS Azure Enterprise application. The admin must have the following Azure roles assigned:
@@ -98,7 +98,7 @@ The VDS setup wizard requests that the Azure admin grant delegated permissions t
 * Global Administrator on the tenant
 * Owner role on the subscription
 
-==== VM Image
+==== VM image
 *Required:* An Azure image that supports multi-session Windows 10.
 
 The Azure Marketplace provides the most recent versions of their base Windows 10 image and all Azure subscriptions have access to those automatically. If you want to use a different image or a custom image, want the VDS team to provide advice about creating or modifying other images or have general questions about Azure images let us know and we can schedule a conversation.
@@ -117,7 +117,7 @@ image:AD Options New.png[]
 image:AD Options Existing.png[]
 
 
-==== Storage Layer
+==== Storage layer
 In WVD the storage strategy is designed so that no persistent user/company data resides on the WVD session VMs. Persistent data for user profiles, user files and folders, and corporate/application data are hosted on one or more data volume(s) hosted on an independent data layer.
 
 FSLogix is a profile containerization technology that solves many user profile issues (like data sprawl and slow logins) by mounting a user profile container (VHD or VHDX format) to the session host at session initialization.
@@ -159,12 +159,12 @@ Some of the unique capabilities of VDS such as the cost saving Workload Scheduli
 As part of the initial deployment a series of questions are answered to customize the settings for the new environment.  Below is an outline of the major decisions to be made.
 
 
-==== Azure Region
+==== Azure region
 Decide which Azure region or regions will host your WVD Virtual Machines. Note that Azure NetApp Files and certain VM families (GPU enabled VMs, for example) have a defined Azure region support list while WVD is available in most regions.
 
 * This link can be used to identify link:https://azure.microsoft.com/en-us/global-infrastructure/services/[Azure product availability by region]
 
-==== Active Directory Type
+==== Active Directory type
 Decide which Active Directory type you want to use:
 
 * Existing on-prem Active Directory
@@ -189,12 +189,12 @@ This configuration type extends an existing Active Directory domain to support t
 * Addition of VDS components and permissions required for VDS management of WVD host pools and data volumes as they are joined to the domain. The WVD VDS Components and Permissions guide defines the required components and permissions and the deployment process requires a Domain user with domain privileges to execute the script that will create the needed elements.
 * Note that the VDS deployment creates a VNet by default for VDS created VMs. The VNet can be either peered with existing Azure network VNets or the CWMGR1 VM can be moved to an existing VNet with the required subnets pre-defined.
 
-==== Credentials and Domain Preparation Tool
+==== Credentials and domain preparation tool
 
 Administrators must provide a Domain Administrator credential at some point in the deployment process. A temporary Domain Administrator credential can be created, used and deleted later (once the deployment process completes).
 Alternatively, customers who require assistance in building out the pre-requisites can leverage the Domain Preparation Tool.
 
-=== NetApp VDS Deployment with Existing File System
+=== NetApp VDS deployment with existing file system
 VDS creates Windows shares that allow user profile, personal folders, and corporate data to be accessed from WVD session VMs. VDS will deploy either the File Server or Azure NetApp File options by default, but if you have an existing file storage component VDS can point the shares to that component once the VDS deployment is complete.
 
 .The requirements for using and existing storage component:
@@ -202,7 +202,7 @@ VDS creates Windows shares that allow user profile, personal folders, and corpor
 * The component must be joined to the same Active Directory domain as the WVD session hosts
 * The component must be able to expose a UNC path for use in the VDS configuration – one path can be used for all three shares or separate paths may be specified for each. Note that VDS will set user level permissions on these shares so refer to the VDS WVD Components and Permissions document to ensure the appropriate permissions have been granted to the VDS Automation Services.
 
-=== NetApp VDS Deployment with Existing Azure AD Domain Services
+=== NetApp VDS deployment with existing Azure AD Domain Services
 This configuration requires a process to identify the attributes of the existing Azure Active Directory Domain services instance. Contact your account manager to request a deployment of this type.
 NetApp VDS Deployment with Existing WVD deployment
 This configuration type assumes that the necessary Azure VNet, Active Directory, and WVD components already exist. The VDS deployment is performed in the same manner as the “NetApp VDS Deployment with Existing AD” configuration, but adds the following requirements:
@@ -211,7 +211,7 @@ This configuration type assumes that the necessary Azure VNet, Active Directory,
 * WVD Host Pool and WVD Host Pool VMs need to be imported into VDS using the VDS Import function in the VDS Web App. This process collects the WVD host pool and session VM metadata and stores in it VDS so that these elements can be managed by VDS
 * WVD User data needs to be imported into the VDS User section using the CRA tool. This process inserts metadata about each user into the VDS control plane so their WVD App Group membership and session information can be managed by VDS
 
-== APPENDIX A: VDS CONTROL PLANE URLS AND IP ADDRESSES
+== APPENDIX A: VDS control plane URLs and IP addresses
 VDS components in the Azure subscription communicate with the VDS global control plane components that are hosted in Azure, including the VDS Web Application and the VDS API endpoints. For access, the following base URI addresses need to be whitelisted for bi-directional access on port 443:
 
 link:api.cloudworkspace.com[]
@@ -248,12 +248,12 @@ If your access control device can only white list by IP address, the following l
 52.171.220.134
 92.242.140.21
 
-== APPENDIX B: MICROSOFT WVD REQUIREMENTS
+== APPENDIX B: Microsoft WVD requirements
 This Microsoft WVD Requirements section is a summary of WVD requirements from Microsoft.  Complete and current WVD requirements can be found here:
 
 https://docs.microsoft.com/en-us/azure/virtual-desktop/overview#requirements
 
-=== Windows Virtual Desktop Session Host Licensing
+=== Windows Virtual Desktop session host licensing
 Windows Virtual Desktop supports the following operating systems, so make sure you have the appropriate licenses for your users based on the desktop and apps you plan to deploy:
 [cols=2*,options="header",cols="50,50"]
 |===
@@ -266,7 +266,7 @@ Windows E3, E5, A3, A5
 |Windows Server 2012 R2, 2016, 2019	|RDS Client Access License (CAL) with Software Assurance
 |===
 
-=== URL Access for WVD Machines
+=== URL Access for WVD machines
 The Azure virtual machines you create for Windows Virtual Desktop must have access to the following URLs:
 
 [cols=4*,options="header",cols="25,25,25,25"]
@@ -339,8 +339,4 @@ Available automation and deployment options depend on which OS and version you c
 |Windows Server 2019	|Yes	|Yes	|No	|No
 |Windows Server 2016	|Yes	|Yes	|Yes	|Yes
 |Windows Server 2012 R2	|Yes	|Yes	|No	|No
-
-
 |===
-
-_Last version: June 1, 2020_

@@ -5,7 +5,7 @@ summary: Step-by-step guide to deploy Applications to end users in VDS
 keywords:
 ---
 
-= Application Entitlement
+= Application entitlement
 
 :toc: macro
 :hardbreaks:
@@ -35,7 +35,7 @@ NOTE: Steps 3 & 4 can be fully automated with Scripted Events as illustrated bel
 video::19NpO8v15BE[youtube]
 link:/video_WVDRDS_app_management_54.html[Video Page]
 
-== Add Applications to the App Catalog
+== Add applications to the App Catalog
 VDS Application Entitlement starts with the App Catalog, this is a listing of all the applications available for deployment to end user environments.
 
 .To add applications to the catalog, follow these steps
@@ -67,7 +67,7 @@ To start the deployment process you'll add the app to the workspace.
 . Click Add
 . Check box the application(s), enter required information, click Add Application, click Add Apps.
 
-== Manually Install the Application
+== Manually install the application
 Once the application has been added to the Workspace you'll need to get that application installed on all session hosts.  This can be done manually and/or it can be automated.
 
 .To manually install applications on session hosts, follow these steps
@@ -82,7 +82,7 @@ Once the application has been added to the Workspace you'll need to get that app
 . Click Complete Installation.
 . If required, open the created Icon Add Service Board Task and confirm the icon has been added.
 
-== Automate Application Installation
+== Automate application installation
 For reoccurring tasks or to perform the task across many hosts, the Scripted Events functionality in VDS can be used to fully automate installs. This automation can be performed with any number of scripting technologies, in this example we'll use Chocolatey.
 
 First, any host where you'll automate installs will need Chocolatey pre-installed, this can be added to the VM image or automated as shown below.
@@ -124,7 +124,7 @@ NOTE: You’ll need to know the shortcut path during this creation wizard.  This
 
 Going forward, the act of adding that application to the Workspace will trigger the install of that application across all session hosts.
 
-== Assign Applications to Users
+== Assign applications to users
 
 Application entitlement is handled by VDS and application can be assigned to users in three ways
 
@@ -133,12 +133,12 @@ Application entitlement is handled by VDS and application can be assigned to use
 . Navigate to the Applications section.
 . Check the box next to all applications required by this user.
 
-.Assign Users to an Application
+.Assign users to an application
 . Navigate to the Applications section on the Workspace Detail page.
 . Click on the name of the application.
 . Check the box next to the users the application.
 
-.Assign Applications and Users to User Groups
+.Assign applications and users to user groups
 . Navigate to the Users and Groups Detail.
 . Add a new group or edit an existing group.
 . Assign user(s) and application(s) to the group.

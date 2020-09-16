@@ -5,7 +5,7 @@ summary: Step-by-step guide to troubleshoot Internet quality issues
 keywords:
 ---
 
-= Internet Connection Quality Troubleshooting
+= Internet connection quality troubleshooting
 
 :toc: macro
 :hardbreaks:
@@ -28,7 +28,7 @@ When users report performance issues, dropped user connections or a laggy interf
 Tier 1 triage and troubleshooting will include basic steps like confirming resources (RAM, CPU and HDD Space) are sufficient but once that is completed, testing the network connectivity is a great next step in the troubleshooting process.
 Resolution
 
-=== Primary Option: NetApp VDS Windows Client has Built-In Diagnostic Tools
+=== Primary option: NetApp VDS Windows client has built-in diagnostic tools
 
 The diagnostic test can be run and delivered to your email, all from within the virtual desktop Client.
 
@@ -43,7 +43,7 @@ image:internet_quality1.gif[]
 
 image:internet_quality2.png[]
 
-=== Secondary Option: Manual Analysis using PingPlotter
+=== Secondary option: Manual analysis using PingPlotter
 
 To confirm the client’s network connection is the culprit you can run the free utility PingPlotter.  This utility sends a ping every few seconds and reports on the speed (latency) of the round trip of that ping.  It also notes the packet loss (PL) percentage at each hop along the route.  When high latency and/or high packet loss is observed it is a good indication that the performance issues are caused by the quality of the internet connection at the hop that is displaying those issues.
 

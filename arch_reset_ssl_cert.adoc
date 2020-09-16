@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: arch_reset_ssl_cert.html
-summary: Wildcard SSL Certificate Renewal Process
+summary: Wildcard SSL certificate renewal process
 keywords:
 ---
 
-= Wildcard SSL Certificate Renewal Process
+= Wildcard SSL certificate renewal process
 
 :toc: macro
 :hardbreaks:
@@ -17,7 +17,7 @@ keywords:
 :keywords: Windows Virtual Desktop
 
 [.lead]
-== Create a Certificate Signing Request (CSR):
+== Create a certificate signing request (CSR):
 
 . Connect to CWMGR1
 . Open IIS Manager from Administrator Tools
@@ -48,7 +48,7 @@ image:ssl4.png[]
 . Reach out to registrar support to purchase a new Wildcard SSL for your certificate: *.domain.com
 . After receiving your SSL certificate, save the SSL certificate .cer file in a location on CWMGR1 and follow the below steps.
 
-== Installing and Configuring CSR:
+== Installing and configuring CSR:
 
 . Connect to CWMGR1
 . Open IIS Manager from Administrator Tools
@@ -65,7 +65,7 @@ image:ssl6.png[]
 .. Friendly name: *.domain.com
 .. Certificate store: Select either Web Hosting or Personal
 
-== Assigning SSL Certificate:
+== Assigning SSL certificate:
 
 . Verify that Migration Mode is not enabled. This can be found on the Workspace Overview page under Security Settings in VDS.
 +

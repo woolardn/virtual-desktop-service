@@ -5,7 +5,7 @@ summary: Managing Data Permissions
 keywords:
 ---
 
-= Managing Data Permissions
+= Managing data permissions
 
 :toc: macro
 :hardbreaks:
@@ -17,7 +17,7 @@ keywords:
 :keywords: Windows Virtual Desktop
 
 [.lead]
-== End User Perspective
+== End user perspective
 
 Virtual Desktop end users can have access to several mapped drives.  These drives includes an FTPs accessible team share, a Company File Share and their Home drive (for their documents, desktop, etc…) . All of these mapped drives reference back to a central storage layer on either a storage services (such as Azure NetApp Files) or on a file server VM.
 
@@ -26,11 +26,11 @@ image:manage_data1.png[]
 
 image:manage_data2.png[]
 
-=== Managing Permissions
+=== Managing permissions
 
 VDS allows admins to edit security groups and folder permissions, all from within the VDS portal.
 
-=== Security Groups
+=== Security groups
 
 Security groups are managed by clicking: Workspaces > Tenant Name > Users & Groups > under the Groups Section
 
@@ -42,7 +42,7 @@ Security groups are managed by clicking: Workspaces > Tenant Name > Users & Grou
 
 image:manage_data3.gif[]
 
-== Folder Permissions
+== Folder permissions
 
 Folder Permissions are managed by clicking: Workspaces > Tenant Name > Manage (in the Folders section).
 

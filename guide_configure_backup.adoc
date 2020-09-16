@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: guide_configure_azure_backup.html
+permalink: guide_configure_backup.html
 summary: Backup Configuration
 keywords:
 ---
 
-= Configure Azure Backup Schedule
+= Configure backup schedule
 
 :toc: macro
 :hardbreaks:
@@ -18,6 +18,9 @@ keywords:
 
 [.lead]
 == Overview
+VDS has the ability to configure and manage native backup services in some infrastructure providers including Azure.
+
+== Azure
 
 In Azure, VDS can automatically configure backups using native link:https://azure.microsoft.com/en-us/services/backup/[Azure Cloud Backup] with locally redundant storage (LRS). Geo-redundant storage (GRS) can be configured in the Azure Management Portal if needed.
 
@@ -45,7 +48,7 @@ In Azure, VDS can automatically configure backups using native link:https://azur
 * For daily schedules, enter the preferred time to take the backup.  For weekly schedules, enter the preferred day and time to take the backup. Note: Setting the time to exactly 12:00 am can cause issues in Azure Backup so 12:01 am is recommended.
 * Define how many daily, weekly, monthly and yearly backups should be retained.
 
-== Setting Deployment Defaults
+=== Setting deployment defaults
 image:Backup_gif.gif[]
 
 .In order to setup Azure backup for the entire deployment, follow these steps:
@@ -72,7 +75,7 @@ image:Backup_gif.gif[]
 
 . Finally, click Create (or Edit) Schedule to put these settings in place.
 
-== Setting Individual Backup Policies
+=== Setting individual backup policies
 
 .To apply server-specific integrated backup settings, navigate to a Workspace detail page.
 
@@ -82,7 +85,7 @@ image:Backup_gif.gif[]
 
 . Apply backup settings as desired and click Create Schedule
 
-== Restoring From Backup
+=== Restoring from backup
 
 .To restore backups of a given VM, begin by navigating to that Workspace detail page.
 

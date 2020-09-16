@@ -14,7 +14,7 @@ keywords:
 :keywords: Windows Virtual Desktop
 
 [.lead]
-= VDS Change Environments
+= VDS Change environments
 == Overview
 
 NetApp’s Virtual Desktop Service allows organizations to manage deployments on prior releases, to preview future releases and to manage environments running one version prior (N -1 methodology).
@@ -32,7 +32,7 @@ Virtual Desktop Service is the management console that administrators can use to
 https://iit-api.hostwindow.net/5.2/
 |===
 
-=== Virtual Desktop Service for Azure (VDS) Setup App
+=== Virtual Desktop Service for Azure (VDS) setup app
 
 The VDS Setup wizard allows process allows Administrators to drastically streamline the process of provisioning a VDS deployment.
 
@@ -45,7 +45,7 @@ Administrators cannot provision deployments to a Legacy environment – only in 
 |Preview 	|Preview of the upcoming release |	https://preview.cwasetup.cloudworkspace.com/ |	5.4 |	TBD
 |===
 
-=== Azure Cost Estimator
+=== Azure cost estimator
 
 ACE is a pupose-built, value-added tool that allows organizations to estimate what their VDS/WVD deployment will cost, including ways to vary and optimize budgets to deliver the solution needed within an organization’s budget.
 [cols=3*,options="header",cols="33,33,33"]
