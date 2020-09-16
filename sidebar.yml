@@ -8,10 +8,10 @@ entries:
     entries:
     - title: Windows Virtual Desktop
       entries:
-    - title: Deploying WVD in Azure
-      url: /guide_deploy_VDS_to_Azure.html
-    - title: Supplemental - WVD with existing AD
-      url: /guide_deploy_VDS_to_Azure_Existing_AD.html
+      - title: Deploying WVD in Azure
+        url: /guide_deploy_VDS_to_Azure.html
+      - title: Supplemental - WVD with existing AD
+        url: /guide_deploy_VDS_to_Azure_Existing_AD.html
 #    - title: Install VDS on Existing WVD
 #      url: /
 #  - title: Remote Desktop Services
