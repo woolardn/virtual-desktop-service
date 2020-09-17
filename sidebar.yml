@@ -94,26 +94,26 @@ entries:
     - title: Configure MFA
       url: /task_configure_MFA.html
 
-- title: System administration
-  entries:
-#         - title: Privileged Access Management
-#           url: /
-  - title: Provide 3rd party access
-    url: /guide_3rd_party_access.html
-  - title: Configure backup
-    url: /guide_configure_backup.html
-#         - title: Connect to Server
-#           url: /
-  - title: Clone virtual machines
-    url: /guide_clone_VMs.html
-  - title: Auto disk size feature
-    url: /guide_auto_add_disk_space.html
-#         - title: Azure Key Vault
-#           url: /
-#         - title: Manage VDS Admin Accounts
-#           url: /
-  - title: Configure antivirus
-    url: /guide_configure_AV.html
+  - title: System administration
+    entries:
+#   - title: Privileged Access Management
+#     url: /
+    - title: Provide 3rd party access
+      url: /guide_3rd_party_access.html
+    - title: Configure backup
+      url: /guide_configure_backup.html
+#    - title: Connect to Server
+#     url: /
+    - title: Clone virtual machines
+      url: /guide_clone_VMs.html
+    - title: Auto disk size feature
+      url: /guide_auto_add_disk_space.html
+#    - title: Azure Key Vault
+#     url: /
+#    - title: Manage VDS Admin Accounts
+#     url: /
+    - title: Configure antivirus
+      url: /guide_configure_AV.html
 
 - title: Troubleshooting
   entries:

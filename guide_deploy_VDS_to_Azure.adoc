@@ -82,21 +82,21 @@ This existing Azure admin must be an Azure AD account in the target tenant. Wind
 This can be confirmed by finding the user account in the Azure Management Portal under Users > All Users.
 image:Azure Admin in Azure AD.png[]
 
-=== Global Administrator role
-The Azure Administrator must be assigned the Global Administrator role in the Azure tenant.
+=== Global administrator role
+The Azure Administrator must be assigned the Global administrator role in the Azure tenant.
 
 .To check your role in Azure AD, follow these steps:
 . Log in to the Azure Portal at https://portal.azure.com/
 . Search for and select Azure Active Directory
 . In the next pane to the right, click on the Users option in the Manage section
 . Click on the name of the Administrator user that you are checking
-. Click on Directory Role. In the far-right pane the Global Administrator role should be listed
+. Click on Directory Role. In the far-right pane the Global administrator role should be listed
 image:Global Administrator Role 1.png[]
 
-.If this user does not have the Global Administrator role, you can perform the following steps to add it (Note that the logged in account must be a Global Administrator to perform these steps):
+.If this user does not have the Global administrator role, you can perform the following steps to add it (Note that the logged in account must be a Global administrator to perform these steps):
 
 . From the user Directory Role detail page in step 5 above, click the Add Assignment button at the top of the detail page.
-. Click on Global Administrator in the list of roles. Click the Add button.
+. Click on Global administrator in the list of roles. Click the Add button.
 image:Global Administrator Role 2.png[]
 
 === Azure subscription ownership
