@@ -29,17 +29,15 @@ This POC document will take you thru the entire WVD deployment and provide a bri
 == WVD basics
 Windows Virtual Desktop is a comprehensive desktop and app virtualization service that runs in the cloud. Here is a quick list of some of the key features and functionality:
 
-* Infrastructure services like gateway, brokering, licensing, diagnostics are provided as a service in Azure. There’s no need to deploy and maintain any on-premises infrastructure.
-* Windows Virtual Desktop can leverage Azure Active Directory (Azure AD) as the identity provider, allowing you to leverage additional security controls like multi-factor authentication (MFA) or conditional access.
-* Once a user is connected to Windows Virtual Desktop service, access to Active Directory joined virtual machines (VMs) will be provided using Azure AD identities. In environments where Active Directory Federation Services (AD FS) is implemented for single sign-on (SSO), the user won’t be prompted for credentials when connecting to the VM, providing a seamless sign-on experience.
-* Reverse connect technology means your destination VM doesn’t need any inbound ports to be opened. Even the default RDP port, TCP/3389, doesn’t have to be open. Instead, an agent creates an outbound connection using TCP/443 into the Windows Virtual Desktop management plane. Azure is your reverse proxy for RDP traffic.
-* Virtual machines in Windows Virtual Desktop are not exposed to the Internet directly. They can run using a private IP address and run isolated from other workloads or even the Internet. (The reverse connect technology allows the VMs to be accessed.)
-* Windows Virtual Desktop introduces Windows 10 multi-session, allowing you to offer a Windows 10 Enterprise experience where multiple users can log into the same Windows client VM simultaneously via RDP. (multi-session was historically only possible on Windows Server operating systems.)
-* Access to FSLogix technology, making your Office experience in a non-persistent environment feel like you are using a traditional PC.
-* Windows Virtual Desktop supports full desktop, RemoteApp, and persistent or non-persistent, dedicated or multi-session experiences.
-* Organizations with “Windows 10 Enterprise E3 Per User” licenses or better (e.g. Windows 10 Enterprise E5 or Microsoft 365 E3, E5, F1, or Business) or RDS CALs can use Windows Virtual Desktop for no additional charge apart from Azure compute/storage and network usage billing. Reserved instances can be used to reduce Azure costs up to 80%.
-
-Source: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/getting-started-with-windows-virtual-desktop/ba-p/391054
+* Platform services including gateways, brokering, licensing, and login and included as a service from Microsoft. This minimized infrastructure requiring hosting and management.
+* Azure Active Directory can be leveraged as the identity provider, allowing for the layering of additional Azure security services such as conditional access.
+* Users experience single sign-on experience for Microsoft services.
+* User sessions connect to the session host via a proprietary reverse-connect technology. This means that no inbound ports need to be open, instead an agent creates and outbound connection to the WVD management plane which in turn connects to the end user device.
+* Reverse connect even allows virtual machines to run without being exposed to the public internet enabling isolated workloads even while maintaining remote connectivity.
+* WVD includes access to Windows 10 Multi Session, allowing a Windows 10 Enterprise experience with the efficiency of high density user sessions.
+* FSLogix profile containerization technology is including, enhancing user session performance, storage efficiency and enhancing the Office experience in non-persistent environments.
+* WVD supports full desktop and RemoteApp access.  Both persistent or non-persistent, and both dedicated and multi-session experiences.
+* Organizations can save on Windows licensing because WVD can leverage "Windows 10 Enterprise E3 Per User" which replaces the need for RDS CALs and significantly reduces the per-hour cost of session host VMs in Azure.
 
 == Guide scope
 This guide walks you through the deployment of WVD using NetApp VDS technology from the perspective of an Azure and VDS administrator. You bring the Azure tenant and subscription with zero preconfiguration and this guide helps you setup WVD end-to-end.
