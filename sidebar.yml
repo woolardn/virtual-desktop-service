@@ -12,49 +12,49 @@ entries:
         url: /guide_deploy_VDS_to_Azure.html
       - title: Supplemental - WVD with existing AD
         url: /guide_deploy_VDS_to_Azure_Existing_AD.html
-#    - title: Install VDS on Existing WVD
+#    - title: Install VDS on existing WVD
 #      url: /
 #  - title: Remote Desktop Services
 #    entries:
 #        - title: Deploying RDS in Azure
 #          url: /
-#        - title: Supplemental - RDS with Existing AD
+#        - title: Supplemental - RDS with existing AD
 #          url: /
-#        - title: Install VDS on Existing RDS
+#        - title: Install VDS on existing RDS
 #          url: /
 
 #  - title: Google
 #    entries:
 #    - title: Deploying RDS in Google
 #      url: /
-#    - title: Supplemental - RDS with Existing AD
+#    - title: Supplemental - RDS with existing AD
 #      url: /
-#    - title: Install VDS on Existing RDS
+#    - title: Install VDS on existing RDS
 #      url: /
 
 #  - title: AWS
 #    entries:
 #    - title: Deploying RDS in AWS
 #      url: /
-#    - title: Supplemental - RDS with Existing AD
+#    - title: Supplemental - RDS with existing AD
 #      url: /
-#    - title: Install VDS on Existing RDS
+#    - title: Install VDS on existing RDS
 #      url: /
 
 #  - title: vSphere
 #    entries:
 #    - title: Deploying RDS in vSphere
 #      url: /
-#    - title: Supplemental - RDS with Existing AD
+#    - title: Supplemental - RDS with existing AD
 #      url: /
-#    - title: Install VDS on Existing RDS
+#    - title: Install VDS on existing RDS
 #      url: /
 
 - title: Architectural
   entries:
-#    - title: Setup Multi-Site Deployments
+#    - title: Setup multi-site deployments
 #    url: /
-#    - title: Migrate Users Between Sites
+#    - title: Migrate users between sites
 #    url: /
   - title: Change data layer
     url: /guide_change_storage.html
@@ -71,7 +71,7 @@ entries:
     entries:
     - title: Application entitlement workflow
       url: /guide_application_entitlement.html
-#     - title: Streaming Applications
+#     - title: Streaming applications
 #       url: /
     - title: Install Microsoft Office 365
       url: /guide_install_office_365.html
@@ -79,7 +79,7 @@ entries:
     url: /feature_scripted_events.html
   - title: Configure cost optimization
     url: /feature_workload_schedule.html
-#      - title: Build VM Images
+#      - title: Build VM images
 #        url: /
   - title: User Administration
     entries:
@@ -96,13 +96,13 @@ entries:
 
   - title: System administration
     entries:
-#   - title: Privileged Access Management
+#   - title: Privileged access management
 #     url: /
     - title: Provide 3rd party access
       url: /guide_3rd_party_access.html
     - title: Configure backup
       url: /guide_configure_backup.html
-#    - title: Connect to Server
+#    - title: Connect to server
 #     url: /
     - title: Clone virtual machines
       url: /guide_clone_VMs.html
@@ -110,7 +110,7 @@ entries:
       url: /guide_auto_add_disk_space.html
 #    - title: Azure Key Vault
 #     url: /
-#    - title: Manage VDS Admin Accounts
+#    - title: Manage VDS admin accounts
 #     url: /
     - title: Configure antivirus
       url: /guide_configure_AV.html
@@ -125,9 +125,9 @@ entries:
     url: /guide_enable_wallpaper.html
   - title: Printing issues
     url: /guide_troubleshooting_printing.html
-#     - title: Disk Consumtpion
+#     - title: Disk consumtpion
 #       url: /
-#     - title: User Performance
+#     - title: User performance
 #       url: /
 
 - title: Reference
