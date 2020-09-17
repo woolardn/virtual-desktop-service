@@ -132,7 +132,7 @@ entries:
 
 - title: Reference
   entries:
-  - title: release notes
+  - title: Release notes
     entries:
     - title: VDS v5.4 release notes
       url: /release_notes_54.html
@@ -182,23 +182,23 @@ entries:
 #      entries:
 
 
-- title: NetApp VDS v5.4 Videos
+- title: NetApp VDS v5.4 videos
   entries:
-  - title: NetApp TV Content
+  - title: NetApp TV content
     url: /video_content_netapptv.html
   - title: Deploy WVD or RDS
     url: /video_azure_WVDRDS_deploy_54.html
-  - title: Add WVD Host Pool in Azure
+  - title: Add WVD host pool in Azure
     url: /video_azure_WVD_hostpool_54.html
-  - title: Manage VM Images
+  - title: Manage VM images
     url: /video_azure_WVDRDS_VMimages_54.html
-  - title: Manage WVD Users and App Groups
+  - title: Manage WVD users and app groups
     url: /video_azure_WVD_users_appgroups_54.html
-  - title: Managing Resources and Minimizing Costs
+  - title: Managing resources and minimizing costs
     url: /video_azure_WVDRDS_optimize_resources_54.html
-  - title: Automate Application management for WVD and RDS
+  - title: Automate application management for WVD and RDS
     url: /video_WVDRDS_app_management_54.html
-  - title: VDS, A Day in the Life
+  - title: VDS, A day in the life
     url: /video_VDS_day_in_the_life.html
-  - title: Upgrade v1 WVD Host Pool to v2
+  - title: Upgrade v1 WVD host pool to v2
     url: /guide_update_WVD_v1.html
