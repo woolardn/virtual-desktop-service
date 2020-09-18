@@ -66,6 +66,10 @@ Normal support business hours: Monday-Friday, 7:00am-7:00pm Central Time.
 
 == Additional resources
 
+=== Cost calculator
+==== Azure
+* link:https://v6.manage.cloudworkspace.com/cost-estimator[]
+
 === Remote Desktop Services (RDS) clients
 * link:https://cwc.cloudworkspace.com/download/cwc-win-setup.exe[VDS RDS client for Windows]
 

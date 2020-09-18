@@ -421,16 +421,16 @@ NOTE: The automatically deployed TSD1 server must remain as-is to support applic
 
 Application Management is detailed in this Article: link:guide_application_entitlement.html[]
 
-=== Azure AD Security Groups
+=== Azure AD security groups
 VDS includes functionality to create, populate and delete user groups which are backed by Azure AD Security Groups. These groups can be used outside of VDS just like any other Security Group. In VDS these groups can be used to assign folder permissions and application entitlement.
 
 
 
-==== Create User Groups
+==== Create user groups
 Creating user groups is performed on the Users & Groups tab within a workspace.
 
 
-==== Assign Folder Permissions by Group
+==== Assign folder permissions by group
 Permissions to view and edit folders in the company share can be assigned to users or groups.
 
 link:guide_manage_data_permissions.html[]
