@@ -154,10 +154,16 @@ entries:
     url: /guide_user_requirements.html
   - title: VDS change environments
     url: /reference_change_environments.html
-#  - title: Glossary
-#    entries:
-#    - title: VDS
-#      entries:
+  - title: Glossary
+    entries:
+    - title: VDS
+      entries:
+#      - title: VDS clients
+#        entries:
+#        - VDS Windows client
+#          url: /
+#        - VDS web client
+#          url: /
 #      - title: Header
 #        entries:
 #      - title: Dashboard
@@ -168,10 +174,28 @@ entries:
 #        entries:
 #      - title: Workspace
 #        entries:
+#        - title: Overview
+#          url: /
+#        - title: Users & Groups
+#          url: /
+#        - title: VM Resource
+#          url: /
+#        - title: Workload Schedule
+#          entries:
+#          - title: Live Scaling
+#            url: /
+#          - title: Woerkload Schedule
+#            url: /
+#          - title: Wake on Demand
+#            url: /
+#        - title: WVD
+#          url: /
 #      - title: App Services
 #        entries:
 #      - title: Service Board
 #        entries:
+      - title: Scripted Events
+        url: /feature_scripted_events.html
 #      - title: Admins
 #        entries:
 #      - title: Reports

@@ -59,7 +59,7 @@ Steps Overview:
 . Log into any local domain joined machine (preferably Domain Controller, but any local domain joined machine will work) and run 3 actions with NetApp VDS Deployment Preparation Tool.
 Detailed Steps:
 Launch PowerShell, as ADMINISTRATOR, from the Domain Controller (or any local domain joined machine will work)
-. Run the following commands, individually, to launch NetaApp VDS Deployment Preparation Tool:
+. Run the following commands, individually, to launch NetApp VDS Deployment Preparation Tool:
 +
 `[System.Net.ServicePointManager]::SecurityProtocol =[System.Net.SecurityProtocolType]::'Ssl3','Tls','Tls11','Tls12';`
 +
