@@ -5,7 +5,7 @@ summary: How to create a Level 3 Admin Account
 keywords:
 ---
 
-= Create a Level 3 admin account
+= Create a domain admin ("Level 3") account
 
 :toc: macro
 :hardbreaks:
