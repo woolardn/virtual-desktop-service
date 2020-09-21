@@ -96,6 +96,8 @@ entries:
 
   - title: System administration
     entries:
+    - title: Create domain admin account
+      url: /guide_create_l3_admin.html
 #   - title: Privileged access management
 #     url: /
     - title: Provide 3rd party access
