@@ -5,7 +5,7 @@ summary: Auto-Increase Disk Size Feature
 keywords:
 ---
 
-= Auto-increase disk size feature
+= Auto-increase disk space feature
 
 :toc: macro
 :hardbreaks:

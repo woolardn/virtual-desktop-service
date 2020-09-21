@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
-permalink: WVD_and_VDS_requirements.html
-summary: WVD and VDS Requirements
+permalink: WVD_and_VDS_prerequisites.html
+summary: WVD and VDS prerequisites
 ---
 
-= WVD and VDS requirements
+= WVD and VDS prerequisites
 
 :toc: macro
 :hardbreaks:
