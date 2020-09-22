@@ -16,6 +16,35 @@ keywords:
 [.lead]
 = Virtual Desktop Service – v5.4 Release Notes
 
+== VDS 5.4 release: Thurs., September 24, 2020
+
+_Components:_ 5.4 Virtual Desktop Service
+_When:_ Thursday September 24th, 2020 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+
+=== VDS
+* Performance enhancement – the list of users for which Cloud Workspaces can be enabled will now populate faster
+* Bug fix for handling site-specific WVD session host server imports
+* Deployment automation enhancement - introducing an optional setting to direct AD requests to CWMGR1
+* Improved handling of variables when importing servers to ensure that CWAgent is installed properly
+* Introduce additional RBAC controls over TestVDCTools – require membership in the CW-Infrastructure group for access
+* Fine tuning of permissions – grant admins in the CW-CWMGRAccess group access to registry entries for VDS settings
+* Update for Wake on Demand for personal WVD host pools to reflect updates for the Spring Release – only power on the VM assigned to the user
+* Update company code naming conventions in Azure deployments – this prevents an issue where Azure Backup cannot restore from a VM that starts with a number
+
+=== VDS Setup
+* Updates to VM quantity selections available in multi-server deployments
+
+=== REST API
+* Add Windows 2019 to GET /DataCenterProvisioning/OperatingSystems method
+* Auto populate VDS admin first and last names when creating admins via the API method
+
+=== Cost estimators
+* Introduction of Google Cost Estimator and a prompt for which hyperscaler you want to use for your estimate - Azure or GCP
+* Introduction of Reserved Instances in the Azure Cost Estimator
+* Updated list of services available per updated Azure products available by region
+
 == VDS 5.4 release: Thurs., September 10, 2020
 _Components:_ 5.4 Virtual Desktop Service
 _When:_ Thursday September 10th, 2020 at 10pm - 11pm Eastern
