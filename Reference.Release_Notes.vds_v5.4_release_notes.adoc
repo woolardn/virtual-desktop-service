@@ -4,6 +4,9 @@ permalink: release_notes_54.html
 summary: NetApp VDS Release Notes v5.4
 keywords:
 ---
+
+= Virtual Desktop Service – v5.4 Release Notes
+
 :toc: macro
 :hardbreaks:
 :toclevels: 2
@@ -14,8 +17,6 @@ keywords:
 :keywords: Windows Virtual Desktop
 
 [.lead]
-= Virtual Desktop Service – v5.4 Release Notes
-
 == VDS 5.4 release: Thurs., September 24, 2020
 
 _Components:_ 5.4 Virtual Desktop Service
