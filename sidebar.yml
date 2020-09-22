@@ -135,12 +135,12 @@ entries:
 #       url: /
   - title: Azure vCPU core quota
     url: /Azure_vCPU_core_quota.html
-#     - title: Unlock user account
-#       url: /
-#     - title: General server performance
-#       url: /
-#     - title: DNS forwarding for Azure ADDS & SSO
-#       url: /
+  - title: Unlock user account
+    url: /guide_troubleshooting_unlocking_user_accounts.html
+  - title: General vm performance
+    url: /guide_troubleshooting_vm_performance.html
+  - title: DNS forwarding for Azure ADDS & SSO
+    url: /guide_troubleshooting_dns_forwarding_for_azure_aadds_sso.html
   - title: Application issues
     url: /guide_troubleshooting_application_issues.html
 

@@ -20,7 +20,7 @@ keywords:
 == Overview
 This article covers the removal of VDS and NetApp control while maintaining WVD end user access. Going forward management would be with native Azure/Windows administration tools. After this process is complete it is recommended to contact cjsupport@netapp.com so that NetApp can clean up our back-end and billing systems.
 
-== Initial State
+== Initial state
 
 * WVD Deployment
 * TDS1 is FS Logix Fileshare
@@ -29,34 +29,34 @@ This article covers the removal of VDS and NetApp control while maintaining WVD 
 +
  \\****TSD1\****-Pro$\ProfileContainers (**** = Unique Company Code)
 
-== Delete CW Agent Service
+== Delete CW Agent service
 
 The CW Agent runs on every machine in the environment. The service that starts this process should be uninstalled with the following command on every VM in the environment. CWMGR1 can be skipped as that VM will be shut down and eventually deleted in most cases. Ideally this action would be run via scripted automation. The video below shows it done manually.
 
   C:\Program files\CloudWorkspace\CwAgent\CwAgent.exe -u
 
-=== Delete CW Agent Service Video
+=== Delete CW Agent service video
 video::l9ASmM5aap0[youtube]
 
 
 
-== Delete CW Agent Directory
+== Delete CW agent directory
 
 The previous uninstall removed the service that launches CW Agent but the files remain. Delete the directory:
 
   "C:\Program Files\CloudWorkspace"
 
-=== Delete CW Agent Directory Video
+=== Delete CW Agent directory video
 video::hMM_z4K2-iI[youtube]
 
-== Remove Startup Shortcuts
+== Remove startup shortcuts
 
 The startup items directory contains two shortcuts to files deleted in the previous step. To avoid end user error messages, these files should be deleted.
 
   "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\Pen.lnk"
   "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\CwRemoteApps.lnk"
 
-=== Remove Startup Shortcuts Video
+=== Remove startup shortcuts video
 video::U0YLZ3Qfu9w[youtube]
 
 == Unlink ‘Users’ and ‘Companies’ GPOs
@@ -72,7 +72,7 @@ Review:
 
 * AADDC Computers > Cloud Workspace Computers
 
-=== Unlink ‘Users’ and ‘Companies’ GPOs Video
+=== Unlink ‘Users’ and ‘Companies’ GPOs video
 video::cb68ri3HKUw[youtube]
 
 == Shutdown CWMGR1
@@ -85,10 +85,10 @@ In extremely rare cases there is a need to maintain this VM if another server ro
 * CW Automation Service
 * CW VM Automation
 
-=== Shutdown CWMGR1 Video
+=== Shutdown CWMGR1 video
 video::avk9HyIiC_s[youtube]
 
-== Delete NetApp VDS Service Accounts
+== Delete NetApp VDS service accounts
 
 The Azure AD service accounts used by VDS can be removed. Login in the Azure Management Portal and delete the users:
 
@@ -101,39 +101,39 @@ Other user accounts can be retained:
 * Azure administrator
 * .tech domain admins
 
-=== Delete NetApp VDS Service Accounts Video
+=== Delete NetApp VDS service accounts video
 video::_VToVNp49cg[youtube]
 
-== Delete App Registrations
+== Delete app registrations
 
 Two App Registrations are made when deploying VDS. These can be deleted:
 
 * Cloud Workspace API
 * Cloud Workspace WVD
 
-=== Delete App Registrations Video
+=== Delete app registrations video
 video::iARz2nw1Oks[youtube]
 
-== Delete Enterprise Applications
+== Delete enterprise applications
 
 Two Enterprise Applications are deployed when deploying VDS. These can be deleted:
 
 * Cloud Workspace
 * Cloud Workspace Management API
 
-=== Delete Enterprise Applications Video
+=== Delete enterprise applications video
 video::3eQzTPdilWk[youtube]
 
-== Confirm CWMGR1 is Stopped
+== Confirm CWMGR1 is stopped
 
 Before testing that the end users can still connect, confirm the CWMGR1 is stopped for a realistic test.
 
-=== Confirm CWMGR1 is Stopped Video
+=== Confirm CWMGR1 is stopped video
 video::Ux9nkDk5lU4[youtube]
 
-== Login and End User
+== Login and end user
 
 To confirm success, login as an end user and confirm functionality is maintained.
 
-=== Login and End User Video
+=== Login and end user video
 video::SuS-OTHJz7Y[youtube]
