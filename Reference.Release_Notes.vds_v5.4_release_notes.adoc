@@ -33,6 +33,9 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 * Fine tuning of permissions – grant admins in the CW-CWMGRAccess group access to registry entries for VDS settings
 * Update for Wake on Demand for personal WVD host pools to reflect updates for the Spring Release – only power on the VM assigned to the user
 * Update company code naming conventions in Azure deployments – this prevents an issue where Azure Backup cannot restore from a VM that starts with a number
+* Replace deployment automation's use of Sendgrid for SMTP transmission with a global control plane to resolve an issue with SendGrid's back-end - this results in a slimmer deployment footprint with fewer permissions/components
+
+
 
 === VDS Setup
 * Updates to VM quantity selections available in multi-server deployments

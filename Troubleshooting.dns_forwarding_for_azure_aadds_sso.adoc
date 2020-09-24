@@ -1,0 +1,49 @@
+---
+sidebar: sidebar
+permalink: guide_troubleshooting_dns_forwarding_for_azure_aadds_sso.html
+summary: Step-by-step guide to troubleshoot AADDS NDS and SSO
+keywords:
+---
+
+= DNS forwards for Azure AD DS & SSO via O365 identity
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords: Windows Virtual Desktop
+
+[.lead]
+== Overview
+Users can’t access company websites on primary email domain.
+
+_For Example, NetApp employees in VDS workspaces can’t access netapp.com if their SSO account is user@netapp.com_
+
+Dedicated VDS deployments use the internal domain of the Azure tenant.
+
+== Resolution
+
+To resolve this, the Organization’s team that manages DNS will need to create a DNS forward lookup zone for your internal domain to allow it to resolve the the correct external IP (for NetApp's purpose, this would let NetApp employees browse to netapp.com from within their virtual desktop).
+
+== Step by Step Guide
+
+. Install the DNS Server Tools on CWMGR1 – this will allow you to manage DNS.
++
+image:dns1.png[]
++
+image:dns2.png[]
++
+image:dns3.png[]
++
+image:dns4.png[]
++
+image:dns5.png[]
+
+. Once installed, you can go to Control Panel → System and Security → Administrative Tools and open up DNS.
++
+image:dns6.png[]
+
+. When asked for the DNS server running DNS you will want to put in your domain name (in the example we’ve been using, this would be _netapp.com_).

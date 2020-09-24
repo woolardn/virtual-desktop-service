@@ -64,6 +64,8 @@ entries:
     url: guide_update_WVD_v1.html
   - title: Renew SSL certificate
     url: /arch_reset_ssl_cert.html
+  - title: VDS teardown guide
+    url: /wvd_teardown_guide.html
 
 - title: Management
   entries:
@@ -93,6 +95,8 @@ entries:
       url: /guide_reset_user_password.html
     - title: Configure MFA
       url: /task_configure_MFA.html
+#   - title:
+#     url: /
 
   - title: System administration
     entries:
@@ -131,18 +135,16 @@ entries:
 #       url: /
 #     - title: User performance
 #       url: /
-#     - title: Azure CPU core quota
-#       url: /
-#     - title: WVD teardown guide
-#       url: /
-#     - title: Unlock user account
-#       url: /
-#     - title: General server performance
-#       url: /
-#     - title: DNS forwarding for Azure ADDS & SSO
-#       url: /
-#     - title: Application issues
-#       url: /
+  - title: Azure vCPU core quota
+    url: /Azure_vCPU_core_quota.html
+  - title: Unlock user account
+    url: /guide_troubleshooting_unlocking_user_accounts.html
+  - title: General vm performance
+    url: /guide_troubleshooting_vm_performance.html
+  - title: DNS forwarding for Azure ADDS & SSO
+    url: /guide_troubleshooting_dns_forwarding_for_azure_aadds_sso.html
+  - title: Application issues
+    url: /guide_troubleshooting_application_issues.html
 
 
 
