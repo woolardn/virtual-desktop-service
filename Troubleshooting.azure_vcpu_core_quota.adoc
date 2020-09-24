@@ -14,12 +14,12 @@ keywords:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: Windows Virtual Desktop
+:keywords:
 
 [.lead]
 == View Current Quota
 
-. Log into the Azure console and navigate to the Subscriptions module and click Quotas. Next, select all providers in the providers drop-down, select show all in the far-right drop down and select the Azure region in which your Cloud Workspace is deployed. 
+. Log into the Azure console and navigate to the Subscriptions module and click Quotas. Next, select all providers in the providers drop-down, select show all in the far-right drop down and select the Azure region in which your Cloud Workspace is deployed.
 +
 image:quota1.png[]
 

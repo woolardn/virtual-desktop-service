@@ -13,7 +13,7 @@ summary: WVD and VDS prerequisites
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: Windows Virtual Desktop
+:keywords:
 
 [.lead]
 == WVD and VDS requirements and notes

@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: guide_3rd_party_access.html
-summary: 3rd party access guide
+permalink: adding_moving_mapped_drives.html
+summary: Adding and Moving Mapped Drives
 keywords:
 ---
 
-= Providing temporary access to 3rd parties
+= Adding and Moving Mapped Drives
 
 :toc: macro
 :hardbreaks:
