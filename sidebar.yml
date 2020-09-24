@@ -12,6 +12,10 @@ entries:
         url: /guide_deploy_VDS_to_Azure.html
       - title: Supplemental - WVD with existing AD
         url: /guide_deploy_VDS_to_Azure_Existing_AD.html
+      - title: VDS v5.4 components and permissions (WVD)
+        url: /WVD_and_VDS_components_and_permissions.html
+      - title: VDS v5.4 prerequisites (WVD)
+        url: /WVD_and_VDS_prerequisites.html
 #    - title: Install VDS on existing WVD
 #      url: /
 #  - title: Remote Desktop Services
@@ -166,10 +170,6 @@ entries:
       url: /release_notes_51.html
     - title: CWS v5.0 release notes
       url: /release_notes_50.html
-  - title: WVD and VDS v5.4 components and permissions
-    url: /WVD_and_VDS_components_and_permissions.html
-  - title: WVD and VDS v5.4 prerequisites
-    url: /WVD_and_VDS_prerequisites.html
   - title: End user access
     url: /guide_user_requirements.html
   - title: VDS change environments
