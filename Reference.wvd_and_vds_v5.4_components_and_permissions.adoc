@@ -72,7 +72,6 @@ WVD requires that the user session Virtual Machines (VM) be created in an Azure 
 *** xSystemSecurity:  Desired state configuration resource for managing UAC and IE Esc
 * *Log Analytics* – a Log Analytics workspace is created to store logs from the deployment and DSC processes and from other services, This can be deleted after deployment, but this isn’t recommended as it enables other functionality. Logs are retained for 30 days by default, incurring no charges for retention.
 * *Availability Set* – an Availability Set is set up as a part of the deployment process to enable separation of shared VMs (shared WVD host pools, RDS resource pools) across fault domains. This can be deleted after deployment if desired, but would disable the option to provide additional fault tolerance for shared VMs.
-* *SendGrid* – an instance of SendGrid is created from the Azure Marketplace and used to send notifications regarding the progress of the deployment process and when new users are provisioned. This can be removed after deployment if desired, but nightly reports and new user creation notifications will be disabled.
 
 NOTE: Windows Virtual Desktop also installs Azure components, including Enterprise Applications and App Registrations for Windows Virtual Desktop and Windows Virtual Desktop Client, the WVD Tenant, WVD Host Pools, WVD App Groups, and WVD registered Virtual Machines. While VDS Automation components manage these components, WVD controls their default configuration and attribute set so refer to the WVD documentation for details.
 
