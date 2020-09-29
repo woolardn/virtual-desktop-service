@@ -18,24 +18,71 @@ keywords:
 
 [.lead]
 == Overview
-Providing access to 3rd parties is a common practice when migrating to any cloud solution.
+By default there are three shared folders exposed to end user sessions.  These folders are found on the defined storage layer.  This could be on the file server (TSD1 or D1) or a storage service such as Azure Files, Azure NetApp Files, NetApp CVO and NetApp CVS.
 
-VDS Admins often elect to not give these 3rd parties the same level of access that they have, to follow a “least required” security access policy.
+To assist with clarity, this article will use an example customer with the company code “NECA.”  This example assumes a single TDS1 server has been deployed, named NECATSD1.  We’ll work through the process of moving a folder to another VM (Named “NECAD1”).  This strategy can be used to move between partition on the same machine or to another machine as shown in the following example…
 
-To set up admin access for 3rd parties, log into VDS and navigate to the Organizations module, click into the organization and click Users & Groups.
+Folders Starting Location:
 
-Next, create a new User account for the 3rd party and scroll down until you see the Admin Access section and check the box to enable admin rights.
+* Data: NECATSD1\C:\data\NECA\ (TSD1means it is the first Terminal Server and also functions as the Data Server)
+* FTP: NECATSD1\C:\ftp\NECA\
+* Home: NECATSD1\C:\home\NECA\
 
-image:3rdparty1.png[]
+Folders Ending Location:
 
-The VDS Admin is then presented with the Admin Access setup screen. There is no need to change user’s name, login or password – just add phone number and/or email if you want to enforce Multi-Factor Authentication and select the level of access to grant.
+* Data: NECAD1\G:\data\NECA\ (the D1means it is the 1st Data Server)
+* FTP: The same process applies, no need to describe it 3x
+* Home: The same process applies, no need to describe it 3x
 
-For database administrators like a VAR or ISV, _Servers_ is commonly the only access module required.
+== Add disk for G: on NECAD1
 
-image:3rdparty2.png[]
+. In order to put the shared folder on the E: drive we’ll need to add one via the hypervisor (e.g. Azure Management Portal), then initialize and format it
++
+image:mapped1.png[]
+. Copy the existing folder (on NECATSD1, C:\) path to the new location (on NECAD1, G:\)
+. Copy the folder(s) from the original location to the new location.
++
+image:mapped2.png[]
 
-Once saved, the End User gains access to self-management functions by logging into VDS with their standard Virtual Desktop user credentials.
+== Gather Information From the Original Folder Share (NECATSD1, C:\data\NECA\)
 
-When the newly created User logs in, they will only see the modules you have assigned to them. They can select the organization, scroll down to the Servers section and connect to the server name you tell them to (say, <XYZ>D1, where XYZ is your company code and D1 designates that the server is a Data server. In the example below, we would tell them to connect to the TSD1 server to perform their assignments.
+. Share the new folder using the exact same path as the folder in the original location.
+. Open the new NECAD1, G:\data\ folder and you’ll see a folder named the company code, “NECA” in our example.
++
+image:mapped3.png[]
+. Note the security permissions of the original folder share:
++
+image:mapped4.png[]
+. Here is the typical setup, however it is important to copy the original settings in case there are existing customizations we need to preserve.  All other user/group permissions should be removed from the new folder share
 
-image:3rdparty3.png[]
+** SYSTEM:All permissions allowed
+** LocalClientDHPAccess (on the local machine):All permissions allowed
+** ClientDHPAccess (on the domain): All permissions allowed
+** NECA-all users (on the domain): All permissions except “Full Control” allowed
+
+== Replicate the Sharing Path and Security Permissions to the New Shared Folder
+
+. Go back to the new location (NECAD1, G:\data\NECA\ and share the NECA folder with the same network path (excluding the machine), in our example “neca-data$”
++
+image:mapped5.png[]
+. For user security add all the users, set their permissions to match.
++
+image:mapped6.png[]
+. Remove any other user/group permissions that may already exist.
++
+image:mapped7.png[]
+
+== Edit Group Policy (Only if the folder moved to a new Machine)
+
+. Next you’ll edit the Drive Maps in Group Policy Management Editor.  For Azure AD Domain Services, the mapping is located in:
++
+  “Cloud Workspace Users > User Configuration > Preferences > Windows Settings> Drive Maps”
++
+image:mapped8.png[]
+. Once Group Policy updates, the next time each user connects, they’ll see the mapped drives which are pointed back to the new location.
+. At this point you can delete the original folders, on NECATSD1, C:\.
+
+== Troubleshooting
+
+If the end user sees the mapped drives with a red X, right click the drive and select disconnect. Log out and back in the drive will be present correctly.
+image:mapped9.png[]
