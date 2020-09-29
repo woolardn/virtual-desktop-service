@@ -27,6 +27,7 @@ This document describes the required elements for deploying Windows Virtual Desk
 * Azure Subscription
 * Available Azure Quota for Azure virtual machines
 * Azure Admin Account with Global Admin and Subscription Ownership Roles
+* Domain admin account with 'Enterprise Admin' role for AD Connect setup
 
 === Pre-deployment information
 

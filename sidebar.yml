@@ -124,6 +124,8 @@ entries:
 #     url: /
     - title: Configure antivirus
       url: /guide_configure_AV.html
+    - title: Adding and moving mapped drives
+      url: /adding_moving_mapped_drives.html
 
 - title: Troubleshooting
   entries:
