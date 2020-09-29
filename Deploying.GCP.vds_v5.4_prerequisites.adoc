@@ -13,7 +13,7 @@ summary: GCP and VDS prerequisites
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: Windows Virtual Desktop
+:keywords:
 
 [.lead]
 == GCP and VDS requirements and notes
@@ -40,7 +40,6 @@ This document describes the required elements for deploying Remote Desktop Servi
 
 === End user connection requirements
 
-= Remains to be edited
 
 .The following Remote Desktop clients support RDS in GCP:
 
@@ -63,6 +62,7 @@ This document describes the required elements for deploying Remote Desktop Servi
 * 3rd party software and/or thin clients
 ** Requirement: Support RD gateway configuration
 
+= Remains to be edited
 
 *The Remote Desktop clients must have access to the following URLs:*
 [cols=4*,options="header",cols="25,25,25,25"]

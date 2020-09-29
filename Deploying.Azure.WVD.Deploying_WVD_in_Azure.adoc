@@ -14,7 +14,7 @@ keywords:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: Windows Virtual Desktop
+:keywords:
 
 [.lead]
 == Overview
@@ -284,8 +284,8 @@ Immediately after the install is successful, AD Connect needs to be installed an
 
 .To install and configure AD Connect, follow these steps:
 . Connect to the domain controller as a domain admin.
-.. Get credentials form the Azure Key Vault
-. Install AD Connect, login with the domain admin and the Azure AD Global Admin.
+.. Get credentials from the Azure Key Vault
+. Install AD Connect, login with the domain admin (with Enterprise Admin role permissions) and the Azure AD Global Admin.
 
 == Activating WVD services
 Once the deployment is complete, the next step is to enable the WVD functionality. The WVD enablement process requires the Azure Administrator to perform several steps to register their Azure AD domain and subscription for access using the Azure WVD services. Similarly, Microsoft requires VDS to request the same permissions for our automation application in Azure. The steps below walk you through that process.

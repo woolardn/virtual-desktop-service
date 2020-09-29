@@ -14,7 +14,7 @@ keywords:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: Windows Virtual Desktop
+:keywords:
 
 [.lead]
 == CWMS 5.2 release: Mon., December 2, 2019

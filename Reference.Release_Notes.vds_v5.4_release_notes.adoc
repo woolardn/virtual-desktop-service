@@ -14,7 +14,7 @@ keywords:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: Windows Virtual Desktop
+:keywords:
 
 [.lead]
 == VDS 5.4 release: Thurs., September 24, 2020

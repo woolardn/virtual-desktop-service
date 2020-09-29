@@ -1,4 +1,4 @@
-''---
+---
 sidebar: sidebar
 permalink: guide_managing_end_users.html
 summary: Step-by-step guide to manage end users in VDS
@@ -14,7 +14,7 @@ keywords:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/
-:keywords: Windows Virtual Desktop
+:keywords:
 
 [.lead]
 == Adding new users to Virtual Desktop Service
