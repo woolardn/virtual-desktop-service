@@ -17,6 +17,25 @@ keywords:
 :keywords:
 
 [.lead]
+== VDS 5.4 hotfix: Wed., September 30, 2020
+_Components:_ 5.4 Virtual Desktop Service
+_When:_ Wednesday September 30th, 2020 at 9pm -10pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== VDS
+* Bug fix for an issue where a subset of App Services VMs were improperly tagged as cache VMs
+* Upgrade to underlying SMTP configuration to mitigate email relay account configuration issues
+** Note: as this is now a control plane service, this results in a slimmer deployment footprint with fewer permissions/components in a customer's tenant
+* Bug fix to prevent an admin using DCConfig from resetting the a service account's password
+
+=== VDS Setup
+* Improved handling of environment variables for Azure NetApp Files deployments
+* Enhanced deployment automation - improved handling of environment variables to ensure required PowerShell components are present
+
+=== REST API
+* Introduction of API support for Azure deployments to leverage an existing Resource Group
+*	Introduction of API support for existing AD deployments with different domain/NetBIOS names
+
 == VDS 5.4 release: Thurs., September 24, 2020
 
 _Components:_ 5.4 Virtual Desktop Service

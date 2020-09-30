@@ -20,23 +20,32 @@ keywords:
 == Overview
 NetApp VDS does not track or recommend different user endpoint devices.  We do recommend some basics, but this does not exclude other possible endpoint choices.
 
-Remote Desktop environments can be access from a variety of endpoint devices.  Clients are available directly from Microsoft and 3rd party vendors.  NetApp VDS offers a custom connection client for Windows devices as well as a Web client compatible with HTML 5 browsers.
+Remote Desktop environments can be access from a variety of endpoint devices.  Clients are available directly from Microsoft and 3rd party vendors.  NetApp VDS offers a custom connection client for Windows devices (_NetApp VDS Client for Windows_) as well as a Web client compatible with HTML 5 browsers.
 
 Windows Virtual Desktop environments can be accessed from a variety of endpoint devices.  Unlike RDS, WVD environments can only be accessed by Microsoft native clients.  Microsoft has published clients for Windows, MacOS, Android, iOS as well as a web client.  Additionally they have partnered with IGEL to offer a Linux-based thin client offering.
 
 
 == End user connection options
 === Remote Desktop Services
-==== NetApp VDS Windows client
+==== NetApp VDS Client for Windows
 The NetApp VDS Client for Windows is the best way for users to connect to their RDS environment.  This simple installer allows the users to connect with just their user name and password.  No server or gateway configuration is required.  Printing and Local drive mapping are automatically enabled and this method has the highest performance.
+
+===== VDS client url whitelisting
+In the event that outbound network connections are controller and in order to guarantee that they can continue to use the NetApp VDS Client for Windows for Windows, we recommend adding the following to the whitelist:
+* api.cloudworkspace.com
+* vdsclient.app
+* api.vdsclient.app
+* bin.vdsclient.app
+* vdsclient.blob.core.windows.net
+
 
 Upon request, a branded version of this application can be created with the Partner’s logos and contact information.  Please contact support to request this.
 
 The NetApp VDS Client can be downloaded from here: https://cwc.cloudworkspace.com/download/cwc-win-setup.exe
 
-*Printing:* When connecting with the Virtual Desktop Client for Windows, printing is automatically setup using ThinPrint.
+*Printing:* When connecting with the NetApp VDS Client for Windows, printing is automatically setup using ThinPrint.
 
-*Local File Access:* By default, the Virtual Desktop Client for Windows shares the Local device drives (HDD, USB & Network) with the cloud user session.  The user can browse and transfer data back and forth from the “This PC” location in Windows Explorer.  This functionality can be disabled by editing the workspace or user in VDS.
+*Local File Access:* By default, the NetApp VDS Client for Windows shares the Local device drives (HDD, USB & Network) with the cloud user session.  The user can browse and transfer data back and forth from the “This PC” location in Windows Explorer.  This functionality can be disabled by editing the workspace or user in VDS.
 
 _VDS > Workspaces > Users & Groups > Security Settings_
 image:win_client_disk_access.png[]
