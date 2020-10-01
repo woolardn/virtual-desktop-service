@@ -17,6 +17,28 @@ keywords:
 :keywords:
 
 [.lead]
+== Date: TBD
+
+Impact: Users may be prompted that their whitelisting needs to be updated next time they launch the client
+
+We will be making an update to our Virtual Desktop Service Client for Windows so that it can utilize the latest API. This means that organizations that whitelist access to outbound locations from inside a network would need to make adjustments to the whitelist either now or in the future.
+
+Users connecting with the VDS for Windows client today will still be able to connect if no whitelist changes are made, but in order to guarantee that they can continue to use the VDS Client for Windows into the future we recommend adding the following to the whitelist:
+
+* api.cloudworkspace.com
+* vdsclient.app
+* api.vdsclient.app
+* bin.vdsclient.app
+* vdsclient.blob.core.windows.net
+
+.Senario descriptions:
+
+* There is no impact if a customer does not whitelist outbound traffic from their network
+* If a customer whitelists outbound traffic from their network (or wishes to do so) and makes the updates above: no impact, access will flow as intended
+* If a customer already whitelists outbound traffic from their network for the VDS Client for Windows but does not make the updates above: no impact, access will flow as intended using their current whitelisted addresses until further notice
+* If a customer whitelists outbound traffic from their network but does not whitelist anything for VDS Client for Windows: user access and telemetry will not be able to function
+
+Please contact ng-vds-support@netapp.com with any questions you may have.
 
 == Date: Thursday August 27, 2020 at 11pm Eastern
 
