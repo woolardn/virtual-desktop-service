@@ -25,7 +25,7 @@ This document describes the required elements for deploying Remote Desktop Servi
 
 * GCP tenant
 * GCP project
-*
+* Service Account with Owner role assigned
 
 === Pre-deployment information
 
@@ -43,7 +43,13 @@ This document describes the required elements for deploying Remote Desktop Servi
 
 .The following Remote Desktop clients support RDS in GCP:
 
-* link:https://docs.netapp.com/us-en/virtual-desktop-service/guide_user_requirements.html#overview[NetApp VDS Windows client]
+* link:https://docs.netapp.com/us-en/virtual-desktop-service/guide_user_requirements.html#overview[NetApp VDS Client for Windows]
+** NetApp VDS Client for Windows outbound url whitelisting requirements
+*** api.cloudworkspace.com
+*** vdsclient.app
+*** api.vdsclient.app
+*** bin.vdsclient.app
+*** vdsclient.blob.core.windows.net
 ** Enhanced features:
 *** VDS Wake on Demand
 *** ThinPrint client and licensing
@@ -72,12 +78,13 @@ This document describes the required elements for deploying Remote Desktop Servi
 | Purpose
 | Client(s)
 | *.wvd.microsoft.com |	443	| Service traffic	|All
-|*.servicebus.windows.net	443	Troubleshooting data	|All
+|*.servicebus.windows.net |	443 |	Troubleshooting data	|All
 |go.microsoft.com	|443	|Microsoft FWLinks	|All
 |aka.ms	|443	|Microsoft URL shortener	|All
 |docs.microsoft.com	|443	|Documentation	|All
 |privacy.microsoft.com	|443	|Privacy statement	|All
 |query.prod.cms.rt.microsoft.com	|443	|Client updates	|Windows Desktop
+|
 |===
 NOTE: Opening these URLs is essential for a reliable client experience. Blocking access to these URLs is unsupported and will affect service functionality. These URLs only correspond to the client sites and resources, and do not include URLs for other services like Azure Active Directory.
 
