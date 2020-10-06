@@ -40,7 +40,7 @@ Windows Virtual Desktop is a comprehensive desktop and app virtualization servic
 * Organizations can save on Windows licensing because WVD can leverage "Windows 10 Enterprise E3 Per User" which replaces the need for RDS CALs and significantly reduces the per-hour cost of session host VMs in Azure.
 
 == Guide scope
-This guide walks you through the deployment of WVD using NetApp VDS technology from the perspective of an Azure and VDS administrator. You bring the Azure tenant and subscription with zero preconfiguration and this guide helps you setup WVD end-to-end.
+This guide walks you through the deployment of WVD using NetApp VDS technology from the perspective of an Azure and VDS administrator. You bring the Azure tenant and subscription with zero pre-configuration and this guide helps you setup WVD end-to-end.
 
 .This guide covers the following steps:
 . <<Azure Prerequisites,Confirm prerequisites of the Azure tenant, Azure subscription and Azure admin account permissions>>

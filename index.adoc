@@ -53,7 +53,7 @@ Learn more: https://cloud.netapp.com/virtual-desktop-service
 
 == Getting support
 
-Email support: cjsupport@netapp.com
+Email support: VDSsupport@netapp.com
 
 Phone support: 844.645.6789 Ext. 2
 
