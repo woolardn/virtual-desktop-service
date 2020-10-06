@@ -1,0 +1,47 @@
+---
+sidebar: sidebar
+permalink: guide_deploy_rds_to_gcp.html
+summary: Step-by-step guide to deploy RDS into GCP
+---
+
+= RDS deployment guide for Google Cloud (GCP)
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+[.lead]
+== Overview
+This guide will provide the step by step instructions to create a Remote Desktop Service (RDS) deployment utilizing NetApp Virtual Desktop Service (VDS) in Google Cloud.
+
+This Proof of Concept (POC) guide is designed to help you quickly deploy and configure RDS in your own test GCP Subscription. This guide assumes a green-field deployment into a clean, non-production Active Directory tenant.
+
+Production deployments, especially into existing AD environments are very common however that process is not considered in this POC Guide. Complex POCs and production deployments should be initiated with the NetApp VDS Sales/Services teams and not performed in a self-service fashion.
+
+This POC document will take you thru the entire RDS deployment and provide a brief tour of the major areas of post-deployment configuration available in the VDS platform. Once completed you’ll have a fully deployed and functional RDS environment, complete with session hosts, applications and users. Optionally you’ll have the option to configure automated application delivery, security groups, file share permissions, Cloud Backup, intelligent cost optimization. VDS deploys a set of best practice settings via GPO. Instructions on how to optionally disable those controls are also included, in the event your POC needs to have no security controls, similar to an unmanaged local device environment.
+
+== RDS basics
+VDS deploys a fully functional RDS environment, with all necessary supporting services from scratch.  This functionality can include:
+
+* RDS gateway server(s)
+* Web client access server(s)
+* Domain controller server(s)
+* RDS broker service
+* RDS licensing service
+* ThinPrint licensing service
+* Filezilla FTPS server service
+
+
+== Guide scope
+This guide walks you through the deployment of RDS using NetApp VDS technology from the perspective of a GCP and VDS administrator. You bring the GCP tenant and project with zero pre-configuration and this guide helps you setup RDS end-to-end.
+
+.This guide covers the following steps:
+. <<Azure Prerequisites,Confirm prerequisites of the GCP project and GCP admin account permissions>>
+
+
+**************************
