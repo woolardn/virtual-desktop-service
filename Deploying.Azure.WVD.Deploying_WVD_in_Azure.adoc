@@ -235,7 +235,7 @@ When splitting the VDS Platform into Multiple virtual machines the following rol
 
 * Remote Desktop Gateway
 +
-VDS Setup can be used to deploy and configure one or two RDS Gateways. These gateways relay the RDS user session form the open internet to the session host VMs within the deployment. RDS Gateways handle an important function, protecting RDS from direct attacks from the open internet and to encrypt all RDS traffic in/out of the environment. When two Remote Desktop Gateways are selected, VDS Setup deploys 2 VMs and configures them to load balance incoming RDS user sessions.
+VDS Setup can be used to deploy and configure one or two RDS Gateways. These gateways relay the RDS user session from the open internet to the session host VMs within the deployment. RDS Gateways handle an important function, protecting RDS from direct attacks from the open internet and to encrypt all RDS traffic in/out of the environment. When two Remote Desktop Gateways are selected, VDS Setup deploys 2 VMs and configures them to load balance incoming RDS user sessions.
 
 * HTML5 Gateway
 +
