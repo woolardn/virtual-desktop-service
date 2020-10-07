@@ -40,8 +40,331 @@ VDS deploys a fully functional RDS environment, with all necessary supporting se
 == Guide scope
 This guide walks you through the deployment of RDS using NetApp VDS technology from the perspective of a GCP and VDS administrator. You bring the GCP tenant and project with zero pre-configuration and this guide helps you setup RDS end-to-end.
 
-.This guide covers the following steps:
-. <<Azure Prerequisites,Confirm prerequisites of the GCP project and GCP admin account permissions>>
 
 
-**************************
+== Create service account
+. In GCP, navigate to (or search for) _IAM & Admin > Service Accounts_
++
+image:GCP_Deploy1.png[]
+
+. Click _+ CREATE SERVICE ACCOUNT_
++
+image:GCP_Deploy2.png[]
+
+. Enter a unique service account name, click _CREATE_.  Make a note of the service account's email address which will be used in a later step.
++
+image:GCP_Deploy3.png[]
+
+. Select the _Owner_ role for the service account, click _CONTINUE_
++
+image:GCP_Deploy4.png[]
+
+. No changes are necessary on the next page (_Grant users access to this service account(optional)_), click _DONE_
++
+image:GCP_Deploy5.png[]
+
+. From the _Service accounts_ page, click the action menu and select _Create key_
++
+image:GCP_Deploy6.png[]
+
+. Select _P12_, click _CREATE_
++
+image:GCP_Deploy7.png[]
+
+. Download the .P12 file and save it to your computer.  Leaved the _Private key password_ unchanged.
++
+image:GCP_Deploy8.png[]
++
+image:GCP_Deploy9.png[]
+
+== Enable Google compute API
+. In GCP, navigate to (or search for) _APIs & Services > Library_
++
+image:GCP_Deploy10.png[]
+
+. In the GCP API Library, navigate to (or search for) _Compute Engine API_, Click _ENABLE_
++
+image:GCP_Deploy11.png[]
+
+== Create new VDS deployment
+. In VDS, navigate to _Deployments_ and click _+ New Deployment_
++
+image:GCP_Deploy12.png[]
+
+. Enter a name for the deployment
++
+image:GCP_Deploy13.png[]
+
+. Select _Google Cloud Platform_
++
+image:GCP_Deploy14.png[]
+
+=== Infrastructure platform
+
+. Enter the _Project ID_ and OAuth Email address.  Upload the .P12 file from earlier in this guide and select the appropriate zone for this deployment. Click _Test_ to confirm the entries are correct and the appropriate permissions have been set.
++
+NOTE: The OAuth email is the address of the service account created earlier in this guide.
++
+image:GCP_Deploy15.png[]
+
+. Once confirmed, click _Continue_
++
+image:GCP_Deploy16.png[]
+
+=== Accounts
+==== Local VM accounts
+. Provide a password for the local Administrator account.  Document this password for later use.
+
+. Provide a password for the SQL SA account.  Document this password for later use.
+
+
+==== SMTP account
+VDS can send email notifications via custom SMTP settings or the built-in SMTP service can be used by selecting _Automatic_.
+
+. Enter an email address to be used as the _From_ address when email notification are sent by VDS.  _no-reply@<your-domain>.com_ is a common format.
+
+. Enter an email address where success reports should be directed.
+
+. Enter an email address where failure reports should be directed.
+
+image:GCP_Deploy17.png[]
+
+==== Level 3 technicians
+Level 3 technician accounts (aka. _.tech accounts_) are domain-level accounts for VDS admins to use when performing administrative tasks on the VMs int he VDS environment.  Additional accounts can be created on this step and/or later.
+
+. Enter the username and password for the Level 3 admin account(s).  ".tech" will be appended to the user name you enter to help differentiate between end users and tech accounts.  Document these credentials for later use.
++
+NOTE: The best practice is to define named accounts for all VDS admins that should have domain-level credentials to the environment.  VDS admins without this type of account can still have VM-level admin access via the _Connect to server_ functionality built into VDS.
++
+image:GCP_Deploy18.png[]
+
+=== Domains
+==== Active directory
+Enter the desired AD domain name.
+
+==== Public domain
+External access is secured via an SSL certificate.  This can be customized with your own domain and a self-managed SSL certificate. Alternativly, selecting _Automatic_ allows VDS to manage the SSl certificate including an automatic 90-day refresh of the certificate.  When using automatic, each deplpoyment uses a unique sub-domain of _cloudworkspace.com_.
+
+image:GCP_Deploy19.png[]
+
+
+=== Virtual machines
+For RDS deployments the required components such as domain controllers, RDS brokers and RDS gateways need to be installed on platform server(s). In production these services should be run on dedicated and redundant virtual machines. For proof of concept deployments a single VM can be used to host all of these services.
+
+==== Platform VM configuration
+
+===== Single virtual machine
+This is the recommended selection for POC deployments. In a Single virtual machine deployment the following roles are all hosted on a single VM in Azure:
+
+*	CW Manager
+*	HTML5 Gateway
+*	RDS Gateway
+*	Remote App
+*	FTPS Server (Optional)
+*	Domain Controller
+
+The maximum advised user count for RDS use cases in this configuration is 100 users. Load balanced RDS/HTML5 gateways are not an option in this configuration, limiting the redundancy and options for increasing scale in the future.
+
+NOTE: If this environment is being designed for multi-tenancy, a Single virtual machine configuration is not supported.
+
+===== Multiple servers
+When splitting the VDS Platform into Multiple virtual machines the following roles are hosted on dedicated VMs in Azure:
+
+* Remote Desktop Gateway
++
+VDS Setup can be used to deploy and configure one or two RDS Gateways. These gateways relay the RDS user session from the open internet to the session host VMs within the deployment. RDS Gateways handle an important function, protecting RDS from direct attacks from the open internet and to encrypt all RDS traffic in/out of the environment. When two Remote Desktop Gateways are selected, VDS Setup deploys 2 VMs and configures them to load balance incoming RDS user sessions.
+
+* HTML5 Gateway
++
+VDS Setup can be used to deploy and configure one or two HTML 5 Gateways.  These gateways serve up an HTML 5 VDS  access client (e.g. https://login.cloudworkspace.com) based on the RemoteSpark technology. Licensing for this component is typically included in the cost of VDS licensing.  When two HTM5 CW Portals are selected, VDS Setup deploys 2 VMs and configures them to load balance incoming HTML5 user sessions.
+
++
+NOTE: When using Multiple server option (even if users will only connect via the RDS client) at least one HTML5 gateway is highly recommended to enable _Connect to Server_ functionality from VDS.
+
+* Gateway Scalability Notes
++
+For RDS use cases, the maximum size of the environment can be scaled out with additional Gateway VMs, with each RDS or HTML5 Gateway supporting roughly 500 users. Additional Gateways can be added later with minimal NetApp professional services assistance
+
+If this environment is being designed for multi-tenancy then the _Multiple servers_ selection is required.
+
+====== Service roles
+
+* Cwmgr1
++
+This VM is the NetApp VDS administrative VM.  It runs the SQL Express database, helper utilities and other administrative services.  In a _single server_ deployment this VM can also host the other services but in a _multiple server_ configuration those services are moved to different VMs.
+
+* CWPortal1(2)
++
+The first HTML5 gateway is named _CWPortal1_, the second is _CWPortal2_.  One or two can be created at deployment.  Additional servers can be added post-deployment for increased capacity (~500 connections per server).
+
+* CWRDSGateway1(2)
++
+The first RDS gateway is named _CWRDSGateway1_, the second is _CWRDSGateway2_.  One or two can be created at deployment.  Additional servers can be added post-deployment for increased capacity (~500 connections per server).
+
+* Domain Controllers
++
+At deployment one or two domain controllers can be automatically built and configured to work with VDS.
+
+image:GCP_Deploy21.png[]
+
+==== Operating system
+Select the desired server operating system to be deployed for the platform servers.
+
+==== Time zone
+Select the desired timezone.  The platform servers will be configured to this time and log files will reflect this timezone.  End user session will still reflect their own timezone, regardless of this setting.
+
+
+==== Additional services
+
+===== FTP
+VDS can optional install and configure Filezilla to run an FTPS server for moving data in and out of the environment.  This technology is older and more modern data transfer methods (like Google Drive) are recommended.
+
+image:GCP_Deploy20.png[]
+
+=== Network
+It is a best practice to isolate VMs to different subnets according to their purpose.
+
+Define the network scope and add a /20 range.
+
+VDS Setup detects and suggests a range that should prove successful. Per best practices, the subnet IP addresses must fall into a private IP address range.
+
+These ranges are:
+
+*  192.168.0.0 through 192.168.255.255
+*  172.16.0.0 through 172.31.255.255
+*  10.0.0.0 through 10.255.255.255
+
+Review and adjust if needed, then click Validate to identify subnets for each of the following:
+
+* Tenant: this is the range in which session host servers and database servers will reside
+* Services: this is the range in which PaaS services like Cloud Volumes Service will reside
+* Platform: this is the range in which Platform servers will reside
+* Directory: this is the range in which AD servers will reside
+
+image:GCP_Deploy22.png[]
+
+=== Licensing
+==== SPLA #
+Enter your SPLA number so VDS can configure the RDS licensing service for easier SPLA RDS CAL reporting.  A temporary number (such as 12345) can be entered for a POC deployment but after a trial period (~120 days) the RDS sessions will stop connecting.
+
+==== SPLA products
+Enter the MAK license codes for any Office products licensed via SPLA to enable simplified SPLA reporting from within VDS reports.
+
+==== ThinPrint
+Choose to install the included ThinPrint licensing server and license to simplify end user printer redirection.
+
+image:GCP_Deploy23.png[]
+
+
+=== Review & provision
+Once all steps have been completed, review the selections, then validate and provision the environment.
+image:GCP_Deploy24.png[]
+
+=== Next steps
+The deployment automation process will now deploy a new RDS environment with the options you selected throughout the deployment wizard.
+
+You'll receive multiple emails as the deployment completes.  Once complete you'll have an environment ready for your first workspace.  A workspace will contain the session hosts and data servers needed to support the end users.  Come back to this guide to follow the next steps once the deployment automation completes in 1-4 hours.
+
+== Create a new provisioning collection
+Provisioning collections if the functionality in VDS that allows for the creation, customization and SysPrep of VM images.  Once we get into the workplace deployment, we'll need an image to deploy.
+
+.Follow these steps to create a basic image for deployment:
+. Navigate to _Deployments > Provisioning Collections_, click _Add_
++
+image:GCP_Deploy27.png[]
+. Enter a Name and Description.  Choose _Type: VDI_.
+. Click _Add_ to define the type of server image to build.
++
+image:GCP_Deploy28.png[]
+
+. Select the appropriate VM image (Server 2016 in this case) and the desired storage type. Click _Add Server_
++
+image:GCP_Deploy29.png[]
+
+. Optionally select the applications that will be installed on this image.
+.. The list of applications available is populated from the App Library that can be accessed by clicking the admin name menu in the upper right corner, under the _Settings > App Catalog_ page.
++
+image:GCP_Deploy30.png[]
+
+. Click _Add Collection_ and wait for the VM to be built.  VDS will build a Vm that can be accessed and customized.
+
+. Once the VM build has completed, connect to the server and make the desired changes.
+.. Once the status shows _Collection Validation_, click the collection name.
++
+image:GCP_Deploy31.png[]
+
+.. Then, click the _server template name_
++
+image:GCP_Deploy32.png[]
+
+.. Finally, click the _Connect to Server_ button to be connected and automatically logged into the VM with local admin credentials.
++
+image:GCP_Deploy33.png[]
++
+image:GCP_Deploy34.png[]
+
+. Once all customizations have been completed, click _Validate Collection_ so VDS can sysprep and finalize the image.  Once complete, the VM will be deleted and the image will be available for deployment form within VDS deployment wizards.
++
+image:GCP_Deploy35.png[]5
+
+== Create new workspace
+A workspace is a collection of session hosts and data servers that support a group of users.  A deployment can contain a single workspace (single-tenant) or multiple workspaces (multi-tenant).
+
+In a multi-tenant deployment, VDS has been designed to fully isolate each of these workspaces fully such at different organizations could be hosted together within a single deployment.  They would share gateway and other platform services (reducing overhead costs)while maintaining their own dedicated sessions hosts, data layer and data/app servers. The same concept can be applied to distinct divisions within a single organization, allowing for efficiency in a shared domain while securely isolating unrelated departments within the same organization.
+
+=== Client & settings
+
+. In NetApp VDS, navigate to _Workspaces_ and click _+ New Workspace_
++
+image:GCP_Deploy25.png[]
+
+. Select an existing client or click _Add_ to create a new client.
++
+image:GCP_Deploy26.png[]
+
+.. If adding a new client, enter company details and select the deployment into which this workspace will be deployed.
+.. *Data Drive:* Define the drive letter to be used for the company share mapped drive.
+.. *User Home Drive:* Define the drive letter to be used for the individual's mapped drive.
+.. *Additional Settings*
++
+The following settings can be defined at deployment and/or selected post-deployment.
+
+... _Enable Remote App:_ Remote app presents applications as streaming applications instead of (or in addition to) presenting a full remote desktop session.
+... _Enable App Locker:_ VDS contains applications deployment and entitlement functionality, by default the system will show/hide applications to the end users.  Enabling App Locker will enforce application access via a GPO whitelist.
+... _Enable Workspace User Data Storage:_ Determine if end users have a need to have data storage access in their virtual desktop.
+... _Disable Printer Access:_ VDS can block access to local printers.
+... _Permit Access to Task Manager:_ VDS can enable/disable end user access to the Task Manager in Windows.
+... _Require Complex User Password:_ Requiring complex passwords enables the native Windows Server complex password rules. It also disables the time-delayed automatic unlock of locked user accounts. Thus, when enabled, admin intervention is required when end users lock their accounts with multiple failed password attempts.
+... _Enable MFA for All Users:_ VDS includes a no-cost email/SMS MFA service that can be used to secure end user and/or VDS admin account access.  Enabling this will require all end users in this workspace authenticate with MFA to access their desktop and/or apps.
+
+=== Choose applications
+Select the Windows OS version and Provisioning collection created earlier in this guide.
+
+Additional applications can be added at this point but for this POC we'll address application entitlement post-deployment.
+
+image:GCP_Deploy36.png[]
+
+
+=== Add Users
+Users can be added by selecting an existing AD security groups or individual users.  In this POC guide we'll add users post-deployment.
+
+image:GCP_Deploy37.png[]
+
+=== Review & provision
+
+On the final page, review the chosen options and click _Provision_ to start the automated build of the RDS resources.
+
+image:GCP_Deploy38.png[]
+
+=== Next steps
+The workplace automation process will now deploy a new RDS resources with the options you selected throughout the deployment wizard.
+
+Once complete, there are several common workflows you'll follow to customize the typical RDS deployment.
+
+* link:guide_managing_end_users.html[Add Users]
+
+* link:guide_user_requirements.html[End User Access]
+
+* link:guide_application_entitlement.html[Application Entitlement]
+
+* link:feature_workload_schedule.html[Cost Optimization]
