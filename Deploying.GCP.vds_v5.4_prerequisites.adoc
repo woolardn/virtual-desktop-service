@@ -78,7 +78,7 @@ Due to this architecture a data storage function is required. This function must
 
 
 ==== Networking
-*Required:* An inventory of all existing network subnets including any subnets visible to the GCP subscription via a VPN. The deployment needs to avoid overlapping subnets.
+*Required:* An inventory of all existing network subnets including any subnets visible to the GCP project via a VPN. The deployment needs to avoid overlapping subnets.
 
 The VDS setup wizard allows you to define the network scope in case there is a range that is required, or must be avoided, as part of the planned integration with existing networks.
 
@@ -90,7 +90,7 @@ Determine an IP range to user during your deployment. Per best practices, only I
 * 10.0.0.0 through 10.255.255.255
 
 ==== CWMGR1
-Some of the unique capabilities of VDS such as the cost saving Workload Scheduling and Live Scaling functionality require an administrative presence within the tenant and subscription. Therefore, an administrative VM called CWMGR1 is deployed as part of the VDS setup wizard automation.  In addition to VDS automation tasks this VM also holds VDS configuration in a SQL express database, local log files and an advanced configuration utility called DCConfig.
+Some of the unique capabilities of VDS such as the cost saving Workload Scheduling and Live Scaling functionality require an administrative presence within the organization and project. Therefore, an administrative VM called CWMGR1 is deployed as part of the VDS setup wizard automation.  In addition to VDS automation tasks this VM also holds VDS configuration in a SQL express database, local log files and an advanced configuration utility called DCConfig.
 
 .Depending on the selections made in the VDS setup wizard, this VM can be used to host additional functionality including:
 * An RDS gateway
@@ -118,9 +118,9 @@ Decide where the data for user profiles, individual files, and corporate shares 
 This configuration type extends an existing Active Directory domain to support the RDS instance. In this case VDS deploys a limited set of components into the domain to support automated provisioning and management tasks for the RDS components.
 
 .This configuration requires:
-* An existing Active Directory domain controller that can be accessed by VMs on the GCP VNet, typically via VPN or a domain controller that has been created in GCP.
+* An existing Active Directory domain controller that can be accessed by VMs on the GCP VPC network, typically via VPN or a domain controller that has been created in GCP.
 * Addition of VDS components and permissions required for VDS management of RDS hosts and data volumes as they are joined to the domain. The deployment process requires a Domain user with domain privileges to execute the script that will create the needed elements.
-* Note that the VDS deployment creates a VNet by default for VDS created VMs. The VNet can be either peered with existing VNets or the CWMGR1 VM can be moved to an existing VNet with the required subnets pre-defined.
+* Note that the VDS deployment creates a VPC network by default for VDS created VMs. The VPC network can be either peered with existing VPC networks or the CWMGR1 VM can be moved to an existing VPC network with the required subnets pre-defined.
 
 ==== Credentials and domain preparation tool
 
@@ -136,7 +136,7 @@ VDS creates Windows shares that allow user profile, personal folders, and corpor
 * The component must be able to expose a UNC path for use in the VDS configuration – one path can be used for all three shares or separate paths may be specified for each. Note that VDS will set user level permissions on these shares, ensure the appropriate permissions have been granted to the VDS Automation Services.
 
 == APPENDIX A: VDS control plane URLs and IP addresses
-VDS components in the GCP subscription communicate with the VDS global control plane components that are hosted in Azure, including the VDS Web Application and the VDS API endpoints. For access, the following base URI addresses need to be whitelisted for bi-directional access on port 443:
+VDS components in the GCP project communicate with the VDS global control plane components that are hosted in Azure, including the VDS Web Application and the VDS API endpoints. For access, the following base URI addresses need to be whitelisted for bi-directional access on port 443:
 
 link:api.cloudworkspace.com[]
 link:autoprodb.database.windows.net[]
