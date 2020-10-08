@@ -145,26 +145,6 @@ General info will also be collected such as:
 * Contact Info
 * Billing Info
 
-== Create a VDS admin account
-
-NOTE: Existing VDS partners should already have an account to login to VDS at https://manage.cloudworkspace.com. Existing users can skip steps 3-7
-
-.Follow these steps to Register with NetApp VDS and to link the VDS admin account with this deployment:
-. Log in to https://cwasetup.cloudworkspace.com using the Azure Administrator account with the required roles above
-image:Create a VDS Admin Account 1.png[]
-. Microsoft Azure requires administrators to consent to specific permissions for applications that run in the Azure security context. Click the Accept button to accept the permissions listed
-image:Create a VDS Admin Account 2.png[]
-. Choose how you want to register this instance with VDS. For new users, you will need to create a new VDS admin account
-image:Create a VDS Admin Account 3.png[]
-. The registration page collects basic contact information the VDS account you will use to provision and manage WVD. For NON-US customers, if your address does not include a State/Province/Locality type entity, please enter “NA” for that field
-image:Create a VDS Admin Account 4.png[]
-. The next step creates your primary VDS Administrator account. Remember your username and password from this step – you will use it to both setup your WVD instance and manage it going forward
-image:Create a VDS Admin Account 5.png[]
-. For the payment terms, enter a Credit Card number or ACH information
-image:Create a VDS Admin Account 6.png[]
-. After reviewing your settings, click the Register button and accept the Terms of Service – you will need to scroll down to the bottom of the Terms of Service dialog to be able to check the checkbox that you agree to the terms
-image:Create a VDS Admin Account 7.png[]
-
 == VDS setup sections
 
 === IaaS and platform
