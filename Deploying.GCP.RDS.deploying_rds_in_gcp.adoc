@@ -19,7 +19,7 @@ summary: Step-by-step guide to deploy RDS into GCP
 == Overview
 This guide will provide the step by step instructions to create a Remote Desktop Service (RDS) deployment utilizing NetApp Virtual Desktop Service (VDS) in Google Cloud.
 
-This Proof of Concept (POC) guide is designed to help you quickly deploy and configure RDS in your own test GCP Subscription. This guide assumes a green-field deployment into a clean, non-production Active Directory tenant.
+This Proof of Concept (POC) guide is designed to help you quickly deploy and configure RDS in your own test GCP Project.
 
 Production deployments, especially into existing AD environments are very common however that process is not considered in this POC Guide. Complex POCs and production deployments should be initiated with the NetApp VDS Sales/Services teams and not performed in a self-service fashion.
 
@@ -31,16 +31,13 @@ VDS deploys a fully functional RDS environment, with all necessary supporting se
 * RDS gateway server(s)
 * Web client access server(s)
 * Domain controller server(s)
-* RDS broker service
 * RDS licensing service
 * ThinPrint licensing service
 * Filezilla FTPS server service
 
 
 == Guide scope
-This guide walks you through the deployment of RDS using NetApp VDS technology from the perspective of a GCP and VDS administrator. You bring the GCP tenant and project with zero pre-configuration and this guide helps you setup RDS end-to-end.
-
-
+This guide walks you through the deployment of RDS using NetApp VDS technology from the perspective of a GCP and VDS administrator. You bring the GCP project with zero pre-configuration and this guide helps you setup RDS end-to-end.
 
 == Create service account
 . In GCP, navigate to (or search for) _IAM & Admin > Service Accounts_
@@ -114,8 +111,9 @@ image:GCP_Deploy16.png[]
 === Accounts
 ==== Local VM accounts
 . Provide a password for the local Administrator account.  Document this password for later use.
-
 . Provide a password for the SQL SA account.  Document this password for later use.
+
+NOTE: Password complexity requires an 8 character minimum with 3 of the 4 following character types: uppercase, lowercase, number, special character
 
 
 ==== SMTP account
@@ -143,7 +141,7 @@ image:GCP_Deploy18.png[]
 Enter the desired AD domain name.
 
 ==== Public domain
-External access is secured via an SSL certificate.  This can be customized with your own domain and a self-managed SSL certificate. Alternativly, selecting _Automatic_ allows VDS to manage the SSl certificate including an automatic 90-day refresh of the certificate.  When using automatic, each deplpoyment uses a unique sub-domain of _cloudworkspace.com_.
+External access is secured via an SSL certificate.  This can be customized with your own domain and a self-managed SSL certificate. Alternatively, selecting _Automatic_ allows VDS to manage the SSl certificate including an automatic 90-day refresh of the certificate.  When using automatic, each deployment uses a unique sub-domain of _cloudworkspace.app_.
 
 image:GCP_Deploy19.png[]
 
@@ -263,21 +261,24 @@ image:GCP_Deploy24.png[]
 === Next steps
 The deployment automation process will now deploy a new RDS environment with the options you selected throughout the deployment wizard.
 
-You'll receive multiple emails as the deployment completes.  Once complete you'll have an environment ready for your first workspace.  A workspace will contain the session hosts and data servers needed to support the end users.  Come back to this guide to follow the next steps once the deployment automation completes in 1-4 hours.
+You'll receive multiple emails as the deployment completes.  Once complete you'll have an environment ready for your first workspace.  A workspace will contain the session hosts and data servers needed to support the end users.  Come back to this guide to follow the next steps once the deployment automation completes in 1-2 hours.
 
 == Create a new provisioning collection
-Provisioning collections if the functionality in VDS that allows for the creation, customization and SysPrep of VM images.  Once we get into the workplace deployment, we'll need an image to deploy.
+Provisioning collections is functionality in VDS that allows for the creation, customization and SysPrep of VM images.  Once we get into the workplace deployment, we'll need an image to deploy and the following steps will guide you thru creating a VM image.
 
 .Follow these steps to create a basic image for deployment:
 . Navigate to _Deployments > Provisioning Collections_, click _Add_
 +
 image:GCP_Deploy27.png[]
-. Enter a Name and Description.  Choose _Type: VDI_.
+. Enter a Name and Description.  Choose _Type: Shared_.
++
+NOTE: You can choose Shared or VDI. Shared will support a session server plus (optionally) a business server for applications like a database. VDI is a single VM image for VMs that will be dedicated to individual users.
+
 . Click _Add_ to define the type of server image to build.
 +
 image:GCP_Deploy28.png[]
 
-. Select the appropriate VM image (Server 2016 in this case) and the desired storage type. Click _Add Server_
+. Select TSData as the _server role_, the appropriate VM image (Server 2016 in this case) and the desired storage type. Click _Add Server_
 +
 image:GCP_Deploy29.png[]
 
@@ -310,7 +311,7 @@ image:GCP_Deploy35.png[]5
 == Create new workspace
 A workspace is a collection of session hosts and data servers that support a group of users.  A deployment can contain a single workspace (single-tenant) or multiple workspaces (multi-tenant).
 
-In a multi-tenant deployment, VDS has been designed to fully isolate each of these workspaces fully such at different organizations could be hosted together within a single deployment.  They would share gateway and other platform services (reducing overhead costs)while maintaining their own dedicated sessions hosts, data layer and data/app servers. The same concept can be applied to distinct divisions within a single organization, allowing for efficiency in a shared domain while securely isolating unrelated departments within the same organization.
+Workspaces define the RDS server collection for a specific group. In this example, we will deploy a single collection to demonstrate the virtual desktop capability. However, the model can be extended to multiple workspaces/ RDS collections to support different groups and different locations within the same Active Directory domain space. Optionally, administrators can restrict access between the workspaces/collections to support use cases that require limited access to applications and data.
 
 === Client & settings
 
@@ -318,11 +319,11 @@ In a multi-tenant deployment, VDS has been designed to fully isolate each of the
 +
 image:GCP_Deploy25.png[]
 
-. Select an existing client or click _Add_ to create a new client.
+. click _Add_ to create a new client. The client details typically represent either the company information or the information for a specific location/department.
 +
 image:GCP_Deploy26.png[]
 
-.. If adding a new client, enter company details and select the deployment into which this workspace will be deployed.
+.. Enter company details and select the deployment into which this workspace will be deployed.
 .. *Data Drive:* Define the drive letter to be used for the company share mapped drive.
 .. *User Home Drive:* Define the drive letter to be used for the individual's mapped drive.
 .. *Additional Settings*
@@ -331,7 +332,7 @@ The following settings can be defined at deployment and/or selected post-deploym
 
 ... _Enable Remote App:_ Remote app presents applications as streaming applications instead of (or in addition to) presenting a full remote desktop session.
 ... _Enable App Locker:_ VDS contains applications deployment and entitlement functionality, by default the system will show/hide applications to the end users.  Enabling App Locker will enforce application access via a GPO whitelist.
-... _Enable Workspace User Data Storage:_ Determine if end users have a need to have data storage access in their virtual desktop.
+... _Enable Workspace User Data Storage:_ Determine if end users have a need to have data storage access in their virtual desktop. For RDS deployments, this setting should always be checked to enable data access for user profiles.
 ... _Disable Printer Access:_ VDS can block access to local printers.
 ... _Permit Access to Task Manager:_ VDS can enable/disable end user access to the Task Manager in Windows.
 ... _Require Complex User Password:_ Requiring complex passwords enables the native Windows Server complex password rules. It also disables the time-delayed automatic unlock of locked user accounts. Thus, when enabled, admin intervention is required when end users lock their accounts with multiple failed password attempts.

@@ -52,7 +52,7 @@ This document describes the required elements for deploying Remote Desktop Servi
 *** vdsclient.blob.core.windows.net
 ** Enhanced features:
 *** VDS Wake on Demand
-*** ThinPrint client and licensing
+*** ThinPrint client and lice nsing
 *** Self-service password reset
 *** Automatic server and gateway address negotiation
 *** Full desktop & streaming application support

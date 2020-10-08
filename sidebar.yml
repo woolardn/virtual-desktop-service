@@ -27,10 +27,12 @@ entries:
 #        - title: Install VDS on existing RDS
 #          url: /
 
-#  - title: Google
-#    entries:
-#    - title: Deploying RDS in Google
-#      url: /
+  - title: Google
+    entries:
+    - title: Deploying RDS in Google
+      url: /guide_deploy_rds_to_gcp.html
+    - title: VDS v5.4 prerequisites (RDS/GCP)
+      url: /GCP_and_VDS_prerequisites.html
 #    - title: Supplemental - RDS with existing AD
 #      url: /
 #    - title: Install VDS on existing RDS
