@@ -45,7 +45,6 @@ This guide walks you through the deployment of WVD using NetApp VDS technology f
 .This guide covers the following steps:
 . <<Azure Prerequisites,Confirm prerequisites of the Azure tenant, Azure subscription and Azure admin account permissions>>
 . <<Collect Discovery Details, Collect required discovery details>>
-. <<Create a VDS Admin Account,Create a VDS admin account (if you don’t have one)>>
 . <<VDS Setup Sections,Build the Azure environment using the purpose-built VDS for Azure Setup wizard>>
 . <<Create WVD Host Pool,Create the first host pool with a standard Windows 10 EVD image>>
 . <<Enable VDS desktops to users,Assigning virtual desktops to Azure AD user(s)>>
@@ -139,11 +138,6 @@ Once working through the CWA Setup wizard there are several questions that need 
 | Virtual Network Scope | A routable /20 network range is required for the deployment.  the VDS setup wizard will allow you to define this range.  It is important that this range does not overlap with any existing vNets in Azure or on-premises (if the two networks will be connected via a VPN or ExpressRoute).
 
 |===
-General info will also be collected such as:
-
-* Company Info
-* Contact Info
-* Billing Info
 
 == VDS setup sections
 
