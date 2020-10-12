@@ -20,13 +20,19 @@ keywords:
 == Overview
 Much of the logging that happens in VDS is not exposed in the web UI due to the sheer volume of it.  More detailed logs are found on the end point.  These logs are described below.
 
-They are found in the Program Files path for VDS on the CWMGR1 server and in some cases on individual client VMs.  This varies by VDS version, example include:
+In VDS v5.4+, the logs are found in the following folder path:
+
+    C:\programdata\cloudworkspace
+
+
+
+In previous version of VDS, they can reside in the following paths:
 
     C:\Program Files\CloudWorkspace\
     C:\Program Files\CloudJumper\
     C:\Program Files\IndependenceIT\
 
-File type also varies by VDS version, log files are either .txt or .log files found in sub-folders of the above outlined path.
+NOTE: File type also varies by VDS version, log files are either .txt or .log files found in sub-folders of the above outlined path.
 
 == Automation logs
 === CW VM Automation Service log

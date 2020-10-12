@@ -199,6 +199,10 @@ The first HTML5 gateway is named _CWPortal1_, the second is _CWPortal2_.  One or
 +
 The first RDS gateway is named _CWRDSGateway1_, the second is _CWRDSGateway2_.  One or two can be created at deployment.  Additional servers can be added post-deployment for increased capacity (~500 connections per server).
 
+* Remote App
++
+App Service is a dedicated collection for hosting RemotApp applications, but uses the RDS Gateways and their RDWeb roles for routing end user session requests and hosting the RDWeb application subscription list.  No VM dedicated vm is deployed for this service role. 
+
 * Domain Controllers
 +
 At deployment one or two domain controllers can be automatically built and configured to work with VDS.
