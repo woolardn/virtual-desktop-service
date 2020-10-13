@@ -213,7 +213,7 @@ This configuration type assumes that the necessary Azure VNet, Active Directory,
 * WVD User data needs to be imported into the VDS User section using the CRA tool. This process inserts metadata about each user into the VDS control plane so their WVD App Group membership and session information can be managed by VDS
 
 == APPENDIX A: VDS control plane URLs and IP addresses
-VDS components in the Azure subscription communicate with the VDS global control plane components that are hosted in Azure, including the VDS Web Application and the VDS API endpoints. For access, the following base URI addresses need to be whitelisted for bi-directional access on port 443:
+VDS components in the Azure subscription communicate with the VDS global control plane components such as the the VDS Web Application and the VDS API endpoints. For access, the following base URI addresses need to be whitelisted for bi-directional access on port 443:
 
 link:api.cloudworkspace.com[]
 link:autoprodb.database.windows.net[]

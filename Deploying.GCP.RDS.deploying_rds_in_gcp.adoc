@@ -152,7 +152,7 @@ For RDS deployments the required components such as domain controllers, RDS brok
 ==== Platform VM configuration
 
 ===== Single virtual machine
-This is the recommended selection for POC deployments. In a Single virtual machine deployment the following roles are all hosted on a single VM in Azure:
+This is the recommended selection for POC deployments. In a Single virtual machine deployment the following roles are all hosted on a single VM:
 
 *	CW Manager
 *	HTML5 Gateway
@@ -166,7 +166,7 @@ The maximum advised user count for RDS use cases in this configuration is 100 us
 NOTE: If this environment is being designed for multi-tenancy, a Single virtual machine configuration is not supported.
 
 ===== Multiple servers
-When splitting the VDS Platform into Multiple virtual machines the following roles are hosted on dedicated VMs in Azure:
+When splitting the VDS Platform into Multiple virtual machines the following roles are hosted on dedicated VMs:
 
 * Remote Desktop Gateway
 +
@@ -201,7 +201,7 @@ The first RDS gateway is named _CWRDSGateway1_, the second is _CWRDSGateway2_.  
 
 * Remote App
 +
-App Service is a dedicated collection for hosting RemotApp applications, but uses the RDS Gateways and their RDWeb roles for routing end user session requests and hosting the RDWeb application subscription list.  No VM dedicated vm is deployed for this service role. 
+App Service is a dedicated collection for hosting RemotApp applications, but uses the RDS Gateways and their RDWeb roles for routing end user session requests and hosting the RDWeb application subscription list.  No VM dedicated vm is deployed for this service role.
 
 * Domain Controllers
 +
@@ -360,6 +360,8 @@ image:GCP_Deploy37.png[]
 On the final page, review the chosen options and click _Provision_ to start the automated build of the RDS resources.
 
 image:GCP_Deploy38.png[]
+
+NOTE: During the deployment process, logs are created and can be accessed under _Task History_ near the bottom of the Deployment details page.  Accessible by navigating to _VDS > Deployments > Deployment Name_
 
 === Next steps
 The workplace automation process will now deploy a new RDS resources with the options you selected throughout the deployment wizard.
