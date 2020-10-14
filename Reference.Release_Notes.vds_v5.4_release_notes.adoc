@@ -17,6 +17,16 @@ keywords:
 :keywords:
 
 [.lead]
+
+== VDS 5.4 hotfix: Wed., October 13, 2020
+_Components:_ 5.4 Virtual Desktop Service
+_When:_ Wednesday October 13th, 2020 at 10pm -11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== Cost Estimators
+* Bug fix for an issue where a scenario in the Azure Cost Estimator where RDS VMs applied OS pricing improperly
+* Bug fix for a scenario where selecting storage PaaS services in the Azure Cost Estimator and Google Cost Estimator resulted in an inflated price per VDI user
+
 == VDS 5.4 release: Thurs., October 8, 2020
 
 _Components:_ 5.4 Virtual Desktop Service
