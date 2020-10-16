@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: WVD_and_VDS_components_and_permissions.html
+permalink: WVD_and_VDS_components_and_permissions_draft.html
 summary: VDS Components and Permissions
 keywords:
 ---
@@ -87,6 +87,7 @@ VDS also requires several Active Directory components to support the Automation 
 ** *Cloud Workspace Firewall GPO* (linked to Dedicated Customers Servers, Remote Desktop and Staging OUs) - creates a policy that ensures and isolates connections to sessions hosts from Platform server(s).
 ** *Cloud Workspace RDS* (Dedicated Customers Servers, Remote Desktop and Staging OUs) - policy set limits for session quality, reliability, disconnect timeout limits. For RDS sessions the TS licensing Server Value is defined.
 ** *Cloud Workspace Companies* (NOT LINKED by default) – optional GPO to “lock down” a user session/ workspace by preventing access to administrative tools and areas. Can be linked/enabled to provide a restricted activity workspace.
+
 NOTE: Default Group Policy setting configurations can be provided on request.
 
 ==== VDS workspace components
