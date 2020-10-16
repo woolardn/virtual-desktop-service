@@ -23,7 +23,7 @@ Windows Virtual Desktop (WVD) requires security accounts and components in both 
 
 The components and permissions of the deployment automation process are mostly distinct from the components of the final deployed environment.  Therefore this article is constructed in two major sections, the deployment automation section and the deployed environment section.
 
-image:Reference Architecture Original.jpg[]
+image:Reference Architecture v2.jpg[]
 
 == WVD deployment automation components & permissions
 VDS deployment leverages multiple Azure and NetApp components and security permissions to implement both deployments and workspaces.
@@ -42,17 +42,31 @@ The components of VDS deployments and workspaces can be organized into several l
 * Hybrid AD Components
 
 === End user clients
+Users can connect to their WVD desktop and/or from a variety of endpoint types.  Microsoft has published client applications for Windows, macOS, Android and iOS.  Additionally a web client is available for client-less access.
+
+There are some Linux think-client vendors who have published endpoint client for WVD.  These are listed at https://docs.microsoft.com/en-us/azure/virtual-desktop/linux-overview
+
 === VDS control plane components
 ==== VDS REST API
+VDS is built on fully documented REST APIs so that all actions available in the web app are also available via the API.  Documentation for the API is here: https://api.cloudworkspace.com/5.4/swagger/ui/index#
+
 ==== VDS web app
-==== Control plan database
+VDS admins can interact the ADS application via the VDS web app.  This web portal is at: https://manage.cloudworkspace.com
+
+==== Control plane database
+VDS data and setting are stored in the control plane SQL database, hosted and managed by NetApp.
+
 ==== VDS Comms
+
 === Azure tenant components
 VDS deployment automation creates a single Azure Resource Group to contain the other WVD components, including VMs, network subnets, network security groups, and either Azure Files containers or Azure NetApp Files capacity pools. Note – the default is a single resource group, but VDS has tools to create resources in additional Resources Groups if desired.
 
 ==== Microsoft Azure WVD-PaaS components
 ===== WVD REST API
+
+Microsoft WVD can be managed via API.  VDS leveraged these APIs extensively to automate and managed WVD environments. Documentation is at: https://docs.microsoft.com/en-us/rest/api/desktopvirtualization/
 ===== Session broker
+
 ===== Azure diagnostics
 ===== WVD web client
 ===== Session gateway
@@ -133,11 +147,18 @@ The specific steps for creating a WVD virtual machine and adding it to the WVD h
 * Update AD Windows Firewall GPO to allow traffic to the new VM (Requires AD GPO create/modify for policies associated with the WVD OU and its associated virtual machines. Requires AD GPO policy create/modify on the WVD OU in the local AD. Can be turned off post-install if not managing VMs via VDS.)
 * Set “Allow New Connections” flag on the new virtual machine (requires Azure Service Principal permissions)
 
-====== Traditional domain controller
-====== Azure AD Domain Services
+====== Joining VMs to Azure AD
+Virtual machines in the Azure tenant need to be joined to the domain however VMs can not joining directly to Azure AD.  Therefore VDS deploys the domain controller role in the VDS platform and then we sync that DC with Azure AD using AD Connect.  Alternative configuration options include using Azure AD Domain Services (AADDS), syncing to a hybrid DC (a VM on-premises or elsewhere) using AD Connect, or directly joining the VMs to a hybrid DC through a site-to-site VPN or Azure ExpressRoute.
+
 ===== WVD Host pools
+Host pools are a collection of one or more identical virtual machines (VMs) within Windows Virtual Desktop environments. Each host pool can contain an app group that users can interact with as they would on a physical desktop.
+
 ====== Session hosts
+Within any host pool is one or more identical virtual machines.  These user sessions connecting to this host pool are  load balanced by the WVD load balancer service.
+
 ====== App groups
+By default, the _Desktop users_ app group is created at deployment.  All users within this app group are presented with a full Windows desktop experience.  Additionally app groups can be created to serve streaming-app services.
+
 ===== Log analytics workspace
 A Log Analytics workspace is created to store logs from the deployment and DSC processes and from other services, This can be deleted after deployment, but this isn’t recommended as it enables other functionality. Logs are retained for 30 days by default, incurring no charges for retention.
 
@@ -150,13 +171,12 @@ A Recovery Service Vault is created by VDS Automation during deployment. This is
 ===== Azure key vault
 An Azure Key Vault is created during the deployment process and is used to store certificates, API keys and credentials that are used by Azure Automation Accounts during deployment.
 
-=== Azure components and security settings
-WVD requires that the user session Virtual Machines (VM) be created in an Azure subscription. To enable the creation and management of these VMs, VDS creates several supporting components in the Azure Subscription:
-
 
 == VDS Deployment Services
 === Enterprise applications
-VDS leverages Enterprise Applications and App Registrations in a tenant’s Azure AD domain. The Enterprise Applications are the conduit for the calls against the Azure Resource Manager, Azure Graph and (if using the WVD Fall Release) WVD API endpoints from the Azure AD instance security context using the delegated roles and permissions granted to the associated Service Principal. App registrations may be created depending on initialization state of WVD services for the tenant through VDS:
+VDS leverages Enterprise Applications and App Registrations in a tenant’s Azure AD domain. The Enterprise Applications are the conduit for the calls against the Azure Resource Manager, Azure Graph and (if using the WVD Fall Release) WVD API endpoints from the Azure AD instance security context using the delegated roles and permissions granted to the associated Service Principal. App registrations may be created depending on initialization state of WVD services for the tenant through VDS.
+
+To enable the creation and management of these VMs, VDS creates several supporting components in the Azure Subscription:
 
 ==== Cloud Workspace
 This is the initial Enterprise Application admins grant consent to and is used during VDS Setup Wizard’s deployment process.
@@ -198,6 +218,8 @@ The Cloud Workspace API Enterprise Application requests a specific set of permis
 ** Access Azure Service Management as Organization Users (Delegated)
 
 === NetApp VDS
+NetApp VDS components are used via the VDS control plane to automate the deployment and configuration of WVD roles, services and resources.
+
 === Custom role
 The Automation Contributor role is created to facilitate deployments via least privileged methodologies. This role allows the CWMGR1 VM to access the Azure automation account.
 
@@ -241,7 +263,20 @@ This is the method used to build the configuration of CWMGR1  The configuration 
 NOTE: Windows Virtual Desktop also installs Azure components, including Enterprise Applications and App Registrations for Windows Virtual Desktop and Windows Virtual Desktop Client, the WVD Tenant, WVD Host Pools, WVD App Groups, and WVD registered Virtual Machines. While VDS Automation components manage these components, WVD controls their default configuration and attribute set so refer to the WVD documentation for details.
 
 === Hybrid AD components
-To facalitate integration with existing AD either on-remises or running in the public cloud, additional components and permissions are required in the exisitng AD environment.
+To facilitate integration with existing AD either on-remises or running in the public cloud, additional components and permissions are required in the existing AD environment.
+
+==== Domain Controller
+The existing domain controller can be integrated into a WVD deployment via AD Connect and/or a site-to-site VPN (or Azure ExpressRoute).
+
+==== AD Connect
+To facilitate successful user authentication through the WVD PaaS-services, AD connect can be used to sync the domain controller with Azure AD.
+
+==== Security Group
+
+==== Service Account
+
+==== VPN or ExpressRoute
+A site-to-site VPN or Azure ExpressRoute can be used to directly join Azure VMs with the existing domain.  This is an optional configuration available when project requirements dictate it.
 
 ==== Local AD permission delegation
 NetApp provides an optional tool that can streamline the hybrid AD process. If using NetApp’s optional tool, it must:
