@@ -35,6 +35,14 @@ WVD requires that the user session Virtual Machines (VM) be created in an Azure 
 ** Platform: contains IP addresses for use as NetApp platform VMs (CWMGR1 and any gateway servers)
 ** Directory: contains IP addresses for use as Active Directory VMs
 * *Azure NetApp Files Capacity Pool (Optional)* – an Azure NetApp Files Capacity Pool and associated Volume(s) will be created if you choose Azure NetApp Files as the Data Layer option in VDS Setup. The Volume hosts the shared filed storage for user profiles (via FSLogix containers), user personal folders, and the corporate data share folder.
++
+NOTE: Azure NetApp Files needs to be made available to the subscription you wish to deploy into - please contact your NetApp account rep or use this link: https://aka.ms/azurenetappfiles
+
+** it is also required that you register NetApp as a provider to your subscription. This can be done by doing the following:
+*** Navigate to Subscriptions in the Azure portal
+**** Click Resource Providers
+**** Filter for NetApp
+**** Select the provider and click Register
 * *File Server VM (Optional)* – a Windows Server VM is created with a Managed Disk if you choose File Server as the Data Layer option in VDS Setup. The File Server hosts the shared filed storage for user profiles (via FSLogix containers), user personal folders, and the corporate data share folder.
 * *Azure File Share (Optional)* – an Azure File Share and its associated Azure Storage Account will be created if you chose Azure Files as the Data Layer option in CWS Setup. The Azure File Share hosts the shared filed storage for user profiles (via FSLogix containers), user personal folders, and the corporate data share folder.
 * *Recovery Service Vault (Optional)* – a Recovery Service Vault is created by VDS Automation during deployment. This is currently activated by default, as Azure Backup is applied to CWMGR1 during the deployment process. This can be deactivated and removed if desired, but will be recreated if Azure Backup is enabled in the environment.

@@ -160,13 +160,22 @@ A detailed article covering an existing AD deployment is found link:guide_deploy
 Enter a **domain name**.  Mirroring the Azure AD Domain Name from above is recommended.
 
 ==== File management
-VDS can provision a simple file server virtual machine or setup and configure Azure NetApp Files.  In production Microsoft recommends allocating 20gb per user and we've observed that allocating 5-15 IOPS per user is required for optimal performance.
+VDS can provision a simple file server virtual machine or setup and configure Azure NetApp Files.  In production Microsoft recommends allocating 30gb per user and we've observed that allocating 5-15 IOPS per user is required for optimal performance.
 
 In a POC (non-production) environment the file server is a low-cost and simple deployment option however the available performance of Azure Managed Disks can be overwhelmed by the IOPS consumption of even a small production deployment.
 
-For example, a 4TB Standard SSD disk in azure supports up to 500 IOPS, which coupld only support a maximum of 100 total users at 5 IOPS/user.  With ANF Premium the same sized storage setup would support 16,000 IOPS posting 32x more IOPS.
+For example, a 4TB Standard SSD disk in azure supports up to 500 IOPS, which could only support a maximum of 100 total users at 5 IOPS/user.  With ANF Premium the same sized storage setup would support 16,000 IOPS posting 32x more IOPS.
 
 For production WVD deployments, **Azure NetApp Files is Microsoft's recommendation**.
+
+NOTE: Azure NetApp Files needs to be made available to the subscription you wish to deploy into - please contact your NetApp account rep or use this link: https://aka.ms/azurenetappfiles
+
+It is also required that you register NetApp as a provider to your subscription. This can be done by doing the following:
+
+* Navigate to Subscriptions in the Azure portal
+** Click Resource Providers
+** Filter for NetApp
+** Select the provider and click Register
 
 ==== RDS license number
 NetApp VDS can be used to deploy RDS and/or WVD environments.  When deploying WVD, this field can **remain empty**.

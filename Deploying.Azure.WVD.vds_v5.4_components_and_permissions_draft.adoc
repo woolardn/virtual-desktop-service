@@ -65,11 +65,19 @@ VDS deployment automation creates a single Azure Resource Group to contain the o
 ===== WVD REST API
 
 Microsoft WVD can be managed via API.  VDS leveraged these APIs extensively to automate and managed WVD environments. Documentation is at: https://docs.microsoft.com/en-us/rest/api/desktopvirtualization/
+
 ===== Session broker
+*Need content here*
 
 ===== Azure diagnostics
+*Need content here*
+
 ===== WVD web client
+*Need content here*
+
 ===== Session gateway
+*Need content here*
+
 ==== VDS platform components
 
 ===== CWMGR1
@@ -273,7 +281,11 @@ To facilitate successful user authentication through the WVD PaaS-services, AD c
 
 ==== Security Group
 
+*Need content here*
+
 ==== Service Account
+
+*Need content here*
 
 ==== VPN or ExpressRoute
 A site-to-site VPN or Azure ExpressRoute can be used to directly join Azure VMs with the existing domain.  This is an optional configuration available when project requirements dictate it.
