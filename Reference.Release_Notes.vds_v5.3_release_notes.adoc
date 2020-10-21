@@ -17,6 +17,15 @@ keywords:
 :keywords:
 
 [.lead]
+== VDS 5.3 release: Thurs., October 22, 2020
+
+_Components:_ 5.3 Virtual Desktop Service
+_When:_ Thursday October 22nd, 2020 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== VDS
+* Bug fix for scenarios where the MFA agent resides in a folder with legacy IIT naming conventions
+
 == VDS 5.3 release: Thurs., October 8, 2020
 
 _Components:_ 5.4 Virtual Desktop Service

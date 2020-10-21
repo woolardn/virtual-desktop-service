@@ -17,6 +17,37 @@ keywords:
 :keywords:
 
 [.lead]
+== VDS 5.4 release: Thurs., October 22, 2020
+
+_Components:_ 5.4 Virtual Desktop Service
+_When:_ Thursday October 22nd, 2020 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== VDS
+* If a VDS admin deletes a WVD host pool, automatically unassign users from that host pool
+* Introduce improved, renamed automation driver – Command Center – in CWMGR1
+* Bug fix for Workload Scheduling behavior in a Bug fix for updating site details when that resides in AWS
+* Bug fix for Wake on Demand activation with specific Live Scaling settings applied
+* Bug fix for creating a second site when incorrect settings were in place in the original site
+* Ease of use improvements for Static IP details in DC Config
+* Naming convention update to admin permissions – update Data Center permissions to Deployment permissions
+* Update to reflect that fewer database entries are needed in single server deployment builds
+* Update to manual AADDS deployment process update to streamline permissions
+* Bug fix for reporting in VDS when changing the dates the report should return
+* Bug fix for creating a Windows Server 2012 R2 template via Provisioning Collections
+* Assorted performance improvements
+
+=== VDS Setup
+* Deployment automation enhancements for primary domain controller and DNS components of a deployment
+* Assorted updates to support selecting from a list of available networks in a future release
+
+=== Cost Estimators
+* Improved handling of adding SQL to VMs
+
+=== REST API
+* New API call to identify which Azure regions are valid and available for a subscription
+* New API call to identify if a customer has Cloud Insights access
+* New API call to identify if a customer has Cloud Insights activated for their Cloud Workspace environment
 
 == VDS 5.4 hotfix: Wed., October 13, 2020
 _Components:_ 5.4 Virtual Desktop Service
