@@ -29,6 +29,7 @@ image:Reference Architecture WVD v1.jpg[]
 VDS deployment leverages multiple Azure and NetApp components and security permissions to implement both deployments and workspaces.
 
 == VDS Deployment Services
+
 === Enterprise applications
 VDS leverages Enterprise Applications and App Registrations in a tenant’s Azure AD domain. The Enterprise Applications are the conduit for the calls against the Azure Resource Manager, Azure Graph and (if using the WVD Fall Release) WVD API endpoints from the Azure AD instance security context using the delegated roles and permissions granted to the associated Service Principal. App registrations may be created depending on initialization state of WVD services for the tenant through VDS.
 
