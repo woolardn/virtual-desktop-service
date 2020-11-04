@@ -17,6 +17,27 @@ keywords:
 :keywords:
 
 [.lead]
+== VDS 5.4 release: Thurs., November 5, 2020
+
+_Components:_ 5.4 Virtual Desktop Service
+_When:_ Thursday November 5th, 2020 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== VDS
+* Introduction of scale-out mechanism for Sites in Command Center – use another Azure subscription with the same Tenant ID and Client ID
+* Creation of VMs with the Data role now deploy as the VM selected in the VDS UI but will fall back to the default specified for the deployment if the VM selected is not available
+* General enhancements to Workload Scheduling and Live Scaling
+* Bug fix for Apply All checkbox for admin permissions
+* Bug fix for a display issue when showing apps selected in a RemoteApp App Group
+* Bug fix for an error prompt a subset of users see when accessing the Command Center
+* Automated process improvements for manual certificate installs on HTML5 gateway VMs
+* Ongoing proactive security measures
+
+=== VDS Setup
+* Improved Azure NetApp Files orchestration
+* Ongoing enhancements to gracefully handle Azure deployment variables
+* New Active Directory deployments will automatically have the Active Directory Recycle Bin feature enabled
+* Improved deployment orchestration for Google Cloud Platform
 
 == VDS 5.4 hotfix: Wed. 10/28, 2020
 
