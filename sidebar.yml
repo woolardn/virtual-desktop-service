@@ -95,8 +95,8 @@ entries:
       url: /guide_managing_end_users.html
     - title: Manage folders and permissions
       url: /guide_manage_data_permissions.html
-#         - title: Manage Application Access
-#          url: /
+    - title: Manage Application Access
+      url: /guide_application_entitlement.html
     - title: Reset user passwords
       url: /guide_reset_user_password.html
     - title: Configure MFA
