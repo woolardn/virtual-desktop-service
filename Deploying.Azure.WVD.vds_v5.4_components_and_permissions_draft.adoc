@@ -23,7 +23,7 @@ Windows Virtual Desktop (WVD) requires security accounts and components in both 
 
 The components and permissions of the deployment automation process are mostly distinct from the components of the final deployed environment.  Therefore this article is constructed in two major sections, the deployment automation section and the deployed environment section.
 
-image:Reference Architecture WVD v1.jpg[]
+image:Reference Architecture WVD v1.jpg[width=75%]
 
 == WVD deployment automation components & permissions
 VDS deployment leverages multiple Azure and NetApp components and security permissions to implement both deployments and workspaces.
@@ -81,14 +81,15 @@ NetApp VDS components are used via the VDS control plane to automate the deploym
 The Automation Contributor role is created to facilitate deployments via least privileged methodologies. This role allows the CWMGR1 VM to access the Azure automation account.
 
 === Automation account
-an Automation account is created during deployment and is a required component during the provisioning process. The Automation account contains variables, credentials, modules and Desired State Configurations and references the Key Vault.
+An Automation account is created during deployment and is a required component during the provisioning process. The Automation account contains variables, credentials, modules and Desired State Configurations and references the Key Vault.
 
 ==== Desired state configuration
 This is the method used to build the configuration of CWMGR1  The configuration file is downloaded to the VM and applied via Local Configuration Manager on the VM. Examples of configuration elements include:
 
 * Installing Windows features
 * Installing software
-* Applying software configurationsEnsuring the proper permission sets are applied
+* Applying software configurations
+* Ensuring the proper permission sets are applied
 * Applying the Let’s Encrypt certificate
 * Ensuring DNS records are correct
 * Ensuring that CWMGR1 is joined to the domain
@@ -169,7 +170,7 @@ The components of VDS deployments and workspaces can be organized into several l
 * Hybrid AD Components
 
 === End user clients
-Users can connect to their WVD desktop and/or from a variety of endpoint types.  Microsoft has published client applications for Windows, macOS, Android and iOS.  Additionally a web client is available for client-less access.
+Users can connect to their WVD desktop and/or from a variety of endpoint types.  Microsoft has published client applications for Windows, macOS, Android and iOS.  Additionally, a web client is available for client-less access.
 
 There are some Linux think-client vendors who have published endpoint client for WVD.  These are listed at https://docs.microsoft.com/en-us/azure/virtual-desktop/linux-overview
 
@@ -283,7 +284,7 @@ The specific steps for creating a WVD virtual machine and adding it to the WVD h
 * Set “Allow New Connections” flag on the new virtual machine (requires Azure Service Principal permissions)
 
 ====== Joining VMs to Azure AD
-Virtual machines in the Azure tenant need to be joined to the domain however VMs can not joining directly to Azure AD.  Therefore VDS deploys the domain controller role in the VDS platform and then we sync that DC with Azure AD using AD Connect.  Alternative configuration options include using Azure AD Domain Services (AADDS), syncing to a hybrid DC (a VM on-premises or elsewhere) using AD Connect, or directly joining the VMs to a hybrid DC through a site-to-site VPN or Azure ExpressRoute.
+Virtual machines in the Azure tenant need to be joined to the domain however VMs cannot joining directly to Azure AD.  Therefore, VDS deploys the domain controller role in the VDS platform and then we sync that DC with Azure AD using AD Connect.  Alternative configuration options include using Azure AD Domain Services (AADDS), syncing to a hybrid DC (a VM on-premises or elsewhere) using AD Connect, or directly joining the VMs to a hybrid DC through a site-to-site VPN or Azure ExpressRoute.
 
 ===== WVD Host pools
 Host pools are a collection of one or more identical virtual machines (VMs) within Windows Virtual Desktop environments. Each host pool can contain an app group that users can interact with as they would on a physical desktop.
@@ -295,18 +296,16 @@ Within any host pool is one or more identical virtual machines.  These user sess
 By default, the _Desktop users_ app group is created at deployment.  All users within this app group are presented with a full Windows desktop experience.  Additionally app groups can be created to serve streaming-app services.
 
 ===== Log analytics workspace
-A Log Analytics workspace is created to store logs from the deployment and DSC processes and from other services, This can be deleted after deployment, but this isn’t recommended as it enables other functionality. Logs are retained for 30 days by default, incurring no charges for retention.
+A Log Analytics workspace is created to store logs from the deployment and DSC processes and from other services. This can be deleted after deployment, but this isn’t recommended as it enables other functionality. Logs are retained for 30 days by default, incurring no charges for retention.
 
 ===== Availability sets
-An Availability Set is set up as a part of the deployment process to enable separation of shared VMs (shared WVD host pools, RDS resource pools) across fault domains. This can be deleted after deployment if desired, but would disable the option to provide additional fault tolerance for shared VMs.
+An Availability Set is set up as a part of the deployment process to enable separation of shared VMs (shared WVD host pools, RDS resource pools) across fault domains. This can be deleted after deployment if desired but would disable the option to provide additional fault tolerance for shared VMs.
 
 ===== Azure recovery vault
-A Recovery Service Vault is created by VDS Automation during deployment. This is currently activated by default, as Azure Backup is applied to CWMGR1 during the deployment process. This can be deactivated and removed if desired, but will be recreated if Azure Backup is enabled in the environment.
+A Recovery Service Vault is created by VDS Automation during deployment. This is currently activated by default, as Azure Backup is applied to CWMGR1 during the deployment process. This can be deactivated and removed if desired but will be recreated if Azure Backup is enabled in the environment.
 
 ===== Azure key vault
 An Azure Key Vault is created during the deployment process and is used to store certificates, API keys and credentials that are used by Azure Automation Accounts during deployment.
-
-
 
 
 == Appendix A – Default Cloud Workspace organizational unit structure
@@ -328,6 +327,3 @@ An Azure Key Vault is created during the deployment process and is used to store
 ** Cloud Workspace Tech Users
 *** Groups
 *** Tech 3 Technicians
-
-
-_Last version: July 15, 2020_
