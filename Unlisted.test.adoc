@@ -1,5 +1,5 @@
 ---
-sidebar: sidtest.html
+sidebar: test.html
 summary: Step-by-step guide to deploy Applications to end users in VDS
 keywords:
 ---
