@@ -16,3 +16,4 @@ keywords:
 :keywords:
 
 [.lead]
+include::_include/Management.Applications.application_entitlement_workflow.adoc[]
