@@ -1,5 +1,6 @@
 ---
-sidebar: sidtest.html
+sidebar: sidebar
+permalink: test.html
 summary: Step-by-step guide to deploy Applications to end users in VDS
 keywords:
 ---
@@ -16,3 +17,4 @@ keywords:
 :keywords:
 
 [.lead]
+include::_include/Management.Applications.application_entitlement_workflow.adoc[]

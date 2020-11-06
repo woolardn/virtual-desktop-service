@@ -25,6 +25,9 @@ Production deployments, especially into existing AD environments are very common
 
 This POC document will take you thru the entire RDS deployment and provide a brief tour of the major areas of post-deployment configuration available in the VDS platform. Once completed you’ll have a fully deployed and functional RDS environment, complete with session hosts, applications and users. Optionally you’ll have the option to configure automated application delivery, security groups, file share permissions, Cloud Backup, intelligent cost optimization. VDS deploys a set of best practice settings via GPO. Instructions on how to optionally disable those controls are also included, in the event your POC needs to have no security controls, similar to an unmanaged local device environment.
 
+== Deployment architecture
+image:Reference Architecture GCP RDS.png[width=75%]
+
 == RDS basics
 VDS deploys a fully functional RDS environment, with all necessary supporting services from scratch.  This functionality can include:
 
