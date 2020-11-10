@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: WVD_and_VDS_components_and_permissions2.html
+permalink: WVD_and_VDS_components_and_permissions.html
 summary: VDS Components and Permissions
 keywords:
 ---
