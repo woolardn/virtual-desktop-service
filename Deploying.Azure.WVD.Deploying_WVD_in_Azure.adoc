@@ -20,6 +20,8 @@ keywords:
 == Overview
 This guide will provide the step by step instructions to create a Windows Virtual Desktop (WVD) deployment utilizing NetApp Virtual Desktop Service (VDS) in Azure.
 
+The guide starts at: https://cwasetup.cloudworkspace.com/
+
 This Proof of Concept (POC) guide is designed to help you quickly deploy and configure WVD in your own test Azure Subscription. This guide assumes a green-field deployment into a clean, non-production Azure Active Directory tenant.
 
 Production deployments, especially into existing AD or Azure AD environments are very common however that process is not considered in this POC Guide. Complex POCs and production deployments should be initiated with the NetApp VDS Sales/Services teams and not performed in a self-service fashion.
@@ -134,12 +136,13 @@ Once working through the CWA Setup wizard there are several questions that need 
 | VDS admin credentials | Collect the existing VDS admin credentials if you already have them.  Otherwise a new admin account will be created during deployment.
 | Azure Region | Determine the target Azure Region based on performance and availability of services. This https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/[Microsoft Tool^] can estimate end user experienced based on region.
 | Active Directory type | The VMs will need to join a domain but can't directly join Azure AD. The VDS deployment can build a new virtual machine or use an existing domain controller.
-| File Management | Performance is highly dependent on disk speed, particularly as related to user profile storage.  The VDS setup wizard can deploy a simple file server or configure Azure NetApp Files (ANF).  For any production environment ANF is recommended however for a POC the file server option provides sufficient performance.  Storage options can be revised post-deployment, including using existing storage resources in Azure.
+| File Management | Performance is highly dependent on disk speed, particularly as related to user profile storage.  The VDS setup wizard can deploy a simple file server or configure Azure NetApp Files (ANF).  For nearly any production environment ANF is recommended however for a POC the file server option provides sufficient performance.  Storage options can be revised post-deployment, including using existing storage resources in Azure.  Consult ANF pricing for details: https://azure.microsoft.com/en-us/pricing/details/netapp/
 | Virtual Network Scope | A routable /20 network range is required for the deployment.  the VDS setup wizard will allow you to define this range.  It is important that this range does not overlap with any existing vNets in Azure or on-premises (if the two networks will be connected via a VPN or ExpressRoute).
 
 |===
 
 == VDS setup sections
+Login to https://cwasetup.cloudworkspace.com/ with your Azure admin credentials found in the prerequisites section.
 
 === IaaS and platform
 image:VDS Setup Sections 1.png[]
@@ -385,11 +388,14 @@ Throughout the portal, VDS Admins will find the “Connect to Server” option. 
 This default behavior can be disabled on a per-Admin basis as described in the next section.
 
 === .tech/Level 3 admin accounts
-In the CWA Setup process there is an option to create one or more “Level III” admin accounts. The user name is formatted as username.tech@domain.xyz
+In the CWA Setup process there is a “Level III” admin account created. The user name is formatted as username.tech@domain.xyz
 
 These accounts, commonly called a “.tech” account, are named domain-level administrator accounts. VDS Admins can use their .tech account when connecting to a CWMGR1 (platform) server and optionally when connecting to all other virtual machines in the environment.
 
 To disable the automatic local admin login function and force the Level III account to be used, change this setting. Navigate to VDS > Admins > Admin Name > Check “Tech Account Enabled.” With this box checked, the VDS admin will not be automatically logged into virtual machines as a local admin and rather be prompted to enter their .tech credentials.
+
+These credentials, and other relevant credentials, are automatically stored in the _Azure Key Vault_ and can be accessed from within the Azure Management Portal at https://portal.azure.com/.
+
 
 == Optional post-deployment actions
 
@@ -407,11 +413,8 @@ Application Management is detailed in this Article: link:guide_application_entit
 === Azure AD security groups
 VDS includes functionality to create, populate and delete user groups which are backed by Azure AD Security Groups. These groups can be used outside of VDS just like any other Security Group. In VDS these groups can be used to assign folder permissions and application entitlement.
 
-
-
 ==== Create user groups
 Creating user groups is performed on the Users & Groups tab within a workspace.
-
 
 ==== Assign folder permissions by group
 Permissions to view and edit folders in the company share can be assigned to users or groups.
