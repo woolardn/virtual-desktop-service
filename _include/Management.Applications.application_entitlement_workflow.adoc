@@ -128,7 +128,7 @@ Application entitlement is handled by VDS and application can be assigned to use
 ////
 
 Used in:
-Management.Applications.application_entitlement_workflow.adoc
-Management.User_administration.manage_application_access.adoc
+sub.Management.Applications.application_entitlement_workflow.adoc
+sub.Management.User_administration.manage_application_access.adoc
 
 ///
