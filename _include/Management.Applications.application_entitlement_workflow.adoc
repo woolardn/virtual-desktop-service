@@ -123,3 +123,5 @@ Application entitlement is handled by VDS and application can be assigned to use
 . Navigate to the Users and Groups Detail.
 . Add a new group or edit an existing group.
 . Assign user(s) and application(s) to the group.
+
+.
