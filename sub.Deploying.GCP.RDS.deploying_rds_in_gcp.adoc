@@ -1,0 +1,18 @@
+---
+sidebar: sidebar
+permalink: guide_deploy_rds_to_gcp.html
+summary: Step-by-step guide to deploy RDS into GCP
+---
+
+= RDS deployment guide for Google Cloud (GCP)
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Deploying.GCP.RDS.deploying_rds_in_gcp.adoc[]
