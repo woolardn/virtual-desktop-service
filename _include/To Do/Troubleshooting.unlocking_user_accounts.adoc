@@ -1,0 +1,13 @@
+== Overview
+Unlocking a locked account for an End User is a simple process that resolves a moderately common issue that end users report.
+
+After four failed login attempts the User will be locked out.  The duration is 30 minutes unless the customer account has password complexity enabled, in which case the lockout can only performed manually.
+
+The user account can be unlocked from the list of users on the Users & Groups page in the Workspaces or from the User Detail page.
+
+== Users & Groups Page
+image:unlock_user_accounts1.png[]
+image:unlock_user_accounts2.png[]
+
+== User Detail Page
+image:unlock_user_accounts3.png[]

@@ -1,0 +1,34 @@
+== Symptoms
+
+Dropped users connections requiring a reconnect.  Laggy interface response, general performance problems that don’t appear to be related to resource (RAM/CPU) loads.
+
+== Cause
+
+When users report performance issues, dropped user connections or a laggy interface, the most common cause is not resources at all but rather the network connections between the customer and the datacenter.  These connections run through their ISP, various internet backbone carriers and ultimately into the datacenter.  Along the way the data traverses multiple stops.  Each of theses hops can introduce network latency, lost packets and jitter, all of these can contribute to the perceived performance of the desktop computing environment in the virtual desktop.
+
+Tier 1 triage and troubleshooting will include basic steps like confirming resources (RAM, CPU and HDD Space) are sufficient but once that is completed, testing the network connectivity is a great next step in the troubleshooting process.
+Resolution
+
+=== Primary option: NetApp VDS Windows client has built-in diagnostic tools
+
+The diagnostic test can be run and delivered to your email, all from within the virtual desktop Client.
+
+. Click on the preferences icon (four horizontal lines on the top menu bar)
+. Click Help
+. Click Network Test
+. Enter the user name experiencing the issues, click Run
+. Once complete, enter your email address to receive an email report
+. Review the report to troubleshoot potential connection issues
+
+image:internet_quality1.gif[]
+
+image:internet_quality2.png[]
+
+=== Secondary option: Manual analysis using PingPlotter
+
+To confirm the client’s network connection is the culprit you can run the free utility PingPlotter.  This utility sends a ping every few seconds and reports on the speed (latency) of the round trip of that ping.  It also notes the packet loss (PL) percentage at each hop along the route.  When high latency and/or high packet loss is observed it is a good indication that the performance issues are caused by the quality of the internet connection at the hop that is displaying those issues.
+
+. Download and install link:https://www.pingplotter.com/[Ping Plotter] (Available for MacOS, Windows and iOS).
+. Enter the gateway of the data center in which the tenant is deployed.
+. Let it run for several minutes.  Ideally while the performance issues or disconnections are being experienced.
+. Capture the data by choosing “Save Image…” from the File Menu if it is needed for additional troubleshooting.

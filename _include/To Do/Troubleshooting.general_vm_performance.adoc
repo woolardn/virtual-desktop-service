@@ -1,0 +1,77 @@
+NetApp offers customers insight into troubleshooting server performance for users/apps. All companies consume resources differently based on the number of end users logged in at once, application use, if SQL Standard is installed vs. SQL Express, etc. so it is important to be able to review what is happening when a user reports performance issues.
+
+== Overview
+
+Every app is different, and even the same software being run by the same number of users can have different resource consumption patterns. This is why it helps to understand the apps your users are running and what truly powers that app. Is it CPU, RAM or storage? These considerations will help focus your troubleshooting.
+
+In our experience, these have proven to be generally true statements to help you begin:
+
+    CPU: this is usually the culprit/limiting factor if the app in question is home-grown and/or an Excel issue
+    RAM: this is usually the culprit/limiting factor if SQL Standard is used
+    Storage: this is usually a contributing factor if disk consumption is greater than 90%.
+
+NOTE: If SQL Express is used, it is likely a limiting factor – it limits RAM consumption to 1 GB, which will may be under the software vendor’s required specs.
+
+== Using nightly resource reports
+
+VDS sends nightly reports with information about each VM. There is a lot of useful information in that report, including recommendations on whether to increase or decrease resources. Here are a few excerpts:
+
+This image shows whether you should increase or decrease CPU/RAM on VMs for a given workspace.
+image:vm_performance1.png[]
+
+In the image below, we can see that there is a column that shows how long it has been since the server has been rebooted.
+image:vm_performance2.png[]
+
+In this image we can see storage provisioned vs. consumed – this becomes a good topic to investigate briefly at first or once you have validated that CPU/RAM are not the issue.
+image:vm_performance3.png[]
+
+== Viewing CPU/RAM resource consumption in real-time
+
+. Log into VDS, then click the Organizations module and select the organization in question.
++
+image:vm_performance4.png[]
+. You can locate what server the user is logged into by locating them in the users section.
++
+image:vm_performance5.png[]
+. Next, scroll down until you see the Servers section – locate the server the user reporting the issue is logged into and click the settings wheel, then connect.
++
+image:vm_performance6.png[]
+. Once you’ve connected to the server, click the Start button. Next, click Task Manager.
++
+image:vm_performance7.png[]
+. The Task Manager gives a wealth of insight into what’s happening, right at that moment. This is the absolute best way to see what’s affecting your users at the moment they report an issue to you.
+. You can review the processes running on the server, identify which if any are causing the issue and either communicate with the Customer or kill the processes on the spot.
++
+image:vm_performance8.png[]
+. You can also view the Performance tab to show what’s happening, live. This is a tremendous troubleshooting step – asking End users to repeat the steps they took to cause a performance issue, then seeing what happens. Similarly, if they follow general advice (close excess Chrome browser tabs, as Google Chrome tabs are a common resource consumer) you can see resource consumption decrease.
++
+image:vm_performance9.png[]
+. The users tab can show you which user, if any, is consuming the resources causing a spike in consumption.
++
+image:vm_performance10.png[]
+. You can expand each End user to see which specific processes they’re running and how much each one is consuming.
++
+image:vm_performance11.png[]
+. Another option is viewing which services are running.
++
+image:vm_performance12.png[]
+. Customers can also open the Resource Monitor to investigate in more detail.
++
+image:vm_performance13.png[]
+
+== Considering storage performacne
+One of the more common causes of vm performance issues is insufficient disk performance.  Standard (and even SSD) disks are not designed to handle the high I/O load demanded by VDS workloads.  User logins tend to happen in bunches and each one demands significant I/O as profiles and settings are loaded.  NetApp's high performing storage technologies such at Azure NetApp Files, CVO and CVS are particularly well suited for this workload and should be considered the default option for VDS workloads.
+
+== Considering storage consumption
+
+Microsoft has a long-held best practice against allowing disk consumption on any drive to exceed 90%. In their eyes, this causes performance to plummet and can cause a number of other challenges, such as not having enough storage for backups to complete and not allowing users to save their work.
+
+RMM tools can offer storage monitoring services, including the ability to set thresholds and alerts. If storage becomes a challenge for you, working with your RMM vendor to enable theses types of alerts is recommended.
+
+For deeper investigation, install software to review drive consumption.
+
+From conversations with customers, Windirstat or Treesize have proven to be the preferred applications for inspection of drive consumption.
+
+Windirstat can inspect a full drive over the network if there is insufficient space to install/run an app locally or login is blocked:
++
+image:vm_performance14.png[]

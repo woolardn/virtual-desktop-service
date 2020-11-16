@@ -1,0 +1,22 @@
+== Overview
+Once your deployment completes you should receive an email notification as well as a large amount of success and error reports via email.  Info on these emails and how to change the delivery options is here: link:guide_why_emails.html[What’s with All these emails?]
+
+Complete documentation is found at https://docs.netapp.com/us-en/virtual-desktop-service/ but the selected items below are a good place to start:
+
+
+== Quick Start
+
+* link:https://www.youtube.com/playlist?list=PLQ1wYDzid2pRl74Y4SnFVvTHL7kbN9GQZ[VDS Introduction Video Playlist on YouTube]
+* link:guide_managing_end_users.html[Managing Users]
+* link:guide_application_entitlement.html[Managing Applications]
+* link:guide_manage_data_permissions.html[Managing Data and Permissions]
+* link:guide_user_requirements.html[Cloud Workspace System Requirements: End-Users Overview]
+
+== Refine your Deployment – Tips & Tricks
+
+* link:task_configure_MFA.html[Enhancing Security with MFA]
+* link:guide_configure_azure_backup[Configure Azure Backup]
+* link:guide_configure_AV.html[Configure Anti-Virus]
+* link:feature_workload_schedule.html[Optimizing Server Costs]
+* link:feature_scripted_events.html[Deploy Your Automation with Scripted Events]
+* link:guide_migrate_data.html[Data Migration]

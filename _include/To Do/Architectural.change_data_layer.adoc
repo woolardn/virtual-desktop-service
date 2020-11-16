@@ -1,0 +1,72 @@
+== Overview
+Virtual Desktop Service deployment technologies allow for a variety of storage options depending on the underlying infrastructure, this guide addresses how to make a change post-deployment.
+
+Virtual desktop performance depends on a variety of key resources, storage performance is one of the primary variables.  As requirements change and workloads evolve, the need to change the storage infrastructure is a common task.  In nearly all cases this involves migrating from a file server platform to NetApp storage technology (such as Azure NetApp Files, NetApp Cloud Volumes Service in Google or NetApp Cloud Volumes ONTAP in AWS) since these technologies typically offer the best performance profile for end user computing environments.
+
+=== Creating the new storage layer
+Due to the wide variety of potential storage services across a wide variety of cloud and HCI infrastructure providers, this guide assumes a new storage service has already been established and with the SMB path(s) known.
+
+=== Create storage folders
+. In the new storage service, create three folders:
+* /Data
+* /Home
+* /Pro
++
+image:storage1.png[]
+
+. Set Folder Permissions
+.. On Folder Properties, select _Security, >Advanced > Disable Inheritance_
++
+image:storage2.png[]
+
+
+.. Adjust the remaining settings to match the settings on the original storage layer as originally created by the deployment automation.
+
+=== Moving data
+The directories, data, files and security settings can be moved a variety of ways.  The following robocopy syntax will achieve the necessary changes. The patches need to be changed to match your environment.
+
+    robocopy c:\data\zucd \\uyy-1c37.deskapps.mobi\zucd-data /xd ~snapshot /MIR /CopyAll /R:1 /W:1 /tee /log:C:\temp\roboitD.txt
+
+=== Redirecting the SMB path at cutover
+When the time for cutover comes, a few changes will redirect all the storage functionality across the VDS environment.
+
+==== Update GPOs
+. The Users GPO (named _<company-code>-users_) needs to be updated with the new share path.  Select _User Configuration > Windows Settings > Preferences > Drive Maps_
++
+image:storage3.png[]
+
+. Right Click on _H:_, _select Properties > Edit > Action: Replace_ and enter the new Path
++
+image:storage4.png[]
+
+. With Classic or Hybrid AD update the share defined in ADUC in the company OU. This is reflected in VDS folder management.
++
+image:storage5.png[]
+
+==== Update FSLogix profile paths
+ . Open Regedit on the original file server and any other provisioned Session Hosts.
++
+NOTE: This can also be set via a GPO policy if desired.
+
+. Edit the _VHDLocations_ value with the new value.  This should be the new SMB path plus _pro/profilecontainers_ as shown in the screenshot below.
++
+image:storage6.png[]
+
+==== Update the folder redirection settings for the home directories
+
+. Open Group Policy Management, select Users GPO linked to DC=domain,DC=mobi/Cloud Workspace/Cloud Workspace Companies/<company-code>/<company-code>-desktop users.
+. Edit folder redirection paths under User Configuration>Policies>Windows Settings>Folder Redirection.
+. Only Desktop and Documents needs updated and the paths should match the new SMB path mount point for Home volume.
++
+image:storage7.png[]
+
+==== Update the VDS SQL database with TestVDC Tools
+CWMGR1 contains a helper utility applications called TestVDC Tools which can bulk update the VDS database.
+
+.To make the final database updates:
+. Connect to CWMGR1, navigate and run TestVdcTools.exe
++
+image:storage10.png[]
+. Navigate to the _Operations_ tab and enter the new storage paths(s) for the storage layer then click _Execute Command_.
++
+image:storage11.png[]

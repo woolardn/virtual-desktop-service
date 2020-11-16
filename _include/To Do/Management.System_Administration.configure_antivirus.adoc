@@ -1,0 +1,25 @@
+== Overview
+Virtual Desktop Service (VDS) Administrators are responsible for monitoring both their platform infrastructure (which will consist of CWMGR1 at minimum) and all other infrastructure and virtual machines (VMs).  In most cases, Administrators arrange infrastructure (hypervisor/SAN) monitoring directly with their Data Center/IaaS provider. Administrators are responsible for monitoring terminal servers and data servers, typically by deploying their preferred Remote Management and Monitoring (RMM) solution.
+
+Anti-Virus is the responsibility of the administrator (for both platform infrastructure and terminal/data server VMs). To streamline this process, VDS for Azure servers have Windows Defender applied by default.
+
+NOTE:  When installing 3rd party solutions, be sure not to include Firewalls or any other components which might interfere with VDS automation.
+
+More specifically, when very specific Anti-Virus policies are in place by default this can result in adverse effects when these Anti-Virus agents are installed on a server managed by Virtual Desktop Service.
+
+Our overall guidance is that while VDS platform automation is generally not impacted by Anti-Virus or Anti-Malware products, it is a best practice to add exceptions/exclusions for the following processes on all platform servers (CWMGR1, RDGateways, HTML5Gateways, FTP, etc):
+
+    *\paexec.exe
+    *\paexec_1_25.exe
+    C:\Program Files\CloudWorkspace\CwAgent\CwAgent.exe
+    C:\Program Files\CloudWorkspace\CW Automation Service\cw.automation.service.exe
+    C:\Program Files\CloudWorkspace\CwVmAutomationService\CwVmAutomationService.exe
+
+Additionally, we recommend white-listing the following processes on client servers:
+
+    C:\Program Files\CloudWorkspace\CwAgent\paexec.exe
+    C:\Program Files\CloudWorkspace\CwAgent\CwAgent.exe
+    C:\Program Files\CloudWorkspace\CwRemoteApps\cwra.exe
+    C:\Program Files\CloudWorkspace\Pen\Pen.exe
+    C:\Program Files\CloudWorkspace\MfaAgent\MFAAgent.exe
+    C:\Program Files\CloudWorkspace\MfaAgent\MFAAgentMonitor.exe

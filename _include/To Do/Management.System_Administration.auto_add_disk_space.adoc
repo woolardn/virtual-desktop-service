@@ -1,0 +1,20 @@
+== Overview
+NetApp recognizes the need to give Administrators an easy way to make sure that users always have space to access and save documents. This also ensures that VMs have enough free space to complete backups successfully, enabling and empowering Administrators and their Disaster Recovery and Business Continuity plans. With this in mind, we built a feature that automatically expands the managed disk in use to the next tier when a drive is running short on space.
+
+This is a setting that is applied by default on all new VDS deployments in Azure, ensuring that all deployments protect users and the tenant’s backups by default.
+
+Administrators can validate this is in place by navigating to the Deployments tab, then selecting a deployment and then connecting to their CWMGR1 server from there. Next, open the DCConfig shortcut on the desktop and click Advanced and scroll down to the bottom.
+
+image:increase_disk1.png[]
+
+
+Administrators can change the amount of free space desired in either GB free or percent of the drive that should be free before moving to the next tier of managed disks in the same Advanced section of DCConfig.
+
+image:increase_disk2.png[]
+
+A few practical application examples:
+
+* If you want to ensure that at least 50 GB is available on your drive, set MinFreeSpaceGB to 50
+* If you want to ensure that at least 15% of your drive is free, set MinFreeSpacePercent from 10 to 15.
+
+This action takes place at midnight on the server’s time zone.
