@@ -1,22 +1,10 @@
----
-sidebar: sidebar
-permalink: guide_auto_add_disk_space.html
-summary: Auto-Increase Disk Size Feature
-keywords:
----
 
-= Auto-increase disk space feature
+////
 
-:toc: macro
-:hardbreaks:
-:toclevels: 2
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
-:keywords:
+Used in: sub.Management.System_Administration.auto_add_disk_space.adoc
 
-// include::_include/[]
+////
+
 == Overview
 NetApp recognizes the need to give Administrators an easy way to make sure that users always have space to access and save documents. This also ensures that VMs have enough free space to complete backups successfully, enabling and empowering Administrators and their Disaster Recovery and Business Continuity plans. With this in mind, we built a feature that automatically expands the managed disk in use to the next tier when a drive is running short on space.
 
