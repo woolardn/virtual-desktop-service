@@ -1,3 +1,10 @@
+
+////
+
+Used in:
+
+////
+
 == Overview
 By default remote sessions have Wallpaper display disabled to improve performance.  The result is a black wallpaper that users often wish to customize. This setting can be changed with a simple GPO edit
 

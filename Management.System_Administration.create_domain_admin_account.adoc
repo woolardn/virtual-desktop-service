@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Overview
 
 Occasionally VDS administrators will need domain-level credentials to manage the environment.  In VDS these are called "Level 3" or ".tech" account.

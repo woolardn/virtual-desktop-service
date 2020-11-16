@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Overview
 
 video::RftG7v9n8hw[youtube]

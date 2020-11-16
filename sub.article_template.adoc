@@ -16,5 +16,4 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
-== Overview
+// include::_include/[]

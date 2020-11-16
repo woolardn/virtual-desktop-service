@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 
 NOTE: There will be no further recurring releases for v5.1 of CWMS – all releases will be considered hotfixes.
 

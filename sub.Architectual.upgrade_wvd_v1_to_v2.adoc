@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_update_WVD_v1.html
+summary: Guide on updating WVD from v1 to v2
+keywords:
+---
+
+= Update WVD host pool from v1 (Fall 2019) to v2 (Spring 2020)
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Architectual.upgrade_wvd_v1_to_v2.adoc[]

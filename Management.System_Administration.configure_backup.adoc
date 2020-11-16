@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Overview
 VDS has the ability to configure and manage native backup services in some infrastructure providers including Azure.
 

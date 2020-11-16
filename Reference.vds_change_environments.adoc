@@ -4,6 +4,9 @@ permalink: reference_change_environments.html
 summary: NetApp VDS Change Environments
 keywords:
 ---
+
+= VDS Change environments
+
 :toc: macro
 :hardbreaks:
 :toclevels: 2
@@ -13,8 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
-= VDS Change environments
+// include::_include/[]
 == Overview
 
 NetApp’s Virtual Desktop Service allows organizations to manage deployments on prior releases, to preview future releases and to manage environments running one version prior (N -1 methodology).

@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Create a certificate signing request (CSR):
 
 . Connect to CWMGR1

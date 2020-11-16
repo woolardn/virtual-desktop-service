@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Overview
 Providing access to 3rd parties is a common practice when migrating to any cloud solution.
 

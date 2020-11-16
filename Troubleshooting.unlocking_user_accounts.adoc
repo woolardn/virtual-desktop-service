@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Overview
 Unlocking a locked account for an End User is a simple process that resolves a moderately common issue that end users report.
 

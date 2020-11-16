@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == CWMS 5.2 release: Mon., December 2, 2019
 
 Components:  5.2 Cloud Workspace Management Suite
