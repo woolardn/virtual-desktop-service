@@ -1,0 +1,120 @@
+== Overview
+This article covers the removal of VDS and NetApp control while maintaining WVD end user access. Going forward management would be with native Azure/Windows administration tools. After this process is complete it is recommended to contact VDSsupport@netapp.com so that NetApp can clean up our back-end and billing systems.
+
+== Initial state
+
+* WVD Deployment
+* TDS1 is FS Logix Fileshare
+* TS1 is Session Host
+* User has logged in and FS Logix disk was created in:
++
+ \\****TSD1\****-Pro$\ProfileContainers (**** = Unique Company Code)
+
+== Delete CW Agent service
+
+The CW Agent runs on every machine in the environment. The service that starts this process should be uninstalled with the following command on every VM in the environment. CWMGR1 can be skipped as that VM will be shut down and eventually deleted in most cases. Ideally this action would be run via scripted automation. The video below shows it done manually.
+
+  C:\Program files\CloudWorkspace\CwAgent\CwAgent.exe -u
+
+=== Delete CW Agent service video
+video::l9ASmM5aap0[youtube]
+
+
+
+== Delete CW agent directory
+
+The previous uninstall removed the service that launches CW Agent but the files remain. Delete the directory:
+
+  "C:\Program Files\CloudWorkspace"
+
+=== Delete CW Agent directory video
+video::hMM_z4K2-iI[youtube]
+
+== Remove startup shortcuts
+
+The startup items directory contains two shortcuts to files deleted in the previous step. To avoid end user error messages, these files should be deleted.
+
+  "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\Pen.lnk"
+  "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\CwRemoteApps.lnk"
+
+=== Remove startup shortcuts video
+video::U0YLZ3Qfu9w[youtube]
+
+== Unlink ‘Users’ and ‘Companies’ GPOs
+
+There are three GPOs implemented by VDS. We recommend un-linking two of them and reviewing the content of the third.
+
+Unlink:
+
+* AADDC Users > Cloud Workspace Companies
+* AADDC Users > Cloud Workspace Users
+
+Review:
+
+* AADDC Computers > Cloud Workspace Computers
+
+=== Unlink ‘Users’ and ‘Companies’ GPOs video
+video::cb68ri3HKUw[youtube]
+
+== Shutdown CWMGR1
+
+With the GPO Changes applied we can now shut down the CWMGR1 VM. Once continued WVD functionality is confirmed this VM can be deleted permanently.
+
+In extremely rare cases there is a need to maintain this VM if another server role is running (e.g. DC, FTP Server…). In that event, three services can be disabled to disable the VDS functionality on CWMGR1:
+
+* CW Agent (See Above)
+* CW Automation Service
+* CW VM Automation
+
+=== Shutdown CWMGR1 video
+video::avk9HyIiC_s[youtube]
+
+== Delete NetApp VDS service accounts
+
+The Azure AD service accounts used by VDS can be removed. Login in the Azure Management Portal and delete the users:
+
+* CloudWorkspaceSVC
+* CloudWorkspaceCASVC
+
+Other user accounts can be retained:
+
+* End users
+* Azure administrator
+* .tech domain admins
+
+=== Delete NetApp VDS service accounts video
+video::_VToVNp49cg[youtube]
+
+== Delete app registrations
+
+Two App Registrations are made when deploying VDS. These can be deleted:
+
+* Cloud Workspace API
+* Cloud Workspace WVD
+
+=== Delete app registrations video
+video::iARz2nw1Oks[youtube]
+
+== Delete enterprise applications
+
+Two Enterprise Applications are deployed when deploying VDS. These can be deleted:
+
+* Cloud Workspace
+* Cloud Workspace Management API
+
+=== Delete enterprise applications video
+video::3eQzTPdilWk[youtube]
+
+== Confirm CWMGR1 is stopped
+
+Before testing that the end users can still connect, confirm the CWMGR1 is stopped for a realistic test.
+
+=== Confirm CWMGR1 is stopped video
+video::Ux9nkDk5lU4[youtube]
+
+== Login and end user
+
+To confirm success, login as an end user and confirm functionality is maintained.
+
+=== Login and end user video
+video::SuS-OTHJz7Y[youtube]
