@@ -1,3 +1,10 @@
+
+////
+
+Used in:
+
+////
+
 == Overview
 This article covers the removal of VDS and NetApp control while maintaining WVD end user access. Going forward management would be with native Azure/Windows administration tools. After this process is complete it is recommended to contact VDSsupport@netapp.com so that NetApp can clean up our back-end and billing systems.
 
