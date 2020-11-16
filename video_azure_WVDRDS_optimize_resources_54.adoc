@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords: Windows Virtual Desktop
 
-[.lead]
+// include::_include/[]
 == Overview
 
 video::IABgjxLCWkI[youtube]

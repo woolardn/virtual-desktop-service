@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Create New User(s)
 Admins can add Users by clicking Workspaces > Users and Groups > Add/import
 

@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Overview
 NetApp VDS does not track or recommend different user endpoint devices.  We do recommend some basics, but this does not exclude other possible endpoint choices.
 

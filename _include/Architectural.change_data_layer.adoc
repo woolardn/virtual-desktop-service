@@ -1,22 +1,10 @@
----
-sidebar: sidebar
-permalink: guide_change_storage.html
-summary: Step-by-step guide to change storage platform
-keywords:
----
 
-= Redirecting storage platform
+////
 
-:toc: macro
-:hardbreaks:
-:toclevels: 2
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
-:keywords:
+Used in: sub.Architectural.change_data_layer.adoc
 
-[.lead]
+////
+
 == Overview
 Virtual Desktop Service deployment technologies allow for a variety of storage options depending on the underlying infrastructure, this guide addresses how to make a change post-deployment.
 

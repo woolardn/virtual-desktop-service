@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Overview
 CloudJumper has released Cloud Workspace Suite 5.0 for general implementation starting in Q4 2016.  This release includes an update of both the CWS APIs and the Admin Control interface.  The release is a significant change and is not “backward compatible” to version 4.x entities.
 

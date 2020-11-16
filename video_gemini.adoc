@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Overview
 
 <iframe src='//players.brightcove.net/260701648001/H1gEPI1kz_default/index.html?videoId=6182654694001' allowfullscreen frameborder=0></iframe>

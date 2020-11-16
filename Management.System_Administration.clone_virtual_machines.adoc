@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Overview
 
 Virtual Desktop Service (VDS) provides the ability to clone an existing virtual machine (VM).  This functionality designed to automatically increase server unit count availability as defined user count grows OR additional servers to available resource pools.

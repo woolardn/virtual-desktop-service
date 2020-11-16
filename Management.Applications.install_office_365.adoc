@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Manual steps overview
 
 Licensing rules prevent Administrators from simply downloading Microsoft Office from logged in user’s account and installing it onto a shared terminal server and functioning for multiple users as expected. Instead, Administrators need to follow a specific process to install Office Pro Plus with the Shared Computer Activation flag activated.

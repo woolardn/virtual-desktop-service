@@ -16,7 +16,7 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-[.lead]
+// include::_include/[]
 == Overview
 
 NetApp’s Virtual Desktop Service allows organizations to manage deployments on prior releases, to preview future releases and to manage environments running one version prior (N -1 methodology).
