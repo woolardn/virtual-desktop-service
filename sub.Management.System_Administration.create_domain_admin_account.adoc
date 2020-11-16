@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_create_l3_admin.html
+summary: How to create a Level 3 Admin Account
+keywords:
+---
+
+= Create a domain admin ("Level 3") account
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Management.System_Administration.create_domain_admin_account.adoc[]

@@ -1,0 +1,18 @@
+---
+sidebar: sidebar
+permalink: GCP_and_VDS_prerequisites.html
+summary: GCP and VDS prerequisites
+---
+
+= Google Compute Platform (GCP) and VDS prerequisites
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Deploying.GCP.vds_v5.4_prerequisites.adoc[]

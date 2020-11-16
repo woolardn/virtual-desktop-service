@@ -1,22 +1,10 @@
----
-sidebar: sidebar
-permalink: guide_configure_AV.html
-summary: Antivirus considerations
-keywords:
----
 
-= Apply monitoring and antivirus
+////
 
-:toc: macro
-:hardbreaks:
-:toclevels: 2
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
-:keywords:
+Used in: sub.Management.System_Administration.configure_antivirus.adoc
 
-// include::_include/[]
+////
+
 == Overview
 Virtual Desktop Service (VDS) Administrators are responsible for monitoring both their platform infrastructure (which will consist of CWMGR1 at minimum) and all other infrastructure and virtual machines (VMs).  In most cases, Administrators arrange infrastructure (hypervisor/SAN) monitoring directly with their Data Center/IaaS provider. Administrators are responsible for monitoring terminal servers and data servers, typically by deploying their preferred Remote Management and Monitoring (RMM) solution.
 

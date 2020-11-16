@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_deploy_VDS_to_Azure_Existing_AD.html
+summary: Step-by-step guide to deploy VDS into Azure for Existing AD deployments
+keywords:
+---
+
+= WVD Deployment Guide
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Deploying.Azure.WVD.Supplimental_WVD_with_existing_AD.adoc[]
