@@ -1,22 +1,10 @@
----
-sidebar: sidebar
-permalink: guide_configure_backup.html
-summary: Backup Configuration
-keywords:
----
 
-= Configure backup schedule
+////
 
-:toc: macro
-:hardbreaks:
-:toclevels: 2
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
-:keywords:
+Used in: sub.Management.System_Administration.configure_backup.adoc
 
-// include::_include/[]
+////
+
 == Overview
 VDS has the ability to configure and manage native backup services in some infrastructure providers including Azure.
 

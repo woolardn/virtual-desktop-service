@@ -1,22 +1,10 @@
----
-sidebar: sidebar
-permalink: guide_create_l3_admin.html
-summary: How to create a Level 3 Admin Account
-keywords:
----
 
-= Create a domain admin ("Level 3") account
+////
 
-:toc: macro
-:hardbreaks:
-:toclevels: 2
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
-:keywords:
+Used in: sub.Management.System_Administration.create_domain_admin_account.adoc
 
-// include::_include/[]
+////
+
 == Overview
 
 Occasionally VDS administrators will need domain-level credentials to manage the environment.  In VDS these are called "Level 3" or ".tech" account.
