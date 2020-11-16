@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: wvd_teardown_guide.html
+summary: Step-by-step guide to remove VDS from WVD
+keywords:
+---
+
+= WVD Teardown Guide
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Architectural.wvd_teardown_guide.adoc[]

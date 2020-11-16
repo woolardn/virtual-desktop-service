@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: arch_reset_ssl_cert.html
+summary: Wildcard SSL certificate renewal process
+keywords:
+---
+
+= Wildcard SSL certificate renewal process
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Architectural.Wildcard_SSL_certificate_renewal_process.adoc[]
