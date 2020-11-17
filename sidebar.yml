@@ -96,7 +96,7 @@ entries:
     - title: Manage folders and permissions
       url: /guide_manage_data_permissions.html
     - title: Manage Application Access
-      url: /manage_application_access.html#assign-applications-to-users
+      url: /manage_application_access.html
     - title: Reset user passwords
       url: /guide_reset_user_password.html
     - title: Configure MFA
