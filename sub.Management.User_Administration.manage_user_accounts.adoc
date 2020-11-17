@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_managing_end_users.html
+summary: Step-by-step guide to manage end users in VDS
+keywords:
+---
+
+= Managing user accounts
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Management.User_Administration.manage_user_accounts.adoc[]

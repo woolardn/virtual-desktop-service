@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: task_configure_MFA.html
+summary: Configure Multi-factor authentication (MFA)
+keywords:
+---
+
+= Multi-factor authentication (MFA)
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Management.User_Administration.multi-factor_authentication(mfa).adoc[]

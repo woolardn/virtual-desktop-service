@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_3rd_party_access.html
+summary: 3rd party access guide
+keywords:
+---
+
+= Providing temporary access to 3rd parties
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Management.System_Administration.provide_3rd_party_access.adoc[]

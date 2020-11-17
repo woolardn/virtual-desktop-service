@@ -1,22 +1,10 @@
----
-sidebar: sidebar
-permalink: guide_user_requirements.html
-summary: What’s with all these emails?
-keywords:
----
 
-= End User Requirements
+////
 
-:toc: macro
-:hardbreaks:
-:toclevels: 2
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
-:keywords:
+Used in: sub.Reference.end_user_access.adoc
 
-// include::_include/[]
+////
+
 == Overview
 NetApp VDS does not track or recommend different user endpoint devices.  We do recommend some basics, but this does not exclude other possible endpoint choices.
 
