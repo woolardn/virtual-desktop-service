@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: release_notes_52.html
+summary: NetApp VDS Release Notes v5.2
+keywords:
+---
+
+= Cloud Workspace Management Suite – version 5.2
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Reference.Release_Notes.cwms_v5.2_release_notes.adoc[]

@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: release_notes_client.html
+summary: NetApp VDS Release Notes Windows Client
+keywords:
+---
+
+= VDS Client for Windows
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Reference.Release_Notes.vds_windows_client_release_notes.adoc[]

@@ -1,0 +1,42 @@
+
+////
+
+Used in: sub.Management.User_Administration.manage_folders_and_permissions.adoc
+
+////
+
+== End user perspective
+
+Virtual Desktop end users can have access to several mapped drives.  These drives includes an FTPs accessible team share, a Company File Share and their Home drive (for their documents, desktop, etc…) . All of these mapped drives reference back to a central storage layer on either a storage services (such as Azure NetApp Files) or on a file server VM.
+
+Depending on the configuration the user may of may not have the H: or F: drives exposed, they may only see their Desktop, Documents, etc… folders. Additionally, different Drive letters are occasionally set by the VDS administrator at deployment.
+image:manage_data1.png[]
+
+image:manage_data2.png[]
+
+=== Managing permissions
+
+VDS allows admins to edit security groups and folder permissions, all from within the VDS portal.
+
+=== Security groups
+
+Security groups are managed by clicking: Workspaces > Tenant Name > Users & Groups > under the Groups Section
+
+.In this section you can:
+. Create new security groups
+. Add/Remove users to the groups
+. Assign applications to groups
+. Enable/Disable Local Drive access to groups
+
+image:manage_data3.gif[]
+
+== Folder permissions
+
+Folder Permissions are managed by clicking: Workspaces > Tenant Name > Manage (in the Folders section).
+
+.In this section you can:
+. Add/Delete Folders
+. Assign permissions to user or groups
+. Customize permissions to Read Only, Full Control & None
+
+image:manage_data4.gif[]

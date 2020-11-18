@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_manage_data_permissions.html
+summary: Managing Data Permissions
+keywords:
+---
+
+= Managing data permissions
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Management.User_Administration.manage_folders_and_permissions.adoc[]

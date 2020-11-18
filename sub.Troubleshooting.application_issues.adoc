@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_troubleshooting_application_issues.html
+summary: Step-by-step guide to troubleshoot application issues
+keywords:
+---
+
+= Troubleshooting application issues
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Troubleshooting.application_issues.adoc[]

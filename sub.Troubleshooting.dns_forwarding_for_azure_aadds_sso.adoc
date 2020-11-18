@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_troubleshooting_dns_forwarding_for_azure_aadds_sso.html
+summary: Step-by-step guide to troubleshoot AADDS NDS and SSO
+keywords:
+---
+
+= DNS forwards for Azure AD DS & SSO via O365 identity
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Troubleshooting.dns_forwarding_for_azure_aadds_sso.adoc[]

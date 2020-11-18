@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: Azure_vCPU_core_quota.html
+summary: Step-by-step guide to troubleshoot Azure vCPU core quota
+keywords:
+---
+
+= Azure vCPU core quota
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Troubleshooting.azure_vcpu_core_quota.adoc[]

@@ -1,0 +1,35 @@
+
+////
+
+Used in: sub.Troubleshooting.printing_issues.adoc
+
+////
+
+== Error
+
+Printing to the local printer from the cloud desktop is not working.
+
+== Remote Desktop Services with ThinPrint
+VDS optionally includes ThinPrint for Remote Desktop Services (RDS) deployments.  The software and licensing are automatically configured at initial deployment.  If ThinPrint is in use, the following sections can help troubleshooting issues with printing.
+
+=== Cause
+
+There are a variety of methods to connect to the cloud desktop.  These method differ in how they perform printing functions and thus knowing which type of access is in use is necessary for troubleshooting:
+
+. Using CloudJumper’s access client on a Windows device
+.. ThinPrint runs on the local device and relays communication between the printer and the cloud desktop
+. Using the HTML5 browser on any device
+.. The browser will present the printed document as a PDF to download and print locally
+. Using a manually configured RDP client (usually) on a Mac or Linux machine
+.. Local printers are shared with the cloud desktop by manually configuring “Local Resources” in the RDP Client.
+
+=== Resolution
+
+. Attempt to print a document from the local device to confirm that the local device is successfully connecting to the printer.
+
+. Uninstall and re-install ThinPrint if using the Access Client on a Windows device.  https://www.thinprint.com/en/resources-support/software/clientsandtools/
+
+. Make a note of the access type and the results of the first two steps in a new case with CloudJumper Support.
+
+== Windows Virtual Desktop
+VDS does not implement any printing solution or unique printing configuration for WVD environments.  Printing questions should be directed to Microsoft or (if one was implemented) the printing technology vendor.

@@ -1,0 +1,21 @@
+
+////
+
+Used in: sub.Troubleshooting.enable_user_wallpaper.adoc
+
+////
+
+== Overview
+By default remote sessions have Wallpaper display disabled to improve performance.  The result is a black wallpaper that users often wish to customize. This setting can be changed with a simple GPO edit
+
+=== Instructions:
+
+. Login to a platform server (e.g. CWMGR1) using level3 .tech account
+. Open Group Policy Management Console
+. Locate the rdsh GPO (labeled as “company code” rdsh (e.g. “xyz1 rdsh”)) Right click “xyz1 rdsh” GPO, choose edit
+.. In Azure AD Domain Services the GPO is called “AADDC “Computers > Cloud Workspace Computers”
+. Modify the Policy:  Computer Configuration >  Policies > Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Remote Session Environment > Remove remote desktop wallpaper set this to Disabled
+
+image:wallpaper1.png[]
+image:wallpaper2.png[]
+image:wallpaper3.png[]

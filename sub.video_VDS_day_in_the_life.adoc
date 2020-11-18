@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: video_VDS_day_in_the_life.html
+summary: Day to Day Administration of RDS and WVD with NetApp VDS v5.4
+keywords:
+---
+
+= Day to Day Administration of RDS and WVD with NetApp VDS v5.4
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/video_VDS_day_in_the_life.adoc[]

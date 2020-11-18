@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_enable_wallpaper.html
+summary: How to enable user wallpapers
+keywords:
+---
+
+= Enable desktop wallpaper for user sessions
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Troubleshooting.enable_user_wallpaper.adoc[]

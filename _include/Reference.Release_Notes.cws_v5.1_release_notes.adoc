@@ -1,0 +1,316 @@
+
+////
+
+Used in: sub.Reference.Release_Notes.cws_v5.1_release_notes.adoc
+
+////
+
+NOTE: There will be no further recurring releases for v5.1 of CWMS – all releases will be considered hotfixes.
+
+== CWMS 5.1 minor release:  Thursday, October 18th, 2018
+
+Components:  5.1 Cloud Workspace Management Suite
+When:  Thursday October 18th, 2018 @ 10pm – 11pm Eastern
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted. Access to Cloud Workspace Management Suite will remain available.
+
+=== Workspace Management Suite
+
+* Add a search function in the applications table
+* Improved sorting in the applications table
+
+== CWMS 5.1 minor release:  Thurs., September 6th, 2018
+
+Components:  5.1 Cloud Workspace Management Suite
+When:  Thurs., September 6, 2018 @ 10pm – 11pm Eastern
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted. Access to Cloud Workspace Management Suite will remain available.
+
+=== 5.1 Cloud Workspace Management Suite
+
+* Added the ability to search for Sub Partners in the Custom App Catalog
+* Fixed a bug where refreshing the screen in the Data Centers module causes an error prompt
+* Removing the restriction on max folder name size and making it easier to browse folders
+* Ensure that resource counts on VMs are never lower than the minimum specified CPU and RAM values
+
+=== 5.1 Cloud Workspace tools and services
+
+* Fixed a bug with MFA where Users who selected Email sometimes didn’t receive a code
+* Allow additional CPU and RAM to be entered for User Count resource allocation type
+* Fixed a bug for Resource Allocation for Server Load allocation type where in some cases the number of servers required was off
+* Add safeguard when automatically rebooting a server – if CwVmAutomationService is busy, retry in 20 minutes
+* Improved handling of wildcard certificate installs on CWMGR1
+* Fixed data in the Data Center Resource Report
+* Improved handling of updating RAM resources
+* Improved calculations on the available Hard Drive Resources
+* Introduces support of v4 of ProfitBricks’ API, allowing for setting of CPU family
+* Fixed deleting old temporary templates in ProfitBricks used when creating a provisioning collection
+* Increased the timeout when waiting for ProfitBricks’ hypervisor to create a VM
+* When installing new versions of VdcTools, Update VdcToolsVersionRunningAtVdc as soon as it is in process so that automation will run sooner
+* Fixed a bug that would surface when installing wildcard certificates on RDP Gateway servers
+* Automate the previously manual installation of a wildcard certificate on FTP server
+* Fixed a bug where password expiration notices were not forcing Users to update their password
+* Improved the File Audit process to reduce the frequency of the Unknown user error appearing
+* Fixed a bug where the File Audit Report was not properly excluding folders
+* Added a feature to install the wildcard certificate if the certificate on the connection broker is expired
+* Fixed a bug where password expiration notices wouldn’t appear if if the password expiration notification shortcut is removed from the startup folder (it will be reinstalled)
+* Fixed a bug where wildcard certificate didn’t delay an update on HTML5 portal servers if a User was logged in
+* Fixed a bug where wildcard certificate would show needing an update HTML5 portal servers when it was already current
+* Fixed a bug found when installing wildcard certificates on on connection broker servers
+* Fixed a cloning issue where Local VM accounts have been removed
+* Fixed an issue where cloning servers put the tenant in Migration Mode
+* Fixed an error with cloning VMs in vCloud where the hypervisor took long than expected to create the VM
+* Fixed a bug where deleting a VM in AzureRM would also always delete the associated managed disks
+* Fixed a rare timing issue creating VMs in AzureRM to prevent two build operations from overlapping
+* Updated list of machine sizes and types in AzureRM
+* Fixed an error when configuring the subnet in the hypervisor for GCP during deployment
+* Fixed an error storing monitoring data re: platform health by removing a timeout that caused data to not be written when a server is busy
+* Added a feature to allow each server to have its time zone set individually, or not controlled by platform automation
+* Fixed a bug when creating VMs at a secondary site would return static IP addresses from the primary site
+* Fixed an error in capturing Username for the User Login Report
+* Fixed a bug that failed to delete old monitoring data by making the call asynchronous so that it would not time out
+* Automatically install wildcard certificates on all infrastructure servers
+
+== CWMS 5.1 minor release:  Thurs., July 12, 2018
+
+Components:  5.1 CWMS Tools and Services
+When:  Thursday July 12, 2018 @ 10-10:30 pm Eastern
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted.
+
+=== 5.1 CWMS web app
+
+* Fix an issue regarding Master App Catalog settings persistence
+
+== CWMS 5.1 minor release:  Thurs., May 17, 2018
+
+Components:  5.1 CWMS Tools and Services
+When:  Thursday May 17, 2018 @ 10-11 pm EST
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted.
+
+=== 5.1 CWMS web app
+
+* Fix an issue regarding summaries of Users for App Services groups
+* Fix an issue with the Data Center wizard pre-populating Username and password
+* Add Username validation for local VM Admins and Level 3 technicians in the Data Center wizard
+* Improved session handling, including auto-logout of Users after a session timeout
+* Fix an issue when deleting Admins if a primary Admin couldn’t be detected
+* Change placeholder in Data Center -> Profile Server Changes from Enter Profile Name to Enter Profile and change Label from Profile Name to Server Name
+* Fix enabling AD admin not working for non-Cloud Workspace Users
+* Fix JavaScript error preventing adding new Users/Groups for a non-Cloud Workspace Customer
+* Allow Master Partners to create Active Directory User Admins for Sub Partners
+* Fix bug causing password resets of a Sub Partner’s Primary Admin to err out
+
+== CWS 5.1 minor release:  Wed., Feb. 21, 2018
+
+Components:  5.1 CW Tools and Services
+When:  Wed., Feb. 21, 2018 @ 10-11 pm EST
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted.
+
+=== 5.1 CW web app
+
+* Fix issue managing user folders via Admin Access role
+
+=== 5.1 CW tools and services
+
+* Ensure failed server is not automatically deleted when upgrading a “no services” client with a Workspace
+* Handle W2016 GPO updates to prevent notification pop-up from being briefly visible to user(s) logged into their RDS sessions on W2016 VMs
+
+=== 5.1 REST API
+
+*  Add new attributes (modify CWS’ SPLA Report to consume new attributes) to better handle core licensing-based apps (specifically, SQL)
+
+== CWS 5.1 minor release:  Wed., Feb. 7, 2018
+
+Components:  5.1 CW Tools and Services
+When:  Wed., Feb. 7, 2018 @ 10-11 pm EST
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted.
+
+=== 5.1 CW web app
+
+* None
+
+=== 5.1 CW tools and services
+
+* Fix issue disabling App Locker on Windows 2016 (due to newly discovered internal Windows 2016 issue)
+* Fix bug when IP incorrectly being reassigned based-on clone failure event
+
+=== 5.1 REST API
+
+* Fix saving Storage Type when modifying a server in a Provisioning Collection
+* When creating a Provisioning Collection with two Terminal Server (TS) servers, only one TS server should be built to validate collection
+
+== CWS 5.1 minor release:  Wed., Jan. 31, 2018
+
+Components:  5.1 CW Tools and Services
+When:  Wed., Jan. 31, 2018 @ 10-11 pm EST
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted.
+
+=== 5.1 CW web app
+
+* Increase  number of rows per table on top-level CWS Modules from 10 to 20
+* Fix User Support Only Admin being unable delve into a client
+
+=== 5.1 CW tools and services
+
+* Fix bug when template doesn’t have .Net Framework v4.5.2 incorrectly fails the server creation
+* Fix issue when cloning VMs in Hyper-V
+
+== CWS 5.1 minor release:  Wed., Jan. 10, 2018
+
+Components:  5.1 CW Tools and Services
+When:  Wed., Jan. 10, 2018 @ 10-11 pm EST
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted.
+
+=== 5.1 CW tools and services
+
+CWS version 5.1 Tools and Services (including the CW Automation Service, VM Automation Service and the CWAgent service) will be updated to eliminate any authorization error that occurs for specific RemoteApp application delivery scenarios.  Specifically, the services will be modified to:
+
+* Change automatic deployment of the SSL Wildcard Certificate for session servers to only deploy to Remote Desktop (RD) Connection Broker servers and Power User servers. Non-Broker session servers will utilize the default certificate generated by Remote Desktop Services (RDS).
+* Change the external DNS Forward Lookup Zone on Active Directory at the SDDC to only create one DNS record for client shared session servers. That record will point to the client’s RDS Broker server (VM), which will in turn handle the load balancing between shared session servers. Power user servers will continue to have a separate DNS entries.
+
+Note:  Only end client configurations that utilize multiple shared session servers were impacted by this issue, but new and modified client configurations will be deployed using this configuration.
+
+== CWS 5.1 minor release:  Wed., Jan. 3, 2018
+
+Components:  5.1 CW Web App
+When:  Wed., Jan. 3, 2018 @ 10-10:30 pm EST
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted.
+
+=== 5.1 CW web app
+
+* Fix sorting by company code in CWS’ Workspaces module
+* Fix Cloud Workspace Users -> Force Password reset not reflecting changes (when navigating to another module and then back to the user)
+* SDDC Self-Deploy Wizard:  Add confirmation alert modal when unchecking ThinPrint installation (Licensing section)
+
+== CWS 5.1 minor release:  Tues., Dec. 5, 2017
+
+Components:  5.1 CW Web App
+When:  Tues., Dec. 5, 2017 @ 10-10:30 pm EST
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted.
+
+=== 5.1 CW web app
+
+* Fix CWS Admin MFA error on Internet Explorer (IE) 11
+* Fix CWS Groups -> Local Drive Access returning ‘not found’
+* Data Center Self Deploy Wizard: add support for AzureRM (ARM) Azure Active Directory
+* Applications Catalog:  ensure Subscription option always available/propagates
+* CWS Scripted Events Module > Script Activity -> Add Application:  fix incorrect application icon path
+* Improve efficiency of Admin Access request to prevent error when redirecting to CWS v5.0
+* Fix various errors when updating AppService details and/or managing application licenses for an AppService
+* CWS Workspace Module > Add Workspace Wizard -> fix AppServices incorrect format being sent to Global Control Plane
+* CWS Workspace Module > Add Workspace Wizard -> New Client -> Step 3, fix Update Group to address JavaScript error to ensure update is processed
+
+== CWS 5.1 minor release:  Sat., Nov. 11, 2017
+
+Components:  5.1 CW Web App
+When:  Sat., Nov. 11, 2017 @ 10-11pm EST
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted.
+
+=== 5.1 CW web app
+
+* As of 10pm EST on Nov. 11, all CWS 5.1 partners must use https://iit.hostwindow.net. This URL is being retrofitted to support CWS 5.1 (as well as CWS 5.0). Partners are responsible for ensuring their CWS Admin and end-users with CWS Admin Access are aware of this change.
+
+== CWS 5.1 minor release:  Mon., Oct. 30, 2017
+
+Components:  5.1 CW Web App and 5.1 CW Tools & Services
+When:  Mon., Oct. 30, 2017 @ 10-11pm EST
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted
+
+=== 5.1 CW web app
+
+* CWS Admin MFA:  pressing Enter submit code for MFA and fix bug which prevents re-sending MFA code
+* SDDC Self Deploy Wizard:  for GCP, have Administrator for Local VM name instead of just being disabled
+* SDDC Self Deploy Wizard:  increase width of drop-down for time zones
+* Scripted Events:  add Arguments field to script activity
+* Scripted Events:  add %applicationname% as an runtime variable for scripted events scripts
+
+=== 5.1 CW tools & services
+
+* End-user email address:  fix issue with email addresses not being saved to DB for existing end-users
+* End-user logon status:  fix issue getting UPN of end-user logged-in
+* End-user logon status in AzureRM: support Azure Managed Disks
+* Templates: fix workflow when templates not being deleted properly
+* Resources:  fix issue converting old Resource Pools to new allocation types
+* File Audit Report: fix bug that causes user to be unknown
+* Windows 2016: fix to ensure GPO to remove PowerShell icons from end-user Workspaces is applied properly
+* Change Resources/Resource Allocation Report: fix error being incorrectly displayed
+* Data Center Resources Report:  if hypervisor not configured to return available Hard Drive Space or VM Quote, prevent report from showing error
+* Infrastructure Server Monthly Reboots: address scenario when infrastructure servers not rebooting monthly as scheduled because they couldn’t communicate to the CWMGR1 server due to this server being busy rebooting
+
+== 5.1 minor release:  Tues., Oct. 3, 2017
+
+Components:  5.1 CW Web App and 5.1 CW Tools & Services
+When:  Tues., Oct. 3, 2017 @ 10-11pm EST
+Impact:  Access to Cloud Workspace desktops and application services for end-users will remain uninterrupted
+
+=== 5.1 CW web app
+
+* AppServices:  fix issue blocking add licenses functionality for AppService applications
+* AppServices:  ensure “Add New Instance” functionality always available for AppService applications
+* Resource Pool Terminology:  update terminology while always allowing applying resource pool configuration to servers even when there are no changes – “Update” changed to “Apply to Servers” and “Edit” has been changed to “Manage”
+* Workload Schedule: ensure Edit modal always opens
+* Workload Schedule: ensure arrows for selecting time always appear
+* Scripted Events:  allow for more granular time selection
+* CWS Report ‘Admin Access’:  fix issue causing IP column to have multiple IP addresses listed instead of just the client IP
+
+=== 5.1 CW tools & services
+
+* File Audit Service:  now disabled consistently
+* Automation Service and new SSL Wildcard Certificate (RDP connections):  update order of commands to ensure updated RDP certificate on RDS Gateway is always refreshed (i.e. not cached)
+
+== CWS® 5.1 initial release overview
+
+Cloud Workspace Suite 5.1 is currently in Public Beta starting in Q3 2017.  This release includes an update of both the CWS APIs and the Admin Control interface.  The release is an update to CWS 5.0 (released Q4 2016) and is not “backward compatible” to version 4.x entities.
+
+Once officially released in Q4 2017, there’s no upgrade fee or implementation cost to transition to CWS 5.1.   The upgrades will be completed by CloudJumper in coordination with each Partner and will not interrupt existing services.  CWS 5.1 continues to support all of the previous versions’ functionality, and extends new features that enhance both Administrator and End-User experience, and further improve the award winning automation and orchestration introduced with previous releases of Cloud Workspace Suite.
+
+The CWS 5.1 upgrade is the fastest and easiest yet by extending and leveraging the updated architecture and REST API platform introduced in CWS 5.0.  CWS 5.1 continues CloudJumper’s commitment for a friendlier environment to allow external developers to extend their services and products based on Cloud Workspace.
+
+NOTE:  CWS 4.x will reach official end-of-life on 12.31.2017. Partners who remain on the CWS 4.x platform will no longer receive direct support for 4.x deployments and no further 4.x updates or bug fixes will be provided.
+
+=== 5.1 Highlights:
+
+* Support for Windows 2016 Server
+* Full Stack Support for Microsoft Azure Resource Manager
+* Support for Office 365 Single Authentication
+* MFA for CWS Portal Administrators
+* Improved Provisioning Collection Management
+* Administrator Defined Automation and Scripting
+* Resource Sizing Management Schemes
+
+==== Support for Windows 2016 Server
+
+* Support Windows Server 2016 server versions for all supported platforms.
+* Windows 2016 Server provides the “Windows 10” desktop experience for shared RDS session users and enables configuration options such as GPU assignment for graphics intensive applications*.
+
+==== Full stack support for Microsoft Azure Resource Manager
+
+* Microsoft requires migration from the traditional encryption key/delegated account user entitlement model to the Azure Resource Manager model.
+* Microsoft Azure Resource Manager is a framework that enables users to work with the resources within a solution as a group.
+* The required authentication attributes are collected once during software defined data center (SDDC) deployment and then reused for other Microsoft Azure activities without the need for re-entry or re-authentication.
+
+==== Support for Office 365 single authentication
+
+* Microsoft Office 365 utilizes an authentication model that requires end-users to enter credentials every time they use the office productivity suite on a new computer or device.
+* CWS 5.1 Manages these credentials across the server farm so that end-users require authentication only on their first use of a new office 365 subscription.
+
+==== Improved provisioning collection management
+
+* Configuration and management of hypervisor templates for pre-defined workloads can be confusing, especially when working across multiple hypervisor platforms.
+* CWS 5.1 introduces Automated hypervisor management functions that include the creation of server instances based on an existing template or Cloud Provider VM image; direct connection/login to the created server for installation of applications from CWS Web App; automatic template creation/Windows sysprep from the configured server instance, and validation of application paths and installs from within CWS to eliminate the need for accessing the hypervisor or cloud service dashboard directly.
+
+==== MFA for CWS portal administrators
+
+* CWS 5.1 includes a built-in multi-factor authentication (MFA) solution for CWS Administrators only
+* Partners can implement their own MFA solution for end-users.  Popular options include Duo, Auth-Anvil & Azure MF.  CloudJumper will be releasing own built-in MFA for end-users in Q1 2018
+
+==== Administrator defined automation
+
+* CWS provides improved deployment/management automation for service providers with Administrator Defined Automation of tasks/script execution.
+* With this enhancement, CWS 5.1 will significantly speed deployments, simplify management, and reduce overhead costs.
+* CWS Administrator Defined Automation will allow for the installation or upgrading of applications based on events, allowing partners to trigger automated application installations/maintenance using this method.
+
+==== Resource sizing management schemes
+
+* CWS 5.1 resource functionality enhances ability to scale resources dynamically by adding three more resource schemas
+* The existing Total Users schemas is now augmented by three more resource sizing schemes:  Fixed, Active User & Activity-based
+* Example: Fixed method supports exact specification of the CPU and RAM.
+* All resource sizing schemes continue to allow for immediate/force change or nightly automated resource check/modification.
