@@ -1,0 +1,10 @@
+
+////
+
+Used in: sub.video_azure_WVDRDS_optimize_resources_54.adoc
+
+////
+
+== Overview
+
+video::IABgjxLCWkI[youtube]

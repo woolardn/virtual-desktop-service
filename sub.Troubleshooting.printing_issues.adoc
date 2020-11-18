@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_troubleshooting_printing.html
+summary: Step-by-step guide to troubleshoot printing
+keywords:
+---
+
+= Troubleshooting printing issues
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Troubleshooting.printing_issues.adoc[]

@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: reference_change_environments.html
+summary: NetApp VDS Change Environments
+keywords:
+---
+
+= VDS Change environments
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Reference.vds_change_environments.adoc[]

@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_troubleshooting_internet_quality.html
+summary: Step-by-step guide to troubleshoot Internet quality issues
+keywords:
+---
+
+= Internet connection quality troubleshooting
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Troubleshooting.internet_connection_quality.adoc[]

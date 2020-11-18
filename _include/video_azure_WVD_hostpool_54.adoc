@@ -1,0 +1,10 @@
+
+////
+
+Used in: sub.video_azure_WVD_hostpool_54.adoc
+
+////
+
+== Overview
+
+video::kaHZm9yCv8g[youtube]

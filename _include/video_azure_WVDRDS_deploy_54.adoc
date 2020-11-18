@@ -1,0 +1,10 @@
+
+////
+
+Used in: sub.video_azure_WVDRDS_deploy_54.adoc
+
+////
+
+== Overview
+
+video::Gp2DzWBc0Go[youtube]

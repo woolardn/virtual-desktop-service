@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: guide_troubleshooting_failed_VDS_actions.html
+summary: Step-by-step guide to troubleshoot failed VDS actions
+keywords:
+---
+
+= Troubleshooting failed VDS actions
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Troubleshooting.reviewing_vds_logs.adoc[]

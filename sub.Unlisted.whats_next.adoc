@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: whats-next.html
+summary: What's Next?
+keywords:
+---
+
+= Congratulations on starting the deployment of a new VDS environment!
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Unlisted.whats_next.adoc[]

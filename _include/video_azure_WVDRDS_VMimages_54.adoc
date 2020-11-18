@@ -1,0 +1,10 @@
+
+////
+
+Used in: sub.video_azure_WVDRDS_VMimages_54.adoc
+
+////
+
+== Overview
+
+video::D4gNs_L-_wg[youtube]
