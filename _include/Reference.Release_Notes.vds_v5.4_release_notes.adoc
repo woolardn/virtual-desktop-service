@@ -47,7 +47,7 @@ _Impact:_ Access to desktops and application services for End Users will remain 
 * New Active Directory deployments will automatically have the Active Directory Recycle Bin feature enabled
 * Improved deployment orchestration for Google Cloud Platform
 
-== VDS 5.4 hotfix: Wed. 10/28, 2020
+== VDS 5.4 hotfix: Wed. October 28, 2020
 
 _Components:_ 5.4 Virtual Desktop Service
 _When:_ Wednesday October 28th, 2020 at 10pm - 11pm Eastern
@@ -231,7 +231,7 @@ _Impact:_  Access to desktops and application services for End Users will remain
 * Bug fix for a display issue when entering custom name information into VM details
 * Bug fix for adjusting storage details in a specific sequence
 
-== VDS 5.4 hotfix: Wedn., August 19, 2020
+== VDS 5.4 hotfix: Wed., August 19, 2020
 
 _Components:_  5.4 Virtual Desktop Service
 _When:_  Wednesday August 19th, 2020 at 5:20pm – 5:25pm Eastern

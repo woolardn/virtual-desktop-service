@@ -86,7 +86,7 @@ entries:
   - title: Automation
     url: /Management.Scripted_Events.scripted_events.html
   - title: Configure cost optimization
-    url: /feature_workload_schedule.html
+    url: /Management.Cost_Optimization.workload_schedule.html
 #      - title: Build VM images
 #        url: /
   - title: User Administration
@@ -218,8 +218,8 @@ entries:
 #        entries:
 #      - title: Service Board
 #        entries:
-      - title: Scripted Events
-        url: /Management.Scripted_Events.scripted_events.html
+#      - title: Scripted Events
+#        url: /
 #      - title: Admins
 #        entries:
 #      - title: Reports
