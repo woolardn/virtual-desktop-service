@@ -166,13 +166,15 @@ entries:
       url: /Reference.Release_Notes.vds_v5.4_release_notes.html
     - title: VDS Windows client release notes
       url: /Reference.Release_Notes.vds_windows_client_release_notes.html
-    - title: VDS v5.3 release notes
-      url: /Reference.Release_Notes.vds_v5.3_release_notes.html
-    - title: CWMS v5.2 release notes
-      url: /Reference.Release_Notes.cwms_v5.2_release_notes.html
-    - title: CWS v5.1 release notes
-      url: /Reference.Release_Notes.cws_v5.1_release_notes.html
-    - title: CWS v5.0 release notes
+    - title: Previous versions
+      entries:
+      - title: VDS v5.3 release notes
+        url: /Reference.Release_Notes.vds_v5.3_release_notes.html
+      - title: CWMS v5.2 release notes
+        url: /Reference.Release_Notes.cwms_v5.2_release_notes.html
+      - title: CWS v5.1 release notes
+        url: /Reference.Release_Notes.cws_v5.1_release_notes.html
+      - title: CWS v5.0 release notes
       url: /Reference.Release_Notes.cws_v5.0_release_notes.html
   - title: End user access
     url: /Reference.end_user_access.html

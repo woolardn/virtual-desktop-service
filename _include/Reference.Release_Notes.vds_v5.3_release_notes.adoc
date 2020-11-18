@@ -5,6 +5,8 @@ Used in: sub.Reference.Release_Notes.vds_v5.3_release_notes.adoc
 
 ////
 
+NOTE: There will be no further recurring releases for v5.3 of VDS – all releases will be considered hotfixes.
+
 == VDS 5.3 release: Thurs., October 22, 2020
 
 _Components:_ 5.3 Virtual Desktop Service
