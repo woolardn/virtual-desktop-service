@@ -16,5 +16,4 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-
 include::_include/sub.Management.Scripted_Events.scripted_events.adoc[]
