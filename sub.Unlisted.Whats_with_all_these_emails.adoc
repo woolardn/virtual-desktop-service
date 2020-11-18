@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_why_emails.html
+permalink: Unlisted.Whats_with_all_these_emails.html
 summary: What’s with all these emails?
 keywords:
 ---

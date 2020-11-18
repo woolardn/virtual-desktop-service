@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: Azure_vCPU_core_quota.html
+permalink: Troubleshooting.azure_vcpu_core_quota.html
 summary: Step-by-step guide to troubleshoot Azure vCPU core quota
 keywords:
 ---

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_troubleshooting_application_issues.html
+permalink: Troubleshooting.application_issues.html
 summary: Step-by-step guide to troubleshoot application issues
 keywords:
 ---

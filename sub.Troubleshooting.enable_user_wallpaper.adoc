@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_enable_wallpaper.html
+permalink: Troubleshooting.enable_user_wallpaper.html
 summary: How to enable user wallpapers
 keywords:
 ---

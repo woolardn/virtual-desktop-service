@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: reference_change_environments.html
+permalink: Reference.vds_change_environments.html
 summary: NetApp VDS Change Environments
 keywords:
 ---
