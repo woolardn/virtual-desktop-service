@@ -84,7 +84,7 @@ entries:
     - title: Install Microsoft Office 365
       url: /guide_install_office_365.html
   - title: Automation
-    url: /feature_scripted_events.html
+    url: /Management.Scripted_Events.scripted_events.html
   - title: Configure cost optimization
     url: /feature_workload_schedule.html
 #      - title: Build VM images
@@ -219,7 +219,7 @@ entries:
 #      - title: Service Board
 #        entries:
       - title: Scripted Events
-        url: /feature_scripted_events.html
+        url: /Management.Scripted_Events.scripted_events.html
 #      - title: Admins
 #        entries:
 #      - title: Reports
