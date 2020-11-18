@@ -1,22 +1,12 @@
----
-sidebar: sidebar
-permalink: release_notes_client.html
-summary: NetApp VDS Release Notes Windows Client
-keywords:
----
 
-= VDS Client for Windows
+////
 
-:toc: macro
-:hardbreaks:
-:toclevels: 2
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
-:keywords:
+Used in: sub.Reference.Release_Notes.vds_windows_client_release_notes.adoc
 
-// include::_include/[]
+////
+
+
+////
 == Date: TBD
 
 Impact: Users may be prompted that their whitelisting needs to be updated next time they launch the client
@@ -39,6 +29,7 @@ Users connecting with the VDS for Windows client today will still be able to con
 * If a customer whitelists outbound traffic from their network but does not whitelist anything for VDS Client for Windows: user access and telemetry will not be able to function
 
 Please contact ng-vds-support@netapp.com with any questions you may have.
+////
 
 == Date: Thursday August 27, 2020 at 11pm Eastern
 

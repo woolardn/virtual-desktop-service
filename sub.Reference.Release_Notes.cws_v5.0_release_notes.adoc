@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: release_notes_50.html
+summary: NetApp VDS release notes v5.0
+keywords:
+---
+
+= CWS – v5.0 release notes
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Reference.Release_Notes.cws_v5.0_release_notes.adoc[]

@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: release_notes_54.html
+summary: NetApp VDS Release Notes v5.4
+keywords:
+---
+
+= Virtual Desktop Service – v5.4 Release Notes
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Reference.Release_Notes.vds_v5.4_release_notes.adoc[]

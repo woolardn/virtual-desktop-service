@@ -1,7 +1,7 @@
 
 ////
 
-Used in:
+Used in: sub.Reference.Release_Notes.vds_v5.3_release_notes.adoc
 
 ////
 
