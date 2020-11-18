@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_auto_add_disk_space.html
+permalink: Management.System_Administration.auto_add_disk_space.html
 summary: Auto-Increase Disk Size Feature
 keywords:
 ---

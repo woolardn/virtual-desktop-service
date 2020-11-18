@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_user_requirements.html
+permalink: Reference.end_user_access.html
 summary: What’s with all these emails?
 keywords:
 ---

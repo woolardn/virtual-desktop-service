@@ -7,7 +7,7 @@ Used in: sub.Deploying.Azure.WVD.Supplimental_WVD_with_existing_AD.adoc
 
 == Overview
 VDS Setup has the ability to connect a new deployment to an existing AD structure. These instruction cover that option in detail.
-This article does not stand-alone, rather it is a detailed explanation of an alternative to the New AD option covered in the link:guide_deploy_VDS_to_Azure.html[WVD Deployment Guide]
+This article does not stand-alone, rather it is a detailed explanation of an alternative to the New AD option covered in the link:Deploying.Azure.WVD.Deploying_WVD_in_Azure.html[WVD Deployment Guide]
 
 == Active Directory type
 The next section defines to make is the Active Directory deployment type for the VDS deployment. In this guide we will select Existing Windows Server Active Directory, which will leverage an AD structure that already exists.
@@ -76,4 +76,4 @@ Typing A and hitting Enter
 image:Existing AD 3.png[]
 
 == Next steps
-This article covers the unique steps to deploy into an existing AD environment.  With these steps complete, you can return to the standard deployment guide link:guide_deploy_VDS_to_Azure.html#active-directory-type[here].
+This article covers the unique steps to deploy into an existing AD environment.  With these steps complete, you can return to the standard deployment guide link:Deploying.Azure.WVD.Deploying_WVD_in_Azure.html#active-directory-type[here].

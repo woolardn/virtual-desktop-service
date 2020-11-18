@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: task_configure_MFA.html
+permalink: Management.User_Administration.multi-factor_authentication.html
 summary: Configure Multi-factor authentication (MFA)
 keywords:
 ---
@@ -16,4 +16,4 @@ keywords:
 :imagesdir: ./media/
 :keywords:
 
-include::_include/Management.User_Administration.multi-factor_authentication(mfa).adoc[]
+include::_include/Management.User_Administration.multi-factor_authentication.adoc[]

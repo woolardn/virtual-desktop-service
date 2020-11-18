@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: adding_moving_mapped_drives.html
+permalink: Management.System_Administration.adding_moving_mapped_drives.html
 summary: Adding and Moving Mapped Drives
 keywords:
 ---

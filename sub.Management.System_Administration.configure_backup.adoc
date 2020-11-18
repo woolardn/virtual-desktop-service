@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_configure_backup.html
+permalink: Management.System_Administration.configure_backup.html
 summary: Backup Configuration
 keywords:
 ---

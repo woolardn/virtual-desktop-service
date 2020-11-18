@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_create_l3_admin.html
+permalink: Management.System_Administration.create_domain_admin_account.html
 summary: How to create a Level 3 Admin Account
 keywords:
 ---

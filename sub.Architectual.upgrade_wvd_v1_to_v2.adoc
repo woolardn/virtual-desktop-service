@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_update_WVD_v1.html
+permalink: Architectual.upgrade_wvd_v1_to_v2.html
 summary: Guide on updating WVD from v1 to v2
 keywords:
 ---

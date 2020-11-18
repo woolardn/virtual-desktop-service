@@ -9,13 +9,13 @@ entries:
     - title: Windows Virtual Desktop
       entries:
       - title: Deploying WVD in Azure
-        url: /guide_deploy_VDS_to_Azure.html
+        url: /Deploying.Azure.WVD.Deploying_WVD_in_Azure.html
       - title: Supplemental - WVD with existing AD
-        url: /guide_deploy_VDS_to_Azure_Existing_AD.html
+        url: /Deploying.Azure.WVD.Supplimental_WVD_with_existing_AD.html
       - title: VDS v5.4 components and permissions (WVD)
-        url: /WVD_and_VDS_components_and_permissions.html
+        url: /Deploying.Azure.WVD.vds_v5.4_components_and_permissions.html
       - title: VDS v5.4 prerequisites (WVD)
-        url: /WVD_and_VDS_prerequisites.html
+        url: /Deploying.Azure.WVD.vds_v5.4_prerequisites.html
 #    - title: Install VDS on existing WVD
 #      url: /
 #  - title: Remote Desktop Services
@@ -30,9 +30,9 @@ entries:
   - title: Google
     entries:
     - title: Deploying RDS in Google
-      url: /guide_deploy_rds_to_gcp.html
+      url: /Deploying.GCP.RDS.deploying_rds_in_gcp.html
     - title: VDS v5.4 prerequisites (RDS/GCP)
-      url: /GCP_and_VDS_prerequisites.html
+      url: /Deploying.GCP.vds_v5.4_prerequisites.html
 #    - title: Supplemental - RDS with existing AD
 #      url: /
 #    - title: Install VDS on existing RDS
@@ -63,26 +63,26 @@ entries:
 #    - title: Migrate users between sites
 #    url: /
   - title: Change data layer
-    url: /guide_change_storage.html
+    url: /Architectural.change_data_layer.html
   - title:  Migrate data into VDS
-    url: /guide_migrate_data.html
+    url: /Architectual.migrate_data_into_vds.html
   - title: Upgrade WVD v1 to v2
-    url: guide_update_WVD_v1.html
+    url: Architectual.upgrade_wvd_v1_to_v2.html
   - title: Renew SSL certificate
-    url: /arch_reset_ssl_cert.html
+    url: /Architectural.Wildcard_SSL_certificate_renewal_process.html
   - title: VDS teardown guide
-    url: /wvd_teardown_guide.html
+    url: /Architectural.wvd_teardown_guide.html
 
 - title: Management
   entries:
   - title: Applications
     entries:
     - title: Application entitlement workflow
-      url: /guide_application_entitlement.html
+      url: /Management.Applications.application_entitlement_workflow.html
 #     - title: Streaming applications
 #       url: /
     - title: Install Microsoft Office 365
-      url: /guide_install_office_365.html
+      url: /Management.Applications.install_office_365.html
   - title: Automation
     url: /Management.Scripted_Events.scripted_events.html
   - title: Configure cost optimization
@@ -92,42 +92,42 @@ entries:
   - title: User Administration
     entries:
     - title: Manage user accounts
-      url: /guide_managing_end_users.html
+      url: /Management.User_Administration.manage_user_accounts.html
     - title: Manage folders and permissions
-      url: /guide_manage_data_permissions.html
+      url: /Management.User_Administration.manage_folders_and_permissions.html
     - title: Manage Application Access
-      url: /manage_application_access.html
+      url: /Management.Applications.application_entitlement_workflow.html
     - title: Reset user passwords
-      url: /guide_reset_user_password.html
+      url: /Management.User_Administration.reset_user_password.html
     - title: Configure MFA
-      url: /task_configure_MFA.html
+      url: /Management.User_Administration.multi-factor_authentication.html
 #   - title:
 #     url: /
 
   - title: System administration
     entries:
     - title: Create domain admin account
-      url: /guide_create_l3_admin.html
+      url: /Management.System_Administration.create_domain_admin_account.html
 #   - title: Privileged access management
 #     url: /
     - title: Provide 3rd party access
-      url: /guide_3rd_party_access.html
+      url: /Management.System_Administration.provide_3rd_party_access.html
     - title: Configure backup
-      url: /guide_configure_backup.html
+      url: /Management.System_Administration.configure_backup.html
 #    - title: Connect to server
 #     url: /
     - title: Clone virtual machines
-      url: /guide_clone_VMs.html
+      url: /Management.System_Administration.clone_virtual_machines.html
     - title: Auto add disk space
-      url: /guide_auto_add_disk_space.html
+      url: /Management.System_Administration.auto_add_disk_space.html
 #    - title: Azure Key Vault
 #     url: /
 #    - title: Manage VDS admin accounts
 #     url: /
     - title: Configure antivirus
-      url: /guide_configure_AV.html
+      url: /Management.System_Administration.configure_antivirus.html
     - title: Adding and moving mapped drives
-      url: /adding_moving_mapped_drives.html
+      url: /Management.System_Administration.adding_moving_mapped_drives.html
 
 - title: Troubleshooting
   entries:
@@ -169,13 +169,13 @@ entries:
     - title: VDS v5.3 release notes
       url: /release_notes_53.html
     - title: CWMS v5.2 release notes
-      url: /release_notes_52.html
+      url: /Reference.Release_Notes.cwms_v5.2_release_notes.html
     - title: CWS v5.1 release notes
-      url: /release_notes_51.html
+      url: /Reference.Release_Notes.cws_v5.1_release_notes.html
     - title: CWS v5.0 release notes
-      url: /release_notes_50.html
+      url: /Reference.Release_Notes.cws_v5.0_release_notes.html
   - title: End user access
-    url: /guide_user_requirements.html
+    url: /Reference.end_user_access.html
   - title: VDS change environments
     url: /reference_change_environments.html
   - title: Glossary
@@ -249,4 +249,4 @@ entries:
   - title: VDS, A day in the life
     url: /video_VDS_day_in_the_life.html
   - title: Upgrade v1 WVD host pool to v2
-    url: /guide_update_WVD_v1.html
+    url: /Architectual.upgrade_wvd_v1_to_v2.html

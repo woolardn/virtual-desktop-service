@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_migrate_data.html
+permalink: Architectual.migrate_data_into_vds.html
 summary: Summary of considerations when migrating data
 keywords:
 ---

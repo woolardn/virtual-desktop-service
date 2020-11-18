@@ -7,7 +7,7 @@ Used in: sub.Management.Scripted_Events.scripted_events.adoc
 == Overview
 Scripted Events provides the advanced administrator with a mechanism to create custom automation for system maintenance, user alerts, group policy management, or other events. Scripts can be designated to run as an executable process and accept arguments, or can be used as arguments for a different executable program. This functionality allows for scripts to be combined and nested to support complex customization and integration needs.
 
-A detailed example of scripted events in action is found in the link:guide_application_entitlement.html[Application Entitlement Guide].
+A detailed example of scripted events in action is found in the link:Management.Applications.application_entitlement_workflow.html[Application Entitlement Guide].
 
 Additionally, Scripted Events allows for the creation of automation that does not require a script to process, rather the automation flow is launched by a system trigger and executes an existing program or system utility with optional arguments.
 
@@ -20,7 +20,7 @@ Clicking Name of a script opens a dialog box for editing the script.
 
 === Activities
 
-Activities are the way to execute one or more scripts. Activities can be triggered on many system actions. More on automating app installs is found link:guide_application_entitlement.html[here].
+Activities are the way to execute one or more scripts. Activities can be triggered on many system actions. More on automating app installs is found link:Management.Applications.application_entitlement_workflow.html[here].
 
 * Application Install (e.g. Automate an app install when added to the VDS tenant on the Workspaces page)
 * Application Uninstall (e.g. Automate an app uninstall when removed from the VDS tenant on the Workspaces page)

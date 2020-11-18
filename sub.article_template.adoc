@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: url.html
+permalink: article_template.html
 summary:
 keywords:
 ---

@@ -158,7 +158,7 @@ Decide which Azure region or regions will host your WVD Virtual Machines. Note t
 Decide which Active Directory type you want to use:
 
 * Existing on-prem Active Directory
-* Refer to the link:WVD_and_VDS_components_and_permissions.html[WVD VDS Components and Permissions] document for an explanation of the required permissions and components in both Azure and the local Active Directory environment
+* Refer to the link:Deploying.Azure.WVD.vds_v5.4_components_and_permissions.html[WVD VDS Components and Permissions] document for an explanation of the required permissions and components in both Azure and the local Active Directory environment
 * New Azure subscription based Active Directory instance
 * Azure Active Directory Domain Services
 

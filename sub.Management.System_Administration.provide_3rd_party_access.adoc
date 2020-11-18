@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_3rd_party_access.html
+permalink: Management.System_Administration.provide_3rd_party_access.html
 summary: 3rd party access guide
 keywords:
 ---

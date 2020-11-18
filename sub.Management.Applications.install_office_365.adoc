@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_install_office_365.html
+permalink: Management.Applications.install_office_365.html
 summary: Office 365 Install Guide
 keywords:
 ---

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_clone_VMs.html
+permalink: Management.System_Administration.clone_virtual_machines.html
 summary: VM Cloning
 keywords:
 ---

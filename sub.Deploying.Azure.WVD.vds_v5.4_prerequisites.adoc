@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: WVD_and_VDS_prerequisites.html
+permalink: Deploying.Azure.WVD.vds_v5.4_prerequisites.html
 summary: WVD and VDS prerequisites
 ---
 

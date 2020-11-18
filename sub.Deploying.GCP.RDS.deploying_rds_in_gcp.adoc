@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_deploy_rds_to_gcp.html
+permalink: Deploying.GCP.RDS.deploying_rds_in_gcp.html
 summary: Step-by-step guide to deploy RDS into GCP
 ---
 

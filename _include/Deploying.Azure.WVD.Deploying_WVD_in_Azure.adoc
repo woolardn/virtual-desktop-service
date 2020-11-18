@@ -145,7 +145,7 @@ Select an appropriate **Azure Region**. This https://azure.microsoft.com/en-us/s
 VDS can be provisioned with a **new virtual machine** for the Domain Controller function or setup to leverage an existing Domain Controller.
 In this guide we will select New Windows Server Active Directory, which will create one or two VMs (based on choices made during this process) under the subscription.
 
-A detailed article covering an existing AD deployment is found link:guide_deploy_VDS_to_Azure_Existing_AD.html[here].
+A detailed article covering an existing AD deployment is found link:Deploying.Azure.WVD.Supplimental_WVD_with_existing_AD.html[here].
 
 ==== Active Directory domain name
 Enter a **domain name**.  Mirroring the Azure AD Domain Name from above is recommended.
@@ -389,14 +389,14 @@ These credentials, and other relevant credentials, are automatically stored in t
 
 === Multi-factor authentication (MFA)
 NetApp VDS includes SMS/Email MFA at no charge. This feature can be used to secure VDS Admin accounts and/or End User accounts.
-link:task_configure_MFA.html[MFA Article]
+link:Management.User_Administration.multi-factor_authentication.html[MFA Article]
 
 === Application entitlement workflow
 VDS provides a mechanism to assign end users access to applications from a pre-defined list of applications called the Application Catalog. The Application catalog spans all managed deployments.
 
 NOTE: The automatically deployed TSD1 server must remain as-is to support application entitlement. Specifically, do not run the “convert to data” function against this virtual machine.
 
-Application Management is detailed in this Article: link:guide_application_entitlement.html[]
+Application Management is detailed in this Article: link:Management.Applications.application_entitlement_workflow.html[]
 
 === Azure AD security groups
 VDS includes functionality to create, populate and delete user groups which are backed by Azure AD Security Groups. These groups can be used outside of VDS just like any other Security Group. In VDS these groups can be used to assign folder permissions and application entitlement.
@@ -407,7 +407,7 @@ Creating user groups is performed on the Users & Groups tab within a workspace.
 ==== Assign folder permissions by group
 Permissions to view and edit folders in the company share can be assigned to users or groups.
 
-link:guide_manage_data_permissions.html[]
+link:Management.User_Administration.manage_folders_and_permissions.html[]
 
 ==== Assign applications by group
 In addition to assigning applications to users individually, applications can be provisioned to groups.
@@ -469,7 +469,7 @@ NOTE: It may take several minutes for all the virtual machines in the deployment
 VDS contains functionality for creating and managing virtual machine images for future deployments. To reach this functionality, navigate to: VDS > Deployments > Deployment Name > Provisioning Collections. The “VDI Image Collection” features are documented here: https://flightschool.cloudjumper.com/cwms/provisioning-collections/
 
 === Configure Azure cloud backup service
-VDS can natively configure and manage Azure Cloud Backup, an Azure PaaS service for backing up virtual machines. Backup Policies can be assigned to individual machines or groups of machine by type or host pool. Details are found here: link:guide_configure_backup.html[]
+VDS can natively configure and manage Azure Cloud Backup, an Azure PaaS service for backing up virtual machines. Backup Policies can be assigned to individual machines or groups of machine by type or host pool. Details are found here: link:Management.System_Administration.configure_backup.html[]
 
 === Select app management/policy mode
 By default, VDS implements a number of Group Policy Objects (GPO) that lock down the end user workspace. These policies prevent access to both core data layer locations (ex: c:\) and the ability to perform application installations as an end user.
