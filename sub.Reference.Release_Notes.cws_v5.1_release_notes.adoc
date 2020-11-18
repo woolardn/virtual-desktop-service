@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: release_notes_51.html
+permalink: Reference.Release_Notes.cws_v5.1_release_notes.html
 summary: NetApp VDS Release Notes v5.1
 keywords:
 ---

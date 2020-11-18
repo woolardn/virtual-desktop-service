@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: arch_reset_ssl_cert.html
+permalink: Architectural.Wildcard_SSL_certificate_renewal_process.html
 summary: Wildcard SSL certificate renewal process
 keywords:
 ---

@@ -32,7 +32,7 @@ This document describes the required elements for deploying Remote Desktop Servi
 
 .The following Remote Desktop clients support RDS in GCP:
 
-* link:https://docs.netapp.com/us-en/virtual-desktop-service/guide_user_requirements.html#overview[NetApp VDS Client for Windows]
+* link:https://docs.netapp.com/us-en/virtual-desktop-service/Reference.end_user_access.html#overview[NetApp VDS Client for Windows]
 ** NetApp VDS Client for Windows outbound url whitelisting requirements
 *** api.cloudworkspace.com
 *** vdsclient.app

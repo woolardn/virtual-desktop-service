@@ -28,7 +28,7 @@ Some applications require additional components, like a service account that rem
 
 === Extending Access to Third Parties
 
-Applications and/or their databases are often installed, configured and supported by either the software vendor (ISV) themselves or a third party expert in that software’s configuration, management and integrations. In these situations you will want to extend temporary administrative access to a these steps: link:guide_3rd_party_access.html[Providing Temporary Access to 3rd Parties]
+Applications and/or their databases are often installed, configured and supported by either the software vendor (ISV) themselves or a third party expert in that software’s configuration, management and integrations. In these situations you will want to extend temporary administrative access to a these steps: link:Management.System_Administration.provide_3rd_party_access.html[Providing Temporary Access to 3rd Parties]
 
 It is a best practice to shut down these third party accounts after the upgrade or update is completed or after the issue is resolved.
 

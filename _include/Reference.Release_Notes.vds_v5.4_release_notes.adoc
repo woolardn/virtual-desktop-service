@@ -5,6 +5,26 @@ Used in: sub.Reference.Release_Notes.vds_v5.4_release_notes.adoc
 
 ////
 
+
+== VDS 5.4 release: Thurs., November 19, 2020
+_Components:_ 5.4 Virtual Desktop Service
+_When:_ Thursday November 19th, 2020 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== VDS
+* Privileged Account Management (PAM) emails now include deployment code details
+* Permissions streamlining for Azure Active Directory Domain Services (AADDS) deployments
+* Improved clarity for admins looking to perform admin tasks in a deployment that is completely powered down
+* Bug fix for an error prompt that appeared when a VDS admin viewing RemoteApp App Group details for a host pool that is powered down
+* Phrasing update to API Users to reflect that they are VDS API Users
+* Faster results for returning the Data Center Status report
+* Improved handling of variables for daily actions (nightly reboots, for example) for VMs
+* Bug fix for a scenario where IP Addresses entered in DC Config were not saving correctly
+* Bug fix for a scenario where unlocking an admin account didn’t function as intended
+
+=== VDS Setup
+* Form factor update – resolve a scenario where action buttons in the VDS Setup wizard were truncated
+
 == VDS 5.4 release: Thurs., November 5, 2020
 
 _Components:_ 5.4 Virtual Desktop Service

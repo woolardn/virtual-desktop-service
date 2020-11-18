@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_configure_AV.html
+permalink: Management.System_Administration.configure_antivirus.html
 summary: Antivirus considerations
 keywords:
 ---

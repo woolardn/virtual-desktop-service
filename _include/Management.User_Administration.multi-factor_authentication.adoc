@@ -1,7 +1,7 @@
 
 ////
 
-Used in: sub.Management.User_Administration.multi-factor_authentication(mfa).adoc
+Used in: sub.Management.User_Administration.multi-factor_authentication.adoc
 
 ////
 

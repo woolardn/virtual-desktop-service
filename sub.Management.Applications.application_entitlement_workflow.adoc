@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_application_entitlement.html
+permalink: Management.Applications.application_entitlement_workflow.html
 summary: Step-by-step guide to deploy Applications to end users in VDS
 keywords:
 ---

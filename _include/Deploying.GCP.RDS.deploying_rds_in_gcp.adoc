@@ -360,10 +360,10 @@ The workplace automation process will now deploy a new RDS resources with the op
 
 Once complete, there are several common workflows you'll follow to customize the typical RDS deployment.
 
-* link:guide_managing_end_users.html[Add Users]
+* link:Management.User_Administration.manage_user_accounts.html[Add Users]
 
-* link:guide_user_requirements.html[End User Access]
+* link:Reference.end_user_access.html[End User Access]
 
-* link:guide_application_entitlement.html[Application Entitlement]
+* link:Management.Applications.application_entitlement_workflow.html[Application Entitlement]
 
 * link:feature_workload_schedule.html[Cost Optimization]

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: GCP_and_VDS_prerequisites.html
+permalink: Deploying.GCP.vds_v5.4_prerequisites.html
 summary: GCP and VDS prerequisites
 ---
 
