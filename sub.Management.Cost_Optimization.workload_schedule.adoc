@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: Management.Cost_Optimization.workload_schedule.html
+summary: Step-by-step guide to deploy Applications to end users in VDS
+keywords:
+---
+
+= Resource optimization
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Management.Cost_Optimization.workload_schedule.adoc[]

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_troubleshooting_failed_VDS_actions.html
+permalink: Troubleshooting.reviewing_vds_logs.html
 summary: Step-by-step guide to troubleshoot failed VDS actions
 keywords:
 ---

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_troubleshooting_printing.html
+permalink: Troubleshooting.printing_issues.html
 summary: Step-by-step guide to troubleshoot printing
 keywords:
 ---

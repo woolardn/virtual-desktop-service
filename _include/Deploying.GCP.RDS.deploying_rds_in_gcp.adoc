@@ -366,4 +366,4 @@ Once complete, there are several common workflows you'll follow to customize the
 
 * link:Management.Applications.application_entitlement_workflow.html[Application Entitlement]
 
-* link:feature_workload_schedule.html[Cost Optimization]
+* link:Management.Cost_Optimization.workload_schedule.html[Cost Optimization]

@@ -59,7 +59,7 @@ The step-by-step process is detailed in VDS > Deployment > Task History under an
 * Update VDS DB (SQL instance on CWMGR1)
 * Create Firewall rules for the clone
 
-As well as Task History, the detail steps for any cloning process can be viewed in CwVmAutomationService log on CWMGR1 in each partner’s Virtual Desktop Deployment.  Reviewing these log files is documented link:guide_troubleshooting_failed_VDS_actions.html[here].
+As well as Task History, the detail steps for any cloning process can be viewed in CwVmAutomationService log on CWMGR1 in each partner’s Virtual Desktop Deployment.  Reviewing these log files is documented link:Troubleshooting.reviewing_vds_logs.html[here].
 
 == Automated creation of new server(s)
 

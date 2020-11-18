@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: guide_troubleshooting_dns_forwarding_for_azure_aadds_sso.html
+permalink: Troubleshooting.dns_forwarding_for_azure_aadds_sso.html
 summary: Step-by-step guide to troubleshoot AADDS NDS and SSO
 keywords:
 ---

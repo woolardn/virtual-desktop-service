@@ -86,7 +86,7 @@ entries:
   - title: Automation
     url: /Management.Scripted_Events.scripted_events.html
   - title: Configure cost optimization
-    url: /feature_workload_schedule.html
+    url: /Management.Cost_Optimization.workload_schedule.html
 #      - title: Build VM images
 #        url: /
   - title: User Administration
@@ -132,27 +132,27 @@ entries:
 - title: Troubleshooting
   entries:
   - title: Reviewing VDS logs
-    url: /guide_troubleshooting_failed_VDS_actions.html
+    url: /Troubleshooting.reviewing_vds_logs.html
   - title: Internet connection quality
-    url: /guide_troubleshooting_internet_quality.html
+    url: /Troubleshooting.internet_connection_quality.html.html
   - title: Enable user wallpaper
-    url: /guide_enable_wallpaper.html
+    url: /Troubleshooting.enable_user_wallpaper.html
   - title: Printing issues
-    url: /guide_troubleshooting_printing.html
+    url: /Troubleshooting.printing_issues.html
 #     - title: Disk consumtpion
 #       url: /
 #     - title: User performance
 #       url: /
   - title: Azure vCPU core quota
-    url: /Azure_vCPU_core_quota.html
+    url: /Troubleshooting.azure_vcpu_core_quota.html
   - title: Unlock user account
-    url: /guide_troubleshooting_unlocking_user_accounts.html
+    url: /Troubleshooting.unlocking_user_accounts.html
   - title: General vm performance
-    url: /guide_troubleshooting_vm_performance.html
+    url: /Troubleshooting.general_vm_performance.html
   - title: DNS forwarding for Azure ADDS & SSO
-    url: /guide_troubleshooting_dns_forwarding_for_azure_aadds_sso.html
+    url: /Troubleshooting.dns_forwarding_for_azure_aadds_sso.html
   - title: Application issues
-    url: /guide_troubleshooting_application_issues.html
+    url: /Troubleshooting.application_issues.html
 
 
 
@@ -165,7 +165,7 @@ entries:
     - title: VDS v5.4 release notes
       url: /Reference.Release_Notes.vds_v5.4_release_notes.html
     - title: VDS Windows client release notes
-      url: /release_notes_client.html
+      url: /Reference.Release_Notes.vds_windows_client_release_notes.html
     - title: VDS v5.3 release notes
       url: /Reference.Release_Notes.vds_v5.3_release_notes.html
     - title: CWMS v5.2 release notes
@@ -177,7 +177,7 @@ entries:
   - title: End user access
     url: /Reference.end_user_access.html
   - title: VDS change environments
-    url: /reference_change_environments.html
+    url: /Reference.vds_change_environments.html
   - title: Glossary
     entries:
     - title: VDS
@@ -218,8 +218,8 @@ entries:
 #        entries:
 #      - title: Service Board
 #        entries:
-      - title: Scripted Events
-        url: /Management.Scripted_Events.scripted_events.html
+#      - title: Scripted Events
+#        url: /
 #      - title: Admins
 #        entries:
 #      - title: Reports
