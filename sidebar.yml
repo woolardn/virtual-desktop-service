@@ -180,10 +180,10 @@ entries:
     url: /Reference.end_user_access.html
   - title: VDS change environments
     url: /Reference.vds_change_environments.html
-  - title: Glossary
-    entries:
-    - title: VDS
-      entries:
+#  - title: Glossary
+#    entries:
+#    - title: VDS
+#      entries:
 #      - title: VDS clients
 #        entries:
 #        - VDS Windows client
