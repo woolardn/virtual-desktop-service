@@ -9,7 +9,7 @@ Used in: sub.Deploying.GCP.vds_v5.4_prerequisites.adoc
 This document describes the required elements for deploying Remote Desktop Services (RDS) using NetApp Virtual Desktop Service (VDS). The “Quick Checklist” provides a brief list of required components and pre-deployment steps to take to ensure an efficient deployment. The rest of the guide provides greater detail for each element, depending on the configuration choices that are made.
 
 
-image:ReferenceArchitectureGCPRDS.png[width=75%] 
+image:ReferenceArchitectureGCPRDS.png[width=75%]
 
 == Quick checklist
 
@@ -102,7 +102,7 @@ Decide which GCP region or regions will host your VDS virtual machines. Note tha
 Decide where the data for user profiles, individual files, and corporate shares will be placed. Choices include:
 
 * Cloud Volumes Service for GCP
-* Traditional File Server (Azure VM with Managed Disk)
+* Traditional File Server
 
 == NetApp VDS Deployment Requirements for Existing Components
 === NetApp VDS Deployment with Existing Active Directory Domain Controllers
@@ -135,7 +135,7 @@ link:autoprodb.database.windows.net[]
 link:vdctoolsapi.trafficmanager.net[]
 link:cjbootstrap3.cjautomate.net[]
 
-If your access control device can only white list by IP address, the following list of IP addresses should be whitelisted. Note that VDS uses the Azure Traffic Manager service, so this list may change over time:
+If your access control device can only white list by IP address, the following list of IP addresses should be whitelisted. Note that VDS uses a load balancer with redundant public IP addresses, so this list may change over time:
 
 13.67.190.243
 13.67.215.62
