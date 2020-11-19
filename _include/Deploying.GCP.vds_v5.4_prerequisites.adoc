@@ -8,6 +8,9 @@ Used in: sub.Deploying.GCP.vds_v5.4_prerequisites.adoc
 == GCP and VDS requirements and notes
 This document describes the required elements for deploying Remote Desktop Services (RDS) using NetApp Virtual Desktop Service (VDS). The “Quick Checklist” provides a brief list of required components and pre-deployment steps to take to ensure an efficient deployment. The rest of the guide provides greater detail for each element, depending on the configuration choices that are made.
 
+
+image:ReferenceArchitectureGCPRDS.png[width=75%] 
+
 == Quick checklist
 
 === GCP requirements
