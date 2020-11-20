@@ -4,6 +4,7 @@
 Used in: sub.video_azure_WVD_hostpool_54.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 

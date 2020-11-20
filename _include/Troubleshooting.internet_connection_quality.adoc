@@ -4,6 +4,7 @@
 Used in: sub.Troubleshooting.internet_connection_quality.adoc
 
 ////
+:imagesdir: ./media/
 
 == Symptoms
 

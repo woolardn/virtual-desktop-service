@@ -4,6 +4,7 @@
 Used in: sub.Troubleshooting.printing_issues.adoc
 
 ////
+:imagesdir: ./media/
 
 == Error
 

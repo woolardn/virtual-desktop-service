@@ -4,6 +4,7 @@
 Used in: sub.Troubleshooting.reviewing_vds_logs.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 Much of the logging that happens in VDS is not exposed in the web UI due to the sheer volume of it.  More detailed logs are found on the end point.  These logs are described below.

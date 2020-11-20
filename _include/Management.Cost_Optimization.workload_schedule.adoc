@@ -5,6 +5,7 @@
 Used in: sub.Management.Cost_Optimization.workload_schedule.adoc
 
 ////
+:imagesdir: ./media/
 
 == Workload scheduling
 Workload Scheduling is a feature that can schedule the time window in which the environment is active.

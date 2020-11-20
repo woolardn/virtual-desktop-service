@@ -4,6 +4,7 @@
 Used in: sub.Deploying.Azure.WVD.vds_v5.4_prerequisites.adoc
 
 ////
+:imagesdir: ./media/
 
 == WVD and VDS requirements and notes
 This document describes the required elements for deploying Windows Virtual Desktop (WVD) using NetApp Virtual Desktop Service (VDS). The “Quick Checklist” provides a brief list of required components and pre-deployment steps to take to ensure an efficient deployment. The rest of the guide provides greater detail for each element, depending on the configuration choices that are made.

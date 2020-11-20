@@ -4,6 +4,7 @@
 Used in: sub.Management.System_Administration.adding_moving_mapped_drives.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 By default there are three shared folders exposed to end user sessions.  These folders are found on the defined storage layer.  This could be on the file server (TSD1 or D1) or a storage service such as Azure Files, Azure NetApp Files, NetApp CVO and NetApp CVS.
