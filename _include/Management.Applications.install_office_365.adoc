@@ -4,6 +4,7 @@
 Used in: sub.Management.Applications.install_office_365.adoc
 
 ////
+:imagesdir: ./media/
 
 == Manual steps overview
 

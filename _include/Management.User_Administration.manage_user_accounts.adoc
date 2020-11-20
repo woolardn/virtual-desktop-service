@@ -4,6 +4,7 @@
 Used in: sub.Management.User_Administration.manage_user_accounts.adoc
 
 ////
+:imagesdir: ./media/
 
 == Create New User(s)
 Admins can add Users by clicking Workspaces > Users and Groups > Add/import

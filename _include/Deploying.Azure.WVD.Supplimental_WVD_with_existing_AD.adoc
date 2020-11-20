@@ -4,6 +4,7 @@
 Used in: sub.Deploying.Azure.WVD.Supplimental_WVD_with_existing_AD.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 VDS Setup has the ability to connect a new deployment to an existing AD structure. These instruction cover that option in detail.

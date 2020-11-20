@@ -4,6 +4,7 @@
 Used in: sub.Management.System_Administration.create_domain_admin_account.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 

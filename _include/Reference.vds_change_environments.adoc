@@ -4,6 +4,7 @@
 Used in: sub.Reference.vds_change_environments.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 

@@ -8,6 +8,7 @@ Other GitHub Repos:
 VDMS Repo: sub.Management.Applications.application_entitlement_workflow.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 VDS has a robust application automation and entitlement functionality built-in. This functionality allows users to have access to different applications while connecting to the same session host(s). This is accomplished by some custom GPOs hiding shortcuts along with automation selectively placing shortcuts on the users’ desktops.

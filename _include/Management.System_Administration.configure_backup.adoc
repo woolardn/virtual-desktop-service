@@ -4,6 +4,7 @@
 Used in: sub.Management.System_Administration.configure_backup.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 VDS has the ability to configure and manage native backup services in some infrastructure providers including Azure.

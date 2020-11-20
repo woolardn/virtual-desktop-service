@@ -4,6 +4,7 @@
 Used in: sub.Architectual.upgrade_wvd_v1_to_v2.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 This guide outlines the process of using the Virtual Desktop Service (VDS) interface to do an in-place upgrade of an existing WVD Fall Release (v1) host pool, resulting in a WVD Spring Release (v2) host pool. Without VDS, this transformation requires highly skilled architects to figure this out on their own or do a complete re-deployment of the environment.

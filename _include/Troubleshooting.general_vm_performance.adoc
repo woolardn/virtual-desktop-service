@@ -4,6 +4,7 @@
 Used in: sub.Troubleshooting.general_vm_performance.adoc
 
 ////
+:imagesdir: ./media/
 
 NetApp offers customers insight into troubleshooting server performance for users/apps. All companies consume resources differently based on the number of end users logged in at once, application use, if SQL Standard is installed vs. SQL Express, etc. so it is important to be able to review what is happening when a user reports performance issues.
 

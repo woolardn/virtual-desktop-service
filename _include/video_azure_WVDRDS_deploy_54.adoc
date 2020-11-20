@@ -4,6 +4,7 @@
 Used in: sub.video_azure_WVDRDS_deploy_54.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 

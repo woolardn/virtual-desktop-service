@@ -5,6 +5,7 @@ Used in:
 sub.Architectual.migrate_data_into_vds.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 Migrating data is a near-universal requirement when migrating to a cloud solution of any type. While Admins are responsible for migrating data into their Virtual Desktops, NetApp’s experience is available and has proven invaluable for innumerable Customer migrations. The Virtual Desktop environment is simply a hosted Windows environment, so any methods desired can likely be accommodated.

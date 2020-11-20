@@ -4,6 +4,7 @@
 Used in: sub.video_gemini.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 

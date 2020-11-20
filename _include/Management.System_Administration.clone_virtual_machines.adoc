@@ -4,6 +4,7 @@
 Used in: sub.Management.System_Administration.clone_virtual_machines.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 

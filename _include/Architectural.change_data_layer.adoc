@@ -4,6 +4,7 @@
 Used in: sub.Architectural.change_data_layer.adoc
 
 ////
+:imagesdir: ./media/
 
 == Overview
 Virtual Desktop Service deployment technologies allow for a variety of storage options depending on the underlying infrastructure, this guide addresses how to make a change post-deployment.
