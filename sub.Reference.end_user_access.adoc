@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: Reference.end_user_access.html
-summary: What’s with all these emails?
+summary: End User Access
 keywords:
 ---
 
