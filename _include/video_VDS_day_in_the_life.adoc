@@ -4,7 +4,6 @@
 Used in: sub.video_VDS_day_in_the_life.adoc
 
 ////
-:imagesdir: ./media/
 
 == Overview
 

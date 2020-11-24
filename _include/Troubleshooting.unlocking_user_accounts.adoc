@@ -3,8 +3,11 @@
 
 Used in: sub.Troubleshooting.unlocking_user_accounts.adoc
 
+Other GitHub Repos:
+VDMS Repo:
+remotesub.Troubleshooting.unlocking_user_accounts.adoc
+
 ////
-:imagesdir: ./media/
 
 == Overview
 Unlocking a locked account for an End User is a simple process that resolves a moderately common issue that end users report.

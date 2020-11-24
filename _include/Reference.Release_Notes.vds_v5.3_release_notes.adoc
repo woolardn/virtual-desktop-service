@@ -4,7 +4,6 @@
 Used in: sub.Reference.Release_Notes.vds_v5.3_release_notes.adoc
 
 ////
-:imagesdir: ./media/
 
 NOTE: There will be no further recurring releases for v5.3 of VDS – all releases will be considered hotfixes.
 

@@ -3,8 +3,11 @@
 
 Used in: sub.Troubleshooting.application_issues.adoc
 
+Other GitHub Repos:
+VDMS Repo:
+remotesub.Troubleshooting.application_issues.adoc
+
 ////
-:imagesdir: ./media/
 
 == Overview
 Troubleshooting an application error is a common administrative practice that doesn’t involve VDS itself, but is greatly assisted by VDS and the level of control it provides administrators. While NetApp VDS does not troubleshoot these issues for Customers, our experience allows us to advice administrators after identifying some basic information like the following in order to dig deeper and troubleshoot with end users and/or third parties.

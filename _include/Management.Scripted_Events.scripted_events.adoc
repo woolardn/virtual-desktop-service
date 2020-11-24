@@ -3,8 +3,11 @@
 
 Used in: sub.Management.Scripted_Events.scripted_events.adoc
 
+Other GitHub Repos:
+VDMS Repo:
+remotesub.Management.Scripted_Events.scripted_events.adoc
+
 ////
-:imagesdir: ./media/
 
 == Overview
 Scripted Events provides the advanced administrator with a mechanism to create custom automation for system maintenance, user alerts, group policy management, or other events. Scripts can be designated to run as an executable process and accept arguments, or can be used as arguments for a different executable program. This functionality allows for scripts to be combined and nested to support complex customization and integration needs.

@@ -3,8 +3,11 @@
 
 Used in: sub.Management.Applications.install_office_365.adoc
 
+Other GitHub Repos:
+VDMS Repo:
+remotesub.Management.Applications.install_office_365.adoc
+
 ////
-:imagesdir: ./media/
 
 == Manual steps overview
 

@@ -4,7 +4,6 @@
 Used in: sub.Troubleshooting.azure_vcpu_core_quota.adoc
 
 ////
-:imagesdir: ./media/
 
 == View Current Quota
 

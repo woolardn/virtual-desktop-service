@@ -3,8 +3,11 @@
 
 Used in: sub.Troubleshooting.internet_connection_quality.adoc
 
+Other GitHub Repos:
+VDMS Repo:
+remotesub.Troubleshooting.internet_connection_quality.adoc
+
 ////
-:imagesdir: ./media/
 
 == Symptoms
 

@@ -4,7 +4,6 @@
 Used in: sub.video_content_netapptv.adoc
 
 ////
-:imagesdir: ./media/
 
 === VDS, GFC, and ANF - The Solution for Globally Deployed Cloud Desktops
 Azure NetApp Files hosts high performance storage, while Virtual Desktop Service and Global File Cache manage workspaces and site regions from a single control panel for your globally deployed cloud desktops.
