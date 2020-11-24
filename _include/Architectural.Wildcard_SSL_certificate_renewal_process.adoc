@@ -4,7 +4,6 @@
 Used in: sub.Architectural.Wildcard_SSL_certificate_renewal_process.adoc
 
 ////
-:imagesdir: ./media/
 
 == Create a certificate signing request (CSR):
 

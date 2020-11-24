@@ -4,7 +4,6 @@
 Used in: sub.Deploying.Azure.WVD.vds_v5.4_components_and_permissions.adoc
 
 ////
-:imagesdir: ./media/
 
 == WVD and VDS security entities and services
 Windows Virtual Desktop (WVD) requires security accounts and components in both Azure AD and the local Active Directory to perform automated actions. NetApp’s Virtual Desktop Service (VDS) creates components and security settings during the deployment process that allow administrators to control the WVD environment. This document describes the relevant VDS accounts, components, and security settings in both environments.

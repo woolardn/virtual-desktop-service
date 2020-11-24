@@ -3,8 +3,11 @@
 
 Used in: sub.Troubleshooting.printing_issues.adoc
 
+Other GitHub Repos:
+VDMS Repo:
+remotesub.Troubleshooting.printing_issues.adoc
+
 ////
-:imagesdir: ./media/
 
 == Error
 

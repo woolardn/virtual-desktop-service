@@ -4,7 +4,6 @@
 Used in: sub.Unlisted.Whats_with_all_these_emails.adoc
 
 ////
-:imagesdir: ./media/
 
 == Overview
 VDS sends a variety of nightly email reports. These are designed to summarize various aspects of your environment on a nightly basis to identify errors and exceptions. They are tuned to help large deployments where individually monitoring each tenant can be a significant task.

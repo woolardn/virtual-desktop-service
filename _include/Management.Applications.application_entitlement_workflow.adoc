@@ -5,7 +5,9 @@ sub.Management.Applications.application_entitlement_workflow.adoc
 sub.Management.User_administration.manage_application_access.adoc
 
 Other GitHub Repos:
-VDMS Repo: sub.Management.Applications.application_entitlement_workflow.adoc
+VDMS Repo:
+remotesub.Management.Applications.application_entitlement_workflow.adoc
+remotesub.Management.User_Administration.manage_application_access.adoc
 
 ////
 

@@ -3,7 +3,6 @@
 Used in: sub.Management.System_Administration.privileged.account.management.adoc
 
 ////
-:imagesdir: ./media/
 
 == Privileged Account Management (PAM)
 

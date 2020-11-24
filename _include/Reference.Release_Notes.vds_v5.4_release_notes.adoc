@@ -4,7 +4,6 @@
 Used in: sub.Reference.Release_Notes.vds_v5.4_release_notes.adoc
 
 ////
-:imagesdir: ./media/
 
 == VDS 5.4 release: Thurs., November 19, 2020
 _Components:_ 5.4 Virtual Desktop Service

@@ -4,7 +4,6 @@
 Used in: sub.video_WVDRDS_app_management_54.adoc
 
 ////
-:imagesdir: ./media/
 
 == Overview
 

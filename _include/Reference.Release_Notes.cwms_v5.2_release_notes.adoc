@@ -4,7 +4,6 @@
 Used in: sub.Reference.Release_Notes.cwms_v5.2_release_notes.adoc
 
 ////
-:imagesdir: ./media/
 
 NOTE: There will be no further recurring releases for v5.2 of CWMS – all releases will be considered hotfixes.
 

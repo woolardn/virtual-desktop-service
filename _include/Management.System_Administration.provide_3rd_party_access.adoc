@@ -3,8 +3,10 @@
 
 Used in: sub.Management.System_Administration.provide_3rd_party_access.adoc
 
+Other GitHub Repos:
+VDMS Repo:
+remotesub.Management.System_Administration.provide_3rd_party_access.adoc
 ////
-:imagesdir: ./media/
 
 == Overview
 Providing access to 3rd parties is a common practice when migrating to any cloud solution.
