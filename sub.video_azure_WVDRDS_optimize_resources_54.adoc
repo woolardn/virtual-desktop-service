@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: video_azure_WVDRDS_optimize_resources_54.html
-summary: Create a WVD Host Pool with NetApp VDS v5.4
+summary: Optimize Azure resource consumption in VDS 5.4
 keywords:
 ---
 
-= Create a WVD Host Pool with NetApp VDS v5.4
+= Optimize Azure resource consumption in VDS 5.4
 
 :toc: macro
 :hardbreaks:
