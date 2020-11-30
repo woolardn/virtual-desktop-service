@@ -3,6 +3,9 @@
 
 Used in: sub.Management.User_Administration.manage_folders_and_permissions.adoc
 
+Other GitHub Repos:
+VDMS Repo:
+remotesub.Management.User_Administration.manage_folders_and_permissions.adoc
 ////
 
 == End user perspective
