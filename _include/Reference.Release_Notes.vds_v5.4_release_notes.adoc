@@ -5,6 +5,26 @@ Used in: sub.Reference.Release_Notes.vds_v5.4_release_notes.adoc
 
 ////
 
+
+== VDS 5.4 release: Thurs., December 3, 2020
+_Components:_ 5.4 Virtual Desktop Service
+_When:_ Thursday December 3rd, 2020 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+=== Virtual Desktop Service
+* Update to the FSLogix installation method
+* Ongoing proactive security measures
+
+=== VDS Setup
+* Update to Azure NetApp Files deployment automation – support creating:
+* 4 TB Capacity Pool/Volume at minimum
+* 500 TB Capacity Pool/100 TB Volume at maximum
+* Improved variable handling for advanced deployment options
+
+=== Cost Estimators
+* Removal of disk operations from the Google Cost Estimator
+* Updates reflecting new services available by region in the Azure Cost Estimator
+
 == VDS 5.4 release: Thurs., November 19, 2020
 _Components:_ 5.4 Virtual Desktop Service
 _When:_ Thursday November 19th, 2020 at 10pm - 11pm Eastern
