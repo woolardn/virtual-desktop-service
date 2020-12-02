@@ -51,7 +51,7 @@ Launch PowerShell, as ADMINISTRATOR, from the Domain Controller (or any local do
 +
 `[System.Net.ServicePointManager]::SecurityProtocol =[System.Net.SecurityProtocolType]::'Ssl3','Tls','Tls11','Tls12';`
 +
-`iex ((New-Object System.Net.WebClient).DownloadString('https://cjbootstrap3.cjAutomate.net/cjBootstrapMenu.ps1'))))`
+`iex (New-Object System.Net.WebClient).DownloadString('https://cjbootstrap3.cjAutomate.net/cjBootstrapMenu.ps1')))`
 
 .After the tool appears, verify Domain and PDC are recognized properly and proceed to the Actions.
 . Select Action ‘Download this tool and click ‘Go’.
