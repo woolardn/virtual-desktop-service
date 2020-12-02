@@ -11,7 +11,7 @@ entries:
       - title: Deploying WVD in Azure
         url: /Deploying.Azure.WVD.Deploying_WVD_in_Azure.html
       - title: Supplemental - WVD with existing AD
-        url: /Deploying.Azure.WVD.Supplimental_WVD_with_existing_AD.html
+        url: /Deploying.Azure.WVD.Supplemental_WVD_with_existing_AD.html
       - title: VDS v5.4 components and permissions (WVD)
         url: /Deploying.Azure.WVD.vds_v5.4_components_and_permissions.html
       - title: VDS v5.4 prerequisites (WVD)

@@ -5,7 +5,7 @@ summary: Step-by-step guide to troubleshoot Azure vCPU core quota
 keywords:
 ---
 
-= Azure vCPU core quota
+= Azure vCPU Core Quota
 
 :toc: macro
 :hardbreaks:

@@ -5,7 +5,7 @@ summary: NetApp VDS Release Notes v5.1
 keywords:
 ---
 
-= Cloud Workspace Suite – version 5.1
+= Cloud Workspace Suite – Version 5.1
 
 :toc: macro
 :hardbreaks:

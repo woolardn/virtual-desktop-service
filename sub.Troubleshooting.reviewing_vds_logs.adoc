@@ -5,7 +5,7 @@ summary: Step-by-step guide to troubleshoot failed VDS actions
 keywords:
 ---
 
-= Troubleshooting failed VDS actions
+= Troubleshooting Failed VDS Actions
 
 :toc: macro
 :hardbreaks:

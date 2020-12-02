@@ -5,7 +5,7 @@ summary: NetApp VDS release notes v5.0
 keywords:
 ---
 
-= CWS – v5.0 release notes
+= CWS – v5.0 Release Notes
 
 :toc: macro
 :hardbreaks:

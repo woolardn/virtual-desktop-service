@@ -5,7 +5,7 @@ summary: Welcome to the documentation portal for Virtual Desktop Service.
 keywords:
 ---
 
-= Virtual Desktop Service documentation
+= Virtual Desktop Service Documentation
 
 :toc: macro
 :hardbreaks:

@@ -5,7 +5,7 @@ summary: Optimize Azure resource consumption in VDS 5.4
 keywords:
 ---
 
-= Optimize Azure resource consumption in VDS 5.4
+= Optimize Azure Resource Consumption in VDS 5.4
 
 :toc: macro
 :hardbreaks:

@@ -5,7 +5,7 @@ summary: Antivirus considerations
 keywords:
 ---
 
-= Apply monitoring and antivirus
+= Apply Monitoring and Antivirus
 
 :toc: macro
 :hardbreaks:

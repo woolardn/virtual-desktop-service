@@ -5,7 +5,7 @@ summary: Configure Multi-factor authentication (MFA)
 keywords:
 ---
 
-= Multi-factor authentication (MFA)
+= Multi-Factor Authentication (MFA)
 
 :toc: macro
 :hardbreaks:
