@@ -5,7 +5,7 @@ summary: Step-by-step guide to change storage platform
 keywords:
 ---
 
-= Redirecting storage platform
+= Redirecting Storage Platform
 
 :toc: macro
 :hardbreaks:

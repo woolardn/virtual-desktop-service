@@ -5,7 +5,7 @@ summary: NetApp VDS Release Notes Windows Client
 keywords:
 ---
 
-= VDS Client for Windows
+= VDS Client for Windows Release Notes
 
 :toc: macro
 :hardbreaks:

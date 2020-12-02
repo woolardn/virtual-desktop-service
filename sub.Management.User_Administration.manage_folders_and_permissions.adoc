@@ -5,7 +5,7 @@ summary: Managing Data Permissions
 keywords:
 ---
 
-= Managing data permissions
+= Managing Data Permissions
 
 :toc: macro
 :hardbreaks:

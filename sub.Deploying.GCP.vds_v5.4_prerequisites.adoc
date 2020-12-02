@@ -4,7 +4,7 @@ permalink: Deploying.GCP.vds_v5.4_prerequisites.html
 summary: GCP and VDS prerequisites
 ---
 
-= Google Compute Platform (GCP) and VDS prerequisites
+= Google Compute Platform (GCP) and VDS Prerequisites
 
 :toc: macro
 :hardbreaks:

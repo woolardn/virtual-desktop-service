@@ -145,7 +145,7 @@ Select an appropriate **Azure Region**. This https://azure.microsoft.com/en-us/s
 VDS can be provisioned with a **new virtual machine** for the Domain Controller function or setup to leverage an existing Domain Controller.
 In this guide we will select New Windows Server Active Directory, which will create one or two VMs (based on choices made during this process) under the subscription.
 
-A detailed article covering an existing AD deployment is found link:Deploying.Azure.WVD.Supplimental_WVD_with_existing_AD.html[here].
+A detailed article covering an existing AD deployment is found link:Deploying.Azure.WVD.Supplemental_WVD_with_existing_AD.html[here].
 
 ==== Active Directory domain name
 Enter a **domain name**.  Mirroring the Azure AD Domain Name from above is recommended.

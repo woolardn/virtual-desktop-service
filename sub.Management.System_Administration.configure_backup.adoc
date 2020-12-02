@@ -5,7 +5,7 @@ summary: Backup Configuration
 keywords:
 ---
 
-= Configure backup schedule
+= Configure Backup Schedule
 
 :toc: macro
 :hardbreaks:

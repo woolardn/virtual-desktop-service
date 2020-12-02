@@ -5,7 +5,7 @@ summary: Wildcard SSL certificate renewal process
 keywords:
 ---
 
-= Wildcard SSL certificate renewal process
+= Wildcard SSL Certificate Renewal Process
 
 :toc: macro
 :hardbreaks:

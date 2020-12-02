@@ -5,7 +5,7 @@ summary: Step-by-step guide to troubleshoot application issues
 keywords:
 ---
 
-= Troubleshooting application issues
+= Troubleshooting Application Issues
 
 :toc: macro
 :hardbreaks:

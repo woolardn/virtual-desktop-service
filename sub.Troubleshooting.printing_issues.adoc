@@ -5,7 +5,7 @@ summary: Step-by-step guide to troubleshoot printing
 keywords:
 ---
 
-= Troubleshooting printing issues
+= Troubleshooting Printing Issues
 
 :toc: macro
 :hardbreaks:

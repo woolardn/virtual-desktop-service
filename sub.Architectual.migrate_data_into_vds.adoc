@@ -5,7 +5,7 @@ summary: Summary of considerations when migrating data
 keywords:
 ---
 
-= Data migration considerations
+= Data Migration Considerations
 
 :toc: macro
 :hardbreaks:

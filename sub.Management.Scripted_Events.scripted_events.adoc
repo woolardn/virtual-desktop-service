@@ -5,7 +5,7 @@ summary: Scripted Events
 keywords:
 ---
 
-= Scripted events
+= Scripted Events
 
 :toc: macro
 :hardbreaks:

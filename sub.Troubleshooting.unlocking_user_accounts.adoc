@@ -5,7 +5,7 @@ summary: Step-by-step guide to unlock user accounts
 keywords:
 ---
 
-= Unlocking user accounts
+= Unlocking User Accounts
 
 :toc: macro
 :hardbreaks:

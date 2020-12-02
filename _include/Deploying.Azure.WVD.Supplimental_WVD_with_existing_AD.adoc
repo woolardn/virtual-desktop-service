@@ -1,7 +1,7 @@
 
 ////
 
-Used in: sub.Deploying.Azure.WVD.Supplimental_WVD_with_existing_AD.adoc
+Used in: sub.Deploying.Azure.WVD.Supplemental_WVD_with_existing_AD.adoc
 
 ////
 
@@ -49,9 +49,11 @@ Detailed Steps:
 Launch PowerShell, as ADMINISTRATOR, from the Domain Controller (or any local domain joined machine will work)
 . Run the following commands, individually, to launch NetApp VDS Deployment Preparation Tool:
 +
-`[System.Net.ServicePointManager]::SecurityProtocol =[System.Net.SecurityProtocolType]::'Ssl3','Tls','Tls11','Tls12';`
+[literal]
+[System.Net.ServicePointManager]::SecurityProtocol =[System.Net.SecurityProtocolType]::'Ssl3','Tls','Tls11','Tls12';'
 +
-`iex ((New-Object System.Net.WebClient).DownloadString('https://cjbootstrap3.cjAutomate.net/cjBootstrapMenu.ps1'))`
+[literal]
+iex (new-object system.net.webclient).donwloadstring('https://cjbootstrap3.cjautomate.net/cjboostrapmenu.ps1')
 
 .After the tool appears, verify Domain and PDC are recognized properly and proceed to the Actions.
 . Select Action ‘Download this tool and click ‘Go’.

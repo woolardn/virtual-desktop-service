@@ -120,7 +120,7 @@ VDS can send email notifications via custom SMTP settings or the built-in SMTP s
 image:GCP_Deploy17.png[]
 
 ==== Level 3 technicians
-Level 3 technician accounts (aka. _.tech accounts_) are domain-level accounts for VDS admins to use when performing administrative tasks on the VMs int he VDS environment.  Additional accounts can be created on this step and/or later.
+Level 3 technician accounts (aka. _.tech accounts_) are domain-level accounts for VDS admins to use when performing administrative tasks on the VMs in the VDS environment.  Additional accounts can be created on this step and/or later.
 
 . Enter the username and password for the Level 3 admin account(s).  ".tech" will be appended to the user name you enter to help differentiate between end users and tech accounts.  Document these credentials for later use.
 +

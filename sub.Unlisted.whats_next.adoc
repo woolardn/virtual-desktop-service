@@ -5,7 +5,7 @@ summary: What's Next?
 keywords:
 ---
 
-= Congratulations on starting the deployment of a new VDS environment!
+= Congratulations on Starting the Deployment of a New VDS Environment!
 
 :toc: macro
 :hardbreaks:
