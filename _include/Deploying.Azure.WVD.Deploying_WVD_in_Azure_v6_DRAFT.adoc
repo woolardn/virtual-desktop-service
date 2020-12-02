@@ -173,7 +173,7 @@ NOTE: If the domain entered is also used externally, additional steps need to be
 ==== File Management type
 VDS can provision a simple file server virtual machine or setup and configure Azure NetApp Files.  In production, Microsoft recommends allocating 30gb per user and we've observed that allocating 5-15 IOPS per user is required for optimal performance.
 
-Azure NetApp Files has a 4TiB minimum while managed disks 
+TIP: Azure NetApp Files (ANF) has a 4TiB minimum while managed disks do not have a relevant minimum size.  Therefore, the minimum spend on ANF may be cost prohibitive for smaller deployments.  As a point of reference, in NetApp's own Managed Desktop Service (VDMS) we default to ANF for environments with 50+ users.
 
 In a POC (non-production) environment the file server is a low-cost and simple deployment option. However, the available performance of Azure Managed Disks can be overwhelmed by the IOPS consumption of even a moderately sized production deployment.
 
@@ -181,7 +181,7 @@ For example, a 4TB Standard SSD disk in azure supports up to 500 IOPS, which cou
 
 For production WVD deployments, **Azure NetApp Files is Microsoft's recommendation**.
 
-NOTE: Azure NetApp Files needs to be made available to the subscription you wish to deploy into - please contact your NetApp account rep or use this link: https://aka.ms/azurenetappfiles
+IMPORTANT: Azure NetApp Files needs to be made available to the subscription you wish to deploy into - please contact your NetApp account rep or use this link: https://aka.ms/azurenetappfiles
 
 It is also required that you register NetApp as a provider to your subscription. This can be done by doing the following:
 
@@ -265,7 +265,6 @@ Review and adjust if needed, then click Validate to identify subnets for each of
 * Services: this is the range that PaaS services like Azure NetApp Files will reside in
 * Platform: this is the range that Platform servers will reside in
 * Directory: this is the range that AD servers will reside in
-
 
 === Review
 The final page provides an opportunity to review your choices. When you have completed that review, click the Validate button. VDS Setup will review all the entries and verify that the deployment can proceed with the information provided. This validation can take 2-10 minutes. To follow the progress, you can click the log logo (upper right) to see the validation activity.
