@@ -1,0 +1,47 @@
+
+////
+
+Used in: sub.Management.System_Administration.azure_key_vault.adoc
+
+////
+
+== Overview
+CWASetup 5.4 is a departure from previous Azure deployment methods. The configuration and validation process is streamlined to reduce the amount of information required to begin a deployment. Many of those removed prompts are for credentials or accounts such as Local VM Admin, SMTP account, Tech account, SQL SA, etc. These accounts are now automatically generated and stored in an Azure Key Vault. By default, accessing these automatically generated accounts requires an additional step, described below.
+
+* Find the 'Key vault' resource and click into it:
++
+image:Management.System_Administration.azure_key_vault-4d897.png[width=75%]
+
+* Under ‘Settings’, click ‘Secrets’. You’ll see a message stating that you are unauthorized to view:
++
+image:Management.System_Administration.azure_key_vault-0f7b9.png[width=75%]
+
+* Add an ‘Access Policy’ to grant an Azure AD account (like a Global Admin or System Administrator) access to these sensitive keys:
++
+image:Management.System_Administration.azure_key_vault-fe473.png[width=75%]
+
+* A Global Admin is used in this example. After selecting the principal, click ‘Select’, then ‘Add’:
++
+image:Management.System_Administration.azure_key_vault-3ae42.png[width=75%]
+
+* Click ‘Save’:
++
+image:Management.System_Administration.azure_key_vault-15c03.png[width=75%]
+
+* Access policy has been successfully added:
++
+image:Management.System_Administration.azure_key_vault-770dd.png[width=75%]
+
+* Revisit the ‘Secrets’ to verify the account now has access to the deployment accounts:
++
+image:Management.System_Administration.azure_key_vault-e277a.png[width=75%]
+
+* For example, if you required the Domain Administrator credential to login to CWMGR1 and update Group Policy, check the strings under cjDomainAdministratorName and cjDomainAdministratorPassword by clicking on each entry:
++
+image:Management.System_Administration.azure_key_vault-69e35.png[width=75%]
++
+image:Management.System_Administration.azure_key_vault-83926.png[width=75%]
+
+* Show or Copy the value:
++
+image:Management.System_Administration.azure_key_vault-c9405.png[width=75%]

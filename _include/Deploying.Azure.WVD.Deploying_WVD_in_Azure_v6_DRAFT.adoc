@@ -137,11 +137,10 @@ Once working through the CWA Setup wizard there are several questions that need 
 * Login with the Azure admin account referenced above in the prerequisites.
 * Select the appropriate Azure subscription and click Add Deployment
 
-image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6.image1.png[width=75%]
-
+image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6_DRAFT-116b5.png[width=75%]
 
 === IaaS and platform
-image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6.image2.png[width=75%]
+image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6_DRAFT-6c76b.png[width=75%]
 
 ==== Azure AD domain name
 The Azure AD domain name is inherited by the selected tenant.
@@ -159,7 +158,7 @@ Selecting _Existing Network_ will allow deployment into an existing Azure networ
 VDS can be provisioned with a **new virtual machine** for the Domain Controller function or setup to leverage an existing Domain Controller.
 
 Alternatively, VDS can deploy using an existing Active Directory if provided credentials to that domain (e.g. Global Administrator rights)
-image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6.image3.png[width=75%]
+image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6_DRAFT-e8633.png[width=75%]
 
 In this guide we will select New Windows Server Active Directory, which will create one or two VMs (based on choices made during this process) under the subscription.
 
@@ -194,7 +193,7 @@ It is also required that you register NetApp as a provider to your subscription.
 NetApp VDS can be used to deploy RDS and/or WVD environments.  When deploying WVD, this field can **remain empty**.
 
 ==== Thinprint
-NetApp VDS can be used to deploy RDS and/or WVD environments. When deploying WVD, this toggle can remain **off** (toggle left).
+NetApp VDS can be used to deploy RDS and/or WVD environments. Thinprint is an optional install that is only compatible with RDS deployments. When deploying WVD, this toggle can remain **off** (toggle left).
 
 ==== Notification email
 VDS will send deployment notifications and ongoing health reports to the **email provided**. This can be changed later.
@@ -206,13 +205,13 @@ Depending on the configuration these can include CWMGR, one or two RDS Gateways,
 Most WVD deployments leverage the Single virtual machine option, as Microsoft manages the WVD Gateways as a PaaS service.
 
 For smaller and simpler environments that will include RDS use cases, all of these services can be condensed into the Single virtual machine option to reducing VM costs (with limited scalability). For RDS uses cases with more than 100 users the Multiple virtual machines option is advised in order to facilitate RDS and/or HTML5 Gateway scalability
-image:VDS Setup Sections 2.png[]
 
+image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6_DRAFT-bb8b3.png[width=75%]
 
 ==== Platform VM configuration
-NetApp VDS can be used to deploy RDS and/or WVD environments. When deploying WVD the Single virtual machine selection is recommended.  For RDS deployments you need to deploy and manage additional components such as Brokers and Gateways, in production these services should be run on dedicated and redundant virtual machines.  For WVD, all of these services are provided by Azure as an included service and thus, the **single virtual machine** configuration is recommended.
+NetApp VDS can be used to deploy RDS and/or WVD environments. For RDS deployments you need to deploy and manage additional components such as Brokers and Gateways, in production these services should be run on dedicated and redundant virtual machines.  For WVD, all of these services are provided by Azure as an included service and thus, the **single virtual machine** configuration is recommended.
 
-===== Single virtual machine
+===== Single VM
 This is the recommended selection for deployments that will exclusively use WVD (and not RDS or a combination of the two). In a Single virtual machine deployment the following roles are all hosted on a single VM in Azure:
 
 *	CW Manager
@@ -226,7 +225,7 @@ The maximum advised user count for RDS use cases in this configuration is 100 us
 
 NOTE: If this environment is being designed for multi-tenancy, a Single virtual machine configuration is not supported - neither is WVD or AD Connect.
 
-===== Multiple virtual machines
+===== Multiple VMs
 When splitting the VDS Platform into Multiple virtual machines the following roles are hosted on dedicated VMs in Azure:
 
 * Remote Desktop Gateway
@@ -245,10 +244,10 @@ For RDS use cases, the maximum size of the environment can be scaled out with ad
 If this environment is being designed for multi-tenancy then the Multiple virtual machines selection is required.
 
 
-==== Time zone
+==== Time Zone
 While the end users' experience will reflect their local time zone, a default time zone needs to be selected. Select the time zone from where the **primary administration** of the environment will be performed.
 
-==== Virtual network scope
+==== Virtual Network Scope
 It is a best practice to isolate VMs to different subnets according to their purpose. First, define the network scope and add a /20 range.
 
 VDS Setup detects and suggests a range that should prove successful. Per best practices, the subnet IP addresses must fall into a private IP address range.
@@ -261,35 +260,74 @@ These ranges are:
 
 Review and adjust if needed, then click Validate to identify subnets for each of the following:
 
-* Tenant: this is the range that session host servers and database servers will reside in
-* Services: this is the range that PaaS services like Azure NetApp Files will reside in
-* Platform: this is the range that Platform servers will reside in
-* Directory: this is the range that AD servers will reside in
+* _Tenant:_ this is the range that session host servers and database servers will reside in
+* _Services:_ this is the range that PaaS services like Azure NetApp Files will reside in
+* _Platform:_ this is the range that Platform servers will reside in
+* _Directory:_ this is the range that AD servers will reside in
 
-=== Review
-The final page provides an opportunity to review your choices. When you have completed that review, click the Validate button. VDS Setup will review all the entries and verify that the deployment can proceed with the information provided. This validation can take 2-10 minutes. To follow the progress, you can click the log logo (upper right) to see the validation activity.
+=== Review & Provision
+The final page provides an opportunity to review your choices. When you have completed that review, click the Validate button. VDS Setup will review all the entries and verify that the deployment can proceed with the information provided. This validation can take 2-10 minutes.
 
 Once validation is complete the green Provision button will appear in place of the Validate button. Click on Provision to start the provisioning process for your deployment.
 
-=== Status
-The provisioning process takes between 2-4 hours depending on Azure workload and the choices you made. You can follow the progress in the log by clicking the Status page or wait for the email that will tell you the deployment process has completed. Deployment builds the virtual machines and Azure components required to support both VDS and a Remote Desktop or a WVD implementation. This includes a single virtual machine that can act as both an Remote Desktop session host and a file server. In a WVD implementation this virtual machine will act only as a file server.
+image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6_DRAFT-8dc32.png[width=75%]
+
+=== Task History
+The provisioning process takes between 2-4 hours depending on Azure workload and the choices you made. You can follow the progress in the log by clicking the _Task History_ page or wait for the email that will tell you the deployment process has completed. Deployment builds the virtual machines and Azure components required to support both VDS and a Remote Desktop or a WVD implementation. This includes a single virtual machine that can act as both an Remote Desktop session host and a file server. In a WVD implementation this virtual machine will act only as a file server.
+
+image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6_DRAFT-20da2.png[width=75%]
 
 == Install and configure AD Connect
 Immediately after the install is successful, AD Connect needs to be installed and configured on the Domain Controller.  In a singe platform VM setup the CWMGR1 machine is the DC. The users in AD need to sync between Azure AD and the local domain.
 
-.To install and configure AD Connect, follow these steps:
-. Connect to the domain controller as a domain admin.
-.. Get credentials from the Azure Key Vault
-. Install AD Connect, login with the domain admin (with Enterprise Admin role permissions) and the Azure AD Global Admin.
 
-== Activating WVD services
-Once the deployment is complete, the next step is to enable the WVD functionality. The WVD enablement process requires the Azure Administrator to perform several steps to register their Azure AD domain and subscription for access using the Azure WVD services. Similarly, Microsoft requires VDS to request the same permissions for our automation application in Azure. The steps below walk you through that process.
+NOTE: AD Connect is a Microsoft supported product that involves managing and replicating user identity and password data. If you plan to use this configuration for production use, make sure you fully understand the configuration choices and security best practices as described by Microsoft.  For example,  using a task specific privileged service account for the sync credential provides a better security profile than reusing an account that belongs to an Administrator. Full details can be found at  https://docs.microsoft.com/en-us/azure/active-directory/hybrid/
+
+.To install and configure AD Connect
+
+. Navigate to the Deplopyment detail page
+. Select _Platform Servers_ from the  _More..._ tab
+. Click _Connect_ from the actions column
+. Connect to the domain controller as a domain admin.
+.. A domain admin account was automatically created as part of the deployment automation.  You can get those credentials from the link:Management.System_Administration.azure_key_vault.html[Azure Key Vault]
+. Install AD Connect on the DC
+.. Download installer and run the .MSI from link:https://www.microsoft.com/en-us/download/details.aspx?id=47594[here]
+.. Select “Use express settings”. See link:https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-express[this Microsoft KB] for more details.
+.. Use the Azure AD Admin user from the initial deployment to authenticate into Azure AD.
+.. Enter the Active Directory admin credentials. ("LocalAdminName" from the Azure Key Vault above)
+... The privileges requirements for the local AD admin can be found at https://docs.microsoft.com/en-us/azure/active-directory/hybrid/reference-connect-accounts-permissions. Enter credentials in the form of domain\account_name (E.g: mytest.onmicrosoft.com\adsyncacct)
+.. On the Azure AD sign-on page, AD-Connect should be able to match the VDS Domain name to the Azure AD domain name automatically because they are the same. in this scenario, check the “Continue without matching all UPN suffixes” option to proceed since you don’t have any custom domain names to match.
+.. Domain suffix matching, including the use of custom domain names at the Azure AD level is supported for this step – consult the AD-Connect documentation for implementing advanced options.
+.. On the “Ready to Configure” screen. Click Install
+. All users need to be present in both the local domain created in the Workspace and Azure AD. By default, AD Connect will sync new users in the local domain up to the Azure AD Users list. Its ok if you already have users in Azure AD – giving them the same username will allow AD Connect to sync their identity in both domains.
+.. Back in VDS, navigate to Workspace Details > User & Groups to manage users.
+.. If the user already exists in Azure AD, ensure the username portion matches the Azure AD username and not the entire email address. (E.g. “tanya.jones” and not tanya.jones@mytest.onmicrosoft.com)
++
+NOTE: Users will be synced up to Azure AD and if the user already exists in Azure AD then the user identities will be synced. Password changes from VDS will sync up to Azure AD users, but Azure AD users will not be able to change their password on Azure AD unless  AD-Connect Password Write Back is enabled: (https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-writeback)
+.. Log into the Azure portal, navigate to Azure Active Directory > AD Connect to confirm that user sync has occurred. Additional details can be found in the application event logs on the domain contrller VM.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 == Create WVD host pool
 End User access to WVD virtual machines is managed by host pools , which contain the virtual machines, and app groups, which in-turn contain the users and type of user access.
 
 .To build your first host pool
-. Click the Add button in the right hand side of the WVD host pools section header.
+. Navidate to Workspace detail page > WVD Tab > Click the Add button in the right hand side of the WVD host pools section header.
 image:Create WVD Host Pool 1.png[]
 
 . Enter a name and description for your host pool.
