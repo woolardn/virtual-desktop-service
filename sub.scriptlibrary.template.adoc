@@ -1,3 +1,4 @@
+////
 ---
 sidebar: sidebar
 permalink: scriptlibrary.Adobe_Reader.html
