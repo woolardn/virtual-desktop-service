@@ -120,8 +120,8 @@ entries:
       url: /Management.System_Administration.clone_virtual_machines.html
     - title: Auto add disk space
       url: /Management.System_Administration.auto_add_disk_space.html
-#    - title: Azure Key Vault
-#     url: /
+    - title: Azure Key Vault
+      url: /Management.System_Administration.azure_key_vault.html
 #    - title: Manage VDS admin accounts
 #     url: /
     - title: Configure antivirus

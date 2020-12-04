@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: Reference.Release_Notes.vds_v6.0_release_notes.html
+summary: NetApp VDS Release Notes v6.0
+keywords:
+---
+
+= Virtual Desktop Service – v6.0 Release Notes
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Reference.Release_Notes.vds_v6.0_release_notes.adoc[]
