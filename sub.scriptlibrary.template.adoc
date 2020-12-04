@@ -1,0 +1,126 @@
+////
+---
+sidebar: sidebar
+permalink: scriptlibrary.Adobe_Reader.html
+permalink: scriptlibrary.AMD_Radeon_Instinct_Drivers.html
+permalink: scriptlibrary.Ezeep_Print_App.html
+permalink: scriptlibrary.Google_Chrome.html
+permalink: scriptlibrary.Microsoft_Edge_Chromium.html
+permalink: scriptlibrary.Microsoft_Office_365.html
+permalink: scriptlibrary.Microsoft_One_Drive.html
+permalink: scriptlibrary.Microsoft_Teams.html
+permalink: scriptlibrary.Microsoft_Teams_for_WVD.html
+permalink: scriptlibrary.Nvidia_CUDA_Drivers.html
+permalink: scriptlibrary.Nvidia_GRID_Drivers.html
+summary: Script documentation - Adobe Reader
+summary: Script documentation - AMD Radeon Instinct Drivers
+summary: Script documentation - Ezeep Print App
+summary: Script documentation - Google Chrome
+summary: Script documentation - Microsoft Edge Chromium
+summary: Script documentation - Microsoft Office 365
+summary: Script documentation - Microsoft One Drive
+summary: Script documentation - Microsoft Teams
+summary: Script documentation - Microsoft Teams for WVD
+summary: Script documentation - Nvidia CUDA Drivers
+summary: Script documentation - Nvidia GRID Drivers
+keywords:
+---
+
+= Scripted Event Documentation - Adobe Reader
+= Scripted Event Documentation - AMD Radeon Instinct Drivers
+= Scripted Event Documentation - Ezeep Print App
+= Scripted Event Documentation - Google Chrome
+= Scripted Event Documentation - Microsoft Edge Chromium
+= Scripted Event Documentation - Microsoft Office 365
+= Scripted Event Documentation - Microsoft One Drive
+= Scripted Event Documentation - Microsoft Teams
+= Scripted Event Documentation - Microsoft Teams for WVD
+= Scripted Event Documentation - Nvidia CUDA Drivers
+= Scripted Event Documentation - Nvidia GRID Drivers
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/scriptlibrary/sub.scriptlibrary.Adobe_Reader.adoc[]
+include::_include/scriptlibrary/sub.scriptlibrary.AMD_Radeon_Instinct_Drivers.adoc[]
+include::_include/scriptlibrary/sub.scriptlibrary.Ezeep_Print_App.adoc[]
+include::_include/scriptlibrary/sub.scriptlibrary.Google_Chrome.adoc[]
+include::_include/scriptlibrary/sub.scriptlibrary.Microsoft_Edge_Chromium.adoc[]
+include::_include/scriptlibrary/sub.scriptlibrary.Microsoft_Office_365.adoc[]
+include::_include/scriptlibrary/sub.scriptlibrary.Microsoft_One_Drive.adoc[]
+include::_include/scriptlibrary/sub.scriptlibrary.Microsoft_Teams.adoc[]
+include::_include/scriptlibrary/sub.scriptlibrary.Microsoft_Teams_for_WVD.adoc[]
+include::_include/scriptlibrary/sub.scriptlibrary.Nvidia_CUDA_Drivers.adoc[]
+include::_include/scriptlibrary/sub.scriptlibrary.Nvidia_GRID_Drivers.adoc[]
+
+TIP: For enhanced detail and greater clarity the article for link:scriptlibrary.Adobe_Reader.html[Adobe Acrobat] has been written with greater detail and screenshots that should act as an example that can be applied to all script documentation.
+
+
+
+
+
+Adobe_Reader
+AMD_Radeon_Instinct_Drivers
+Ezeep_Print_App
+Google_Chrome
+Microsoft_Edge_Chromium
+Microsoft_Office_365
+Microsoft_One_Drive
+Microsoft_Teams
+Microsoft_Teams_for_WVD
+Nvidia_CUDA_Drivers
+Nvidia_GRID_Drivers
+
+
+
+Scripted Events
+
+I believe this is the level of detail we'll need to get this set up properly:
+
+Scripted Event Details
+
+Script description: <Install Adobe Acrobat on all session host VMs>
+
+Application version (if relevant):
+
+Scripted event name: <Scripted Event Name>
+
+Script name: <Script Name>
+
+Executes with:<detail>
+
+Argument used: <detail>
+
+List of arguments supported:
+
+1
+
+2
+
+3
+
+Etc
+
+Use cases: <acceptable answers should be initial best-practices install of software, on-demand functionality or similar>
+
+Caveats: <if Teams, must not have had
+
+Creating an Activity
+
+Scroll down to the Activities section and click +Add Activity
+
+Enter a name for your activity
+
+Enter easy to understand description
+
+Pick trigger (manual, app install, etc)
+
+Pick VMs to apply against, if relevant
+
+Copy/paste icon path

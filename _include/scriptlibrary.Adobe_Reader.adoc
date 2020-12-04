@@ -1,0 +1,76 @@
+////
+
+Used in:
+sub.scriptlibrary.Adobe_Reader.adoc
+
+////
+
+== Install Script
+
+=== Suggested Add Script Settings
+
+NOTE: Built-in scripted events such as this one are pre-populated, can't be edited and don't need to be created.  These "Suggested Add Script Settings" are simply for reference.  To learn how to link this script to an activity, jump to the link:#anchor1[Suggested Add Activity Settings] section below.
+
+* *Name:* Enter `InstallAdobeReader`
+* *Include Script File:* Select `Yes`
+* *Script File:* Select script file and upload (`InstallAdobeReader.ps1`)
+* *Execute With:* Enter `C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe`
+
+image::scriptlibrary.Adobe_Reader-25e3d.png[width=75%]
+
+=== [[anchor1]]Suggested Add Activity Settings
+
+NOTE: In order for a script in the repository to take any action, an activity must be created to associate that script with a selected trigger. In this case, the activity will link the existing script to the _Application Install_ trigger.  Once configured, the action of adding this application to a workspace (from the _Workspace > Applications_ page in VDS) will trigger this script to install this application on all appropriate session hosts in the selected deployment.
+
+image::scriptlibrary.Adobe_Reader-60283.png[width=75%]
+
+*Activity Settings*
+
+* *Name:* Enter `InstallAdobeReader`
+* *Description:* Optionally enter a description
+* *Deployment* Select the desired deployment from dropdown
+* *Script:* Select `InstallAdobeReader` from the dropdown
+* *Arguments:* Leave blank
+* *Enabled checkbox:* `Check` the box
+
+*Event Settings*
+
+* *Event Type:* Select `Application Install` from dropdown
+
+*Target Settings*
+
+* *Application:* Select `Adobe Reader` from dropdown
+* *Shortcut Path:* Enter `\\shortcuts\Acrobat Reader DC.lnk`
+
+== Uninstall Script
+
+=== Suggested Add Script Settings
+
+NOTE: Built-in scripted events such as this one are pre-populated, can't be edited and don't need to be created.  These "Suggested Add Script Settings" are simply for reference.  To learn how to link this script to an activity, jump to the link:#anchor2[Suggested Add Activity Settings]section below.
+
+* *Name:* Enter `UninstallAdobeReader`
+* *Include Script File:* Select `Yes`
+* *Script File:* Select script file and upload (`UninstallAdobeReader.ps1`)
+* *Execute With:* Enter `C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe`
+
+=== [[anchor2]]Suggested Add Activity Settings
+
+NOTE: In order for a script in the repository to take any action, an activity must be created to associate that script with a selected trigger. In this case, the activity will link the existing script to the _Application Install_ trigger.  Once configured, the action of adding this application to a workspace (from the _Workspace > Applications_ page in VDS) will trigger this script to install this application on all appropriate session hosts in the selected deployment.
+
+*Activity Settings*
+
+* *Name:* Enter `UninstallAdobeReader`
+* *Description:* Optionally enter a description
+* *Deployment* Select the desired deployment from dropdown
+* *Script:* Select `UninstallAdobeReader` from the dropdown
+* *Arguments:* Leave blank
+* *Enabled checkbox:* `Check` the box
+
+*Event Settings*
+
+* *Event Type:* Select `Application Uninstall` from dropdown
+
+*Target Settings*
+
+* *Application:* Select `Adobe Reader` from dropdown
+* *Shortcut Path:* Enter `\\shortcuts\Acrobat Reader DC.lnk`
