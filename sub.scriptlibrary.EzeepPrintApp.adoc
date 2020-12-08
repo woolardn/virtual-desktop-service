@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: scriptlibrary.AdobeReader.html
-summary: Script documentation - Adobe Reader DC
+permalink: scriptlibrary.EzeepPrintApp.html
+summary: Script documentation - Ezeep Print App
 keywords:
 ---
 
-= Scripted Event Documentation - Adobe Reader DC
+= Scripted Event Documentation - Ezeep Print App
 
 :toc: macro
 :hardbreaks:
@@ -18,4 +18,4 @@ keywords:
 
 include::_include/scriptlibrary.overview.adoc[]
 
-include::_include/scriptlibrary.AdobeReader.adoc[]
+include::_include/scriptlibrary.EzeepPrintApp.adoc[]
