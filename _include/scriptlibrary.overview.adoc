@@ -13,7 +13,7 @@ For this application, this article covers both the link:#install-script[install]
 
 .Jump to Section:
 
-* link:#Suggested-Add-Script-Settings-for-Install[Install Script]
-* link:#Suggested-Add-Activity-Settings-for-Install[Install Activity]
-* link:#Suggested-Add-Script-Settings-for-Uninstall[Uninstall Script]
-* link:#Suggested-Add-Activity-Settings-for-Uninstall[Uninstall Activity]
+* link:#suggested-add-script-settings-for-install[Install Script]
+* link:#suggested-add-activity-settings-for-install[Install Activity]
+* link:#suggested-add-script-settings-for-uninstall[Uninstall Script]
+* link:#suggested-add-activity-settings-for-uninstall[Uninstall Activity]

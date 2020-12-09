@@ -84,7 +84,34 @@ entries:
     - title: Install Microsoft Office 365
       url: /Management.Applications.install_office_365.html
   - title: Automation
-    url: /Management.Scripted_Events.scripted_events.html
+    entries:
+      - title: Scriped Events
+        url: /Management.Scripted_Events.scripted_events.html
+      - title: Script Library
+        entries:
+        - title: Adobe Reader DC
+          url: /scriptlibrary.AdobeReader.html
+        - title: AMD Radeon Instinct Drivers
+          url: /scriptlibrary.AMDRadeonInstinctDrivers.html
+        - title: Ezeep Print App
+          url: /scriptlibrary.EzeepPrintApp.html
+        - title: Google Chrome
+          url: /scriptlibrary.GoogleChrome.html
+        - title: Microsoft Edge Chromium
+          url: /scriptlibrary.MicrosoftEdgeChromium.html
+        - title: Microsoft Office 365
+          url: /scriptlibrary.MicrosoftOffice365.html
+        - title: Microsoft One Drive
+          url: /scriptlibrary.MicrosoftOneDrive.html
+        - title: Microsoft Teams
+          url: /scriptlibrary.MicrosoftTeams.html
+        - title: Microsoft Teams for WVD
+          url: /scriptlibrary.MicrosoftTeamsWVD.html
+        - title: Nvidia Cuda Drivers
+          url: /scriptlibrary.NvidiaCudaDrivers.html
+        - title: Nvidia Grid Drivers
+          url: /scriptlibrary.NvidiaGridDrivers.html
+
   - title: Configure cost optimization
     url: /Management.Cost_Optimization.workload_schedule.html
 #      - title: Build VM images
