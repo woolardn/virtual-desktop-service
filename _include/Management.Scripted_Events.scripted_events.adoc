@@ -27,16 +27,31 @@ Clicking Name of a script opens a dialog box for editing the script.
 
 Activities are the way to execute one or more scripts. Activities can be triggered on many system actions. More on automating app installs is found link:Management.Applications.application_entitlement_workflow.html[here].
 
-* Application Install (e.g. Automate an app install when added to the VDS tenant on the Workspaces page)
-* Application Uninstall (e.g. Automate an app uninstall when removed from the VDS tenant on the Workspaces page)
+* Application Install
+** This is triggered when the VDS Admin clicks "+ Add..." from the _Workspace > Applications_ page.
+** This selection allows you to select an application from the Application Library and to pre-define the shortcut of the application.
+** Detailed instructions for this trigger are highlighted in the link:scriptlibrary.AdobeReader.html#install-script[_Install Adobe Reader DC_ script documentation].
+* Application Uninstall
+** This is triggered when the VDS Admin clicks "Actions > Uninstall" from the _Workspace > Applications_ page.
+** This selection allows you to select an application from the Application Library and to pre-define the shortcut of the application.
+** Detailed instructions for this trigger are highlighted in the link:scriptlibrary.AdobeReader.html##uninstall-script[_Uninstall Adobe Reader DC_ script documentation].
 * Create Cache
+** This is triggered anytime a new VM is built by VDS for a provisioning collection cache
 * Create Client
+** This is triggered anytime a new Client organization is added to VDS
 * Create Server
+** This is triggered anytime a new VM is built by VDS
 * Create User
-* Delete User (e.g. Zip and upload user profile before permanently deleting the user and user profile)
-* Manual (e.g. Run a one-time automation across all servers in an environment to address a zero-day threat)
+** This is triggered anytime a new user is added via VDS
+* Delete User
+** This is triggered anytime a new user is deleted via VDS
+* Manual
+** This is triggered by a VDS admin manually from within the "Scripted Events > Activity" page
 * Manual Application Update
-* Scheduled (e.g. Run automate maintenance tasks on a nightly basis)
-* Start Server (e.g. Add automation to a server each time it it boots up)
+**
+* Scheduled
+** This is triggered when the defined date/time is reached
+* Start Server
+** This is triggered on a VM each time it boots up
 
 Clicking on the _Name_ opens a dialog box where the activity can be edited.

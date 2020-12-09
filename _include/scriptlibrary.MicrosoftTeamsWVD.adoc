@@ -6,7 +6,7 @@ sub.scriptlibrary.MicrosoftTeamsWVD.adoc
 ////
 This script package installs/uninstalls _Microsoft Teams WVD_ using the Chocolatey package manager (https://chocolatey.org/) to do the deployment.  Chocolatey is deployed by VDS when VMs are created but this script will also check and install Chocolatey as a prerequisite if it is missing.
 
-//WARNING: text
+WARNING: This Microsoft Teams install is specifically configured for deployments into a WVD environment.  link:scriptlibrary.MicrosoftTeams.html[A different Microsoft Teams script] is provided for RDS deployments.
 
 == Install Script
 
