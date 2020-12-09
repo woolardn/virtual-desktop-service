@@ -109,15 +109,6 @@ entries:
 #   - title:
 #     url: /
 
-  - title: Deployment Administration
-    entries:
-
-  - title: Workspace Administration
-    entries:
-    - title: Clone Virtual Machines
-      url: /Management.System_Administration.clone_virtual_machines.html
-
-
   - title: System Administration
     entries:
     - title: Create Domain Admin Account
@@ -128,6 +119,8 @@ entries:
       url: /Management.System_Administration.provide_3rd_party_access.html
     - title: Configure Backup
       url: /Management.System_Administration.configure_backup.html
+    - title: Clone Virtual Machines
+      url: /Management.System_Administration.clone_virtual_machines.html
 #    - title: Connect to server
 #     url: /
     - title: Auto Add Disk Space
@@ -165,10 +158,6 @@ entries:
     url: /Troubleshooting.dns_forwarding_for_azure_aadds_sso.html
   - title: Application Issues
     url: /Troubleshooting.application_issues.html
-
-
-
-
 
 - title: Reference
   entries:

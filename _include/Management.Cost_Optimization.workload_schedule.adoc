@@ -1,5 +1,4 @@
 
-
 ////
 
 Used in: sub.Management.Cost_Optimization.workload_schedule.adoc

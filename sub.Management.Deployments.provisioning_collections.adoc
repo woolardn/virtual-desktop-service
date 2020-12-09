@@ -5,7 +5,7 @@ summary: Summary of Provisioning Collections
 keywords:
 ---
 
-= Data Migration Considerations
+= Provisioning Collections
 
 :toc: macro
 :hardbreaks:
