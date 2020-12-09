@@ -251,14 +251,14 @@ The final page provides an opportunity to review your choices. When you have com
 Once validation is complete the green Provision button will appear in place of the Validate button. Click on Provision to start the provisioning process for your deployment.
 
 === Status
-The provisioning process takes between 2-4 hours depending on Azure workload and the choices you made. You can follow the progress in the log by clicking the Status page or wait for the email that will tell you the deployment process has completed. Deployment builds the virtual machines and Azure components required to support both VDS and a Remote Desktop or a WVD implementation. This includes a single virtual machine that can act as both an Remote Desktop session host and a file server. In a WVD implementation this virtual machine will act only as a file server.
+The provisioning process takes between 2-4 hours depending on Azure workload and the choices you made. You can follow the progress in the log by clicking the Status page or wait for the email that will tell you the deployment process has completed. Deployment builds the virtual machines and Azure components required to support both VDS and a Remote Desktop or a WVD implementation. This includes a single virtual machine that can act as both a Remote Desktop session host and a file server. In a WVD implementation this virtual machine will act only as a file server.
 
 == Install and configure AD Connect
 Immediately after the install is successful, AD Connect needs to be installed and configured on the Domain Controller.  In a singe platform VM setup the CWMGR1 machine is the DC. The users in AD need to sync between Azure AD and the local domain.
 
 .To install and configure AD Connect, follow these steps:
 . Connect to the domain controller as a domain admin.
-.. Get credentials from the Azure Key Vault
+.. Get credentials from the Azure Key Vault (See  link:Management.System_Administration.azure_key_vault.html[Key Vault instructions here])
 . Install AD Connect, login with the domain admin (with Enterprise Admin role permissions) and the Azure AD Global Admin.
 
 == Activating WVD services

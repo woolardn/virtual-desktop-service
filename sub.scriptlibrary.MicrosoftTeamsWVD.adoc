@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: scriptlibrary.MicrosoftTeamsWVD.html
-summary: Script documentation - Microsoft Teams WVD
+summary: Script documentation - Microsoft Teams for WVD
 keywords:
 ---
 
-= Scripted Event Documentation - Microsoft Teams WVD
+= Scripted Event Documentation - Microsoft Teams for WVD
 
 :toc: macro
 :hardbreaks:

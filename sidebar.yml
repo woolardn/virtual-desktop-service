@@ -10,11 +10,11 @@ entries:
       entries:
       - title: Deploying WVD in Azure
         url: /Deploying.Azure.WVD.Deploying_WVD_in_Azure.html
-      - title: Supplemental - WVD with existing AD
+      - title: Supplemental - WVD with Existing AD
         url: /Deploying.Azure.WVD.Supplemental_WVD_with_existing_AD.html
-      - title: VDS v5.4 components and permissions (WVD)
+      - title: VDS v5.4 Components and Permissions (WVD)
         url: /Deploying.Azure.WVD.vds_v5.4_components_and_permissions.html
-      - title: VDS v5.4 prerequisites (WVD)
+      - title: VDS v5.4 Prerequisites (WVD)
         url: /Deploying.Azure.WVD.vds_v5.4_prerequisites.html
 #    - title: Install VDS on existing WVD
 #      url: /
@@ -31,7 +31,7 @@ entries:
     entries:
     - title: Deploying RDS in Google
       url: /Deploying.GCP.RDS.deploying_rds_in_gcp.html
-    - title: VDS v5.4 prerequisites (RDS/GCP)
+    - title: VDS v5.4 Prerequisites (RDS/GCP)
       url: /Deploying.GCP.vds_v5.4_prerequisites.html
 #    - title: Supplemental - RDS with existing AD
 #      url: /
@@ -62,96 +62,108 @@ entries:
 #    url: /
 #    - title: Migrate users between sites
 #    url: /
-  - title: Change data layer
+  - title: Change Data Layer
     url: /Architectural.change_data_layer.html
-  - title:  Migrate data into VDS
+  - title:  Migrate Data into VDS
     url: /Architectual.migrate_data_into_vds.html
   - title: Upgrade WVD v1 to v2
     url: Architectual.upgrade_wvd_v1_to_v2.html
-  - title: Renew SSL certificate
+  - title: Renew SSL Certificate
     url: /Architectural.Wildcard_SSL_certificate_renewal_process.html
-  - title: VDS teardown guide
+  - title: VDS Teardown Guide
     url: /Architectural.wvd_teardown_guide.html
 
 - title: Management
   entries:
+  - title: Deployments
+    entries:
+      - title: Provisioning Collections
+        url: /Management.Deployments.provisioning_collections.html
   - title: Applications
     entries:
-    - title: Application entitlement workflow
+    - title: Application Entitlement Workflow
       url: /Management.Applications.application_entitlement_workflow.html
 #     - title: Streaming applications
 #       url: /
-    - title: Install Microsoft Office 365
-      url: /Management.Applications.install_office_365.html
-  - title: Automation
-    url: /Management.Scripted_Events.scripted_events.html
-  - title: Configure cost optimization
+  - title: Scripted Events
+    entries:
+      - title: Scriped Events
+        url: /Management.Scripted_Events.scripted_events.html
+
+
+  - title: Configure Cost Optimization
     url: /Management.Cost_Optimization.workload_schedule.html
-#      - title: Build VM images
-#        url: /
+
   - title: User Administration
     entries:
-    - title: Manage user accounts
+    - title: Manage User Accounts
       url: /Management.User_Administration.manage_user_accounts.html
-    - title: Manage folders and permissions
+    - title: Manage Folders and Permissions
       url: /Management.User_Administration.manage_folders_and_permissions.html
     - title: Manage Application Access
       url: /Management.Applications.application_entitlement_workflow.html
-    - title: Reset user passwords
+    - title: Reset User Passwords
       url: /Management.User_Administration.reset_user_password.html
     - title: Configure MFA
       url: /Management.User_Administration.multi-factor_authentication.html
 #   - title:
 #     url: /
 
-  - title: System administration
+  - title: Deployment Administration
     entries:
-    - title: Create domain admin account
+
+  - title: Workspace Administration
+    entries:
+    - title: Clone Virtual Machines
+      url: /Management.System_Administration.clone_virtual_machines.html
+
+
+  - title: System Administration
+    entries:
+    - title: Create Domain Admin Account
       url: /Management.System_Administration.create_domain_admin_account.html
 #   - title: Privileged access management
 #     url: /
-    - title: Provide 3rd party access
+    - title: Provide 3rd Party Access
       url: /Management.System_Administration.provide_3rd_party_access.html
-    - title: Configure backup
+    - title: Configure Backup
       url: /Management.System_Administration.configure_backup.html
 #    - title: Connect to server
 #     url: /
-    - title: Clone virtual machines
-      url: /Management.System_Administration.clone_virtual_machines.html
-    - title: Auto add disk space
+    - title: Auto Add Disk Space
       url: /Management.System_Administration.auto_add_disk_space.html
     - title: Azure Key Vault
       url: /Management.System_Administration.azure_key_vault.html
 #    - title: Manage VDS admin accounts
 #     url: /
-    - title: Configure antivirus
+    - title: Configure Antivirus
       url: /Management.System_Administration.configure_antivirus.html
-    - title: Adding and moving mapped drives
+    - title: Adding and Moving Mapped Drives
       url: /Management.System_Administration.adding_moving_mapped_drives.html
 
 - title: Troubleshooting
   entries:
   - title: Reviewing VDS logs
     url: /Troubleshooting.reviewing_vds_logs.html
-  - title: Internet connection quality
+  - title: Internet Connection Quality
     url: /Troubleshooting.internet_connection_quality.html
-  - title: Enable user wallpaper
+  - title: Enable User Wallpaper
     url: /Troubleshooting.enable_user_wallpaper.html
-  - title: Printing issues
+  - title: Printing Issues
     url: /Troubleshooting.printing_issues.html
 #     - title: Disk consumtpion
 #       url: /
 #     - title: User performance
 #       url: /
-  - title: Azure vCPU core quota
+  - title: Azure vCPU Core Quota
     url: /Troubleshooting.azure_vcpu_core_quota.html
-  - title: Unlock user account
+  - title: Unlock User Account
     url: /Troubleshooting.unlocking_user_accounts.html
-  - title: General vm performance
+  - title: General VM Performance
     url: /Troubleshooting.general_vm_performance.html
-  - title: DNS forwarding for Azure ADDS & SSO
+  - title: DNS Forwarding for Azure ADDS & SSO
     url: /Troubleshooting.dns_forwarding_for_azure_aadds_sso.html
-  - title: Application issues
+  - title: Application Issues
     url: /Troubleshooting.application_issues.html
 
 
@@ -180,6 +192,30 @@ entries:
     url: /Reference.end_user_access.html
   - title: VDS change environments
     url: /Reference.vds_change_environments.html
+  - title: Script Library Documentation
+    entries:
+    - title: Adobe Reader DC
+      url: /scriptlibrary.AdobeReader.html
+    - title: AMD Radeon Instinct Drivers
+      url: /scriptlibrary.AMDRadeonInstinctDrivers.html
+    - title: Ezeep Print App
+      url: /scriptlibrary.EzeepPrintApp.html
+    - title: Google Chrome
+      url: /scriptlibrary.GoogleChrome.html
+    - title: Microsoft Edge Chromium
+      url: /scriptlibrary.MicrosoftEdgeChromium.html
+    - title: Microsoft Office 365
+      url: /scriptlibrary.MicrosoftOffice365.html
+    - title: Microsoft One Drive
+      url: /scriptlibrary.MicrosoftOneDrive.html
+    - title: Microsoft Teams
+      url: /scriptlibrary.MicrosoftTeams.html
+    - title: Microsoft Teams for WVD
+      url: /scriptlibrary.MicrosoftTeamsWVD.html
+    - title: Nvidia Cuda Drivers
+      url: /scriptlibrary.NvidiaCudaDrivers.html
+    - title: Nvidia Grid Drivers
+      url: /scriptlibrary.NvidiaGridDrivers.html
 #  - title: Glossary
 #    entries:
 #    - title: VDS

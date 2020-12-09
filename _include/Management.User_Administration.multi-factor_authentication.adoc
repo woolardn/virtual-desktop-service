@@ -40,4 +40,4 @@ MFA is also available for administrator accounts accessing the VDS portal. This 
 Admins > Admin Name > Multi-Factor Auth Required > Update
 
 == Initial setup
-On the first login after enabling MFA, the user of admin will be prompted to enter an email address or mobile phone number. They'll receive a confirmation code to enter and confirm successful enrollment.
+On the first login after enabling MFA, the user or admin will be prompted to enter an email address or mobile phone number. They'll receive a confirmation code to enter and confirm successful enrollment.
