@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: Management.Deployments.provisioning_collections.html
+summary: Summary of Provisioning Collections
+keywords:
+---
+
+= Data Migration Considerations
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Management.Deployments.provisioning_collections.adoc[]
