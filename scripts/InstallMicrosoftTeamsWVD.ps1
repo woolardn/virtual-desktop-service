@@ -1,19 +1,19 @@
 ﻿# Scripted Event Example, Install Microsoft Teams
 #
 # Example Script Repository Settings
-# Name: InstallMicrosoftTeams
+# Name: InstallMicrosoftTeamsWVD
 # Include Script File: Use Script File
-# Import Script, Select a File: InstallMicrosoftTeams.ps1
+# Import Script, Select a File: InstallMicrosoftTeamsWVD.ps1
 # Script Usage: Use this script as an argument for an executable.
 # Execute With: C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe
 # Arguments: -file %scriptname%
 #
 # Example Activity Settings
-# Name: InstallMicrosoftTeams
-# Script: InstallMicrosoftTeams
+# Name: InstallMicrosoftTeamsWVD
+# Script: InstallMicrosoftTeamsWVD
 # Enabled
 # Trigger On: Application Install
-# Target Settings, Application: Microsoft Teams
+# Target Settings, Application: Microsoft Teams WVD
 # No Desktop Icon.
 #
 

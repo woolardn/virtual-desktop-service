@@ -1,0 +1,21 @@
+---
+sidebar: sidebar
+permalink: scriptlibrary.MicrosoftTeamsWVD.html
+summary: Script documentation - Microsoft Teams WVD
+keywords:
+---
+
+= Scripted Event Documentation - Microsoft Teams WVD
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/scriptlibrary.overview.adoc[]
+
+include::_include/scriptlibrary.MicrosoftTeamsWVD.adoc[]

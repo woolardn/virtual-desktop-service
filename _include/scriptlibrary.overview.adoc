@@ -5,8 +5,15 @@ all script library _include articles in VDS
 
 
 ////
-
+[.lead]
 == Overview
 NetApp VDS includes a library of pre-defined scripted events that can be used directly in VDS environments and/or duplicated and used as the building blocks for custom scripted events.
 
-Below are details related to both the link:#install-script[install] and link:#uninstall-script[uninstall] versions of this script.
+For this application, this article covers both the link:#install-script[install] and link:#uninstall-script[uninstall] action.  For each of these two actions, there is a summary of the script and an example of an activity (trigger) that can be applied to implement the script.
+
+.Jump to Section:
+
+* link:#Suggested-Add-Script-Settings-for-Install[Install Script]
+* link:#Suggested-Add-Activity-Settings-for-Install[Install Activity]
+* link:#Suggested-Add-Script-Settings-for-Uninstall[Uninstall Script]
+* link:#Suggested-Add-Activity-Settings-for-Uninstall[Uninstall Activity]
