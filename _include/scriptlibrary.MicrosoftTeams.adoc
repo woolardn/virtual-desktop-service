@@ -6,7 +6,7 @@ sub.scriptlibrary.MicrosoftTeams.adoc
 ////
 This script package installs/uninstalls _Microsoft Teams_ using the Chocolatey package manager (https://chocolatey.org/) to do the deployment.  Chocolatey is deployed by VDS when VMs are created but this script will also check and install Chocolatey as a prerequisite if it is missing.
 
-//WARNING: text
+WARNING: This Microsoft Teams install is specifically configured for deployments into an RDS environment.  link:scriptlibrary.MicrosoftTeamsWVD.html[A different Microsoft Teams script] is provided for WVD deployments.  
 
 == Install Script
 
@@ -19,9 +19,9 @@ NOTE: Built-in scripted events such as this one are pre-populated, can't be edit
 * *Script File:* Select script file and upload (link:https://docs.netapp.com/us-en/virtual-desktop-service/scripts/InstallMicrosoftTeams.ps1[InstallMicrosoftTeams.ps1])
 * *Execute With:* Enter `C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe`
 
-==== Add Script Dialog Window Screenshot
+//==== Add Script Dialog Window Screenshot
 
-image::scriptlibrary.script.InstallMicrosoftTeams.png[width=75%]
+//image::scriptlibrary.script.InstallMicrosoftTeams.png[width=75%]
 
 === [[anchor1]]Suggested Add Activity Settings for Install
 
@@ -43,8 +43,8 @@ NOTE: In order for a script in the repository to take any action, an activity mu
 * *Application:* Select `Microsoft Teams` from dropdown
 * *Shortcut Path:* Enter `\\shortcut\Microsoft Teams.lnk`
 
-==== Add Activity Dialog Window Screenshot
-image::scriptlibrary.activity.InstallMicrosoftTeams.png[width=75%]
+//==== Add Activity Dialog Window Screenshot
+//image::scriptlibrary.activity.InstallMicrosoftTeams.png[width=75%]
 
 == Uninstall Script
 
@@ -57,8 +57,8 @@ NOTE: Built-in scripted events such as this one are pre-populated, can't be edit
 * *Script File:* Select script file and upload (link:https://docs.netapp.com/us-en/virtual-desktop-service/scripts/UninstallMicrosoftTeams.ps1[UninstallMicrosoftTeams.ps1])
 * *Execute With:* Enter `C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe`
 
-==== Add Script Dialog Window Screenshot
-image::scriptlibrary.script.UninstallMicrosoftTeams.png[width=75%]
+//==== Add Script Dialog Window Screenshot
+//image::scriptlibrary.script.UninstallMicrosoftTeams.png[width=75%]
 
 === [[anchor2]]Suggested Add Activity Settings for Uninstall
 
@@ -78,5 +78,5 @@ NOTE: In order for a script in the repository to take any action, an activity mu
 * *Application:* Select `Microsoft Teams` from dropdown
 * *Shortcut Path:* Enter `\\shortcut\Microsoft Teams.lnk`
 
-==== Add Activity Dialog Window Screenshot
-image::scriptlibrary.activity.UninstallMicrosoftTeams.png[width=75%]
+//==== Add Activity Dialog Window Screenshot
+//image::scriptlibrary.activity.UninstallMicrosoftTeams.png[width=75%]

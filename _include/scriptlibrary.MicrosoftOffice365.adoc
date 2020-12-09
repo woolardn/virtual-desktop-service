@@ -6,7 +6,7 @@ sub.scriptlibrary.MicrosoftOffice365.adoc
 ////
 This script package installs/uninstalls _Microsoft Office_ using the Chocolatey package manager (https://chocolatey.org/) to do the deployment.  Chocolatey is deployed by VDS when VMs are created but this script will also check and install Chocolatey as a prerequisite if it is missing.
 
-//WARNING: text
+WARNING: This Microsoft Office 365 install script does not include Microsoft Teams or Microsoft One Drive.  These are included as stand-alone automated scripts to allow for greater flexability as some deployments do not require these applications.  This deployment can be copied and edited to include them (or to change any other link:https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool[Office Deployment Tool] settings) by editing the link:https://docs.netapp.com/us-en/virtual-desktop-service/scripts/InstallMicrosoftOffice365.ps1[.ps1 file] to input different values into the xml config file.
 
 == Install Script
 
