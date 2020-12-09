@@ -11,7 +11,7 @@ Provisioning Collections is a function of VDS related to the creation and manage
 .At a high level, the Provisioning Collection workflow is as follows:
 . A temporary VM (e.g. "CWT1") is built based on an existing image (either a stock image or a previously saved Provisioning Collection).
 . The VDS Administrator customizes the temporary VM to match their requirements using link:Management.Scripted_Events.scripted_events.html[Scripted Events], link:#customizing-the-temporary-vm[Connect to Server] and/or 3rd party management tools.
-. Once customized, the VDS Admin click "Validate" and triggers a validation process that automates finalizing the image, running SysPrep, deleting the temporary VM and making the image available for deployment throughout VDS.
+. Once customized, the VDS Admin click *Validate* and triggers a validation process that automates finalizing the image, running SysPrep, deleting the temporary VM and making the image available for deployment throughout VDS.
 
 
 === Video Demo - Managing VM images for VDI Session Hosts
@@ -20,58 +20,59 @@ video::rRDPnDzVBTw[youtube]
 
 === Provisioning Collection Types
 
-There are two distinct types of collection with specific use cases, _Shared_ and _VDI_.
+There are two distinct types of collection with specific use cases, *_Shared_* and *_VDI_*.
 
 ==== Shared
 
-The _Shared_ type is a collection of VM images(s) designed to deploy an entire environment with multiple, distinct VM images and VM roles.
+The *_Shared_* type is a collection of VM images(s) designed to deploy an entire environment with multiple, distinct VM images and VM roles.
 
 ==== VDI
 
-The _VDI_ type is a single VM image designed to be used and reused to deploy multiple identical VMs, typically as for hosting user sessions.
+The *_VDI_* type is a single VM image designed to be used and reused to deploy multiple identical VMs, typically as for hosting user sessions.
 
 === Creating a new Provisioning Collection
 
-Provisioning Collections are found in the VDS interface within each deployment, under the _Provisioning Collections_ sub-tab.
+Provisioning Collections are found in the VDS interface within each deployment, under the *_Provisioning Collections_* sub-tab.
 
 image:Management.Deployments.provisioning_collections1.png[width=75%]
 
 .To create a new collection
-. Click the _+ Add Collection_ button.
+. Click the *_+ Add Collection_* button.
 . Complete the following fields:
-.. Name
-.. Description (Optional)
-.. Type - Shared or VDI
-..  Operating System
-..  Share Drive - If this VM will be used to host users profiles or company share data, pick the drive letter on which is will be hosted.  If not, leave as "C"
-..  Minimum Cache - IF you and VDS to create VMs to hold for instant deployment, specify the minimum number of cached VMs that should be maintained. If deploying new VMs can wait for as long as it takes the hypervisor to build a VM, this can be set to "0" to save costs.
-.. Add Servers
-... Role (If "Shared" type is selected)
-.... TS - This VM will act only as a session host
-.... Data - This VM will not host any user sessions
-.... TSData - This VM will be both the session host and the storage host (Maximum: one TSData per workspace)
-... VM Template - Select from the available list, both stock hypervisor images and previously saved Provisioning Collections are available to select.
-... Storage Type - Select the speed of the OS disk considering cost and performance
-... Data Drive - Optionally enable a 2nd disk attached to this image, typically for the data storage layer referenced above in 2.e.
-.... Data Drive Type - Select the speed of the 2nd (data) disk considering cost and performance
-.... Data Drive Size (GB) - Define the size of the 2nd (data) disk considering capacity, cost and performance
-.. Add Applications - Select any application from the Application Library that will be (1) installed on this image and (2) managed by VDS application entitlement. (This is only applicable to RDS deployments.  It should remain empty for WVD workspaces)
+.. *Name*
+.. *Description*(Optional)
+.. *Type* - Shared or VDI
+..  *perating System*
+..  *Share Drive* - If this VM will be used to host users profiles or company share data, pick the drive letter on which is will be hosted.  If not, leave as "C"
+..  *Minimum Cache* - IF you and VDS to create VMs to hold for instant deployment, specify the minimum number of cached VMs that should be maintained. If deploying new VMs can wait for as long as it takes the hypervisor to build a VM, this can be set to "0" to save costs.
+.. *Add Servers*
+... *Role* (If "Shared" type is selected)
+.... *TS* - This VM will act only as a session host
+.... *Data* - This VM will not host any user sessions
+.... *TSData* - This VM will be both the session host and the storage host (Maximum: one TSData per workspace)
+... *VM Template* - Select from the available list, both stock hypervisor images and previously saved Provisioning Collections are available to select.
+.... NOTE: By using an existing Provisioning Collection you can update and re-deploy existing images as part of a planned image upgrade process.
+... *Storage Type* - Select the speed of the OS disk considering cost and performance
+... *Data Drive* - Optionally enable a 2nd disk attached to this image, typically for the data storage layer referenced above in 2.e.
+.... *Data Drive Type* - Select the speed of the 2nd (data) disk considering cost and performance
+.... *Data Drive Size (GB)* - Define the size of the 2nd (data) disk considering capacity, cost and performance
+.. *Add Applications* - Select any application from the Application Library that will be (1) installed on this image and (2) managed by VDS application entitlement. (This is only applicable to RDS deployments.  It should remain empty for WVD workspaces)
 
 
 === Customizing the Temporary VM
-VDS includes functionality that will allows remove VM access from within the VDS web interface.  By default a local Windows admin account is created with a rotating password and passed through to the VM allowing the VDS admin local admin access without needing to know local admin credentials.
+VDS includes functionality that will allow remove VM access from within the VDS web interface.  By default a local Windows admin account is created with a rotating password and passed through to the VM allowing the VDS admin local admin access without needing to know local admin credentials.
 
 NOTE: The Connect to Server function has an alternative setting where the VDS admin will be prompted for credentials with each connection. This setting can be enabled/disabled by editing the VDS admin account from within the "Admin" section of VDS.  the functionality is called _Tech Account_ and checking the box will require credential to be entered when using Connect to Server, unchecking this box will enable the automatic injection of local Windows admin credentials at each connection.
 
 The VDS Admin simply needs to connect to the temporary VM using Connect to Server or another process and make the changes required to meet their requirements.
 
 === Validating the Collection
-Once customization is complete, the VDS Admin can close the image and SysPrep it by clicking "Validate" from the Actions icon.
+Once customization is complete, the VDS Admin can close the image and SysPrep it by clicking *Validate* from the Actions icon.
 
 image::Management.Deployments.provisioning_collections-ed97e.png[width=75%]
 
 === Using the Collection
-After validation has completed, the Status of the Provisioning Collection will change to "Available".  From within the Provisioning Collection the VDS Admin can identify the "VM Template" name which is used to identify this provisioning collection throughout VDS.
+After validation has completed, the Status of the Provisioning Collection will change to *Available*.  From within the Provisioning Collection the VDS Admin can identify the *VM Template* name which is used to identify this provisioning collection throughout VDS.
 
 image::Management.Deployments.provisioning_collections-f5a49.png[width=50%]
 
@@ -81,21 +82,43 @@ From the Workspace > Servers page, a new server can be created and the dialog bo
 image:Management.Deployments.provisioning_collections-fc8ad.png[width=75%]
 
 ==== New WVD Host Pool
-From the Workspace > WVD > Host Pools page, new WVD Host Pool can be created by clicking "+ Add Host Pool" and the dialog box will prompt for the VM Template. The template name from above will be found on this list:
+From the Workspace > WVD > Host Pools page, new WVD Host Pool can be created by clicking *+ Add Host Pool* and the dialog box will prompt for the VM Template. The template name from above will be found on this list:
 
 image::Management.Deployments.provisioning_collections-ba2f5.png[width=75%]
 
-==== New WVD Session Host
-From the Workspace > WVD > Host Pool > Session Hosts page, new WVD session host(s) can be created by clicking "+ Add Session Host" and the dialog box will prompt for the VM Template. The template name from above will be found on this list:
+==== New WVD Session Host(s)
+From the Workspace > WVD > Host Pool > Session Hosts page, new WVD session host(s) can be created by clicking *+ Add Session Host* and the dialog box will prompt for the VM Template. The template name from above will be found on this list:
 
 image::Management.Deployments.provisioning_collections-ba5e9.png[width=75%]
 
+===== WVD Session Host Update Process
+VDS provides for an easy way to update session hosts in a WVD Host Pool by using Provisioning Collections and the *Add Session Host* functionality. This process can be done without impacting end users and repeated over and over with subsequent image updates, building on previous image iterations.
+
+.The WVD Session Host update process is as follows:
+.  Build a new VDI Provisioning Collection, customize and validate the collection per the instructions above.
+.. Generally this Provisioning Collection will be built on the previous VM Template, emulating an "Open, Save As" process.
+. Once the Provisioning Collection has validated, navigate to the _Workspace > WVD > Host Pools_ page and click the name of the Host Pool
+. From within the _Host Pool > Session Hosts_ page, click *+ Add Session Host*
++
+image::Management.Deployments.provisioning_collections-9ed95.png[width=75%]
+. Select the latest *VM Template*.  Make the appropriate *Machine Size* and *Storage Type* selections based on your requirements.
+. Enter the *Number of Instances* equal to the total number of required Session Hosts.  Typically this will be the same number as are currently in the Host Pool but it can be any number.
+.. Note that the Session Hosts currently in the Host pool will ultimately be decommissioned after these new host come online.  Plan for the *Number of Instances* entered to be sufficient to support the entire workload in this Host Pool.
+. Click *Save*, the session hosts will build based on the selected VM Template and starting coming online in as soon as 10-15 minutes (depending on the hypervisor).
+. For each session host, the *Allow New Sessions* toggle can be used to manage which hosts can receive new user sessions.  Once sufficient new hosts have been built and functionality has been confirmed, this setting can be managed on both the new and old hosts to route all new sessions to the new hosts.  The old hosts, with *Allow New Sessions* set to *disabled*, can continue to run and host existing user sessions.
++
+image::Management.Deployments.provisioning_collections-be47e.png[width=75%]
+. As users log off of the old host(s), and with no new user sessions joining the old host(s), the old host(s) where *Sessions = 0* can be deleted by clicking the *Actions* icon and selecting *delete*.
++
+image::Management.Deployments.provisioning_collections-cefb9.png[width=75%]
+
+
 ==== New Workspace
-From the Workspaces page, a new workspace can be created by clicking "+ New Workspace" and the dialog box will prompt for the "Provisioning Collection". The Shared Provisioning Collection name will be found on this list.
+From the Workspaces page, a new workspace can be created by clicking *+ New Workspace* and the dialog box will prompt for the Provisioning Collection. The Shared Provisioning Collection name will be found on this list.
 
 image::Management.Deployments.provisioning_collections-5c941.png[width=75%]
 
 ==== New Provisioning Collection
-From the Deployment > Provisioning Collection page, a new Provisioning Collection can be created by clicking "+ Add Collection".  When adding servers to this collection the dialog box will prompt for the VM Template.  The template name from above will be found on this list:
+From the Deployment > Provisioning Collection page, a new Provisioning Collection can be created by clicking *+ Add Collection*.  When adding servers to this collection the dialog box will prompt for the VM Template.  The template name from above will be found on this list:
 
 image::Management.Deployments.provisioning_collections-9eac4.png[width=75%]

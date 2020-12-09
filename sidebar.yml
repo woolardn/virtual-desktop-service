@@ -265,8 +265,6 @@ entries:
     url: /video_azure_WVDRDS_deploy_54.html
   - title: Add WVD host pool in Azure
     url: /video_azure_WVD_hostpool_54.html
-  - title: Manage VM images
-    url: /video_azure_WVDRDS_VMimages_54.html
   - title: Manage WVD users and app groups
     url: /video_azure_WVD_users_appgroups_54.html
   - title: Managing resources and minimizing costs
