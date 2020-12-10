@@ -66,30 +66,33 @@ Normal support business hours: Monday-Friday, 7:00am-7:00pm Central Time.
 
 == Additional resources
 
-=== Cost calculator
+=== Cost calculators
 ==== Azure
-* link:https://v6.manage.cloudworkspace.com/cost-estimator[]
+* https://manage.vds.netapp.com/azure-cost-estimator
 
-=== Remote Desktop Services (RDS) clients
+==== Google Cloud
+* https://manage.vds.netapp.com/google-cost-estimator
+
+=== Downloads
+==== Remote Desktop Services (RDS) clients
 * link:https://cwc.cloudworkspace.com/download/cwc-win-setup.exe[VDS RDS client for Windows]
 
-* link:https://login.cloudworkspace.com/[VDS web client]
+* link:https://login.cloudworkspace.com/[VDS Web Client]
 
-* link:https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients[Microsoft RD client]
+* link:https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients[Microsoft RD Client]
 
-=== Windows Virtual Desktop (WVD) clients
-* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-windows-7-10[Microsoft WVD for Windows client]
+==== Windows Virtual Desktop (WVD) clients
+* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-windows-7-10[Microsoft WVD for Windows Client]
 
-* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-web[Microsoft WVD web client]
+* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-web[Microsoft WVD Web Client]
 
-* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-android[Microsoft WVD for Android client]
+* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-android[Microsoft WVD for Android Client]
 
-* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-macos[Microsoft WVD for macOS client]
+* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-macos[Microsoft WVD for macOS Client]
 
-* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-ios[Microsoft WVD for iOS client]
+* link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-ios[Microsoft WVD for iOS Client]
 
+==== Other downloads
+* link:https://cloudjumper.com/wp-content/uploads/2019/12/RemoteScanEnterpriseUser.zip[RemoteScan Client]
 
-=== Other downloads
-* link:https://cloudjumper.com/wp-content/uploads/2019/12/RemoteScanEnterpriseUser.zip[RemoteScan client]
-
-* link:https://cloudjumper.com/cloudworkspaceclient/designer/Cloud%20Workspace%20Designer.exe[VDS RDS Windows client designer]
+* link:https://cloudjumper.com/cloudworkspaceclient/designer/Cloud%20Workspace%20Designer.exe[VDS RDS Windows Client Designer]
