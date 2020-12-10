@@ -1,0 +1,26 @@
+
+////
+
+Used in: sub.Management.Deployments.provisioning_collections.adoc
+
+////
+=== WVD Session Host Update Process
+VDS provides for an easy way to update session hosts in a WVD Host Pool by using Provisioning Collections and the *Add Session Host* functionality. This process can be done without impacting end users and repeated over and over with subsequent image updates, building on previous image iterations.
+
+.The WVD Session Host update process is as follows:
+.  Build a new VDI Provisioning Collection, customize and validate the collection per the instructions above.
+.. Generally this Provisioning Collection will be built on the previous VM Template, emulating an "Open, Save As" process.
+. Once the Provisioning Collection has validated, navigate to the _Workspace > WVD > Host Pools_ page and click the name of the Host Pool
+. From within the _Host Pool > Session Hosts_ page, click *+ Add Session Host*
++
+image::Management.Deployments.provisioning_collections-9ed95.png[width=75%]
+. Select the latest *VM Template*.  Make the appropriate *Machine Size* and *Storage Type* selections based on your requirements.
+. Enter the *Number of Instances* equal to the total number of required Session Hosts.  Typically this will be the same number as are currently in the Host Pool but it can be any number.
+.. Note that the Session Hosts currently in the Host pool will ultimately be decommissioned after these new host come online.  Plan for the *Number of Instances* entered to be sufficient to support the entire workload in this Host Pool.
+. Click *Save*, the session hosts will build based on the selected VM Template and starting coming online in as soon as 10-15 minutes (depending on the hypervisor).
+. For each session host, the *Allow New Sessions* toggle can be used to manage which hosts can receive new user sessions.  Once sufficient new hosts have been built and functionality has been confirmed, this setting can be managed on both the new and old hosts to route all new sessions to the new hosts.  The old hosts, with *Allow New Sessions* set to *disabled*, can continue to run and host existing user sessions.
++
+image::Management.Deployments.provisioning_collections-be47e.png[width=75%]
+. As users log off of the old host(s), and with no new user sessions joining the old host(s), the old host(s) where *Sessions = 0* can be deleted by clicking the *Actions* icon and selecting *delete*.
++
+image::Management.Deployments.provisioning_collections-cefb9.png[width=75%]

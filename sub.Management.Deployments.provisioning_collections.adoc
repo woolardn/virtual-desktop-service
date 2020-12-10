@@ -17,4 +17,7 @@ keywords:
 :keywords:
 
 include::_include/Management.Deployments.provisioning_collections.adoc[]
- 
+
+include::_include/Management.Deployments.provisioning_collections.rds_session_hosts.adoc[]
+
+include::_include/Management.Deployments.provisioning_collections.wvd_session_hosts.adoc[]
