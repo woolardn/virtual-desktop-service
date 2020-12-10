@@ -18,6 +18,8 @@ keywords:
 
 include::_include/Management.Deployments.provisioning_collections.adoc[]
 
+== Addendum 1 - RDS Session Hosts
 include::_include/Management.Deployments.provisioning_collections.rds_session_hosts.adoc[]
 
-include::_include/Management.Deployments.provisioning_collections.wvd_session_hosts.adoc[]
+== Addendum 2 - WVD Session Hosts
+include::_include/Management.Deployments.provisioning_collections.wvd_host_pools.adoc[]
