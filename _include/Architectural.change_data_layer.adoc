@@ -8,7 +8,7 @@ Used in: sub.Architectural.change_data_layer.adoc
 == Overview
 Virtual Desktop Service deployment technologies allow for a variety of storage options depending on the underlying infrastructure, this guide addresses how to make a change post-deployment.
 
-Virtual desktop performance depends on a variety of key resources, storage performance is one of the primary variables.  As requirements change and workloads evolve, the need to change the storage infrastructure is a common task.  In nearly all cases this involves migrating from a file server platform to NetApp storage technology (such as Azure NetApp Files, NetApp Cloud Volumes Service in Google or NetApp Cloud Volumes ONTAP in AWS) since these technologies typically offer the best performance profile for end user computing environments.
+Virtual desktop performance depends on a variety of key resources, storage performance is one of the primary variables. As requirements change and workloads evolve, the need to change the storage infrastructure is a common task. In nearly all cases this involves migrating from a file server platform to NetApp storage technology (such as Azure NetApp Files, NetApp Cloud Volumes Service in Google or NetApp Cloud Volumes ONTAP in AWS) since these technologies typically offer the best performance profile for end user computing environments.
 
 === Creating the new storage layer
 Due to the wide variety of potential storage services across a wide variety of cloud and HCI infrastructure providers, this guide assumes a new storage service has already been established and with the SMB path(s) known.
@@ -30,7 +30,7 @@ image:storage2.png[]
 .. Adjust the remaining settings to match the settings on the original storage layer as originally created by the deployment automation.
 
 === Moving data
-The directories, data, files and security settings can be moved a variety of ways.  The following robocopy syntax will achieve the necessary changes. The patches need to be changed to match your environment.
+The directories, data, files and security settings can be moved a variety of ways. The following robocopy syntax will achieve the necessary changes. The patches need to be changed to match your environment.
 
     robocopy c:\data\zucd \\uyy-1c37.deskapps.mobi\zucd-data /xd ~snapshot /MIR /CopyAll /R:1 /W:1 /tee /log:C:\temp\roboitD.txt
 
@@ -38,7 +38,7 @@ The directories, data, files and security settings can be moved a variety of way
 When the time for cutover comes, a few changes will redirect all the storage functionality across the VDS environment.
 
 ==== Update GPOs
-. The Users GPO (named _<company-code>-users_) needs to be updated with the new share path.  Select _User Configuration > Windows Settings > Preferences > Drive Maps_
+. The Users GPO (named _<company-code>-users_) needs to be updated with the new share path. Select _User Configuration > Windows Settings > Preferences > Drive Maps_
 +
 image:storage3.png[]
 
@@ -55,7 +55,7 @@ image:storage5.png[]
 +
 NOTE: This can also be set via a GPO policy if desired.
 
-. Edit the _VHDLocations_ value with the new value.  This should be the new SMB path plus _pro/profilecontainers_ as shown in the screenshot below.
+. Edit the _VHDLocations_ value with the new value. This should be the new SMB path plus _pro/profilecontainers_ as shown in the screenshot below.
 +
 image:storage6.png[]
 

@@ -27,7 +27,7 @@ Windows Virtual Desktop is a comprehensive desktop and app virtualization servic
 * Reverse connect even allows virtual machines to run without being exposed to the public internet enabling isolated workloads even while maintaining remote connectivity.
 * WVD includes access to Windows 10 Multi Session, allowing a Windows 10 Enterprise experience with the efficiency of high density user sessions.
 * FSLogix profile containerization technology is including, enhancing user session performance, storage efficiency and enhancing the Office experience in non-persistent environments.
-* WVD supports full desktop and RemoteApp access.  Both persistent or non-persistent, and both dedicated and multi-session experiences.
+* WVD supports full desktop and RemoteApp access. Both persistent or non-persistent, and both dedicated and multi-session experiences.
 * Organizations can save on Windows licensing because WVD can leverage "Windows 10 Enterprise E3 Per User" which replaces the need for RDS CALs and significantly reduces the per-hour cost of session host VMs in Azure.
 
 == Guide scope
@@ -52,7 +52,7 @@ This guide walks you through the deployment of WVD using NetApp VDS technology f
 
 
 == Azure prerequisites
-VDS uses native Azure security context to deploy the WVD instance.  Before starting the VDS Setup wizard, there are a few Azure prerequisites that need to be established.
+VDS uses native Azure security context to deploy the WVD instance. Before starting the VDS Setup wizard, there are a few Azure prerequisites that need to be established.
 
 During the deployment, service accounts and permissions are granted to VDS via authentication of an existing admin account from within the Azure tenant.
 
@@ -122,11 +122,11 @@ Once working through the CWA Setup wizard there are several questions that need 
 |===
 | Item
 | Description
-| VDS admin credentials | Collect the existing VDS admin credentials if you already have them.  Otherwise a new admin account will be created during deployment.
+| VDS admin credentials | Collect the existing VDS admin credentials if you already have them. Otherwise a new admin account will be created during deployment.
 | Azure Region | Determine the target Azure Region based on performance and availability of services. This https://azure.microsoft.com/en-us/services/virtual-desktop/assessment/[Microsoft Tool^] can estimate end user experienced based on region.
 | Active Directory type | The VMs will need to join a domain but can't directly join Azure AD. The VDS deployment can build a new virtual machine or use an existing domain controller.
-| File Management | Performance is highly dependent on disk speed, particularly as related to user profile storage.  The VDS setup wizard can deploy a simple file server or configure Azure NetApp Files (ANF).  For nearly any production environment ANF is recommended however for a POC the file server option provides sufficient performance.  Storage options can be revised post-deployment, including using existing storage resources in Azure.  Consult ANF pricing for details: https://azure.microsoft.com/en-us/pricing/details/netapp/
-| Virtual Network Scope | A routable /20 network range is required for the deployment.  the VDS setup wizard will allow you to define this range.  It is important that this range does not overlap with any existing vNets in Azure or on-premises (if the two networks will be connected via a VPN or ExpressRoute).
+| File Management | Performance is highly dependent on disk speed, particularly as related to user profile storage. The VDS setup wizard can deploy a simple file server or configure Azure NetApp Files (ANF). For nearly any production environment ANF is recommended however for a POC the file server option provides sufficient performance. Storage options can be revised post-deployment, including using existing storage resources in Azure. Consult ANF pricing for details: https://azure.microsoft.com/en-us/pricing/details/netapp/
+| Virtual Network Scope | A routable /20 network range is required for the deployment. the VDS setup wizard will allow you to define this range. It is important that this range does not overlap with any existing vNets in Azure or on-premises (if the two networks will be connected via a VPN or ExpressRoute).
 
 |===
 
@@ -165,18 +165,18 @@ In this guide we will select New Windows Server Active Directory, which will cre
 A detailed article covering an existing AD deployment is found link:Deploying.Azure.WVD.Supplemental_WVD_with_existing_AD.html[here].
 
 ==== Active Directory domain name
-Enter a **domain name**.  Mirroring the Azure AD Domain Name from above is recommended.
+Enter a **domain name**. Mirroring the Azure AD Domain Name from above is recommended.
 
 NOTE: If the domain entered is also used externally, additional steps need to be completed to allow access to that address from within the VDS environment. (e.g. accessing https://www.companydomain.com from within VDS) See this link:Troubleshooting.dns_forwarding_for_azure_aadds_sso.html[article for more information].
 
 ==== File Management type
-VDS can provision a simple file server virtual machine or setup and configure Azure NetApp Files.  In production, Microsoft recommends allocating 30gb per user and we've observed that allocating 5-15 IOPS per user is required for optimal performance.
+VDS can provision a simple file server virtual machine or setup and configure Azure NetApp Files. In production, Microsoft recommends allocating 30gb per user and we've observed that allocating 5-15 IOPS per user is required for optimal performance.
 
-TIP: Azure NetApp Files (ANF) has a 4TiB minimum while managed disks do not have a relevant minimum size.  Therefore, the minimum spend on ANF may be cost prohibitive for smaller deployments.  As a point of reference, in NetApp's own Managed Desktop Service (VDMS) we default to ANF for environments with 50+ users.
+TIP: Azure NetApp Files (ANF) has a 4TiB minimum while managed disks do not have a relevant minimum size. Therefore, the minimum spend on ANF may be cost prohibitive for smaller deployments. As a point of reference, in NetApp's own Managed Desktop Service (VDMS) we default to ANF for environments with 50+ users.
 
 In a POC (non-production) environment the file server is a low-cost and simple deployment option. However, the available performance of Azure Managed Disks can be overwhelmed by the IOPS consumption of even a moderately sized production deployment.
 
-For example, a 4TB Standard SSD disk in azure supports up to 500 IOPS, which could only support a maximum of 100 total users at 5 IOPS/user.  With ANF Premium the same sized storage setup would support 16,000 IOPS posting 32x more IOPS.
+For example, a 4TB Standard SSD disk in azure supports up to 500 IOPS, which could only support a maximum of 100 total users at 5 IOPS/user. With ANF Premium the same sized storage setup would support 16,000 IOPS posting 32x more IOPS.
 
 For production WVD deployments, **Azure NetApp Files is Microsoft's recommendation**.
 
@@ -190,7 +190,7 @@ It is also required that you register NetApp as a provider to your subscription.
 ** Select the provider and click Register
 
 ==== RDS license number
-NetApp VDS can be used to deploy RDS and/or WVD environments.  When deploying WVD, this field can **remain empty**.
+NetApp VDS can be used to deploy RDS and/or WVD environments. When deploying WVD, this field can **remain empty**.
 
 ==== Thinprint
 NetApp VDS can be used to deploy RDS and/or WVD environments. Thinprint is an optional install that is only compatible with RDS deployments. When deploying WVD, this toggle can remain **off** (toggle left).
@@ -209,7 +209,7 @@ For smaller and simpler environments that will include RDS use cases, all of the
 image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6_DRAFT-bb8b3.png[width=75%]
 
 ==== Platform VM configuration
-NetApp VDS can be used to deploy RDS and/or WVD environments. For RDS deployments you need to deploy and manage additional components such as Brokers and Gateways, in production these services should be run on dedicated and redundant virtual machines.  For WVD, all of these services are provided by Azure as an included service and thus, the **single virtual machine** configuration is recommended.
+NetApp VDS can be used to deploy RDS and/or WVD environments. For RDS deployments you need to deploy and manage additional components such as Brokers and Gateways, in production these services should be run on dedicated and redundant virtual machines. For WVD, all of these services are provided by Azure as an included service and thus, the **single virtual machine** configuration is recommended.
 
 ===== Single VM
 This is the recommended selection for deployments that will exclusively use WVD (and not RDS or a combination of the two). In a Single virtual machine deployment the following roles are all hosted on a single VM in Azure:
@@ -234,7 +234,7 @@ VDS Setup can be used to deploy and configure one or two RDS Gateways. These gat
 
 * HTML5 Gateway
 +
-VDS Setup can be used to deploy and configure one or two HTML 5 Gateways.  These gateways serve up an HTML 5 VDS  access client (e.g. https://login.cloudworkspace.com) based on the RemoteSpark technology. Licensing for this component is typically included in the cost of VDS licensing.  When two HTM5 CW Portals are selected, VDS Setup deploys 2 VMs and configures them to load balance incoming HTML5 user sessions.
+VDS Setup can be used to deploy and configure one or two HTML 5 Gateways. These gateways serve up an HTML 5 VDS  access client (e.g. https://login.cloudworkspace.com) based on the RemoteSpark technology. Licensing for this component is typically included in the cost of VDS licensing. When two HTM5 CW Portals are selected, VDS Setup deploys 2 VMs and configures them to load balance incoming HTML5 user sessions.
 Note that when using Multiple virtual machine option - even if you are only intend to support RDP connections for your RDS workloads - at least 1 HTML5 gateway is highly recommended to enable Connect to Server functionality from VDS.
 
 * Gateway Scalability Notes
@@ -278,10 +278,10 @@ The provisioning process takes between 2-4 hours depending on Azure workload and
 image:Deploying.Azure.WVD.Deploying_WVD_in_Azure_v6_DRAFT-20da2.png[width=75%]
 
 == Install and configure AD Connect
-Immediately after the install is successful, AD Connect needs to be installed and configured on the Domain Controller.  In a singe platform VM setup the CWMGR1 machine is the DC. The users in AD need to sync between Azure AD and the local domain.
+Immediately after the install is successful, AD Connect needs to be installed and configured on the Domain Controller. In a singe platform VM setup the CWMGR1 machine is the DC. The users in AD need to sync between Azure AD and the local domain.
 
 
-NOTE: AD Connect is a Microsoft supported product that involves managing and replicating user identity and password data. If you plan to use this configuration for production use, make sure you fully understand the configuration choices and security best practices as described by Microsoft.  For example,  using a task specific privileged service account for the sync credential provides a better security profile than reusing an account that belongs to an Administrator. Full details can be found at  https://docs.microsoft.com/en-us/azure/active-directory/hybrid/
+NOTE: AD Connect is a Microsoft supported product that involves managing and replicating user identity and password data. If you plan to use this configuration for production use, make sure you fully understand the configuration choices and security best practices as described by Microsoft. For example,  using a task specific privileged service account for the sync credential provides a better security profile than reusing an account that belongs to an Administrator. Full details can be found at  https://docs.microsoft.com/en-us/azure/active-directory/hybrid/
 
 .To install and configure AD Connect
 
@@ -289,7 +289,7 @@ NOTE: AD Connect is a Microsoft supported product that involves managing and rep
 . Select _Platform Servers_ from the  _More..._ tab
 . Click _Connect_ from the actions column
 . Connect to the domain controller as a domain admin.
-.. A domain admin account was automatically created as part of the deployment automation.  You can get those credentials from the link:Management.System_Administration.azure_key_vault.html[Azure Key Vault]
+.. A domain admin account was automatically created as part of the deployment automation. You can get those credentials from the link:Management.System_Administration.azure_key_vault.html[Azure Key Vault]
 . Install AD Connect on the DC
 .. Download installer and run the .MSI from link:https://www.microsoft.com/en-us/download/details.aspx?id=47594[here]
 .. Select “Use express settings”. See link:https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-express[this Microsoft KB] for more details.

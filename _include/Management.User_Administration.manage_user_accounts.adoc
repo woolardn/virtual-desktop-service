@@ -32,7 +32,7 @@ NOTE: For Azure AD Domain Service only: In order for logins to work, the passwor
 == Delete user account(s)
 
 == Edit user info
-On the user detail page changes can be made the the user details such as username and contact details.  The email and phone values are used for the Self Service Password Reset (SSPR) process.
+On the user detail page changes can be made the the user details such as username and contact details. The email and phone values are used for the Self Service Password Reset (SSPR) process.
 
 image:user_detail.png[]
 
@@ -48,7 +48,7 @@ image:user_detail.png[]
 * Wake on Demand Enabled – For RDS users connecting via the CW Client for Windows, enabling this will give the end user permission to take their environment when connecting outside of normal working hours as defined by Workload Schedule.
 
 == Locked Account
-By default, five failed login attempts will lock the user account.  The user account will unlock after 30 minutes unless _Enable Password Complexity_ is enabled.  With password complexity enabled, the account will not automatically be unlocked.  In either case, the VDS admin can manually unlock the user account from the Users/Groups page in VDS.
+By default, five failed login attempts will lock the user account. The user account will unlock after 30 minutes unless _Enable Password Complexity_ is enabled. With password complexity enabled, the account will not automatically be unlocked. In either case, the VDS admin can manually unlock the user account from the Users/Groups page in VDS.
 
 == Reset user password
 Resets the user password.
@@ -56,13 +56,13 @@ Resets the user password.
 Note: When resetting Azure AD user passwords (or unlocking an account) there can be a delay of up to 20 minutes as the reset propagates through Azure AD.
 
 == Admin Access
-Enabling this give the end user limited access to the management portal for their tenant.  Common uses include providing an on-site employee access to reset peers’ passwords, assign application or allow manual server wakeup access. Permissions controlling what areas of the console can be seen is set here as well.
+Enabling this give the end user limited access to the management portal for their tenant. Common uses include providing an on-site employee access to reset peers’ passwords, assign application or allow manual server wakeup access. Permissions controlling what areas of the console can be seen is set here as well.
 
 == Logoff user(s)
 Logged on users can be logged off by the VDS admin from the Users/Groups page in VDS.
 
 == Applications
-Displays the application deployed in this workspace.  The check box provisions the apps to this specific user. Complete Application Management documentation can be found here. Access to applications can also be granted from the App interface or to Security Groups.
+Displays the application deployed in this workspace. The check box provisions the apps to this specific user. Complete Application Management documentation can be found here. Access to applications can also be granted from the App interface or to Security Groups.
 
 == View/kill user processes
-Displays the processes currently running in that user’s session.  Processes can be killed from this interface as well.
+Displays the processes currently running in that user’s session. Processes can be killed from this interface as well.

@@ -10,7 +10,7 @@ remotesub.Management.System_Administration.configure_antivirus.adoc
 ////
 
 == Overview
-Virtual Desktop Service (VDS) Administrators are responsible for monitoring both their platform infrastructure (which will consist of CWMGR1 at minimum) and all other infrastructure and virtual machines (VMs).  In most cases, Administrators arrange infrastructure (hypervisor/SAN) monitoring directly with their Data Center/IaaS provider. Administrators are responsible for monitoring terminal servers and data servers, typically by deploying their preferred Remote Management and Monitoring (RMM) solution.
+Virtual Desktop Service (VDS) Administrators are responsible for monitoring both their platform infrastructure (which will consist of CWMGR1 at minimum) and all other infrastructure and virtual machines (VMs). In most cases, Administrators arrange infrastructure (hypervisor/SAN) monitoring directly with their Data Center/IaaS provider. Administrators are responsible for monitoring terminal servers and data servers, typically by deploying their preferred Remote Management and Monitoring (RMM) solution.
 
 Anti-Virus is the responsibility of the administrator (for both platform infrastructure and terminal/data server VMs). To streamline this process, VDS for Azure servers have Windows Defender applied by default.
 

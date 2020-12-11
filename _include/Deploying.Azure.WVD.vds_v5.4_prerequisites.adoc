@@ -98,7 +98,7 @@ WVD requires that the user identity be a part of Azure AD and that the VMs are j
 
 .These supported options include:
 
-* The automated build of an Active Directory instance within the subscription. The AD instance is typically created by VDS on the VDS control VM (CWMGR1) for Windows Virtual Desktop deployments that use this option.  AD Connect must be setup and configured to sync with Azure AD as part of the setup process.
+* The automated build of an Active Directory instance within the subscription. The AD instance is typically created by VDS on the VDS control VM (CWMGR1) for Windows Virtual Desktop deployments that use this option. AD Connect must be setup and configured to sync with Azure AD as part of the setup process.
 +
 image:AD Options New.png[]
 
@@ -136,7 +136,7 @@ Determine an IP range to user during your deployment. Per Azure best practices, 
 * 10.0.0.0 through 10.255.255.255
 
 ==== CWMGR1
-Some of the unique capabilities of VDS such as the cost saving Workload Scheduling and Live Scaling functionality require an administrative presence within the tenant and subscription. Therefore, an administrative VM called CWMGR1 is deployed as part of the VDS setup wizard automation.  In addition to VDS automation tasks this VM also holds VDS configuration in a SQL express database, local log files and an advanced configuration utility called DCConfig.
+Some of the unique capabilities of VDS such as the cost saving Workload Scheduling and Live Scaling functionality require an administrative presence within the tenant and subscription. Therefore, an administrative VM called CWMGR1 is deployed as part of the VDS setup wizard automation. In addition to VDS automation tasks this VM also holds VDS configuration in a SQL express database, local log files and an advanced configuration utility called DCConfig.
 
 .Depending on the selections made in the VDS setup wizard, this VM can be used to host additional functionality including:
 * An RDS gateway (only used in RDS deployments)
@@ -146,7 +146,7 @@ Some of the unique capabilities of VDS such as the cost saving Workload Scheduli
 
 
 === Decision tree in the Deployment Wizard
-As part of the initial deployment a series of questions are answered to customize the settings for the new environment.  Below is an outline of the major decisions to be made.
+As part of the initial deployment a series of questions are answered to customize the settings for the new environment. Below is an outline of the major decisions to be made.
 
 
 ==== Azure region
@@ -239,7 +239,7 @@ If your access control device can only white list by IP address, the following l
 92.242.140.21
 
 == APPENDIX B: Microsoft WVD requirements
-This Microsoft WVD Requirements section is a summary of WVD requirements from Microsoft.  Complete and current WVD requirements can be found here:
+This Microsoft WVD Requirements section is a summary of WVD requirements from Microsoft. Complete and current WVD requirements can be found here:
 
 https://docs.microsoft.com/en-us/azure/virtual-desktop/overview#requirements
 

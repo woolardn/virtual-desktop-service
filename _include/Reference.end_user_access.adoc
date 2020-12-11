@@ -6,17 +6,17 @@ Used in: sub.Reference.end_user_access.adoc
 ////
 
 == Overview
-NetApp VDS does not track or recommend different user endpoint devices.  We do recommend some basics, but this does not exclude other possible endpoint choices.
+NetApp VDS does not track or recommend different user endpoint devices. We do recommend some basics, but this does not exclude other possible endpoint choices.
 
-Remote Desktop environments can be access from a variety of endpoint devices.  Clients are available directly from Microsoft and 3rd party vendors.  NetApp VDS offers a custom connection client for Windows devices (_NetApp VDS Client for Windows_) as well as a Web client compatible with HTML 5 browsers.
+Remote Desktop environments can be access from a variety of endpoint devices. Clients are available directly from Microsoft and 3rd party vendors. NetApp VDS offers a custom connection client for Windows devices (_NetApp VDS Client for Windows_) as well as a Web client compatible with HTML 5 browsers.
 
-Windows Virtual Desktop environments can be accessed from a variety of endpoint devices.  Unlike RDS, WVD environments can only be accessed by Microsoft native clients.  Microsoft has published clients for Windows, MacOS, Android, iOS as well as a web client.  Additionally they have partnered with IGEL to offer a Linux-based thin client offering.
+Windows Virtual Desktop environments can be accessed from a variety of endpoint devices. Unlike RDS, WVD environments can only be accessed by Microsoft native clients. Microsoft has published clients for Windows, MacOS, Android, iOS as well as a web client. Additionally they have partnered with IGEL to offer a Linux-based thin client offering.
 
 
 == End user connection options
 === Remote Desktop Services
 ==== NetApp VDS Client for Windows
-The NetApp VDS Client for Windows is the best way for users to connect to their RDS environment.  This simple installer allows the users to connect with just their user name and password.  No server or gateway configuration is required.  Printing and Local drive mapping are automatically enabled and this method has the highest performance.
+The NetApp VDS Client for Windows is the best way for users to connect to their RDS environment. This simple installer allows the users to connect with just their user name and password. No server or gateway configuration is required. Printing and Local drive mapping are automatically enabled and this method has the highest performance.
 
 ===== VDS client url whitelisting
 In the event that outbound network connections are controller and in order to guarantee that they can continue to use the NetApp VDS Client for Windows for Windows, we recommend adding the following to the whitelist:
@@ -27,13 +27,13 @@ In the event that outbound network connections are controller and in order to gu
 * vdsclient.blob.core.windows.net
 
 
-Upon request, a branded version of this application can be created with the Partner’s logos and contact information.  Please contact support to request this.
+Upon request, a branded version of this application can be created with the Partner’s logos and contact information. Please contact support to request this.
 
 The NetApp VDS Client can be downloaded from here: https://cwc.cloudworkspace.com/download/cwc-win-setup.exe
 
 *Printing:* When connecting with the NetApp VDS Client for Windows, printing is automatically setup using ThinPrint.
 
-*Local File Access:* By default, the NetApp VDS Client for Windows shares the Local device drives (HDD, USB & Network) with the cloud user session.  The user can browse and transfer data back and forth from the “This PC” location in Windows Explorer.  This functionality can be disabled by editing the workspace or user in VDS.
+*Local File Access:* By default, the NetApp VDS Client for Windows shares the Local device drives (HDD, USB & Network) with the cloud user session. The user can browse and transfer data back and forth from the “This PC” location in Windows Explorer. This functionality can be disabled by editing the workspace or user in VDS.
 
 _VDS > Workspaces > Users & Groups > Security Settings_
 image:win_client_disk_access.png[]
@@ -42,17 +42,17 @@ image:win_client_disk_access.png[]
 ==== NetApp VDS web client
 The NetApp VDS Web client can be accessed at https://login.cloudworkspace.com/
 
-End users can also access their desktop via a webpage, as long as their browser supports HTML5.  Browser compatibility for HTML5 can be checked at https://html5test.com/
+End users can also access their desktop via a webpage, as long as their browser supports HTML5. Browser compatibility for HTML5 can be checked at https://html5test.com/
 
-A fully branded version of this page can be created for NetApp VDS Partners.  The partner is required to provide an SSL cert and there is a small professional services fee to implement. Please contact support to begin the process.
+A fully branded version of this page can be created for NetApp VDS Partners. The partner is required to provide an SSL cert and there is a small professional services fee to implement. Please contact support to begin the process.
 
 *Printing:* When connecting via HTML5, printing from the Virtual Desktop generates a PDF that is downloaded in the browser and can then be printed locally.
 
-*Local File Access:* When connecting via HTML5, the user can upload files to the Cloud Drive.  To do this the user will click the floating cloud icon, upload the file and the navigate to the “This PC > Cloud on…” location in Windows Explorer to access that file in the Virtual Desktop user session.
+*Local File Access:* When connecting via HTML5, the user can upload files to the Cloud Drive. To do this the user will click the floating cloud icon, upload the file and the navigate to the “This PC > Cloud on…” location in Windows Explorer to access that file in the Virtual Desktop user session.
 
 
 ==== Manually configured RDS client
-The second best connection method is to manually configure the Microsoft Remote Desktop application.  This is ideal for MacOs, Linux, iOS, Android and ThinClients.  The only requirement is that the device/software be able to connect via RDP and to configure an RDS Gateway.
+The second best connection method is to manually configure the Microsoft Remote Desktop application. This is ideal for MacOs, Linux, iOS, Android and ThinClients. The only requirement is that the device/software be able to connect via RDP and to configure an RDS Gateway.
 
 The information needed to manually configure an RDP client is (Links go to where that information can be located):
 
@@ -114,7 +114,7 @@ Manually Configure Client | https://login.cloudworkspace.com/
 |iOS |	iOS 8.0 or Later and any link:https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8[Remote Desktop App] that supports RD Gateways 	|Manually Configure Client |https://login.cloudworkspace.com/
 |Android |Android version capable of running  link:https://play.google.com/store/apps/details?id=com.microsoft.rdc.android&hl=en_US[Microsoft Remote Desktop app]	|Manually Configure Client | https://login.cloudworkspace.com/
 |Linux |Virtually all versions with any RDS application that supports RD Gateways	|Manually Configure Client |https://login.cloudworkspace.com/
-|Thin Client |A wide variety of Thin Clients work, provided they support RD Gateways.  Windows-based thin clients are recommended	|Manually Configure Client |https://login.cloudworkspace.com/
+|Thin Client |A wide variety of Thin Clients work, provided they support RD Gateways. Windows-based thin clients are recommended	|Manually Configure Client |https://login.cloudworkspace.com/
 |===
 
 ===== Comparison matrix
@@ -140,12 +140,12 @@ performance 	|RemoteFX enabled, enhancing audio/video performance 	|RemoteFX (en
 
 ===== USB peripherals
 
-Items such as scanners, cameras, card readers, audio devices have mix results.  There is nothing unique about a Virtual Desktop deployment that will prevent this but the best choice is to test any devices that are required.  Your Sales Rep can help setup test accounts if required.
+Items such as scanners, cameras, card readers, audio devices have mix results. There is nothing unique about a Virtual Desktop deployment that will prevent this but the best choice is to test any devices that are required. Your Sales Rep can help setup test accounts if required.
 
 ===== Bandwidth
 
-* NetApp recommends a minimum of 150kb bandwidth per user.  Higher capacity will improve the user experience.
-* Internet Latency under 100ms and very low Jitter are just as important.  KB Article
+* NetApp recommends a minimum of 150kb bandwidth per user. Higher capacity will improve the user experience.
+* Internet Latency under 100ms and very low Jitter are just as important. KB Article
 * Additional bandwidth needs will be introduced by your company’s use of VOIP, video streaming, audio streaming, and general Internet browsing.
 * The amount of bandwidth consumed by the Virtual Desktop itself will be one of the smallest components when calculating user bandwidth requirements.
 
@@ -181,7 +181,7 @@ NOTE: These recommendations apply regardless of how many users are in the sessio
 
 * Local system resources like RAM, CPU, Network Cards and Graphics capabilities will cause variation in the user experience.
 * This is MOST true of network and Graphics capability.
-* 1 GB of RAM and a low-power processor on an inexpensive Windows device.  2-4 GB RAM is a recommended minimum.
+* 1 GB of RAM and a low-power processor on an inexpensive Windows device. 2-4 GB RAM is a recommended minimum.
 
 === Windows Virtual Desktop
 ==== WVD Windows client

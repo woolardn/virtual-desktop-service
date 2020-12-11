@@ -7,7 +7,7 @@ Used in: sub.Management.System_Administration.clone_virtual_machines.adoc
 
 == Overview
 
-Virtual Desktop Service (VDS) provides the ability to clone an existing virtual machine (VM).  This functionality designed to automatically increase server unit count availability as defined user count grows OR additional servers to available resource pools.
+Virtual Desktop Service (VDS) provides the ability to clone an existing virtual machine (VM). This functionality designed to automatically increase server unit count availability as defined user count grows OR additional servers to available resource pools.
 
 Admins use cloning in VDS in two ways:
 
@@ -16,12 +16,12 @@ Admins use cloning in VDS in two ways:
 
 == Cloning to add additional shared servers
 
-A clone is a copy of an existing virtual machine.  Cloning functionality saves time and helps admins scale because Installing a guest operating system and applications can be time consuming. With clones, you can make many copies of a virtual machine from a single installation and configuration process. This typically looks like:
+A clone is a copy of an existing virtual machine. Cloning functionality saves time and helps admins scale because Installing a guest operating system and applications can be time consuming. With clones, you can make many copies of a virtual machine from a single installation and configuration process. This typically looks like:
 
 . Install all desired applications and settings onto a TS or TSD server
 . Navigate to: Workspaces > Servers Section > Gear Icon for the Source Server > Click Clone
 . Allow the clone process to run (typically 45-90 minutes)
-. The final step activate the cloned server, putting it into the RDS pool to accept new connections.  Cloned servers may require individual configuration after being cloned so VDS waits for the Administrator to manually put the server into rotation.
+. The final step activate the cloned server, putting it into the RDS pool to accept new connections. Cloned servers may require individual configuration after being cloned so VDS waits for the Administrator to manually put the server into rotation.
 
 Repeat as many times as necessary.
 image:Cloning-Servers.gif[]
@@ -30,13 +30,13 @@ image:Cloning-Servers.gif[]
 
 . Select a session host to clone, verify no users are currently logged in to the machine.
 
-. In VDS, navigate to the Workspace of the target client.  Scroll to the Servers section, click the Gear Icon and select Clone. This process takes significant time and will take the source machine offline. Expect 30+ minutes to complete.
+. In VDS, navigate to the Workspace of the target client. Scroll to the Servers section, click the Gear Icon and select Clone. This process takes significant time and will take the source machine offline. Expect 30+ minutes to complete.
 
 +
 image:clone1.png[]
 image:clone2.png[]
 
-. The process will shut down the server, clone the server to another image and SysPrep the image to the next TS# for the customer.  The server shows as _Type=staged_ and _Status=Activation Required_ in the Servers list.
+. The process will shut down the server, clone the server to another image and SysPrep the image to the next TS# for the customer. The server shows as _Type=staged_ and _Status=Activation Required_ in the Servers list.
 +
 image:clone3.png[]
 
@@ -50,7 +50,7 @@ image:clone5.png[]
 
 == VDS cloning process definition
 
-The step-by-step process is detailed in VDS > Deployment > Task History under any Clone Server operations.  The process has 20+ steps, which start with accessing the hypervisor to start the clone process & ends with activating the cloned server.  The cloning process includes key steps such as:
+The step-by-step process is detailed in VDS > Deployment > Task History under any Clone Server operations. The process has 20+ steps, which start with accessing the hypervisor to start the clone process & ends with activating the cloned server. The cloning process includes key steps such as:
 
 * Configure DNS & set server name
 * Assign StaticIP
@@ -59,26 +59,26 @@ The step-by-step process is detailed in VDS > Deployment > Task History under an
 * Update VDS DB (SQL instance on CWMGR1)
 * Create Firewall rules for the clone
 
-As well as Task History, the detail steps for any cloning process can be viewed in CwVmAutomationService log on CWMGR1 in each partner’s Virtual Desktop Deployment.  Reviewing these log files is documented link:Troubleshooting.reviewing_vds_logs.html[here].
+As well as Task History, the detail steps for any cloning process can be viewed in CwVmAutomationService log on CWMGR1 in each partner’s Virtual Desktop Deployment. Reviewing these log files is documented link:Troubleshooting.reviewing_vds_logs.html[here].
 
 == Automated creation of new server(s)
 
 This VDS functionality designed to automatically increase server unit count availability as defined user count grows.
 
-The partner defines and manages via VDS (link:https://manage.cloudworkspace.com[]) > Client > Overview – VM Resources > Auto-Scaling.  Several controls are exposed to allow partners to Enable/Disable Auto Scaling as well as create custom rules for each client such as:  number/users/server, additional RAM per user & number of users per CPU.
+The partner defines and manages via VDS (link:https://manage.cloudworkspace.com[]) > Client > Overview – VM Resources > Auto-Scaling. Several controls are exposed to allow partners to Enable/Disable Auto Scaling as well as create custom rules for each client such as:  number/users/server, additional RAM per user & number of users per CPU.
 
-NOTE:  Above assumes automated cloning is enabled for the entire Virtual Desktop Deployment.  For example, to stop all automated cloning, use DCConfig, in the Advanced window, uncheck the Server Creation->Automated Cloning Enabled.
+NOTE:  Above assumes automated cloning is enabled for the entire Virtual Desktop Deployment. For example, to stop all automated cloning, use DCConfig, in the Advanced window, uncheck the Server Creation->Automated Cloning Enabled.
 
 === When does the automated clone process run?
 
-The automated clone process executes when the daily maintenance is configured to run.  The default is midnight, but this can be edited.  Part of the daily maintenance is to run the Change Resources thread for each resource pool.  The Change Resources thread determines the number of shared servers required based-on the number of users the pool’s configuration (customizable; can be 10, 21, 30, etc users per server).
+The automated clone process executes when the daily maintenance is configured to run. The default is midnight, but this can be edited. Part of the daily maintenance is to run the Change Resources thread for each resource pool. The Change Resources thread determines the number of shared servers required based-on the number of users the pool’s configuration (customizable; can be 10, 21, 30, etc users per server).
 
 == “On demand” automated creation of new server
 
 This VDS functionality allows automated “on demand” cloning of additional servers to available resource pools.
 
-The VDS Admin logs into VDS and under the Organizations or Workspaces Modules, finds the specific Client & opens the Overview tab.   The Servers Tile lists all servers (TSD1, TS1, D1, etc).  To clone any individual server, simply click on the cog to far-right of server name & select Clone option.
+The VDS Admin logs into VDS and under the Organizations or Workspaces Modules, finds the specific Client & opens the Overview tab.  The Servers Tile lists all servers (TSD1, TS1, D1, etc). To clone any individual server, simply click on the cog to far-right of server name & select Clone option.
 
-Typically, the process should take about an hour.  However, the duration depends on the size of VM and the available resources of the underlying hypervisor.  Please note the server being cloned will need to be rebooted, so partners typically perform after hours or during a scheduled maintenance window.
+Typically, the process should take about an hour. However, the duration depends on the size of VM and the available resources of the underlying hypervisor. Please note the server being cloned will need to be rebooted, so partners typically perform after hours or during a scheduled maintenance window.
 
-When cloning a TSData server, one of the steps is deleting the c:\Home, c:\Data, and c:\Pro folders so they’re aren’t any duplicate files.  In this case, the clone process failed there were problems deleting these files.   This error is vague.  Typically, this means the clone event failed because there was an open file or process.  Next attempt, please disable any AV (because that might explain this error).
+When cloning a TSData server, one of the steps is deleting the c:\Home, c:\Data, and c:\Pro folders so they’re aren’t any duplicate files. In this case, the clone process failed there were problems deleting these files.  This error is vague. Typically, this means the clone event failed because there was an open file or process. Next attempt, please disable any AV (because that might explain this error).

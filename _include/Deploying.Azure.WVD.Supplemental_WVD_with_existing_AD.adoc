@@ -78,4 +78,4 @@ Typing A and hitting Enter
 image:Existing AD 3.png[]
 
 == Next steps
-This article covers the unique steps to deploy into an existing AD environment.  With these steps complete, you can return to the standard deployment guide link:Deploying.Azure.WVD.Deploying_WVD_in_Azure.html#active-directory-type[here].
+This article covers the unique steps to deploy into an existing AD environment. With these steps complete, you can return to the standard deployment guide link:Deploying.Azure.WVD.Deploying_WVD_in_Azure.html#active-directory-type[here].

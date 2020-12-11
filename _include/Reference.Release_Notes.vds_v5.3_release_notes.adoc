@@ -616,7 +616,7 @@ _Impact:_  Access to Cloud Workspace desktops and application services for End U
 * Bug fix where a subset of admins could not log into an older version of CWMS
 * Bug fix where navigating to WVD Diagnostics and then back to Workspaces displayed  ‘page not found’
 * Change friendly name of a user’s desktop (what appears in the WVD RDP client and in the blue bar at the top of the user’s session) to match the name of the host pool
-* Servers must be manually added to the pool with a checkbox “Allow New Sessions” which is unchecked by default.  Checkbox was previously checked by default.
+* Servers must be manually added to the pool with a checkbox “Allow New Sessions” which is unchecked by default. Checkbox was previously checked by default.
 
 === CWA Setup
 

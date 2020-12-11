@@ -10,7 +10,7 @@ remotesub.Management.User_Administration.manage_folders_and_permissions.adoc
 
 == End user perspective
 
-Virtual Desktop end users can have access to several mapped drives.  These drives includes an FTPs accessible team share, a Company File Share and their Home drive (for their documents, desktop, etc…) . All of these mapped drives reference back to a central storage layer on either a storage services (such as Azure NetApp Files) or on a file server VM.
+Virtual Desktop end users can have access to several mapped drives. These drives includes an FTPs accessible team share, a Company File Share and their Home drive (for their documents, desktop, etc…) . All of these mapped drives reference back to a central storage layer on either a storage services (such as Azure NetApp Files) or on a file server VM.
 
 Depending on the configuration the user may of may not have the H: or F: drives exposed, they may only see their Desktop, Documents, etc… folders. Additionally, different Drive letters are occasionally set by the VDS administrator at deployment.
 image:manage_data1.png[]
