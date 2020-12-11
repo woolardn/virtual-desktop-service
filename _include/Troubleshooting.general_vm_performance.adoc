@@ -71,7 +71,7 @@ image:vm_performance12.png[]
 image:vm_performance13.png[]
 
 == Considering storage performacne
-One of the more common causes of vm performance issues is insufficient disk performance.  Standard (and even SSD) disks are not designed to handle the high I/O load demanded by VDS workloads.  User logins tend to happen in bunches and each one demands significant I/O as profiles and settings are loaded.  NetApp's high performing storage technologies such at Azure NetApp Files, CVO and CVS are particularly well suited for this workload and should be considered the default option for VDS workloads.
+One of the more common causes of vm performance issues is insufficient disk performance. Standard (and even SSD) disks are not designed to handle the high I/O load demanded by VDS workloads. User logins tend to happen in bunches and each one demands significant I/O as profiles and settings are loaded. NetApp's high performing storage technologies such at Azure NetApp Files, CVO and CVS are particularly well suited for this workload and should be considered the default option for VDS workloads.
 
 == Considering storage consumption
 

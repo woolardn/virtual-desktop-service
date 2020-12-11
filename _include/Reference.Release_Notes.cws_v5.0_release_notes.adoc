@@ -9,11 +9,11 @@ NOTE: There will be no further recurring releases for v5.0 of CWS – all releas
 
 
 == Overview
-CloudJumper has released Cloud Workspace Suite 5.0 for general implementation starting in Q4 2016.  This release includes an update of both the CWS APIs and the Admin Control interface.  The release is a significant change and is not “backward compatible” to version 4.x entities.
+CloudJumper has released Cloud Workspace Suite 5.0 for general implementation starting in Q4 2016. This release includes an update of both the CWS APIs and the Admin Control interface. The release is a significant change and is not “backward compatible” to version 4.x entities.
 
 Version 4.x will continue to be supported until all partner Software Defined Data Centers (SDDCs) have been upgraded to the 5.0 platform, upgrades will be completed by CloudJumper in coordination with each Partner and will not interrupt existing services. There is no upgrade fee or implementation cost to transition. CWS 5 continues to support all of the previous versions’ functionality, and extends new features that enhance both Administrator and End-User experience, and further improve the award winning automation and orchestration introduced with previous releases of Cloud Workspace Suite.
 
-Existing Partners should have little trouble adopting the new Admin interface, and “time to mastery” for new Partners will be even easier.  With CWS 5.0, CloudJumper has re-written all of the platforms APIs into REST API format and completely retired the earlier SOAP APIs.  This updated architecture will make further enhancement by CloudJumper easier and faster, and creates an even friendlier environment for external developers to extend their services and products based on Cloud Workspace.
+Existing Partners should have little trouble adopting the new Admin interface, and “time to mastery” for new Partners will be even easier. With CWS 5.0, CloudJumper has re-written all of the platforms APIs into REST API format and completely retired the earlier SOAP APIs. This updated architecture will make further enhancement by CloudJumper easier and faster, and creates an even friendlier environment for external developers to extend their services and products based on Cloud Workspace.
 
 == Highlights
 

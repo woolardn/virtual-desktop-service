@@ -1,0 +1,15 @@
+////
+
+Used in:
+
+
+Other GitHub Repos:
+VDMS Repo:
+
+
+////
+
+== Overview
+When a host pool is created, a default app groups is also created which publishes the full desktop. Additional app groups can be created in the same host pool to expose specific applications as a streaming application to WVD users.
+
+To the end user, the desktop and any assigned applications are presented as part fo the standard WVD login process.

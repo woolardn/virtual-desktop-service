@@ -12,9 +12,9 @@ VDS has the ability to configure and manage native backup services in some infra
 
 In Azure, VDS can automatically configure backups using native link:https://azure.microsoft.com/en-us/services/backup/[Azure Cloud Backup] with locally redundant storage (LRS). Geo-redundant storage (GRS) can be configured in the Azure Management Portal if needed.
 
-* Individual backup policies can be defined for each Server Type (with default recommendations).   Additionally, individual machines can be assigned a schedule independent (from their server type) from within the VDS UI, this setting can be applied by navigating to the Server Detail View by clicking on the Server name on the Workspace page (See Video Below: Setting Individual Backup Policies)
+* Individual backup policies can be defined for each Server Type (with default recommendations).  Additionally, individual machines can be assigned a schedule independent (from their server type) from within the VDS UI, this setting can be applied by navigating to the Server Detail View by clicking on the Server name on the Workspace page (See Video Below: Setting Individual Backup Policies)
 ** Data
-*** Backup with 7 daily, 5 weekly & 2 monthly backups.  Increase retention periods based on business requirements.
+*** Backup with 7 daily, 5 weekly & 2 monthly backups. Increase retention periods based on business requirements.
 *** This is true for both a dedicated Data server and for add-on VPS VMs for Apps and Databases.
 ** Infrastructure
 *** CWMGR1 – Backup Daily and keep 7 daily, 5 weekly, 2 monthly.
@@ -23,17 +23,17 @@ In Azure, VDS can automatically configure backups using native link:https://azur
 ** PowerUser (aka VDI User)
 *** Don’t backup the VM as data should be stored on a D1 or TSD1 server.
 *** Be aware that some applications do store data locally and special considerations should be taken if this is the case.
-*** In the event of a VM failure, a new VM can be built via Cloning another.  In the event there is only one VDI VM (or one unique VM build) it it advisable to back it up so that a complete rebuild of that VM is not required.
+*** In the event of a VM failure, a new VM can be built via Cloning another. In the event there is only one VDI VM (or one unique VM build) it it advisable to back it up so that a complete rebuild of that VM is not required.
 *** If needed, rather than backing up all VDI servers, costs can be minimized by manually configuring a single VM to backup directly in the Azure Management portal.
 ** TS
 *** Don’t backup the VM as data should be stored on a D1 or TSD1 server.
 *** Be aware that some applications do store data locally and special considerations should be taken if this is the case.
-*** In the event of a VM failure, a new VM can be built via Cloning another.  In the event there is only one TS VM it it advisable to back it up so that a complete rebuild of that VM is not required.
+*** In the event of a VM failure, a new VM can be built via Cloning another. In the event there is only one TS VM it it advisable to back it up so that a complete rebuild of that VM is not required.
 *** If needed, rather than backing up all TS servers, costs can be minimized by manually configuring a single VM to backup directly in the Azure Management portal.
 ** TSData
-*** Backup with 7 daily, 5 weekly & 2 monthly backups.  Increase retention periods based on business requirements.
+*** Backup with 7 daily, 5 weekly & 2 monthly backups. Increase retention periods based on business requirements.
 * Policies can be set to take backups daily or weekly, Azure does not support more frequent schedules.
-* For daily schedules, enter the preferred time to take the backup.  For weekly schedules, enter the preferred day and time to take the backup. Note: Setting the time to exactly 12:00 am can cause issues in Azure Backup so 12:01 am is recommended.
+* For daily schedules, enter the preferred time to take the backup. For weekly schedules, enter the preferred day and time to take the backup. Note: Setting the time to exactly 12:00 am can cause issues in Azure Backup so 12:01 am is recommended.
 * Define how many daily, weekly, monthly and yearly backups should be retained.
 
 === Setting deployment defaults

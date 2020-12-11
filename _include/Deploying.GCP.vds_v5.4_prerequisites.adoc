@@ -82,7 +82,7 @@ Determine an IP range to user during your deployment. Per best practices, only I
 * 10.0.0.0 through 10.255.255.255
 
 ==== CWMGR1
-Some of the unique capabilities of VDS such as the cost saving Workload Scheduling and Live Scaling functionality require an administrative presence within the organization and project. Therefore, an administrative VM called CWMGR1 is deployed as part of the VDS setup wizard automation.  In addition to VDS automation tasks this VM also holds VDS configuration in a SQL express database, local log files and an advanced configuration utility called DCConfig.
+Some of the unique capabilities of VDS such as the cost saving Workload Scheduling and Live Scaling functionality require an administrative presence within the organization and project. Therefore, an administrative VM called CWMGR1 is deployed as part of the VDS setup wizard automation. In addition to VDS automation tasks this VM also holds VDS configuration in a SQL express database, local log files and an advanced configuration utility called DCConfig.
 
 .Depending on the selections made in the VDS setup wizard, this VM can be used to host additional functionality including:
 * An RDS gateway
@@ -92,7 +92,7 @@ Some of the unique capabilities of VDS such as the cost saving Workload Scheduli
 
 
 === Decision tree in the Deployment Wizard
-As part of the initial deployment a series of questions are answered to customize the settings for the new environment.  Below is an outline of the major decisions to be made.
+As part of the initial deployment a series of questions are answered to customize the settings for the new environment. Below is an outline of the major decisions to be made.
 
 
 ==== GCP region

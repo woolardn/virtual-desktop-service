@@ -8,7 +8,7 @@ Used in: sub.Deploying.Azure.WVD.vds_v5.4_components_and_permissions.adoc
 == WVD and VDS security entities and services
 Windows Virtual Desktop (WVD) requires security accounts and components in both Azure AD and the local Active Directory to perform automated actions. NetApp’s Virtual Desktop Service (VDS) creates components and security settings during the deployment process that allow administrators to control the WVD environment. This document describes the relevant VDS accounts, components, and security settings in both environments.
 
-The components and permissions of the deployment automation process are mostly distinct from the components of the final deployed environment.  Therefore this article is constructed in two major sections, the deployment automation section and the deployed environment section.
+The components and permissions of the deployment automation process are mostly distinct from the components of the final deployed environment. Therefore this article is constructed in two major sections, the deployment automation section and the deployed environment section.
 
 image:Reference Architecture WVD v1.jpg[width=75%]
 
@@ -124,7 +124,7 @@ VDS uses a Active Directory Security Group called CW-Infrastructure to contain t
 VDS uses an Active Directory service account called CloudworkspaceSVC that is used as the identity for the VDS Windows services and the IIS application service. This account is non-interactive (does not allow RDP login) and is the primary member of the CW-Infrastructure account
 
 ==== VPN or ExpressRoute
-A site-to-site VPN or Azure ExpressRoute can be used to directly join Azure VMs with the existing domain.  This is an optional configuration available when project requirements dictate it.
+A site-to-site VPN or Azure ExpressRoute can be used to directly join Azure VMs with the existing domain. This is an optional configuration available when project requirements dictate it.
 
 ==== Local AD permission delegation
 NetApp provides an optional tool that can streamline the hybrid AD process. If using NetApp’s optional tool, it must:
@@ -156,16 +156,16 @@ The components of VDS deployments and workspaces can be organized into several l
 * Hybrid AD Components
 
 === End user clients
-Users can connect to their WVD desktop and/or from a variety of endpoint types.  Microsoft has published client applications for Windows, macOS, Android and iOS.  Additionally, a web client is available for client-less access.
+Users can connect to their WVD desktop and/or from a variety of endpoint types. Microsoft has published client applications for Windows, macOS, Android and iOS. Additionally, a web client is available for client-less access.
 
-There are some Linux think-client vendors who have published endpoint client for WVD.  These are listed at https://docs.microsoft.com/en-us/azure/virtual-desktop/linux-overview
+There are some Linux think-client vendors who have published endpoint client for WVD. These are listed at https://docs.microsoft.com/en-us/azure/virtual-desktop/linux-overview
 
 === VDS control plane components
 ==== VDS REST API
-VDS is built on fully documented REST APIs so that all actions available in the web app are also available via the API.  Documentation for the API is here: https://api.cloudworkspace.com/5.4/swagger/ui/index#
+VDS is built on fully documented REST APIs so that all actions available in the web app are also available via the API. Documentation for the API is here: https://api.cloudworkspace.com/5.4/swagger/ui/index#
 
 ==== VDS web app
-VDS admins can interact the ADS application via the VDS web app.  This web portal is at: https://manage.cloudworkspace.com
+VDS admins can interact the ADS application via the VDS web app. This web portal is at: https://manage.cloudworkspace.com
 
 ==== Control plane database
 VDS data and setting are stored in the control plane SQL database, hosted and managed by NetApp.
@@ -178,7 +178,7 @@ VDS deployment automation creates a single Azure Resource Group to contain the o
 ==== Microsoft Azure WVD-PaaS components
 ===== WVD REST API
 
-Microsoft WVD can be managed via API.  VDS leveraged these APIs extensively to automate and managed WVD environments. Documentation is at: https://docs.microsoft.com/en-us/rest/api/desktopvirtualization/
+Microsoft WVD can be managed via API. VDS leveraged these APIs extensively to automate and managed WVD environments. Documentation is at: https://docs.microsoft.com/en-us/rest/api/desktopvirtualization/
 
 ===== Session broker
 The broker determines the resources authorized for the user and orchestrates the connection of the user to the gateway.
@@ -270,16 +270,16 @@ The specific steps for creating a WVD virtual machine and adding it to the WVD h
 * Set “Allow New Connections” flag on the new virtual machine (requires Azure Service Principal permissions)
 
 ====== Joining VMs to Azure AD
-Virtual machines in the Azure tenant need to be joined to the domain however VMs cannot joining directly to Azure AD.  Therefore, VDS deploys the domain controller role in the VDS platform and then we sync that DC with Azure AD using AD Connect.  Alternative configuration options include using Azure AD Domain Services (AADDS), syncing to a hybrid DC (a VM on-premises or elsewhere) using AD Connect, or directly joining the VMs to a hybrid DC through a site-to-site VPN or Azure ExpressRoute.
+Virtual machines in the Azure tenant need to be joined to the domain however VMs cannot joining directly to Azure AD. Therefore, VDS deploys the domain controller role in the VDS platform and then we sync that DC with Azure AD using AD Connect. Alternative configuration options include using Azure AD Domain Services (AADDS), syncing to a hybrid DC (a VM on-premises or elsewhere) using AD Connect, or directly joining the VMs to a hybrid DC through a site-to-site VPN or Azure ExpressRoute.
 
 ===== WVD Host pools
 Host pools are a collection of one or more identical virtual machines (VMs) within Windows Virtual Desktop environments. Each host pool can contain an app group that users can interact with as they would on a physical desktop.
 
 ====== Session hosts
-Within any host pool is one or more identical virtual machines.  These user sessions connecting to this host pool are  load balanced by the WVD load balancer service.
+Within any host pool is one or more identical virtual machines. These user sessions connecting to this host pool are  load balanced by the WVD load balancer service.
 
 ====== App groups
-By default, the _Desktop users_ app group is created at deployment.  All users within this app group are presented with a full Windows desktop experience.  Additionally app groups can be created to serve streaming-app services.
+By default, the _Desktop users_ app group is created at deployment. All users within this app group are presented with a full Windows desktop experience. Additionally app groups can be created to serve streaming-app services.
 
 ===== Log analytics workspace
 A Log Analytics workspace is created to store logs from the deployment and DSC processes and from other services. This can be deleted after deployment, but this isn’t recommended as it enables other functionality. Logs are retained for 30 days by default, incurring no charges for retention.

@@ -4,15 +4,15 @@ Used in:
 sub.scriptlibrary.MicrosoftOffice365.adoc
 
 ////
-This script package installs/uninstalls _Microsoft Office_ using the Chocolatey package manager (https://chocolatey.org/) to do the deployment.  Chocolatey is deployed by VDS when VMs are created but this script will also check and install Chocolatey as a prerequisite if it is missing.
+This script package installs/uninstalls _Microsoft Office_ using the Chocolatey package manager (https://chocolatey.org/) to do the deployment. Chocolatey is deployed by VDS when VMs are created but this script will also check and install Chocolatey as a prerequisite if it is missing.
 
-WARNING: This Microsoft Office 365 install script does not include Microsoft Teams or Microsoft One Drive.  These are included as stand-alone automated scripts to allow for greater flexability as some deployments do not require these applications.  This deployment can be copied and edited to include them (or to change any other link:https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool[Office Deployment Tool] settings) by editing the link:https://docs.netapp.com/us-en/virtual-desktop-service/scripts/InstallMicrosoftOffice365.ps1[.ps1 file] to input different values into the xml config file.
+WARNING: This Microsoft Office 365 install script does not include Microsoft Teams or Microsoft One Drive. These are included as stand-alone automated scripts to allow for greater flexability as some deployments do not require these applications. This deployment can be copied and edited to include them (or to change any other link:https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool[Office Deployment Tool] settings) by editing the link:https://docs.netapp.com/us-en/virtual-desktop-service/scripts/InstallMicrosoftOffice365.ps1[.ps1 file] to input different values into the xml config file.
 
 == Install Script
 
 === Suggested Add Script Settings for Install
 
-NOTE: Built-in scripted events such as this one are pre-populated, can't be edited and don't need to be created.  These "Suggested Add Script Settings" are simply for reference.  To learn how to link this script to an activity, jump to the link:#anchor1[Suggested Add Activity Settings] section below.
+NOTE: Built-in scripted events such as this one are pre-populated, can't be edited and don't need to be created. These "Suggested Add Script Settings" are simply for reference. To learn how to link this script to an activity, jump to the link:#anchor1[Suggested Add Activity Settings] section below.
 
 * *Name:* Enter `InstallMicrosoftOffice365`
 * *Include Script File:* Select `Yes`
@@ -25,9 +25,9 @@ image::scriptlibrary.script.InstallMicrosoftOffice365.png[width=75%]
 
 === [[anchor1]]Suggested Add Activity Settings for Install
 
-TIP: This example activity will install this application when the app is added to the Workspace in the VDS interface.  VDS Scripted Events offers many other types of activity triggers such as "Create Server" which could be used as an alternative to the "Application Install" Event Type.  Using "Create Server" would simply run this app install against all newly created VMs in VDS.  "Create Server" and other triggers are documented and can be explored link:Management.Scripted_Events.scripted_events.html[here].
+TIP: This example activity will install this application when the app is added to the Workspace in the VDS interface. VDS Scripted Events offers many other types of activity triggers such as "Create Server" which could be used as an alternative to the "Application Install" Event Type. Using "Create Server" would simply run this app install against all newly created VMs in VDS. "Create Server" and other triggers are documented and can be explored link:Management.Scripted_Events.scripted_events.html[here].
 
-NOTE: In order for a script in the repository to take any action, an activity must be created to associate that script with a selected trigger. In this case, the activity will link the existing script to the _Application Install_ trigger.  Once configured, the action of adding this application to a workspace (from the _Workspace > Applications_ page in VDS) will trigger this script to install this application on all appropriate session hosts in the selected deployment.
+NOTE: In order for a script in the repository to take any action, an activity must be created to associate that script with a selected trigger. In this case, the activity will link the existing script to the _Application Install_ trigger. Once configured, the action of adding this application to a workspace (from the _Workspace > Applications_ page in VDS) will trigger this script to install this application on all appropriate session hosts in the selected deployment.
 
 .To create an Activity and link this script to an action:
 . Navigate to the Scripted Events section in VDS
@@ -50,7 +50,7 @@ image::scriptlibrary.activity.InstallMicrosoftOffice365.png[width=75%]
 
 === Suggested Add Script Settings for Uninstall
 
-NOTE: Built-in scripted events such as this one are pre-populated, can't be edited and don't need to be created.  These "Suggested Add Script Settings" are simply for reference.  To learn how to link this script to an activity, jump to the link:#anchor2[Suggested Add Activity Settings] section below.
+NOTE: Built-in scripted events such as this one are pre-populated, can't be edited and don't need to be created. These "Suggested Add Script Settings" are simply for reference. To learn how to link this script to an activity, jump to the link:#anchor2[Suggested Add Activity Settings] section below.
 
 * *Name:* Enter `UninstallMicrosoftOffice365`
 * *Include Script File:* Select `Yes`
@@ -62,7 +62,7 @@ image::scriptlibrary.script.UninstallMicrosoftOffice365.png[width=75%]
 
 === [[anchor2]]Suggested Add Activity Settings for Uninstall
 
-NOTE: In order for a script in the repository to take any action, an activity must be created to associate that script with a selected trigger. In this case, the activity will link the existing script to the _Application Install_ trigger.  Once configured, the action of adding this application to a workspace (from the _Workspace > Applications_ page in VDS) will trigger this script to install this application on all appropriate session hosts in the selected deployment.
+NOTE: In order for a script in the repository to take any action, an activity must be created to associate that script with a selected trigger. In this case, the activity will link the existing script to the _Application Install_ trigger. Once configured, the action of adding this application to a workspace (from the _Workspace > Applications_ page in VDS) will trigger this script to install this application on all appropriate session hosts in the selected deployment.
 
 .To create an Activity and link this script to an action:
 . Navigate to the Scripted Events section in VDS

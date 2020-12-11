@@ -22,42 +22,37 @@ NetApp's Virtual Desktop Service (VDS) solves the complexity of deploying and ma
 
 //VIDEO HERE- TBD
 
-=== Virtual Desktop Service benefits:
+=== Virtual Desktop Service Benefits:
 
-* *Reduce infrastructure costs*
+* *Reduce Infrastructure Costs*
 +
-Our customizable resource scheduling system optimizes infrastructure spend up to 50%.
+Our customizable resource scheduling system optimizes infrastructure spending by up to 50%.
 
-* *Reduce risk*
+* *Reduce Risk*
 +
-Deploy desktops into logical workflows per cloud best practices; Such as Microsoft best practice WVD standards.
+Deploy desktops into logical workflows per cloud best practices; Such as Microsoft best practice standards for WVD.
 
-* *Custom automation*
+* *Custom Automation*
 +
 Event driven automation and orchestration engine leveraging your current scripts, making management so easy, general IT administrators can manage your cloud desktops!
 
-* *Turnkey*
-+
-Deploy as a do-it-yourself software management service for your choice of VDI environments or choose a fully managed WVD platform service.
-
-* *Multi-cloud*
+* *Multi-Cloud*
 +
 Control multiple tenants across AWS, Azure and Google with a single graphical user interface.
 
-* *Flexible control*
+* *Flexible Control*
 +
 Maximize business flexibility with a single portal to control every layer of your technology stack.
 
-
 Learn more: https://cloud.netapp.com/virtual-desktop-service
 
-== Getting support
+== Getting Support
 
-Email support: VDSsupport@netapp.com
+Email Support: VDSsupport@netapp.com
 
-Phone support: 844.645.6789 Ext. 2
+Phone Support: 844.645.6789 Ext. 2
 
-link:https://cloudjumper.zendesk.com[VDS support portal]
+link:https://cloudjumper.zendesk.com[VDS Support Portal]
 
 Normal support business hours: Monday-Friday, 7:00am-7:00pm Central Time.
 
@@ -66,7 +61,7 @@ Normal support business hours: Monday-Friday, 7:00am-7:00pm Central Time.
 
 == Additional resources
 
-=== Cost calculators
+=== Cost Calculators
 ==== Azure
 * https://manage.vds.netapp.com/azure-cost-estimator
 
@@ -74,14 +69,14 @@ Normal support business hours: Monday-Friday, 7:00am-7:00pm Central Time.
 * https://manage.vds.netapp.com/google-cost-estimator
 
 === Downloads
-==== Remote Desktop Services (RDS) clients
+==== Remote Desktop Services (RDS) Clients
 * link:https://cwc.cloudworkspace.com/download/cwc-win-setup.exe[VDS RDS client for Windows]
 
 * link:https://login.cloudworkspace.com/[VDS Web Client]
 
 * link:https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients[Microsoft RD Client]
 
-==== Windows Virtual Desktop (WVD) clients
+==== Windows Virtual Desktop (WVD) Clients
 * link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-windows-7-10[Microsoft WVD for Windows Client]
 
 * link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-web[Microsoft WVD Web Client]
@@ -92,7 +87,7 @@ Normal support business hours: Monday-Friday, 7:00am-7:00pm Central Time.
 
 * link:https://docs.microsoft.com/en-us/azure/virtual-desktop/connect-ios[Microsoft WVD for iOS Client]
 
-==== Other downloads
+==== Other Downloads
 * link:https://cloudjumper.com/wp-content/uploads/2019/12/RemoteScanEnterpriseUser.zip[RemoteScan Client]
 
 * link:https://cloudjumper.com/cloudworkspaceclient/designer/Cloud%20Workspace%20Designer.exe[VDS RDS Windows Client Designer]

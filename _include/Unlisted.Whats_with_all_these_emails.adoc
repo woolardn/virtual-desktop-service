@@ -14,6 +14,6 @@ The email address(es) that receive these reports are defined in the VDS Setup wi
 
 After deployment, the addresses can be changed in the DCConfig utility. This is an application that runs on the CWMGR1 VM and exposes much of the more advanced and nuanced settings too advanced to expose in the VDS UI.
 
-To change the email address that receives these reports edit the “ToAddress” field in DCConfig (under Configuration > Email) on the CWMGR1 VM.  It is recommended to leave ddcnotifications@cloudjumper.com intact.
+To change the email address that receives these reports edit the “ToAddress” field in DCConfig (under Configuration > Email) on the CWMGR1 VM. It is recommended to leave ddcnotifications@cloudjumper.com intact.
 
 image:why_emails.png[]
