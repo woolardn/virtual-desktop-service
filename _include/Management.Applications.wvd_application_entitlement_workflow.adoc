@@ -25,17 +25,18 @@ At login, the end user is presented with the resources assigned to them by their
 
 image::Management.Deployments.vds_sites-0e49c.png[width=75%]
 
-.In this more complex example, this user has access to two different desktop sessions and 4 different streaming applications:
+In this more complex example, this user has access to two different desktop sessions and 4 different streaming applications:
+
 * *Available Desktops*
 ** Nvidia GPU Desktop
 ** Shared WVD Pool Desktop
 ** Operation 2 Pool Desktop
 
-*Available RemoteApps*
-* AutoCAD 2021
-* Revit 2021
-* Microsoft Edge
-* Notepad
+* *Available RemoteApps*
+** AutoCAD 2021
+** Revit 2021
+** Microsoft Edge
+** Notepad
 
 Behind the scenes these applications and desktops are hosted across a variety of session hosts, WVD workspaces and could even be hosted in different Azure regions.
 
