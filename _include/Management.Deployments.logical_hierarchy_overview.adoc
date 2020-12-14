@@ -1,0 +1,48 @@
+////
+
+Used in:
+sub.Management.Deployments.logical_hierarchy_overview.adoc
+
+////
+
+== Overview
+VDS organizes concepts into various layers of a logical hierarchy.  This article helps to outline how they fit together.
+
+=== VDS Organizational Scheme
+The VDS management portal is found at https://manage.vds.netapp.com.  This web interface is a single pane of glass for managing all VDS-related objects.  Within the VDS web UI, the following hierarchy of components and logical containers exist.
+
+==== VDS Deployment
+The _Deployment_ is a VDS concept that organized and contains _VDS Workspace(s)_.  In certain deployment architectures a deployment can contain multiple VDS Workspaces.
+
+NOTE: Running multiple VDS Workspaces within a single Deployment is called "Multi-Tenancy" and is only an option in RDS deployments, WVD deployments do not support this approach.
+
+A deployment is defined by its Active Directory domain and there is a 1:1 relationship between the AD domain and a Deployment.
+
+There are certain VM resources that are deployed to support a deployment that are shared across all VDS Workspaces in the deployment.  E.g. every Deployment contains a VM named "CWMGR1" which is a server that run VDS applications, a SQL Express database and facilitates management of the VDS Workspace(s) (and the contained resources) within the Deployment.
+
+==== VDS Workspace
+WARNING: There is a difference between a "*VDS* Workspace" and a "*WVD* Workspace".
+
+A VDS Workspace is a logical container inside the deployment for the client (end user) resources.  These resources include Virtual Machines (for session hosts, application servers, database servers, file servers etc.), virtual networking, storage and other hypervisor infrastructure.
+
+The VDS Workspace also contains management functionality to manage Users, Security Groups, Workload Scheduling, Applications, Automation, VMs, and WVD configuration.
+
+Typically a VDS Workspace is aligned with a single company, or (in enterprise deployments), a business unit.
+
+==== VDS Sites
+Within a deployment, multiple Sites can be created to represent different infrastructure providers, all managed within a single deployment.
+
+This is helpful when a single company or business unit needs to host users and apps across multiple physical locations (e.g North America and EMEA), hypervisor subscriptions (to align costs to business units)and even hypervisors (E.g. users in Azure, Google Compute and on-premises HCI on vSphere).
+
+==== WVD Workspaces
+WARNING: There is a difference between a "*VDS* Workspace" and a "*WVD* Workspace".
+
+A WVD Workspace is a logical container that sits inside a VDS Workspace and VDS Site. It that can be used similarly to a VDS Site for segmenting management and operational policies in the same deployment.
+
+==== WVD Host Pools
+WVD Host Pools are logical container that sit inside a WVD Workspace and hold the Session Hosts and App Groups users to server the user sessions and control access to individual resources.
+
+==== WVD App Groups
+Each WVD Host Pool starts with a single "Desktop" App Group.  Users and/or groups can be assigned to this (or other) App Group to allow access to the resources in the App Group to the assigned users.
+
+Additional App Groups can be created within a host pool in VDS.  All Additional App Groups are "RemoteApp" App Groups and serve RemoteApp resources as opposed to a full windows desktop experience.

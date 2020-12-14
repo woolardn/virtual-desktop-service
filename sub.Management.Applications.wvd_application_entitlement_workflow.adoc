@@ -1,0 +1,19 @@
+---
+sidebar: sidebar
+permalink: Management.Applications.wvd_application_entitlement_workflow.html
+summary: Script documentation - AMD Radeon Instinct Drivers
+keywords:
+---
+
+= Application Entitlement Workflow for WVD
+
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+:keywords:
+
+include::_include/Management.Applications.wvd_application_entitlement_workflow.adoc[]

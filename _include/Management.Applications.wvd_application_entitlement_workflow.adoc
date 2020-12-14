@@ -1,15 +1,86 @@
 ////
 
 Used in:
-
-
-Other GitHub Repos:
-VDMS Repo:
-
+sub.Management.Applications.wvd_application_entitlement_workflow.adoc
 
 ////
 
 == Overview
-When a host pool is created, a default app groups is also created which publishes the full desktop. Additional app groups can be created in the same host pool to expose specific applications as a streaming application to WVD users.
+In a Windows Virtual Desktop (WVD) environment, application access is managed by app group membership.
 
-To the end user, the desktop and any assigned applications are presented as part fo the standard WVD login process.
+NOTE: This workflow only applies to WVD deployments.  For RDS application entitlement documentation, please see link:Management.Applications.application_entitlement_workflow.html[Application Entitlement Workflow for RDS]
+
+TIP: WVD is a well documented service and there are many link:https://docs.microsoft.com/en-us/azure/virtual-desktop/manage-app-groups[public resources for information].  VDS does not superseded the standard way that WVD operates.  Rather, this article is designed to illustrate how VDS approaches the standard concept found across all WVD deployments.
+
+TIP: Reviewing the link:Management.Deployments.logical_hierarchy_overview.html[VDS Logical Hierarchy Overview] article may be useful before or while reviewing this article.
+
+=== The End User View
+In Windows Virtual Desktop, each end user is assigned access to RemoteApp(s) and/or Desktop(s) by their WVD administrator.  This is accomplished via App Group assignment in VDS.
+
+*RemoteApp* refers to an application that runs remotely on the session host but is presented on the local device without the desktop context.  Commonly referred to as a "streaming app", these application look like a local application on the local device but run in the security context, and on the storage and compute layer of the session host.
+
+*Desktop* refers to the full Windows experience running on the session host and presented on the local device, typically in a full screen window.  Commonly referred to as "remote desktop", this desktop itself will contain any applications installed on that session host which can be launched by the user from within the desktop session window.
+
+At login, the end user is presented with the resources assigned to them by their administrator. Below is an example of the view an end user may see when logging in with their WVD client.  This is a more complex example, often an end user will only have a dingle desktop or RemoteApp assigned to them.  The end user can double click on any of these resources to launch that application/desktop.
+
+image::Management.Deployments.vds_sites-0e49c.png[width=75%]
+
+.In this more complex example, this user has access to two different desktop sessions and 4 different streaming applications:
+* *Available Desktops*
+** Nvidia GPU Desktop
+** Shared WVD Pool Desktop
+** Operation 2 Pool Desktop
+
+*Available RemoteApps*
+* AutoCAD 2021
+* Revit 2021
+* Microsoft Edge
+* Notepad
+
+Behind the scenes these applications and desktops are hosted across a variety of session hosts, WVD workspaces and could even be hosted in different Azure regions.
+
+Here is a diagram illustrating where each of these resources are hosted and how they got assigned to this end user.
+
+image::Management.Deployments.vds_sites-0e880.png[]
+
+As shown above, the various resources available to this end user are hosted in different session hosts, in different host pools, and potentially managed by different IT organizations in different WVD Workspaces.  While not showing in this example, these resources could also be hosted in different Azure regions and/or subscriptions using the VDS Sites feature.
+
+
+=== Providing Desktop Access
+By default every host pool starts with a single app group, used to assign access to the Windows desktop experience.  All applications installed on these session hosts will be accessible to the end users assigned to this app group.
+
+.To enable the Desktop resource for users in VDS:
+. Navigate to the Workspaces > WVD > Host Pool > App Groups page and click on the App group for the "Desktop" resource.
++
+image::Management.Applications.wvd_application_entitlement_workflow-349fe.png[width=75%]
+. Once inside the App Group, click Edit
++
+image::Management.Applications.wvd_application_entitlement_workflow-3bcfc.png[width=75%]
+. From the edit dialog, you can add or remove users to this App Group by User and/or by Groups.
++
+image::Management.Applications.wvd_application_entitlement_workflow-07ff0.png[width=75%]
+
+=== Providing RemoteApp Access
+In order to provision access to RemoteApps, a new app group needs to be created within the host pool.  Once created, the appropriate apps need to be assigned to this app group.
+
+NOTE: Any applications on these sessions hosts will already be available to any users assigned to this host pool's "Desktop" AppGroup.  It is not necessary to also provision access via a RemoteApp app group simply to provide access to apps.  A RemoteApp app group is only necessary to enable access to apps that run as-if on the local device as a streaming app.
+
+==== Create a New App Group
+. Navigate to the Workspaces > WVD > Host Pool > App Groups page and click on the _+ Add App Group_ button
++
+image::Management.Applications.wvd_application_entitlement_workflow-d33da.png[width=75%]
+. Enter the Name, Workspace and Friendly Name for this app group. Select the users and/or groups that should be assigned and click _Save_
++
+image::Management.Applications.wvd_application_entitlement_workflow-242eb.png[width=75%]
+
+==== Add Applications to the App Group
+. Navigate to the Workspaces > WVD > Host Pool > App Groups page and click on the App group for the "RemoteApp" resource.
++
+image::Management.Applications.wvd_application_entitlement_workflow-3dcde.png[width=75%]
+. Once inside the App Group, click Edit
++
+image::Management.Applications.wvd_application_entitlement_workflow-27a41.png[width=75%]
+. Scroll down to the "Remote Apps" section.  This section may take a moment to populate as VDS is directly querying the session hosts to show available apps for streaming.
++
+image::Management.Applications.wvd_application_entitlement_workflow-1e9f2.png[width=75%]
+. Search and select any apps that the users in this app groups should have access to as a RemoteApp resource.
