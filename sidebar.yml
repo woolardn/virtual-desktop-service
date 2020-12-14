@@ -83,9 +83,9 @@ entries:
         url: /Management.Deployments.logical_hierarchy_overview.html
   - title: Applications
     entries:
-    - title: Application Entitlement Workflow for RDS
+    - title: App Entitlement for RDS
       url: /Management.Applications.application_entitlement_workflow.html
-    - title: Application Entitlement Workflow for WVD
+    - title: App Entitlement for WVD
       url: /Management.Applications.wvd_application_entitlement_workflow.html
   - title: Scripted Events
     entries:
@@ -272,8 +272,6 @@ entries:
   - title: Managing resources and minimizing costs
     url: /video_azure_WVDRDS_optimize_resources_54.html
   - title: Automate application management for WVD and RDS
-    url: /video_WVDRDS_app_management_54.html
-  - title: VDS, A day in the life
     url: /video_VDS_day_in_the_life.html
   - title: Upgrade v1 WVD host pool to v2
     url: /Architectual.upgrade_wvd_v1_to_v2.html
