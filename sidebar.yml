@@ -79,12 +79,14 @@ entries:
     entries:
       - title: Provisioning Collections
         url: /Management.Deployments.provisioning_collections.html
+      - title: VDS Logical Hierarchy Overview
+        url: /Management.Deployments.logical_hierarchy_overview.html
   - title: Applications
     entries:
-    - title: Application Entitlement Workflow
+    - title: Application Entitlement Workflow for RDS
       url: /Management.Applications.application_entitlement_workflow.html
-#     - title: Streaming applications
-#       url: /
+    - title: Application Entitlement Workflow for WVD
+      url: /Management.Applications.wvd_application_entitlement_workflow.html
   - title: Scripted Events
     entries:
       - title: Scriped Events
