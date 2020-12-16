@@ -59,9 +59,11 @@ entries:
 - title: Architectural
   entries:
 #    - title: Setup multi-site deployments
-#    url: /
+#      url: /
 #    - title: Migrate users between sites
-#    url: /
+#      url: /
+#    - title: Platform Server Roles 
+#      url: /
   - title: Change Data Layer
     url: /Architectural.change_data_layer.html
   - title:  Migrate Data into VDS

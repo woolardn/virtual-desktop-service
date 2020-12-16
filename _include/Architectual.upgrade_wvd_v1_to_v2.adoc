@@ -15,7 +15,8 @@ This guide outlines the process of using the Virtual Desktop Service (VDS) inter
 * All VMs in the host pool must be online and running
 
 It is worth noting that NetApp’s Virtual Desktop Service can import existing host pools, so customers can leverage VDS to perform in-place upgrades even if VDS was not used to deploy the host pool initially.
-Note: It is a best practice to perform this action during an established maintenance window in which end users are instructed not to log in (or the VMs are set to not allow user connections), as the end user desktops will not accessible while this action is performed.
+
+NOTE: It is a best practice to perform this action during an established maintenance window in which end users are instructed not to log in (or the VMs are set to not allow user connections), as the end user desktops will not accessible while this action is performed.
 
 === Process steps
 . Navigate to the Workspaces module, then to the WVD tab. You will then see the Host Pools section, which now includes an option to leverage VDS’ automation to upgrade a host pool.
