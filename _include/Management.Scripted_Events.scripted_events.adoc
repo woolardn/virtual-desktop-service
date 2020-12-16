@@ -79,10 +79,7 @@ The following fields need to be completed to create a new activity:
 * *Event Settings*
 
 
-
-
-
-
+==== Activity Triggers
 
 * *Application Install*
 ** This is triggered when the VDS Admin clicks "+ Add..." from the _Workspace > Applications_ page.
@@ -114,7 +111,6 @@ The following fields need to be completed to create a new activity:
 ** This is triggered on a VM each time it boots up
 
 Clicking on the _Name_ opens a dialog box where the activity can be edited.
-
 
 == Example Use Cases
 === Automate Application Installs
