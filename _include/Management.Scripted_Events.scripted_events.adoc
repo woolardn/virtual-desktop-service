@@ -21,12 +21,12 @@ Scripts Events contains both a *repository* of scripts and *activities*.  Script
 === Repository
 The Repository Tab shows a list of all scripts available to be deployed from within your VDS account.  This is a custom repository that is shared by all administrators in your VDS instance.  Access to Scripted Events can be managed on the _VDS > Admins > Permissions page_.
 
-image::images/Management.Scripted_Events.scripted_events-823b2.png[width=75%]
+image::/Management.Scripted_Events.scripted_events-823b2.png[width=75%]
 
 ==== Add Script
 Clicking on the _+ Add Script_ button opens a new page for creating a script and saving it to the repository.
 
-image::images/Management.Scripted_Events.scripted_events-8360c.png[width=75%]
+image::/Management.Scripted_Events.scripted_events-8360c.png[width=75%]
 
 The following fields need to be completed to create a new script:
 
@@ -56,17 +56,17 @@ When editing a script the same fields are editable as documented above in the li
 
 On this script detail page, you can also *delete* the script and *download* any uploaded script file.
 
-image::images/Management.Scripted_Events.scripted_events-4b491.png[width=75%]
+image::/Management.Scripted_Events.scripted_events-4b491.png[width=75%]
 
 === Activities
 Activities link a script from the repository to a Deployment, a subset of VMs and a trigger event.
 
-image::images/Management.Scripted_Events.scripted_events-f971c.png[width=75%]
+image::/Management.Scripted_Events.scripted_events-f971c.png[width=75%]
 
 ==== Add Activity
 Clicking on the _+ Add Activity_ button opens a new page for creating an Activity.
 
-image::images/Management.Scripted_Events.scripted_events-02ef8.png[width=75%]
+image::/Management.Scripted_Events.scripted_events-02ef8.png[width=75%]
 
 The following fields need to be completed to create a new activity:
 
