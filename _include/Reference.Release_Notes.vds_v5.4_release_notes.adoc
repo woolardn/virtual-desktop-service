@@ -6,6 +6,22 @@ Used in: sub.Reference.Release_Notes.vds_v5.4_release_notes.adoc
 ////
 
 
+== VDS 5.4 release: Thurs., December 17, 2020
+_Components:_ 5.4 Virtual Desktop Service
+_When:_ Thursday December 17th,  2020 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+NOTE: The next release will be on Thursday January 7th, 2021 instead of New Year’s Eve 2020.
+
+=== Virtual Desktop Service
+* Improved deployment automation when using Azure NetApp Files
+* Enhancement to Provisioning Collections with updated Windows 10 images
+* Update to VCC to better support variables in multi-site configurations
+* Minor proactive security enhancement to Sites functionality
+* API enhancements to Peak Live Scaling functionality within Live Scaling
+* General usability and text clarity improvements in DC Config
+* Assorted behind the scenes bug fixes and security enhancements
+
 == VDS 5.4 release: Thurs., December 3, 2020
 _Components:_ 5.4 Virtual Desktop Service
 _When:_ Thursday December 3rd, 2020 at 10pm - 11pm Eastern

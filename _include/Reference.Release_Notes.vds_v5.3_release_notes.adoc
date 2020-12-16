@@ -7,6 +7,16 @@ Used in: sub.Reference.Release_Notes.vds_v5.3_release_notes.adoc
 
 NOTE: There will be no further recurring releases for v5.3 of VDS – all releases will be considered hotfixes.
 
+== VDS 5.3 release: Thurs., December 17, 2020
+_Components:_ 5.3 Virtual Desktop Service
+_When:_ Thursday December 17th,  2020 at 10pm - 11pm Eastern
+_Impact:_ Access to desktops and application services for End Users will remain uninterrupted. Access to Virtual Desktop Service will remain available.
+
+NOTE: The next release cycle will be on Thursday January 7th, 2021 instead of New Year’s Eve 2020.
+
+=== Virtual Desktop Service
+* Update SMTP service to leverage Postmark
+
 == VDS 5.3 release: Thurs., October 22, 2020
 
 _Components:_ 5.3 Virtual Desktop Service

@@ -77,47 +77,7 @@ Once the application has been added to the Workspace you'll need to get that app
 . Click Complete Installation.
 . If required, open the created Icon Add Service Board Task and confirm the icon has been added.
 
-== Automate application installation
-For reoccurring tasks or to perform the task across many hosts, the Scripted Events functionality in VDS can be used to fully automate installs. This automation can be performed with any number of scripting technologies, in this example we'll use Chocolatey.
 
-First, any host where you'll automate installs will need Chocolatey pre-installed, this can be added to the VM image or automated as shown below.
-
-.To automate the install of Chocolatey, follow these steps
-. Installing Chocolatey is the first step, this utility can then be used to automate app installs. To do so, you’ll build a scripted event that executes Powershell.exe with the following arguments:
-`Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString(‘https://chocolatey.org/install.ps1’))))`
-. Once the script is built it can be triggered in a variety of ways. The simplest is to manually run it but there are other options such as running this at _server create_.
-
-Once the host(s) has Chocolatey, autoamte with Scripted events can install a wide variety of applications from the Chocolatey repository. A complete list of available applications can be foudn at link:https://chocolatey.org/packages[]
-
-image:Add Script.png[]
-
-.To automate the install of an applications, follow these steps (using 7-Zip as an example)
-. Navigate to Scripted Events > Script Repository > Add
-. Select `No Script File`
-. Execute With: `c:\programdata\chocolatey\choco.exe`
-. Arguments (Optional): _leave blank_
-. Once the Script is saved, the next step is to associate that script with a Trigger. Navigate to Scripted Events > Activities > Add
-.. Enter a name for the activity (e.g. _choco install 7-Zip_)
-+
-TIP: Develop a consistent naming convention as the library of Scripts can get large
-
-.. Optionally give a description
-.. Select the script created in the previous section
-.. In _Enter Arguments (Optional):_ enter `install 7zip -y -f` (which is found here: https://chocolatey.org/packages/7zip)
-... `-y` is required to unattended installs
-... `-f` forces the install, even if the app was previously installed and is optional
-.. Select the deployment
-.. Check the enable checkbox
-.. under _Trigger On_ select _Application install_
-.. Click _Add Application_
-.. Select the application name (e.g. _7-Zip File Manager_)
-.. Enter the shortcut path for the application icon (e.g. \\shortcuts\7-Zip File Manager.lnk)
-+
-NOTE: You’ll need to know the shortcut path during this creation wizard. This can be found by looking at other installs of the app or by doing a manual install on the machine and browsing to it from the service board entry.
-
-.. Click Update > Add Activity
-
-Going forward, the act of adding that application to the Workspace will trigger the install of that application across all session hosts.
 
 == Assign applications to users
 
