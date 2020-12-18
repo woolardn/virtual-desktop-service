@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.delete_template.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.delete_template-83488.png[]

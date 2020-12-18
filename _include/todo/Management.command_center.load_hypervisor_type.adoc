@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.load_hypervisor_type.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.load_hypervisor_type-e9558.png[]

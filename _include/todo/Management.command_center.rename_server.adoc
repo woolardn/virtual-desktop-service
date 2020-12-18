@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.rename_server.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.rename_server-db4c9.png[]

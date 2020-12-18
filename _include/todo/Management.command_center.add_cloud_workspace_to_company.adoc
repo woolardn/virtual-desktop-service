@@ -1,0 +1,10 @@
+
+////
+
+Used in:
+_include/todo/Management.command_center.add_cloud_workspace_to_company.adoc
+
+////
+
+== Overview
+image::Management.command_center.add_cloud_workspace_to_company-5c011.png[]

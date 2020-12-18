@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.delete_server.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.delete_server-09320.png[]

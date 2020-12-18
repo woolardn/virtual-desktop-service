@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.set_external_dns.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.set_external_dns-abf19.png[]

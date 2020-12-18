@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.should_pool_be_running.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.should_pool_be_running-d7849.png[]

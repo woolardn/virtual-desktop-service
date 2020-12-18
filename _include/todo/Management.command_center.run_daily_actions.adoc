@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.run_daily_actions.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.run_daily_actions-4a3cd.png[]

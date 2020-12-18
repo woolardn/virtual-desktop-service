@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.remove_vds_software.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.remove_vds_software-204f4.png[]

@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.wildcard_cert_create_new.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.wildcard_cert_create_new-d44ae.png[]

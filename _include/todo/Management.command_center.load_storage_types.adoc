@@ -1,0 +1,13 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.load_storage_types.adoc
+
+
+////
+
+== Overview
+
+image::Management.command_center.load_storage_types-e47d0.png[]

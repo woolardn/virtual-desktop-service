@@ -1,0 +1,20 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.create_server_from_clone.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.create_server_from_clone-098a1.png[]
+
+image::Management.command_center.create_server_from_clone-2b8e0.png[]
+
+image::Management.command_center.create_server_from_clone-b252d.png[]
+
+image::Management.command_center.create_server_from_clone-3b909.png[]
+
+image::Management.command_center.create_server_from_clone-68dc9.png[]

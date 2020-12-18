@@ -1,0 +1,11 @@
+
+////
+
+Used in:
+_include/todo/Management.command_center.allow_new_wvd_connections.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.allow_new_wvd_connections-74385.png[]

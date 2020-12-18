@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.create_cache_company.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.create_cache_company-079e0.png[]

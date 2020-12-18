@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.create_azure_netapp_files_share.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.create_azure_netapp_files_share-90774.png[]

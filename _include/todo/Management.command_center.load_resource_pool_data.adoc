@@ -1,0 +1,18 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.load_resource_pool_data.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.load_resource_pool_data-e7092.png[]
+
+image::Management.command_center.load_resource_pool_data-c9810.png[]
+
+image::Management.command_center.load_resource_pool_data-cb3a8.png[]
+
+image::Management.command_center.load_resource_pool_data-6ae0e.png[]

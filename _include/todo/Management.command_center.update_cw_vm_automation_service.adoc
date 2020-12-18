@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.update_cw_vm_automation_service.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.update_cw_vm_automation_service-c5b84.png[]

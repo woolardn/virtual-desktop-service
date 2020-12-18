@@ -89,9 +89,176 @@ entries:
       url: /Management.Applications.wvd_application_entitlement_workflow.html
   - title: Scripted Events
     entries:
-      - title: Scriped Events
+      - title: Scriped Events Overview
         url: /Management.Scripted_Events.scripted_events.html
-
+#  - title: Command Center
+#    entries:
+#      - title: Management Command Center Overview
+#        url: /Management.command_center_overview.html
+#      - title: Add Cloud Workspace to Company
+#        url: /Management.command_center.add_cloud_workspace_to_company.html
+#      - title: Add Existing Server to Company
+#        url: /Management.command_center.add_existing_server_to_company.html
+#      - title: Allow New WVD Connections
+#        url: /Management.command_center.allow_new_wvd_connections.html
+#      - title: Backup List
+#        url: /Management.command_center.backup_list.html
+#      - title: Backup Restore to Drive
+#        url: /Management.command_center.backup_restore_to_drive.html
+#      - title: Backup Server Now
+#        url: /Management.command_center.backup_server_now.html
+#      - title: Backups  - Run All Scheduled
+#        url: /Management.command_center.backups_run_all_scheduled.html
+#      - title: Change Data/Home/Pro Folders
+#        url: /Management.command_center.change_data_home_pro_folders.html
+#      - title: Change Password
+#        url: /Management.command_center.change_password.html
+#      - title: Copy Template to Gallery
+#        url: /Management.command_center.copy_template_to_gallery.html
+#      - title: Create Azure File Share
+#        url: /Management.command_center.create_azure_file_share.html
+#      - title: Create Azure Netapp Files Share
+#        url: /Management.command_center.create_azure_netapp_files_share.html
+#      - title: Create Cache Company
+#        url: /Management.command_center.create_cache_company.html
+#      - title: Create Data Center Site
+#        url: /Management.command_center.create_data_center_site.html
+#      - title: Create No Server Company
+#        url: /Management.command_center.create_no_server_company.html
+#      - title: Create Server from Backup
+#        url: /Management.command_center.create_server_from_backup.html
+#      - title: Create Server from Clone
+#        url: /Management.command_center.create_server_from_clone.html
+#      - title: Create Server from Template
+#        url: /Management.command_center.create_server_from_template.html
+#      - title: Create Template Phase 1
+#        url: /Management.command_center.create_template_phase_1.html
+#      - title: Create Template Phase 3
+#        url: /Management.command_center.create_template_phase_3.html
+#      - title: Created Company
+#        url: /Management.command_center.created_company.html
+#      - title: Delete Backup
+#        url: /Management.command_center.delete_backup.html
+#      - title: Delete Datacenter Site
+#        url: /Management.command_center.delete_datacenter_site.html
+#      - title: Delete Drives Form Server
+#        url: /Management.command_center.delete_drives_form_server.html
+#      - title: Delete Server
+#        url: /Management.command_center.delete_server.html
+#      - title: Delete Template
+#        url: /Management.command_center.delete_template.html
+#      - title: Edit Provisioning Collection
+#        url: /Management.command_center.edit_provisioning_collection.html
+#      - title: Edit Resource Pool
+#        url: /Management.command_center.edit_resource_pool.html
+#      - title: Edit Workload Schedule
+#        url: /Management.command_center.edit_workload_schedule.html
+#      - title: Exclude Server from Monitoring
+#        url: /Management.command_center.exclude_server_from_monitoring.html
+#      - title: Expand Drive
+#        url: /Management.command_center.expand_drive.html
+#      - title: File Migration
+#        url: /Management.command_center.file_migration.html
+#      - title: Generate Email Reports
+#        url: /Management.command_center.generate_email_reports.html
+#      - title: Generate Reports
+#        url: /Management.command_center.generate_reports.html
+#      - title: Install Notepad++ & Chrome
+#        url: /Management.command_center.install_notepad_plus_plus_Chrome.html
+#      - title: Install Thinprint License Server
+#        url: /Management.command_center.install_thinprint_license_server.html
+#      - title: List Drives for Server
+#        url: /Management.command_center.list_drives_for_server.html
+#      - title: List Long Running Operations
+#        url: /Management.command_center.list_long_running_operations.html
+#      - title: Load Active Users
+#        url: /Management.command_center.load_active_users.html
+#      - title: Load Cache Companies
+#        url: /Management.command_center.load_cache_companies.html
+#      - title: Load Hypervisor Config Options
+#        url: /Management.command_center.load_hypervisor_config_options.html
+#      - title: Load Hypervisor Type
+#        url: /Management.command_center.load_hypervisor_type.html
+#      - title: Load Machine Series
+#        url: /Management.command_center.load_machine_series.html
+#      - title: Load Machine Sizes
+#        url: /Management.command_center.load_machine_sizes.html
+#      - title: Load Max Concurrent Users
+#        url: /Management.command_center.load_max_concurrent_users.html
+#      - title: Load Resource Pool Data
+#        url: /Management.command_center.load_resource_pool_data.html
+#      - title: Load Server Resource Report Data
+#        url: /Management.command_center.load_server_resource_report_data.html
+#      - title: Load Servers for Company
+#        url: /Management.command_center.load_servers_for_company.html
+#      - title: Load Storage Types
+#        url: /Management.command_center.load_storage_types.html
+#      - title: Load Templates
+#        url: /Management.command_center.load_templates.html
+#      - title: Load Virtual Machines
+#        url: /Management.command_center.load_virtual_machines.html
+#      - title: Make Server Active
+#        url: /Management.command_center.make_server_active.html
+#      - title: Make Server Data Server
+#        url: /Management.command_center.make_server_data_server.html
+#      - title: Migrate Company
+#        url: /Management.command_center.migrate_company.html
+#      - title: Move Servers to Company
+#        url: /Management.command_center.move_servers_to_company.html
+#      - title: Reboot Server
+#        url: /Management.command_center.reboot_server.html
+#      - title: Reload Configuration
+#        url: /Management.command_center.reload_configuration.html
+#      - title: Reload Monitored Applications
+#        url: /Management.command_center.reload_monitored_applications.html
+#      - title: Remove Vds Software
+#        url: /Management.command_center.remove_vds_software.html
+#      - title: Rename Server
+#        url: /Management.command_center.rename_server.html
+#      - title: Resource Allocation Enable
+#        url: /Management.command_center.resource_allocation_enable.html
+#      - title: Run Daily Actions
+#        url: /Management.command_center.run_daily_actions.html
+#      - title: Run Daily Maintenance
+#        url: /Management.command_center.run_daily_maintenance.html
+#      - title: Run Program
+#        url: /Management.command_center.run_program.html
+#      - title: Run Resource Allocation
+#        url: /Management.command_center.run_resource_allocation.html
+#      - title: Run Workload Schedule
+#        url: /Management.command_center.run_workload_schedule.html
+#      - title: Set External Dns
+#        url: /Management.command_center.set_external_dns.html
+#      - title: Set Gateway Address
+#        url: /Management.command_center.set_gateway_address.html
+#      - title: Set Time Zone
+#        url: /Management.command_center.set_time_zone.html
+#      - title: Should Pool Be Running
+#        url: /Management.command_center.should_pool_be_running.html
+#      - title: Start Company
+#        url: /Management.command_center.start_company.html
+#      - title: Start Server
+#        url: /Management.command_center.start_server.html
+#      - title: Start Server for Wake on Demand
+#        url: /Management.command_center.start_server_for_wake_on_demand.html
+#      - title: Stop Company
+#        url: /Management.command_center.stop_company.html
+#      - title: Stop Cwagent
+#        url: /Management.command_center.stop_cwagent.html
+#      - title: Stop Sddc
+#        url: /Management.command_center.stop_sddc.html
+#      - title: Stop Server
+#        url: /Management.command_center.stop_server.html
+#      - title: Test Hypervisor Connection
+#        url: /Management.command_center.test_hypervisor_connection.html
+#      - title: Update Active User Count
+#        url: /Management.command_center.update_active_user_count.html
+#      - title: Update CW VM Automation Service
+#        url: /Management.command_center.update_cw_vm_automation_service.html
+#      - title: Wildcard Cert-Create New
+#        url: /Management.command_center.wildcard_cert_create_new.html
+#      - title: Wildcard Cert-Install
+#        url: /Management.command_center.wildcard_cert_install.html
 
   - title: Configure Cost Optimization
     url: /Management.Cost_Optimization.workload_schedule.html

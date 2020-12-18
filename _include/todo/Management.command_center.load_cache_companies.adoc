@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.load_cache_companies.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.load_cache_companies-02d25.png[]

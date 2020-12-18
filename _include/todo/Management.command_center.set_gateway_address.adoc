@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.set_gateway_address.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.set_gateway_address-ece6c.png[]

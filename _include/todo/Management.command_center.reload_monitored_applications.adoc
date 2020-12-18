@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.reload_monitored_applications.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.reload_monitored_applications-6d616.png[]

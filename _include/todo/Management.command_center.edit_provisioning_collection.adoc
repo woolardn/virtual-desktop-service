@@ -1,0 +1,14 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.edit_provisioning_collection.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.edit_provisioning_collection-cc1b0.png[]
+
+image::Management.command_center.edit_provisioning_collection-4e113.png[]

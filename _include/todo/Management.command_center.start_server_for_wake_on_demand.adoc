@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.start_company.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.start_server_for_wake_on_demand-d8436.png[]

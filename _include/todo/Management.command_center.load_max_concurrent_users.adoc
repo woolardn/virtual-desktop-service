@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.load_max_concurrent_users.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.load_max_concurrent_users-ebd53.png[]

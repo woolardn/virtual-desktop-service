@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.test_hypervisor_connection.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.test_hypervisor_connection-fcfa3.png[]

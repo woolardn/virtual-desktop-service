@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.stop_sddc.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.stop_sddc-ce267.png[]

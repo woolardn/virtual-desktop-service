@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.load_machine_sizes.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.load_machine_sizes-a93bd.png[]

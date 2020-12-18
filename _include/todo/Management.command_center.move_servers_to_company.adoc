@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.move_servers_to_company.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.move_servers_to_company-cec7b.png[]
