@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.install_thinprint_license_server.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.install_thinprint_license_server-d4818.png[]

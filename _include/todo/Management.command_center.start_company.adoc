@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.start_company.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.start_company-063ef.png[]

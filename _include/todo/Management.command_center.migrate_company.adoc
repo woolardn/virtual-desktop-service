@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.migrate_company.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.migrate_company-778d7.png[]

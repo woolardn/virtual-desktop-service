@@ -1,0 +1,25 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.create_server_from_backup.adoc
+
+
+////
+
+== Overview
+
+image::Management.command_center.create_server_from_backup-cac47.png[]
+
+image::Management.command_center.create_server_from_backup-eabc4.png[]
+
+image::Management.command_center.create_server_from_backup-14061.png[]
+
+image::Management.command_center.create_server_from_backup-c7d6b.png[]
+
+image::Management.command_center.create_server_from_backup-a487e.png[]
+
+image::Management.command_center.create_server_from_backup-51ac2.png[]
+
+image::Management.command_center.create_server_from_backup-b0fa0.png[]

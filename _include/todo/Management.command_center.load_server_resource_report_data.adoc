@@ -1,0 +1,11 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.load_server_resource_report_data.adoc
+
+////
+
+== Overview
+image::Management.command_center.load_server_resource_report_data-7c205.png[]

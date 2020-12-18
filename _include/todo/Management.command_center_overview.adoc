@@ -1,0 +1,126 @@
+
+////
+
+Used in:
+
+
+////
+
+== Overview
+The Command Center is an application that runs on the CWMGR1 Platform Server in the Deployment. This application
+
+== Running Command Center
+.To run the Command Center application:
+. Connect to the server from the _VDS > Deployment > Platform Servers_ page click the _Acrions_ icon and select "Connect"
++
+image::Management.command_center_overview-68087.png[width=75%]
+. When prompted for credentials enter domain admin credentials
+.. The user will need to be a member of the "CW-Infrastructure" security group.  For consistency sake we recommend adding this membership by making the user a member fo the "Level 3 Technicians" group in _AD > Cloud Workspace > Cloud Workspace Tech Users > Groups_
++
+image::Management.command_center_overview-1c42d.png[width=75%]
+. Locate the desktop icon for _Command Center_ and run it
++
+image::Management.command_center_overview-3c860.png[]
+.. To enable the advanced tab, launch the application with the "-showadvancedtab" switch.
+
+=== Operations Tab
+image::Management.command_center_overview-b614e.png[width=50%]
+
+From the *Command* menu you can select from a list of actions (listed below).
+
+Once a command is selected, data can be populated with deployment data from the *Load Data* button.  The Load Data button is also used to query the hypervisor for data once earlier selections are made (e.g. Loading a list of available backup dates after selecting a specific VM from a dropdown)
+
+image::Management.command_center_overview-85417.png[]
+
+After making selections on a command, clicking *Execute Command* will run the selected process.
+
+To review logs, click the *View All Logs* button.  The raw text file will open, with newest entries at the bottom.
+
+==== Command List
+* link:Management.command_center.add_cloud_workspace_to_company.html[Add Cloud Workspace to Company]
+* link:Management.command_center.add_existing_server_to_company.html[Add Existing Server to Company]
+* link:Management.command_center.allow_new_wvd_connections.html[Allow New WVD Connections]
+* link:Management.command_center.backup_list.html[Backup List]
+* link:Management.command_center.backup_restore_to_drive.html[Backup Restore to Drive]
+* link:Management.command_center.backup_server_now.html[Backup Server Now]
+* link:Management.command_center.backups_run_all_scheduled.html[Backups  - Run All Scheduled]
+* link:Management.command_center.change_data_home_pro_folders.html[Change Data/Home/Pro Folders]
+* link:Management.command_center.change_password.html[Change Password]
+* link:Management.command_center.copy_template_to_gallery.html[Copy Template to Gallery]
+* link:Management.command_center.create_azure_file_share.html[Create Azure File Share]
+* link:Management.command_center.create_azure_netapp_files_share.html[Create Azure Netapp Files Share]
+* link:Management.command_center.create_cache_company.html[Create Cache Company]
+* link:Management.command_center.create_data_center_site.html[Create Data Center Site]
+* link:Management.command_center.create_no_server_company.html[Create No Server Company]
+* link:Management.command_center.create_server_from_backup.html[Create Server from Backup]
+* link:Management.command_center.create_server_from_clone.html[Create Server from Clone]
+* link:Management.command_center.create_server_from_template.html[Create Server from Template]
+* link:Management.command_center.create_template_phase_1.html[Create Template Phase 1]
+* link:Management.command_center.create_template_phase_3.html[Create Template Phase 3]
+* link:Management.command_center.created_company.html[Created Company]
+* link:Management.command_center.delete_backup.html[Delete Backup]
+* link:Management.command_center.delete_datacenter_site.html[Delete Datacenter Site]
+* link:Management.command_center.delete_drives_form_server.html[Delete Drives Form Server]
+* link:Management.command_center.delete_server.html[Delete Server]
+* link:Management.command_center.delete_template.html[Delete Template]
+* link:Management.command_center.edit_provisioning_collection.html[Edit Provisioning Collection]
+* link:Management.command_center.edit_resource_pool.html[Edit Resource Pool]
+* link:Management.command_center.edit_workload_schedule.html[Edit Workload Schedule]
+* link:Management.command_center.exclude_server_from_monitoring.html[Exclude Server from Monitoring]
+* link:Management.command_center.expand_drive.html[Expand Drive]
+* link:Management.command_center.file_migration.html[File Migration]
+* link:Management.command_center.generate_email_reports.html[Generate Email Reports]
+* link:Management.command_center.generate_reports.html[Generate Reports]
+* link:Management.command_center.install_notepad_plus_plus_Chrome.html[Install Notepad plus plus & Chrome]
+* link:Management.command_center.install_thinprint_license_server.html[Install Thinprint License Server]
+* link:Management.command_center.list_drives_for_server.html[List Drives for Server]
+* link:Management.command_center.list_long_running_operations.html[List Long Running Operations]
+* link:Management.command_center.load_active_users.html[Load Active Users]
+* link:Management.command_center.load_cache_companies.html[Load Cache Companies]
+* link:Management.command_center.load_hypervisor_config_options.html[Load Hypervisor Config Options]
+* link:Management.command_center.load_hypervisor_type.html[Load Hypervisor Type]
+* link:Management.command_center.load_machine_series.html[Load Machine Series]
+* link:Management.command_center.load_machine_sizes.html[Load Machine Sizes]
+* link:Management.command_center.load_max_concurrent_users.html[Load Max Concurrent Users]
+* link:Management.command_center.load_resource_pool_data.html[Load Resource Pool Data]
+* link:Management.command_center.load_server_resource_report_data.html[Load Servers for Company]
+* link:Management.command_center.load_servers_for_company.html[Load Servers for Company]
+* link:Management.command_center.load_storage_types.html[Load Storage Types]
+* link:Management.command_center.load_templates.html[Load Templates]
+* link:Management.command_center.load_virtual_machines.html[Load Virtual Machines]
+* link:Management.command_center.make_server_active.html[Make Server Active]
+* link:Management.command_center.make_server_data_server.html[Make Server Data Server]
+* link:Management.command_center.migrate_company.html[Migrate Company]
+* link:Management.command_center.move_servers_to_company.html[Move Servers to Company]
+* link:Management.command_center.reboot_server.html[Reboot Server]
+* link:Management.command_center.reload_configuration.html[Reload Configuration]
+* link:Management.command_center.reload_monitored_applications.html[Reload Monitored Applications]
+* link:Management.command_center.remove_vds_software.html[Remove Vds Software]
+* link:Management.command_center.rename_server.html[Rename Server]
+* link:Management.command_center.resource_allocation_enable.html[Resource Allocation Enable]
+* link:Management.command_center.run_daily_actions.html[Run Daily Actions]
+* link:Management.command_center.run_daily_maintenance.html[Run Daily Maintenance]
+* link:Management.command_center.run_program.html[Run Program]
+* link:Management.command_center.run_resource_allocation.html[Run Resource Allocation]
+* link:Management.command_center.run_workload_schedule.html[Run Workload Schedule]
+* link:Management.command_center.set_external_dns.html[Set External Dns]
+* link:Management.command_center.set_gateway_address.html[Set Gateway Address]
+* link:Management.command_center.set_time_zone.html[Set Time Zone]
+* link:Management.command_center.should_pool_be_running.html[Should Pool Be Running]
+* link:Management.command_center.start_company.html[Start Company]
+* link:Management.command_center.start_server.html[Start Server]
+* link:Management.command_center.start_server_for_wake_on_demand.html[Start Server for Wake on Demand]
+* link:Management.command_center.stop_company.html[Stop Company]
+* link:Management.command_center.stop_cwagent.html[Stop Cwagent]
+* link:Management.command_center.stop_sddc.html[Stop Sddc]
+* link:Management.command_center.stop_server.html[Stop Server]
+* link:Management.command_center.test_hypervisor_connection.html[Test Hypervisor Connection]
+* link:Management.command_center.update_active_user_count.html[Update Active User Count]
+* link:Management.command_center.update_cw_vm_automation_service.html[Update Cw Vm Automation Service]
+* link:Management.command_center.wildcard_cert_create_new.html[Wildcard Cert-Create New]
+* link:Management.command_center.wildcard_cert_install.html[Wildcard Cert-Install]
+
+=== Hypervisor
+
+=== Advanced
+NOTE: This tab is only visible if Command Center was launched with the _-showadvancedtab_ switch.

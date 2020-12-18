@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: Management.Applications.wvd_application_entitlement_workflow.html
-summary: Script documentation - AMD Radeon Instinct Drivers
+summary: Step-by-step guide to deploy Applications to end users in VDS
 keywords:
 ---
 

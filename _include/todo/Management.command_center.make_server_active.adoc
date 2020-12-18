@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.make_server_active.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.make_server_active-6dc9b.png[]

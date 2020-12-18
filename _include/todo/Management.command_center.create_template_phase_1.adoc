@@ -1,0 +1,14 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.create_template_phase_1.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.create_template_phase_1-87b71.png[]
+
+image::Management.command_center.create_template_phase_1-25559.png[]

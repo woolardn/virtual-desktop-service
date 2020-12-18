@@ -1,0 +1,13 @@
+
+////
+
+Used in:
+_include/todo/Management.command_center.change_data_home_pro_folders.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.change_data_home_pro_folders-6606b.png[]
+
+image::Management.command_center.change_data_home_pro_folders-8b088.png[]

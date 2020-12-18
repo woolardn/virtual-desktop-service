@@ -15,22 +15,20 @@ Occasionally VDS administrators will need domain-level credentials to manage the
 
 These instructions show how these accounts can be created with the appropriate permissions.
 
-=== Traditional domain controller
+=== Windows Server Domain Controller
 
 When running an internally hosted Domain Controller (or a local DC linked to Azure via a VPN/Express Route) managing .tech accounts can be done directly in Active Directory Manager.
 
 . Connect to the Domain Controller (CWMGR1, DC01 or the existing VM) with a domain admin (.tech) account.
-. Open Active Directory Users and Computers, Navigate to Cloud Workspace > Cloud Workspace Tech Users. Right click on the Level3 Technicians entry and select New > User.
+. Create a new user (if needed).
+. Add the user to the "Level3 Technicians" security group
 +
-image:l31.png[]
-
-. Alternatively you can select an existing .tech account inside of the Level3 Technician directory and copy it to create a new user.
-
+image::Management.System_Administration.create_domain_admin_account-9ee17.png[width=25%]
+.. If the "Level3 Technicians" security group is missing, please create the group and make it a member of "CW-Infrastructure" security group.
++
+image::Management.System_Administration.create_domain_admin_account-0fc27.png[width=25%]
 
 NOTE: Adding “.tech” to the end of the username is a recommended best practice to help delineate admin accounts from end user accounts.
-
-image:l32.png[]
-
 
 === Azure AD Domain Services
 

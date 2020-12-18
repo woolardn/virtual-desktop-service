@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.start_server.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.start_server-c8845.png[]

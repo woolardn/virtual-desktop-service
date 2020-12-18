@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.delete_drives_form_server.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.delete_drives_form_server-fd4b6.png[]

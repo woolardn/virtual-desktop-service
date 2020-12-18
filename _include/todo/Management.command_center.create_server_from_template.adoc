@@ -1,0 +1,24 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.create_server_from_template.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.create_server_from_template-83e84.png[]
+
+image::Management.command_center.create_server_from_template-82622.png[]
+
+image::Management.command_center.create_server_from_template-83e84.png[]
+
+image::Management.command_center.create_server_from_template-211d7.png[]
+
+image::Management.command_center.create_server_from_template-644c1.png[]
+
+image::Management.command_center.create_server_from_template-4a22f.png[]
+
+image::Management.command_center.create_server_from_template-70fa8.png[]

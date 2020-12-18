@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.stop_cwagent.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.stop_cwagent-09176.png[]

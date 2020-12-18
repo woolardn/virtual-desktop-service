@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.run_resource_allocation.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.run_resource_allocation-664d2.png[]

@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.reboot_server.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.reboot_server-2fbca.png[]

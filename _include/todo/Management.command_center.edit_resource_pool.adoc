@@ -1,0 +1,22 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.edit_resource_pool.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.edit_resource_pool-4bc36.png[]
+
+image::Management.command_center.edit_resource_pool-e15e5.png[]
+
+image::Management.command_center.edit_resource_pool-6c466.png[]
+
+image::Management.command_center.edit_resource_pool-40dbd.png[]
+
+image::Management.command_center.edit_resource_pool-bebd9.png[]
+
+image::Management.command_center.edit_resource_pool-de40f.png[]

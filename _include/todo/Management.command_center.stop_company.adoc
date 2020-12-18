@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.stop_company.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.stop_company-99c73.png[]

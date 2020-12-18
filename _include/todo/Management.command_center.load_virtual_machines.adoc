@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.load_virtual_machines.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.load_virtual_machines-da7e2.png[]

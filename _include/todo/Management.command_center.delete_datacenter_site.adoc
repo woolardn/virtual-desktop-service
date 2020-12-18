@@ -1,0 +1,13 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.delete_datacenter_site.adoc
+
+
+////
+
+== Overview
+
+image::Management.command_center.delete_datacenter_site-6df98.png[]

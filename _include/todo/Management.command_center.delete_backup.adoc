@@ -1,0 +1,14 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.delete_backup.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.delete_backup-f8c61.png[]
+
+image::Management.command_center.delete_backup-dabbb.png[]

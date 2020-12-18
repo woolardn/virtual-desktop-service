@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.reload_configuration.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.reload_configuration-e97f8.png[]

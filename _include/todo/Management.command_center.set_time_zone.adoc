@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.set_time_zone.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.set_time_zone-6f3cf.png[]

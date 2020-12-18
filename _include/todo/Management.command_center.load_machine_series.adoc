@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.load_machine_series.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.load_machine_series-fcd2c.png[]

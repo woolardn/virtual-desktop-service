@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.created_company.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.created_company-da1a3.png[]

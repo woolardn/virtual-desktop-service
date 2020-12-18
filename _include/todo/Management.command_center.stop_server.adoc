@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.stop_server.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.stop_server-57787.png[]

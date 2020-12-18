@@ -1,0 +1,12 @@
+
+////
+
+Used in:
+
+_include/todo/Management.command_center.exclude_server_from_monitoring.adoc
+
+
+////
+
+== Overview
+image::Management.command_center.exclude_server_from_monitoring-f1bdb.png[]
